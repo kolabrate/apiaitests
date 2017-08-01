@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{27C36998-A6CF-4943-BD3B-B7172E95B9C6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>apiaisdk</RootNamespace>
+    <AssemblyName>apiaisdk</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\APIAIDownload\apiai-dotnet-client-master\apiai-dotnet-client-master\ApiAiSDK\AIConfiguration.cs">
+      <Link>AIConfiguration.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\APIAIDownload\apiai-dotnet-client-master\apiai-dotnet-client-master\ApiAiSDK\AIServiceException.cs">
+      <Link>AIServiceException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\APIAIDownload\apiai-dotnet-client-master\apiai-dotnet-client-master\ApiAiSDK\ApiAiBase.cs">
+      <Link>ApiAiBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\APIAIDownload\apiai-dotnet-client-master\apiai-dotnet-client-master\ApiAiSDK\LibraryInfo.cs">
+      <Link>LibraryInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\model\AIContext.cs">
+      <Link>Model\AIContext.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\model\AIOutputContext.cs">
+      <Link>Model\AIOutputContext.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\model\AIRequest.cs">
+      <Link>Model\AIRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\model\AIResponse.cs">
+      <Link>Model\AIResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\model\Entity.cs">
+      <Link>Model\Entity.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\model\EntityEntry.cs">
+      <Link>Model\EntityEntry.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\model\Fulfillment.cs">
+      <Link>Model\Fulfillment.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\model\Metadata.cs">
+      <Link>Model\Metadata.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\model\OriginalRequest.cs">
+      <Link>Model\OriginalRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\model\QuestionMetadata.cs">
+      <Link>Model\QuestionMetadata.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\model\Result.cs">
+      <Link>Model\Result.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\model\Status.cs">
+      <Link>Model\Status.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\APIAIDownload\apiai-dotnet-client-master\apiai-dotnet-client-master\ApiAiSDK\RequestExtras.cs">
+      <Link>RequestExtras.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\APIAIDownload\apiai-dotnet-client-master\apiai-dotnet-client-master\ApiAiSDK\SupportedLanguage.cs">
+      <Link>SupportedLanguage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\util\ActionExtensions.cs">
+      <Link>Util\ActionExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\util\ByteBuffer.cs">
+      <Link>Util\ByteBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\util\VoiceActivityDetector.cs">
+      <Link>Util\VoiceActivityDetector.cs</Link>
+    </Compile>
+    <Compile Include="AIDataService.cs" />
+    <Compile Include="AIService.cs" />
+    <Compile Include="ApiAi.cs" />
+    <Compile Include="Http\MultipartHttpClient.cs" />
+    <Compile Include="PrivacyStatementDeclinedException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
