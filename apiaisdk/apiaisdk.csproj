@@ -47,34 +47,13 @@
     <Compile Include="..\..\..\APIAIDownload\apiai-dotnet-client-master\apiai-dotnet-client-master\ApiAiSDK\AIConfiguration.cs">
       <Link>AIConfiguration.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\APIAIDownload\apiai-dotnet-client-master\apiai-dotnet-client-master\ApiAiSDK\AIServiceException.cs">
-      <Link>AIServiceException.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\APIAIDownload\apiai-dotnet-client-master\apiai-dotnet-client-master\ApiAiSDK\ApiAiBase.cs">
-      <Link>ApiAiBase.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\APIAIDownload\apiai-dotnet-client-master\apiai-dotnet-client-master\ApiAiSDK\LibraryInfo.cs">
-      <Link>LibraryInfo.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\APIAIDownload\apiai-dotnet-client-master\apiai-dotnet-client-master\ApiAiSDK\RequestExtras.cs">
-      <Link>RequestExtras.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\APIAIDownload\apiai-dotnet-client-master\apiai-dotnet-client-master\ApiAiSDK\SupportedLanguage.cs">
-      <Link>SupportedLanguage.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\util\ActionExtensions.cs">
-      <Link>Util\ActionExtensions.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\util\ByteBuffer.cs">
-      <Link>Util\ByteBuffer.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\util\VoiceActivityDetector.cs">
-      <Link>Util\VoiceActivityDetector.cs</Link>
-    </Compile>
     <Compile Include="AIDataService.cs" />
     <Compile Include="AIService.cs" />
+    <Compile Include="AIServiceException.cs" />
     <Compile Include="ApiAi.cs" />
+    <Compile Include="ApiAiBase.cs" />
     <Compile Include="Http\MultipartHttpClient.cs" />
+    <Compile Include="LibraryInfo.cs" />
     <Compile Include="Model\AIContext.cs" />
     <Compile Include="Model\AIOutputContext.cs" />
     <Compile Include="Model\AIRequest.cs" />
@@ -89,6 +68,13 @@
     <Compile Include="Model\Status.cs" />
     <Compile Include="PrivacyStatementDeclinedException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestExtras.cs" />
+    <Compile Include="SupportedLanguage.cs" />
+    <Compile Include="Util\ActionExtensions.cs" />
+    <Compile Include="Util\ByteBuffer.cs" />
+    <Compile Include="Util\FFT2.cs" />
+    <Compile Include="Util\VoiceActivityDetector.cs" />
+    <Compile Include="Util\VoiceActivityDetectorV2.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
