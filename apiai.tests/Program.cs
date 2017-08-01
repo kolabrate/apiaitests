@@ -31,7 +31,9 @@ namespace apiai.tests
 
         private static async Task RunAsync()
         {
-            await GetResponse();
+           var response = await GetResponse();
+            Console.WriteLine(response.Result.Fulfillment.Speech);
+            Console.Read();
         }
 
         private static async Task<AIResponse> GetResponse()
