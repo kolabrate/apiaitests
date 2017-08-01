@@ -56,42 +56,6 @@
     <Compile Include="..\..\..\APIAIDownload\apiai-dotnet-client-master\apiai-dotnet-client-master\ApiAiSDK\LibraryInfo.cs">
       <Link>LibraryInfo.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\model\AIContext.cs">
-      <Link>Model\AIContext.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\model\AIOutputContext.cs">
-      <Link>Model\AIOutputContext.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\model\AIRequest.cs">
-      <Link>Model\AIRequest.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\model\AIResponse.cs">
-      <Link>Model\AIResponse.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\model\Entity.cs">
-      <Link>Model\Entity.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\model\EntityEntry.cs">
-      <Link>Model\EntityEntry.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\model\Fulfillment.cs">
-      <Link>Model\Fulfillment.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\model\Metadata.cs">
-      <Link>Model\Metadata.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\model\OriginalRequest.cs">
-      <Link>Model\OriginalRequest.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\model\QuestionMetadata.cs">
-      <Link>Model\QuestionMetadata.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\model\Result.cs">
-      <Link>Model\Result.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\apiaidownload\apiai-dotnet-client-master\apiai-dotnet-client-master\apiaisdk\model\Status.cs">
-      <Link>Model\Status.cs</Link>
-    </Compile>
     <Compile Include="..\..\..\APIAIDownload\apiai-dotnet-client-master\apiai-dotnet-client-master\ApiAiSDK\RequestExtras.cs">
       <Link>RequestExtras.cs</Link>
     </Compile>
@@ -111,6 +75,18 @@
     <Compile Include="AIService.cs" />
     <Compile Include="ApiAi.cs" />
     <Compile Include="Http\MultipartHttpClient.cs" />
+    <Compile Include="Model\AIContext.cs" />
+    <Compile Include="Model\AIOutputContext.cs" />
+    <Compile Include="Model\AIRequest.cs" />
+    <Compile Include="Model\AIResponse.cs" />
+    <Compile Include="Model\Entity.cs" />
+    <Compile Include="Model\EntityEntry.cs" />
+    <Compile Include="Model\Fulfillment.cs" />
+    <Compile Include="Model\Metadata.cs" />
+    <Compile Include="Model\OriginalRequest.cs" />
+    <Compile Include="Model\QuestionMetadata.cs" />
+    <Compile Include="Model\Result.cs" />
+    <Compile Include="Model\Status.cs" />
     <Compile Include="PrivacyStatementDeclinedException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
