@@ -44,9 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\APIAIDownload\apiai-dotnet-client-master\apiai-dotnet-client-master\ApiAiSDK\AIConfiguration.cs">
-      <Link>AIConfiguration.cs</Link>
-    </Compile>
+    <Compile Include="AIConfiguration.cs" />
     <Compile Include="AIDataService.cs" />
     <Compile Include="AIService.cs" />
     <Compile Include="AIServiceException.cs" />
