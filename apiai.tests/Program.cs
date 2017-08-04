@@ -13,12 +13,20 @@ namespace apiai.tests
 
         private static string accessToken = "e0cdd76a123a48f194e626e15af15c02";
         private static ApiAi apiAi;
-        private static string input = "Can I make an appointment tomorrow at 9 AM for a haircut?";
+        private static AIDataService dataService;
         static void Main(string[] args)
         {
             try
             {
-                RunAsync().Wait();
+                Initialise();
+                do
+                {
+
+                  
+
+
+                } while (UserQuery == "End");
+                
             }
             catch (Exception e)
             {
@@ -30,19 +38,16 @@ namespace apiai.tests
 
         }
 
-        private static async Task RunAsync()
+
+        private static async Task<string> RunAsync()
         {
-           var response = await GetResponse();
-            Console.WriteLine(response.Result.Fulfillment.Speech);
-            Console.Read();
+           var response = await GetResponse(UserQuery);
+            return response.Result.Fulfillment.Speech;
         }
 
-        private static async Task<AIResponse> GetResponse()
+        private static async Task<AIResponse> GetResponse(string userQuery)
         {
-            
-            var config = new AIConfiguration(accessToken, SupportedLanguage.English);
-            var dataService = new AIDataService(config);
-            var request = new AIRequest(input);
+            var request = new AIRequest(userQuery);
             request.OriginalRequest = PopulateOriginalRequest();
             var response = await dataService.RequestAsync(request);
            
@@ -57,6 +62,14 @@ namespace apiai.tests
             }
         }
 
+
+        #region private methods to populate object
+
+        private static void Initialise()
+        {
+            var config = new AIConfiguration(accessToken, SupportedLanguage.English);
+            dataService = new AIDataService(config);
+        }
         private static OriginalRequest PopulateOriginalRequest()
         {
             
@@ -80,7 +93,7 @@ namespace apiai.tests
                     To = "",
                     FromZip = "",
                     ToCountry = "",
-                    Body = input,
+                    Body = UserQuery,
                     NumMedia = "",
                     FromState = ""
                 },
@@ -88,5 +101,9 @@ namespace apiai.tests
             };
 
         }
+        private static string UserQuery { get; set; }
+
+
+        #endregion
     }
 }
