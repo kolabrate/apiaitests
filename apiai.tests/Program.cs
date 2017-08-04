@@ -56,6 +56,10 @@ namespace apiai.tests
             {
                 BookaResponse = response.Result.Fulfillment.Speech;
             }
+            else
+            {
+                BookaResponse = "Sorry something went wrong, please try again later.";
+            }
             // BookaResponse = response.Result.Fulfillment.Speech;
             
         }
