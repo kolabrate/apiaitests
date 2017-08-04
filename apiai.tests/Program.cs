@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using ApiAiSDK;
@@ -21,11 +22,21 @@ namespace apiai.tests
                 Initialise();
                 do
                 {
-
-                  
-
-
-                } while (UserQuery == "End");
+                    Console.Write("user:");
+                    UserQuery = Console.ReadLine();
+                    if (!string.IsNullOrEmpty(UserQuery))
+                    {
+                        ProcessUserQueryAsync().Wait();
+                        Console.Write($"Booka:{BookaResponse} \n");
+                    }
+                    else
+                    {
+                        Console.Write($"Booka:Please enter a message(or) enter 'end' to end the chat \n");
+                    }
+                    
+                    
+                    
+                } while (UserQuery != "end");
                 
             }
             catch (Exception e)
@@ -34,15 +45,19 @@ namespace apiai.tests
                 Console.Read();
                 
             }
-           
 
         }
 
 
-        private static async Task<string> RunAsync()
+        private static async Task ProcessUserQueryAsync()
         {
            var response = await GetResponse(UserQuery);
-            return response.Result.Fulfillment.Speech;
+            if (response.IsError == false)
+            {
+                BookaResponse = response.Result.Fulfillment.Speech;
+            }
+            // BookaResponse = response.Result.Fulfillment.Speech;
+            
         }
 
         private static async Task<AIResponse> GetResponse(string userQuery)
@@ -102,6 +117,7 @@ namespace apiai.tests
 
         }
         private static string UserQuery { get; set; }
+        private static string BookaResponse { get; set; }
 
 
         #endregion
