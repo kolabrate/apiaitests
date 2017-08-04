@@ -22,15 +22,20 @@ namespace apiai.tests
                 Initialise();
                 do
                 {
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.Write("user:");
                     UserQuery = Console.ReadLine();
                     if (!string.IsNullOrEmpty(UserQuery))
                     {
                         ProcessUserQueryAsync().Wait();
+                        Console.ForegroundColor = IsError == true
+                            ? ConsoleColor.Red
+                            : ConsoleColor.DarkGreen;
                         Console.Write($"Booka:{BookaResponse} \n");
                     }
                     else
                     {
+                        Console.ForegroundColor = ConsoleColor.DarkGreen;
                         Console.Write($"Booka:Please enter a message(or) enter 'end' to end the chat \n");
                     }
                     
@@ -51,15 +56,26 @@ namespace apiai.tests
 
         private static async Task ProcessUserQueryAsync()
         {
-           var response = await GetResponse(UserQuery);
-            if (response.IsError == false)
+            try
             {
-                BookaResponse = response.Result.Fulfillment.Speech;
+                var response = await GetResponse(UserQuery);
+                if (response.IsError == false)
+                {
+                    BookaResponse = response.Result.Fulfillment.Speech;
+                }
+                else
+                {
+                    IsError = true;
+                    BookaResponse = "Sorry something went wrong, please try again later.";
+                }
             }
-            else
+            catch (Exception)
             {
+                //resetContexts();
+                IsError = true;
                 BookaResponse = "Sorry something went wrong, please try again later.";
             }
+           
             // BookaResponse = response.Result.Fulfillment.Speech;
             
         }
@@ -122,6 +138,7 @@ namespace apiai.tests
         }
         private static string UserQuery { get; set; }
         private static string BookaResponse { get; set; }
+        private static bool IsError { get; set; }
 
 
         #endregion
