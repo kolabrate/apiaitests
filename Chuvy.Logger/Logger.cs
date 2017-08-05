@@ -8,9 +8,15 @@ namespace Chuvy.Logger
 {
    public class Logger : ILogger
     {
+
+        private ILogger _logger;
+        public Logger(ILogger logger)
+        {
+            this._logger = logger;
+        }
         public void Verbose(string info)
         {
-            throw new NotImplementedException();
+            
         }
 
         public void Debug(string info)

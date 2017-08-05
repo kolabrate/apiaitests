@@ -7,13 +7,32 @@ using Serilog;
 
 namespace Chuvy.Logger.Serilog
 {
-    class SqlLog
+    public class SqlLog : ILogger
     {
-        
-        public SqlLog()
+
+        public void Verbose(string info)
         {
-            //tbd
+            throw new NotImplementedException();
         }
 
+        public void Debug(string info)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Info(string info)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Error(string info, Exception ex)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Fatal(string infor, Exception ex)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

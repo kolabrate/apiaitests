@@ -47,8 +47,6 @@
     <Compile Include="ILogger.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Serilog\AzueStorageLog.cs" />
-    <Compile Include="Serilog\RollingFileLog.cs" />
     <Compile Include="Serilog\SqlLog.cs" />
   </ItemGroup>
   <ItemGroup>
