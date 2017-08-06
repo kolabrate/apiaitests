@@ -9,7 +9,6 @@ namespace Chuvy.Logger.Serilog
 {
     public class SqlLog : ILogger
     {
-
         public void Verbose(string info)
         {
             throw new NotImplementedException();
