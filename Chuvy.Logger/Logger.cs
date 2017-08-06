@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Chuvy.Logger
 {
-   public class Logger : ILogger
+   public class Logger : ILogger, IDisposable
     {
 
         private ILogger _logger;
@@ -16,27 +16,32 @@ namespace Chuvy.Logger
         }
         public void Verbose(string info)
         {
-            
+            _logger.Verbose(info);
         }
 
         public void Debug(string info)
         {
-            throw new NotImplementedException();
+           _logger.Debug(info);
         }
 
         public void Info(string info)
         {
-            throw new NotImplementedException();
+            _logger.Info(info);
         }
 
         public void Error(string info, Exception ex)
         {
-            throw new NotImplementedException();
+            _logger.Error(info,ex);
         }
 
         public void Fatal(string infor, Exception ex)
         {
-            throw new NotImplementedException();
+            _logger.Fatal(infor,ex);
+        }
+
+        public void Dispose()
+        {
+            _logger = null;
         }
     }
 }
