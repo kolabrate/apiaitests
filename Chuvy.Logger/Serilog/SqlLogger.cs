@@ -1,31 +1,20 @@
 ﻿using System;
 using System.Configuration;
 using Serilog;
-using Serilog.Events;
-using Serilog.Sinks.MSSqlServer;
 
-namespace Chuvy.Logger.Serilog
+
+namespace Chuvy.Logger
 {
     //article - https://www.codeproject.com/Articles/1041816/Serilog-An-Excellent-Logging-Framework-Integrated
     public sealed class SqlLogger : ILogger
     {
-        private global::Serilog.Core.Logger _logger;
+
+        private Serilog.ILogger _logger;
         private SqlLogger()
         {
-
-            try
-            {
-                _logger = new LoggerConfiguration().MinimumLevel.Debug().WriteTo
-                    .MSSqlServer(ConfigurationManager.ConnectionStrings["SqlLogger"].ConnectionString, "Logs")
+                _logger = new LoggerConfiguration().WriteTo.MSSqlServer(ConfigurationManager.ConnectionStrings["SqlLogger"].ConnectionString, "Logs")
                     .CreateLogger();
-
-            }
-            catch (Exception e)
-            {
-
-                throw(e);
-            }
-           
+  
         }
 
         #region Singleton Instantiation
@@ -63,7 +52,7 @@ namespace Chuvy.Logger.Serilog
 
         public void Error(dynamic infor, Exception ex)
         {
-            _logger.Error(ex, ex.Message.ToString());
+            _logger.Error(ex, ex.StackTrace);
            
         }
 
