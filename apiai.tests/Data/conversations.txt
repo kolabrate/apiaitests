@@ -1,0 +1,10 @@
+﻿variations: Name=Greeting; Values=Hi
+	
+Expression: 1. Appointment Request Expression with Service Name & Date &  Time
+Case: 1. New Customer booking a free time slot
+Customer: [Greeting] 
+Booka: Hi there, How can I help you?
+Customer: I want an appointment for reports at 5PM tomorrow
+Booka: Name of the person attending the appointment2?
+Customer: Jack Jill
+Booka: Appointment Booked.
