@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,10 +11,15 @@ namespace Chuvy.Logger
     {
 
         private ILogger _logger;
+
         public Logger(ILogger logger)
         {
             this._logger = logger;
         }
+
+        #region private methods
+
+
         public void Verbose(string info)
         {
             _logger.Verbose(info);
@@ -29,12 +35,12 @@ namespace Chuvy.Logger
             _logger.Info(info);
         }
 
-        public void Error(string info, Exception ex)
+        public void Error(object properties, Exception ex)
         {
-            _logger.Error(info,ex);
+            _logger.Error(properties, ex);
         }
 
-        public void Fatal(string infor, Exception ex)
+        public void Fatal(dynamic infor, Exception ex)
         {
             _logger.Fatal(infor,ex);
         }
@@ -43,5 +49,9 @@ namespace Chuvy.Logger
         {
             _logger = null;
         }
+
+
+        #endregion
+
     }
 }
