@@ -35,9 +35,9 @@ namespace Chuvy.Logger
             _logger.Info(info);
         }
 
-        public void Error(dynamic info, Exception ex)
+        public void Error(object properties, Exception ex)
         {
-            _logger.Error(info,ex);
+            _logger.Error(properties, ex);
         }
 
         public void Fatal(dynamic infor, Exception ex)

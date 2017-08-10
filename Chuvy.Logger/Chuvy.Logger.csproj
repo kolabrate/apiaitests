@@ -83,7 +83,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serilog\AzureStorageLogger.cs" />
     <Compile Include="Serilog\SqlLogger.cs" />
-    <Compile Include="Singleton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

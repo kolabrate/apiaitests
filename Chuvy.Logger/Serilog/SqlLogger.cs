@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using Serilog;
+using Serilog.Events;
 
 
 namespace Chuvy.Logger
@@ -50,10 +52,14 @@ namespace Chuvy.Logger
             _logger.Information(info);
         }
 
-        public void Error(dynamic infor, Exception ex)
+        public void Error(dynamic properties, Exception ex)
         {
-            _logger.Error(ex, ex.StackTrace);
-           
+
+                _logger.Error(ex,
+                ex.InnerException == null
+                    ? ex.StackTrace
+                    : $"InnerStack = {ex.InnerException.StackTrace} | OuterStack = {ex.StackTrace}", properties, properties.param);
+
         }
 
         public void Fatal(dynamic infor, Exception ex)
@@ -61,12 +67,7 @@ namespace Chuvy.Logger
             throw new NotImplementedException();
         }
 
-        //sample method for checking singleton
-        public int ReturnCounter()
-        {
-
-            return ++_counter;
-        }
+        
 
         #endregion
     }
