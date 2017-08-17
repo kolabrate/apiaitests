@@ -61,14 +61,16 @@ namespace apiai.tests
         }
 
 
-        private static async Task ProcessUserQueryAsync()
+        private static async Task ProcessUserQueryAsync(string number = "+61400000000")
         {
             try
             {
-                var response = GetResponse(UserQuery).Result;
+
+                var response = GetResponse(UserQuery,number).Result;
                 if (response.IsError == false)
                 {
                     BookaResponse = response.Result.Fulfillment.Speech;
+                    BookaResponseDisplayText = response.Result.Fulfillment.DisplayText;
                 }
                 else
                 {
@@ -86,12 +88,12 @@ namespace apiai.tests
             // BookaResponse = response.Result.Fulfillment.Speech;
             
         }
-
-        private static async Task<AIResponse> GetResponse(string userQuery)
+        private static AIResponse response = null;
+        private static async Task<AIResponse> GetResponse(string userQuery,string number = "+61400000000")
         {
             var request = new AIRequest(userQuery);
-            request.OriginalRequest = PopulateOriginalRequest();
-            var response = await dataService.RequestAsync(request);
+            request.OriginalRequest = PopulateOriginalRequest(number);
+            response = await dataService.RequestAsync(request);
            
             if (response.Status.Code == 200)
             {
@@ -112,9 +114,8 @@ namespace apiai.tests
             var config = new AIConfiguration(accessToken, SupportedLanguage.English);
             dataService = new AIDataService(config);
         }
-        private static OriginalRequest PopulateOriginalRequest()
-        {
-            
+        private static OriginalRequest PopulateOriginalRequest(string number = "+61400000000")
+        {   
             return new OriginalRequest()
             {
                 Data = new
@@ -125,7 +126,7 @@ namespace apiai.tests
                     SmsMessageSid = "",
                     NumSegments = "",
                     ToState = "",
-                    From = "+61468492337", //a temp phone number that represents its from console app.
+                    From = number, //a temp phone number that represents its from console app.
                     MessageSid = "SMf0000000000000000000000",//a rep of console.
                     AccountSid = "",
                     ToCity = "",
@@ -145,11 +146,15 @@ namespace apiai.tests
         }
         private static string UserQuery { get; set; }
         private static string BookaResponse { get; set; }
+        private static string BookaResponseDisplayText { get; set; }
         private static bool IsError { get; set; }
 
         public static void AllConversations()
         {
             var greetingVariations = new List<string>();
+            var appmtRequestVariations = new List<string>();
+            var appmtRequestConfirmVariations = new List<string>();
+            var variations = new Dictionary<string, List<string>>();
             var exits = Directory.Exists(@"..\Data\");
             var list = File.ReadAllLines(@"..\..\Data\conversations.txt");
             var expressions = new List<Expression>();
@@ -160,95 +165,199 @@ namespace apiai.tests
             #region Build Expressions
             foreach (var str in list)
             {
-                if (str.Contains("Name=Greeting;"))
+                if (!str.StartsWith("#"))
                 {
-                    var val = str.Replace("variations: Name=Greeting; Values=", "");
-                    var values = val.Split(',');
-                    foreach (var greetingVal in values)
+                    if (str.StartsWith("variations:"))
                     {
-                        greetingVariations.Add(greetingVal);
+                        var firstPortion = str.IndexOf("variations: Name=") > -1 ? "variations: Name=" : "variations:Name="; 
+                        var lastPortion = str.IndexOf("; Values=")>-1? "; Values=": ";Values=";
+                        var variationName = str.Replace(firstPortion, "");
+                        var endofName = variationName.IndexOf(lastPortion);                                                
+                        variationName = variationName.Substring(0, endofName);
+                        var variationValuesStr = str.Replace(firstPortion + variationName + lastPortion, ""); 
+                        var variationValues = variationValuesStr.Split(',');
+                        var listValues = new List<string>();
+                        foreach (var val in variationValues)
+                        {
+                            listValues.Add(val);
+                        }
+                        variations.Add(variationName, listValues);
                     }
-                }
-                if (str.Contains("Expression:"))
-                {
-                    var exprName = str.Replace("Expression:", "");
-                    currentExpr = new Expression()
+                    //if (str.Contains("Name=Greeting;"))
+                    //{
+                    //    var val = str.Replace("variations: Name=Greeting; Values=", "");
+                    //    var values = val.Split(',');
+                    //    foreach (var greetingVal in values)
+                    //    {
+                    //        greetingVariations.Add(greetingVal);
+                    //    }
+                    //}
+                    //if (str.Contains("Name=AppmtRequest;"))
+                    //{
+                    //    var val = str.Replace("variations: Name=AppmtRequest; Values=", "");
+                    //    var values = val.Split(',');
+                    //    foreach (var aVal in values)
+                    //    {
+                    //        appmtRequestVariations.Add(aVal);
+                    //    }
+                    //}
+                    //if (str.Contains("Name=AppmtRequestConfirm;"))
+                    //{
+                    //    var val = str.Replace("variations: Name=AppmtRequestConfirm; Values=", "");
+                    //    var values = val.Split(',');
+                    //    foreach (var aval in values)
+                    //    {
+                    //        appmtRequestConfirmVariations.Add(aval);
+                    //    }
+                    //}
+                    if (str.Contains("Expression:"))
                     {
-                        Name = exprName,
-                        Cases = new List<Case>()
-                    };
-                    expressions.Add(currentExpr);
-                }
-                if (str.Contains("Case:"))
-                {
-                    var caseName = str.Replace("Case:", "");
-                    currentCase = new Case()
+                        var exprName = str.Replace("Expression:", "");
+                        currentExpr = new Expression()
+                        {
+                            Name = exprName,
+                            Cases = new List<Case>()
+                        };
+                        expressions.Add(currentExpr);
+                    }
+                    if (str.Contains("Case:"))
                     {
-                        Name = caseName,
-                        Conversations = new List<Conversation>()
-                    };
-                    currentExpr.Cases.Add(currentCase);
-                }
-                if (str.Contains("Customer:") || str.Contains("Booka:"))
-                {
-                    var text = str.Replace("Customer:", "");
-                    text = text.Replace("Booka:", "");
-                    currentConvo = new Conversation()
+                        var caseName = str.Replace("Case:", "");
+                        currentCase = new Case()
+                        {
+                            Name = caseName,
+                            Conversations = new List<Conversation>()
+                        };
+                        currentExpr.Cases.Add(currentCase);
+                    }
+                    if (str.StartsWith("Customer:") || str.StartsWith("Booka:"))
                     {
-                        Text = text,
-                        Type = str.Contains("Customer:") ? ConvoType.Request : ConvoType.Response
-                    };
-                    currentCase.Conversations.Add(currentConvo);
+                        var text = str.Replace("Customer:", "");
+                        text = text.Replace("Booka:", "");
+                        currentConvo = new Conversation()
+                        {
+                            Text = text,
+                            Type = str.Contains("Customer:") ? ConvoType.Request : ConvoType.Response
+                        };
+                        currentCase.Conversations.Add(currentConvo);
+                    }
                 }
             }
             #endregion
 
             #region Process Expressions
+            greetingVariations = variations["Greeting"];
+            appmtRequestConfirmVariations = variations["AppmtRequestConfirm"];
+            appmtRequestVariations = variations["AppmtRequest"];
+            var fullDateTimeVariations = variations["FullDateTime"];
+
+            var fs = File.Create(@"..\..\Data\results.txt");
+            fs.Close();
             foreach (var expression in expressions)
             {
+                WriteToFile(string.Format("Expression: {0}", expression.Name));
                 foreach (var caseItem in expression.Cases)
                 {
-
-                    if (caseItem.Conversations.Exists(x => x.Text.Contains("[Greeting]")))
+                    WriteToFile("********************************************************************************************************************************************************");
+                    WriteToFile(string.Format("Case: {0}", caseItem.Name));
+                    //if (caseItem.Conversations.Exists(x => x.Text.Contains("[Greeting]")))
+                    //{     
+                    foreach (var aReqConfirm in appmtRequestConfirmVariations)
                     {
                         foreach (var greetingVariation in greetingVariations)
                         {
-                            ProcessCase(caseItem.Conversations, greetingVariation);
+                            foreach (var aReq in appmtRequestVariations)
+                            {
+                                //foreach (var dt in fullDateTimeVariations)
+                                //{
+                                ProcessCase(caseItem.Conversations, greetingVariation, aReq, aReqConfirm, caseItem.Name);
+                                //}
+                            }
                         }
                     }
-                    else
-                    {
-                        ProcessCase(caseItem.Conversations, null);
-                    }
+                    //}
+                    //else
+                    //{
+                    //    ProcessCase(caseItem.Conversations, null, null, null, caseItem.Name);
+                    //}
+                    WriteToFile("********************************************************************************************************************************************************");
                 }
             }
 
 
 
             #endregion
-
+            Console.WriteLine("DONE");
             Console.ReadLine();
         }
-        private static void ProcessCase(List<Conversation> conversations, string greetingReplacement)
+        private static string bookedDt = "17th August 10.30AM";
+        private static string freeDt = "17th August 12.30PM";
+        private static string freeDtConfirm = "2.30 pm on 17th Aug";
+        private static string serviceName = "Reports";
+        private static void ProcessCase(List<Conversation> conversations, string greetingReplacement, string AppmtRequest, string AppmtRequestConfirm, string caseName)
         {
+            response = null;
             Initialise();
+            var number = "+61400000000";
+            if (caseName.Contains("New Customer"))
+                number = "+61" + (new string(DateTime.Now.Ticks.ToString().Reverse().ToArray())).Substring(0, 8);
 
             foreach (var convo in conversations)
             {
                 if (convo.Type == ConvoType.Request)
                 {
-                    UserQuery = convo.Text.Contains("[Greeting]") ? greetingReplacement : convo.Text;
+                    var convoTxt = convo.Text;
+                    UserQuery = convoTxt;
+                    if (convoTxt.Contains("[Greeting]"))
+                    {
+                        UserQuery = convoTxt.Contains("[Greeting]") ? greetingReplacement : convoTxt;
+                    }
+                    if (convoTxt.Contains("[AppmtRequest]"))
+                    {
+                        UserQuery = convoTxt.Contains("[AppmtRequest]") ? AppmtRequest : convoTxt;
+                        UserQuery = UserQuery.Replace("[service]", serviceName);
+                        if (caseName.Contains("free time slot"))
+                        {
+                            UserQuery = UserQuery.Replace("[Datetime]", freeDt);
+                        }
+                        if (caseName.Contains("booked time slot "))
+                        {
+                            UserQuery = UserQuery.Replace("[Datetime]", bookedDt);
+                        }
+                    }
+                    if (convoTxt.Contains("[AppmtRequestConfirm]"))
+                    {
+                        UserQuery = convoTxt.Contains("[AppmtRequestConfirm]") ? AppmtRequestConfirm : convoTxt;
+                        UserQuery = UserQuery.Replace("[Datetime]", freeDtConfirm);
+                    }
                     Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine(string.Format("user: {0}",UserQuery));
-                    ProcessUserQueryAsync().Wait();
+                    Console.WriteLine(string.Format("user: {0}", UserQuery));
+                    ProcessUserQueryAsync(number).Wait();
+                    WriteToFile(string.Format("user: {0}", UserQuery));
                 }
                 if (convo.Type == ConvoType.Response)
-                {
+                {                    
                     convo.ActualResponse = BookaResponse;
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    Console.Write($"Booka:{BookaResponse} \n");
+                    if (response == null || !convo.Text.Contains("<" + response.Result.Fulfillment.DisplayText + ">"))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                    }
+                    var r = response == null ? "Empty" : BookaResponse;
+                    Console.Write($"Booka:{r} \n");
+                    WriteToFile(string.Format("Booka: Expected: {0}; Actual: {1}", convo.Text, r));
                 }
             }
+            var breakLine = "----------------------------------------------------";
+            WriteToFile(breakLine);
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(breakLine);
+        }
+        private static void WriteToFile(string line)
+        {
+            var e = new List<string>();
+            e.Add(line);
+            File.AppendAllLines(@"..\..\Data\results.txt", e);
         }
         #endregion
     }
