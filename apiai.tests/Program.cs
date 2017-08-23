@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using ApiAiSDK;
 using ApiAiSDK.Model;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace apiai.tests
 {
@@ -19,7 +20,7 @@ namespace apiai.tests
         static void Main(string[] args)
         {
             try
-            {
+            {   
                 //IndividualConvo();
                 AllConversations();
 
@@ -105,6 +106,7 @@ namespace apiai.tests
                 return response;
             }
         }
+
 
 
         #region private methods to populate object
@@ -245,11 +247,42 @@ namespace apiai.tests
             }
             #endregion
 
-            #region Process Expressions
-            greetingVariations = variations["Greeting"];
+            #region New Process Expressions 
+            //foreach (var expression in expressions)
+            //{
+            //    var thisCases = expression.Cases;
+            //    foreach (var thisCase in thisCases)
+            //    {
+            //        foreach (var variation in variations)
+            //        {
+            //            string tmp = JsonConvert.SerializeObject(thisCase);
+            //            var copyCase = JsonConvert.DeserializeObject<Case>(tmp);
+                         
+            //        }
+            //    }
+            //}
+                #endregion
+
+                #region Process Expressions
+                greetingVariations = variations["Greeting"];
             appmtRequestConfirmVariations = variations["AppmtRequestConfirm"];
             appmtRequestVariations = variations["AppmtRequest"];
             var fullDateTimeVariations = variations["FullDateTime"];
+
+            var dates = new List<DateTime>();
+            var currentDt = new DateTime(2017, 08, 23, 15, 00, 00);
+            var lastDt = new DateTime(2017, 08, 26, 17, 00, 00);
+            while (currentDt != lastDt)
+            {
+                if (currentDt.Hour >= 18)
+                { }
+                else
+                {
+                    dates.Add(currentDt);
+                }
+                currentDt = currentDt.AddMinutes(30);
+
+            }
 
             var fs = File.Create(@"..\..\Data\results.txt");
             fs.Close();
@@ -270,7 +303,12 @@ namespace apiai.tests
                             {
                                 //foreach (var dt in fullDateTimeVariations)
                                 //{
-                                ProcessCase(caseItem.Conversations, greetingVariation, aReq, aReqConfirm, caseItem.Name);
+                                foreach (var date in dates)
+                                {
+                                    bookedDt = date.Day+ GetDaySuffix(date.Day)+ " "+date.ToString("MMM")+" at "+date.ToString("hh:mm tt");
+                                    freeDt = bookedDt;
+                                    ProcessCase(caseItem.Conversations, greetingVariation, aReq, aReqConfirm, caseItem.Name);
+                                }
                                 //}
                             }
                         }
@@ -290,10 +328,26 @@ namespace apiai.tests
             Console.WriteLine("DONE");
             Console.ReadLine();
         }
+        private static string GetDaySuffix(int day)
+        {
+            if (day > 0)
+            {
+                if (day % 10 == 1 && day % 100 != 11)
+                    return "st";
+                else if (day % 10 == 2 && day % 100 != 12)
+                    return "nd";
+                else if (day % 10 == 3 && day % 100 != 13)
+                    return "rd";
+                else
+                    return "th";
+            }
+            else
+                return string.Empty;
+        }
         private static string bookedDt = "17th August 10.30AM";
         private static string freeDt = "17th August 12.30PM";
-        private static string freeDtConfirm = "2.30 pm on 17th Aug";
-        private static string serviceName = "Reports";
+        private static string freeDtConfirm = "3.30 pm on 17th Aug";
+        private static string serviceName = "mobile dev";
         private static void ProcessCase(List<Conversation> conversations, string greetingReplacement, string AppmtRequest, string AppmtRequestConfirm, string caseName)
         {
             response = null;
@@ -336,7 +390,11 @@ namespace apiai.tests
                     WriteToFile(string.Format("user: {0}", UserQuery));
                 }
                 if (convo.Type == ConvoType.Response)
-                {                    
+                {
+                    if (response.Result.Fulfillment.DisplayText == "SlotsAvailable" || response.Result.Fulfillment.DisplayText == "AlternateSlotsOnly")
+                    {
+                        freeDtConfirm = response.Result.Fulfillment.Speech.Split(',')[2];
+                    }
                     convo.ActualResponse = BookaResponse;
                     Console.ForegroundColor = ConsoleColor.DarkGreen;
                     if (response == null || !convo.Text.Contains("<" + response.Result.Fulfillment.DisplayText + ">"))

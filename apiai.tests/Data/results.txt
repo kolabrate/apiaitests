@@ -1,59 +1,12 @@
-Expression: 5. Appointment Request expression with time range & service		
+Expression:  1. Appointment Request Expression with Service Name & Date &  Time
 ********************************************************************************************************************************************************
-Case: 1. Existing Customer asking a free time range slot 	
+Case:  3. New Customer: asking a booked time slot 	
 user: Hi
-Booka: Expected: 	Hi Priya, How can I help you?<NamedGreeting>; Actual: Hello Jack Jill, how can I help you with the appointment?
-user: book me in this afternoon for Reports
-Booka: Expected: 	The next available appointments are 3PM tomorrow, 28th July 4PM and 29th July 12PM. What is your preference? <AlternateSlotsOnly>; Actual: I have following slots available: 17th Aug 11:22AM, 17th Aug 11:52AM, 17th Aug 12:22PM. What is Date & Time do you prefer?
-user: I will go for 12.30 am on 17th Aug
-Booka: Expected: 	Appointment Booked <Booked>; Actual: Please pick a future date & time.
-user: Hi
-Booka: Expected: 	Hi There, How can I help you?; Actual: Hello Jack Jill, how can I help you with the appointment?
-user: book me in this afternoon for Reports
-Booka: Expected: 	The next available appointments are 3PM tomorrow, 28th July 4PM and 29th July 12PM. What is your preference? <AlternateSlotsOnly>; Actual: I have following slots available: 17th Aug 11:22AM, 17th Aug 11:52AM, 17th Aug 12:22PM. What is Date & Time do you prefer?
-user: I will go for 12.30 am on 17th Aug
-Booka: Expected: 	Name of the person attending the appointment?<ValidationException>; Actual: Please pick a future date & time.
-user:  	Jack Jill
-Booka: Expected: 	Appointment Booked <Booked>; Actual: I have following slots available: 17th Aug 11:22AM, 17th Aug 11:52AM, 17th Aug 12:22PM. What is Date & Time do you prefer?
-user: Hi
-Booka: Expected: 	Hi There, How can I help you?<GeneralGreeting>; Actual: Hello Jack Jill, how can I help you with the appointment?
-user: book me in this afternoon for Reports
-Booka: Expected: 	The next available appointments are 3PM tomorrow, 28th July 4PM and 29th July 12PM. What is your preference? <AlternateSlotsOnly>; Actual: I have following slots available: 17th Aug 11:22AM, 17th Aug 11:52AM, 17th Aug 12:22PM. What is Date & Time do you prefer?
-user: I will go for 12.30 am on 17th Aug
-Booka: Expected: 	Name of the person attending the appointment?<ValidationException>; Actual: Please pick a future date & time.
-user:  	Jack Jill
-Booka: Expected: 	Appointment Booked.<Booked>; Actual: I have following slots available: 17th Aug 11:22AM, 17th Aug 11:52AM, 17th Aug 12:22PM. What is Date & Time do you prefer?
+Booka: Expected: Hi there, How can I help you? <GeneralGreeting>; Actual: Hello, how can I help you with the appointment?
+user: Book me in for mobile dev on 23rd Aug at 03:00 PM
+Booka: Expected:  Name of the person attending the appointment 2?<ValidationException>; Actual: Name of the person attending the appointment?
+user:  Donald Trump
+Booka: Expected: Sorry, that time is not available. Next available is time is 27th July 2PM, 28th July 11pm <AlternateSlotsOnly>; Actual: Sorry, that time is not available. Next available slots are: 23rd Aug 03:30 PM, 24th Aug 09:00 AM, 24th Aug 10:00 AM
+user: I will go for  24th Aug 09:00 AM
+Booka: Expected: Appointment Booked <Booked>; Actual: All done!The appointment has been booked!
 ----------------------------------------------------
-user: Hi
-Booka: Expected: 	Hi Priya, How can I help you?<NamedGreeting>; Actual: Hello Jack Jill, how can I help you with the appointment?
-user: can I make an appointment tomorrow afternoon for Reports
-Booka: Expected: 	The next available appointments are 3PM tomorrow, 28th July 4PM and 29th July 12PM. What is your preference? <AlternateSlotsOnly>; Actual: I have following slots available: 18th Aug 12PM, 18th Aug 12:30PM, 18th Aug 1PM. What is Date & Time do you prefer?
-user: I will go for 12.30 am on 17th Aug
-Booka: Expected: 	Appointment Booked <Booked>; Actual: Please pick a future date & time.
-user: Hi
-Booka: Expected: 	Hi There, How can I help you?; Actual: Hello Jack Jill, how can I help you with the appointment?
-user: can I make an appointment tomorrow afternoon for Reports
-Booka: Expected: 	The next available appointments are 3PM tomorrow, 28th July 4PM and 29th July 12PM. What is your preference? <AlternateSlotsOnly>; Actual: I have following slots available: 18th Aug 12PM, 18th Aug 12:30PM, 18th Aug 1PM. What is Date & Time do you prefer?
-user: I will go for 12.30 am on 17th Aug
-Booka: Expected: 	Name of the person attending the appointment?<ValidationException>; Actual: Please pick a future date & time.
-user:  	Jack Jill
-Booka: Expected: 	Appointment Booked <Booked>; Actual: I have following slots available: 18th Aug 12PM, 18th Aug 12:30PM, 18th Aug 1PM. What is Date & Time do you prefer?
-user: Hi
-Booka: Expected: 	Hi There, How can I help you?<GeneralGreeting>; Actual: Hello Jack Jill, how can I help you with the appointment?
-user: can I make an appointment tomorrow afternoon for Reports
-Booka: Expected: 	The next available appointments are 3PM tomorrow, 28th July 4PM and 29th July 12PM. What is your preference? <AlternateSlotsOnly>; Actual: I have following slots available: 18th Aug 12PM, 18th Aug 12:30PM, 18th Aug 1PM. What is Date & Time do you prefer?
-user: I will go for 12.30 am on 17th Aug
-Booka: Expected: 	Name of the person attending the appointment?<ValidationException>; Actual: Please pick a future date & time.
-user:  	Jack Jill
-Booka: Expected: 	Appointment Booked.<Booked>; Actual: I have following slots available: 18th Aug 12PM, 18th Aug 12:30PM, 18th Aug 1PM. What is Date & Time do you prefer?
-----------------------------------------------------
-user: Hi
-Booka: Expected: 	Hi Priya, How can I help you?<NamedGreeting>; Actual: Hello Jack Jill, how can I help you with the appointment?
-user: Can I make an appointment tomorrow morning for Reports
-Booka: Expected: 	The next available appointments are 3PM tomorrow, 28th July 4PM and 29th July 12PM. What is your preference? <AlternateSlotsOnly>; Actual: I have following slots available: 18th Aug 8AM, 18th Aug 8:30AM, 18th Aug 9AM. What is Date & Time do you prefer?
-user: I will go for 12.30 am on 17th Aug
-Booka: Expected: 	Appointment Booked <Booked>; Actual: Please pick a future date & time.
-user: Hi
-Booka: Expected: 	Hi There, How can I help you?; Actual: Hello Jack Jill, how can I help you with the appointment?
-user: Can I make an appointment tomorrow morning for Reports
-Booka: Expected: 	The next available appointments are 3PM tomorrow, 28th July 4PM and 29th July 12PM. What is your preference? <AlternateSlotsOnly>; Actual: I have following slots available: 18th Aug 8AM, 18th Aug 8:30AM, 18th Aug 9AM. What is Date & Time do you prefer?
