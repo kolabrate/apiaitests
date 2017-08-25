@@ -248,79 +248,144 @@ namespace apiai.tests
             #endregion
 
             #region New Process Expressions 
-            //foreach (var expression in expressions)
-            //{
-            //    var thisCases = expression.Cases;
-            //    foreach (var thisCase in thisCases)
-            //    {
-            //        foreach (var variation in variations)
-            //        {
-            //            string tmp = JsonConvert.SerializeObject(thisCase);
-            //            var copyCase = JsonConvert.DeserializeObject<Case>(tmp);
-                         
-            //        }
-            //    }
-            //}
-                #endregion
-
-                #region Process Expressions
-                greetingVariations = variations["Greeting"];
-            appmtRequestConfirmVariations = variations["AppmtRequestConfirm"];
-            appmtRequestVariations = variations["AppmtRequest"];
-            var fullDateTimeVariations = variations["FullDateTime"];
-
-            var dates = new List<DateTime>();
-            var currentDt = new DateTime(2017, 08, 23, 15, 00, 00);
-            var lastDt = new DateTime(2017, 08, 26, 17, 00, 00);
-            while (currentDt != lastDt)
-            {
-                if (currentDt.Hour >= 18)
-                { }
-                else
-                {
-                    dates.Add(currentDt);
-                }
-                currentDt = currentDt.AddMinutes(30);
-
-            }
-
-            var fs = File.Create(@"..\..\Data\results.txt");
-            fs.Close();
+            var masterCaseList = new List<Case>();
+            var allGreetingCaseFull = new List<Case>();
             foreach (var expression in expressions)
             {
-                WriteToFile(string.Format("Expression: {0}", expression.Name));
-                foreach (var caseItem in expression.Cases)
-                {
-                    WriteToFile("********************************************************************************************************************************************************");
-                    WriteToFile(string.Format("Case: {0}", caseItem.Name));
-                    //if (caseItem.Conversations.Exists(x => x.Text.Contains("[Greeting]")))
-                    //{     
-                    foreach (var aReqConfirm in appmtRequestConfirmVariations)
+                var thisCases = expression.Cases;
+                foreach (var thisCase in thisCases)
+                {                    
+                    var processedCases = new List<Case>();
+                    if (allGreetingCaseFull.Count > 0)
                     {
-                        foreach (var greetingVariation in greetingVariations)
+                        masterCaseList.AddRange(allGreetingCaseFull);
+                    }
+                    processedCases.Add(thisCase);
+                    foreach (var variation in variations)
+                    {
+                        var key = variation.Key;
+                        var variationList = variation.Value;
+                        var allGreetingCases = new List<Case>();
+                        foreach (var variationItem in variationList)
                         {
-                            foreach (var aReq in appmtRequestVariations)
+                            foreach (var processedCase in processedCases)
                             {
-                                //foreach (var dt in fullDateTimeVariations)
-                                //{
-                                foreach (var date in dates)
+                                string tmp = JsonConvert.SerializeObject(processedCase);
+                                var copyCase = JsonConvert.DeserializeObject<Case>(tmp);
+                                copyCase.ExpressionName = expression.Name;
+                                var con = copyCase.Conversations.FirstOrDefault(c => c.Text.Contains(key));
+                                if (con != null)
                                 {
-                                    bookedDt = date.Day+ GetDaySuffix(date.Day)+ " "+date.ToString("MMM")+" at "+date.ToString("hh:mm tt");
-                                    freeDt = bookedDt;
-                                    ProcessCase(caseItem.Conversations, greetingVariation, aReq, aReqConfirm, caseItem.Name);
+                                    con.Text = con.Text.Replace("[" + key + "]", variationItem);
+                                    allGreetingCases.Add(copyCase);
                                 }
-                                //}
-                            }
+                            }                            
+                        }
+                        if (allGreetingCases.Count > 0)
+                        {
+                            processedCases = allGreetingCases;
+                            allGreetingCaseFull = new List<Case>();
+                            allGreetingCaseFull.AddRange(processedCases);
                         }
                     }
-                    //}
-                    //else
-                    //{
-                    //    ProcessCase(caseItem.Conversations, null, null, null, caseItem.Name);
-                    //}
-                    WriteToFile("********************************************************************************************************************************************************");
+                    //thisCases = allGreetingCaseFull;
                 }
             }
+            masterCaseList.AddRange(allGreetingCaseFull);
+            var dateList = new List<string>();
+            var currentDt = new DateTime(2017, 08, 27, 09, 00, 00);
+            var lastDt = new DateTime(2017, 09, 02, 17, 00, 00);
+            while (currentDt != lastDt)
+            {
+
+                if (currentDt.Hour >= 9 && currentDt.TimeOfDay <= new TimeSpan(17, 0, 0))
+                {
+                    
+                    var dtString = currentDt.Day.ToString() + GetDaySuffix(currentDt.Day) + " " + currentDt.ToString("MMM hh:mm tt").Substring(0, 3) + " at " + currentDt.ToString("hh:mm tt");
+                    for (int i = 0; i < 4; i++)
+                    {
+                        dateList.Add(dtString);
+                    }
+                }
+                currentDt = currentDt.AddMinutes(10);
+            }
+            var freeSlotCases = masterCaseList.Where(c => c.Name.Contains("free time slot")).ToList();
+            var bookedSlotCases = masterCaseList.Where(c => c.Name.Contains("booked time slot")).ToList();
+            var fs = File.Create(@"..\..\Data\results.txt");
+            fs.Close();
+            int ji = 0;
+            foreach (var caseItem in freeSlotCases)
+            {
+                freeDt = dateList[ji];
+                ji = ji + 1;
+                var caseName = string.Format("Case: {0}", caseItem.Name);
+                Console.WriteLine(caseName);
+                WriteToFile(caseName);
+                ProcessCase(caseItem.Conversations, caseItem.Name);
+            }
+            foreach (var caseItem in bookedSlotCases)
+            {
+                ProcessCase(caseItem.Conversations, caseItem.Name);
+            }
+            #endregion
+
+            #region Process Expressions
+            //greetingVariations = variations["Greeting"];
+            //appmtRequestConfirmVariations = variations["AppmtRequestConfirm"];
+            //appmtRequestVariations = variations["AppmtRequest"];
+            //var fullDateTimeVariations = variations["FullDateTime"];
+
+            //var dates = new List<DateTime>();
+            //var currentDt = new DateTime(2017, 08, 24, 16, 00, 00);
+            //var lastDt = new DateTime(2017, 08, 26, 17, 00, 00);
+            //while (currentDt != lastDt)
+            //{
+            //    if (currentDt.Hour >= 18)
+            //    { }
+            //    else
+            //    {
+            //        dates.Add(currentDt);
+            //    }
+            //    currentDt = currentDt.AddMinutes(30);
+
+            //}
+
+
+            //foreach (var expression in expressions)
+            //{
+            //    WriteToFile(string.Format("Expression: {0}", expression.Name));
+            //    foreach (var caseItem in expression.Cases)
+            //    {
+            //        WriteToFile("********************************************************************************************************************************************************");
+            //        WriteToFile(string.Format("Case: {0}", caseItem.Name));
+            //        //if (caseItem.Conversations.Exists(x => x.Text.Contains("[Greeting]")))
+            //        //{     
+            //        foreach (var aReqConfirm in appmtRequestConfirmVariations)
+            //        {
+            //            foreach (var greetingVariation in greetingVariations)
+            //            {
+            //                foreach (var aReq in appmtRequestVariations)
+            //                {
+            //                    //foreach (var dt in fullDateTimeVariations)
+            //                    //{
+            //                    foreach (var date in dates)
+            //                    {
+            //                        bookedDt = date.Day+ GetDaySuffix(date.Day)+ " "+date.ToString("MMM")+" at "+date.ToString("hh:mm tt");
+            //                        freeDt = bookedDt;
+            //                        ProcessCase(caseItem.Conversations, greetingVariation, aReq, aReqConfirm, caseItem.Name);
+            //                    }
+            //                    //}
+            //                }
+            //            }
+            //        }
+            //        //}
+            //        //else
+            //        //{
+            //        //    ProcessCase(caseItem.Conversations, null, null, null, caseItem.Name);
+            //        //}
+            //        WriteToFile("********************************************************************************************************************************************************");
+            //    }
+            //}
 
 
 
@@ -344,10 +409,64 @@ namespace apiai.tests
             else
                 return string.Empty;
         }
-        private static string bookedDt = "17th August 10.30AM";
+        private static string bookedDt = "27th August at 10.30AM";
         private static string freeDt = "17th August 12.30PM";
         private static string freeDtConfirm = "3.30 pm on 17th Aug";
         private static string serviceName = "mobile dev";
+        private static void ProcessCase(List<Conversation> conversations, string caseName)
+        {
+            response = null;
+            Initialise();
+            var number = "+61400000000";
+            if (caseName.Contains("New Customer"))
+                number = "+61" + (new string(DateTime.Now.Ticks.ToString().Reverse().ToArray())).Substring(0, 8);
+
+            foreach (var convo in conversations)
+            {
+                if (convo.Type == ConvoType.Request)
+                {
+                    var convoTxt = convo.Text;
+                    UserQuery = convoTxt;
+                    UserQuery = UserQuery.Replace("[service]", serviceName);
+                    if (caseName.Contains("free time slot"))
+                    {
+                        UserQuery = UserQuery.Replace("[Datetime]", freeDt);
+                    }
+                    if (caseName.Contains("booked time slot "))
+                    {
+                        UserQuery = UserQuery.Replace("[Datetime]", bookedDt);
+                    }
+                    UserQuery = UserQuery.Replace("[ConfirmDatetime]", freeDtConfirm);
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine(string.Format("user: {0}", UserQuery));
+                    //ProcessUserQueryAsync(number).Wait();
+                    WriteToFile(string.Format("user: {0}", UserQuery));
+                }
+                if (convo.Type == ConvoType.Response)
+                {
+                    if (response != null)
+                    {
+                        if (response.Result.Fulfillment.DisplayText == "SlotsAvailable" || response.Result.Fulfillment.DisplayText == "AlternateSlotsOnly")
+                        {
+                            freeDtConfirm = response.Result.Fulfillment.Speech.Split(',')[2];
+                        }
+                        convo.ActualResponse = BookaResponse;
+                        Console.ForegroundColor = ConsoleColor.DarkGreen;
+                        if (response == null || !convo.Text.Contains("<" + response.Result.Fulfillment.DisplayText + ">"))
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                        }
+                    }
+                    var r = response == null ? "Empty" : BookaResponse;
+                    Console.Write($"Booka:{r} \n");
+                    WriteToFile(string.Format("Booka: Expected: {0}; Actual: {1}", convo.Text, r));
+                }
+            }
+            var breakLine = "----------------------------------------------------";
+            WriteToFile(breakLine);
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(breakLine);
+        }
         private static void ProcessCase(List<Conversation> conversations, string greetingReplacement, string AppmtRequest, string AppmtRequestConfirm, string caseName)
         {
             response = null;
@@ -404,6 +523,7 @@ namespace apiai.tests
                     var r = response == null ? "Empty" : BookaResponse;
                     Console.Write($"Booka:{r} \n");
                     WriteToFile(string.Format("Booka: Expected: {0}; Actual: {1}", convo.Text, r));
+                    WriteToFile(response.Result.Fulfillment.DisplayText);
                 }
             }
             var breakLine = "----------------------------------------------------";
@@ -428,6 +548,7 @@ namespace apiai.tests
 
     public class Case
     {
+        public string ExpressionName { get; set; }
         public string Name { get; set; }
         public List<Conversation> Conversations { get; set; }
     }
