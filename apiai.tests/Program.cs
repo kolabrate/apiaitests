@@ -228,7 +228,8 @@ namespace apiai.tests
                         currentCase = new Case()
                         {
                             Name = caseName,
-                            Conversations = new List<Conversation>()
+                            Conversations = new List<Conversation>(),
+                            ExpressionName = currentExpr.Name
                         };
                         currentExpr.Cases.Add(currentCase);
                     }
@@ -271,8 +272,7 @@ namespace apiai.tests
                             foreach (var processedCase in processedCases)
                             {
                                 string tmp = JsonConvert.SerializeObject(processedCase);
-                                var copyCase = JsonConvert.DeserializeObject<Case>(tmp);
-                                copyCase.ExpressionName = expression.Name;
+                                var copyCase = JsonConvert.DeserializeObject<Case>(tmp);                                
                                 var con = copyCase.Conversations.FirstOrDefault(c => c.Text.Contains(key));
                                 if (con != null)
                                 {
@@ -293,7 +293,7 @@ namespace apiai.tests
             }
             masterCaseList.AddRange(allGreetingCaseFull);
             var dateList = new List<string>();
-            var currentDt = new DateTime(2017, 08, 27, 09, 00, 00);
+            var currentDt = new DateTime(2017, 08, 27, 14, 30, 00);
             var lastDt = new DateTime(2017, 09, 02, 17, 00, 00);
             while (currentDt != lastDt)
             {
@@ -318,13 +318,17 @@ namespace apiai.tests
             {
                 freeDt = dateList[ji];
                 ji = ji + 1;
-                var caseName = string.Format("Case: {0}", caseItem.Name);
+                var caseName = string.Format("Case: {0} (Expression: {1})", caseItem.Name,caseItem.ExpressionName);
                 Console.WriteLine(caseName);
                 WriteToFile(caseName);
                 ProcessCase(caseItem.Conversations, caseItem.Name);
             }
+            serviceName = "reports dev";
             foreach (var caseItem in bookedSlotCases)
             {
+                var caseName = string.Format("Case: {0} (Expression: {1})", caseItem.Name, caseItem.ExpressionName);
+                Console.WriteLine(caseName);
+                WriteToFile(caseName);
                 ProcessCase(caseItem.Conversations, caseItem.Name);
             }
             #endregion
@@ -439,7 +443,7 @@ namespace apiai.tests
                     UserQuery = UserQuery.Replace("[ConfirmDatetime]", freeDtConfirm);
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine(string.Format("user: {0}", UserQuery));
-                    //ProcessUserQueryAsync(number).Wait();
+                    ProcessUserQueryAsync(number).Wait();
                     WriteToFile(string.Format("user: {0}", UserQuery));
                 }
                 if (convo.Type == ConvoType.Response)
@@ -449,6 +453,7 @@ namespace apiai.tests
                         if (response.Result.Fulfillment.DisplayText == "SlotsAvailable" || response.Result.Fulfillment.DisplayText == "AlternateSlotsOnly")
                         {
                             freeDtConfirm = response.Result.Fulfillment.Speech.Split(',')[2];
+                            freeDtConfirm = freeDtConfirm.Replace("Aug", "Aug at ");
                         }
                         convo.ActualResponse = BookaResponse;
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
@@ -461,6 +466,10 @@ namespace apiai.tests
                     Console.Write($"Booka:{r} \n");
                     WriteToFile(string.Format("Booka: Expected: {0}; Actual: {1}", convo.Text, r));
                 }
+            }
+            if (response != null)
+            {
+                WriteToFile("AI Session:" + response.SessionId);
             }
             var breakLine = "----------------------------------------------------";
             WriteToFile(breakLine);

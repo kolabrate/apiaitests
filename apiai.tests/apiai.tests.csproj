@@ -59,6 +59,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Data\conversationsSingle.txt" />
     <Content Include="Data\conversations.txt" />
     <Content Include="Data\data.txt" />
   </ItemGroup>
