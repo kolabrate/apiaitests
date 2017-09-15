@@ -8,6 +8,9 @@ using ApiAiSDK;
 using ApiAiSDK.Model;
 using System.IO;
 using Newtonsoft.Json;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
+using Twilio.Types;
 
 namespace apiai.tests
 {
@@ -20,10 +23,10 @@ namespace apiai.tests
         static void Main(string[] args)
         {
             try
-            {   
+            {
                 //IndividualConvo();
-                AllConversations();
-
+                //AllConversations();
+                AllConversationsViaTwilio();
             }
             catch (Exception e)
             {
@@ -34,6 +37,28 @@ namespace apiai.tests
 
         }
 
+        private static void AllConversationsViaTwilio()
+        {
+            // Find your Account Sid and Auth Token at twilio.com/console
+            const string accountSid = "ACf6f7442e6e1a2d2d1072f60b7ad1b30b";
+            const string authToken = "1e9868706fecd711c1746e38162e11e1";
+            TwilioClient.Init(accountSid, authToken);
+            var fromNum = "+15005550006";
+
+            MessageResource.Create(
+    from: new PhoneNumber(fromNum),
+    to: new PhoneNumber("+61451562335"),
+    body: "Hello");
+
+            var messages = MessageResource.Read();
+            var m = messages.ToList().Take(2);
+            foreach (var message in m)
+            {                
+                Console.WriteLine(message.Direction+": "+ message.Body);
+            }
+            Console.ReadLine();
+        }
+        
         private static void IndividualConvo()
         {
             Initialise();
@@ -293,7 +318,7 @@ namespace apiai.tests
             }
             masterCaseList.AddRange(allGreetingCaseFull);
             var dateList = new List<string>();
-            var currentDt = new DateTime(2017, 08, 27, 14, 30, 00);
+            var currentDt = new DateTime(2017, 08, 30, 12, 30, 00);
             var lastDt = new DateTime(2017, 09, 02, 17, 00, 00);
             while (currentDt != lastDt)
             {
