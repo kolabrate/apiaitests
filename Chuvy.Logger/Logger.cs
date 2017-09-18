@@ -30,9 +30,9 @@ namespace Chuvy.Logger
            _logger.Debug(info);
         }
 
-        public void Info(string info)
+        public void Info(string info, params object[] data)
         {
-            _logger.Info(info);
+            _logger.Info(info,data);
         }
 
         public void Error(object properties, Exception ex)

@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Chuvy.Logger;
 namespace Chuvy.Logger.Tests
 {
     class Program
@@ -11,7 +6,8 @@ namespace Chuvy.Logger.Tests
         private static Logger _logger = new Logger(SqlLogger.Create());
         static void Main(string[] args)
         {
-            _logger.Info("Inside Main");
+            test t = new test() { param = "Priya", Address = "7 southksjdfk, Vic 3000" };
+            _logger.Info("trying to retrieve {@T} records", t);
             int[] x = { 1, 2 };
             try
             {
@@ -22,10 +18,16 @@ namespace Chuvy.Logger.Tests
             catch (Exception e)
             {
                 var prop = new {user = "Anand", param = x};
-                _logger.Error(prop, e);
+                test t1 = new test() { param = "Priya", Address = "7 southksjdfk, Vic 3000" };
+                _logger.Error(t,e);
               //  throw;
             }
            
         }
+    }
+    public class test
+    {
+        public string param { get; set; }
+        public string Address { get; set; }
     }
 }

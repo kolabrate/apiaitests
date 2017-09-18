@@ -47,18 +47,20 @@ namespace Chuvy.Logger
             _logger.Debug(info);
         }
 
-        public void Info(string info)
+        public void Info(string info,params object[] data)
         {
-            _logger.Information(info);
+            //_logger.Information(info);
+            //var count = 456;
+            _logger.Information(info, data);
         }
 
-        public void Error(dynamic properties, Exception ex)
+        public void Error(object properties, Exception ex)
         {
 
-                _logger.Error(ex,
-                ex.InnerException == null
-                    ? ex.StackTrace
-                    : $"InnerStack = {ex.InnerException.StackTrace} | OuterStack = {ex.StackTrace}", properties, properties.param);
+            _logger.Error(ex,
+            ex.InnerException == null
+                ? ex.StackTrace
+                : $"InnerStack = {ex.InnerException.StackTrace} | OuterStack = {ex.StackTrace}", properties);
 
         }
 
