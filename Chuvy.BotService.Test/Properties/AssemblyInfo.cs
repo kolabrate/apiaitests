@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Chuvy.Logger")]
+[assembly: AssemblyTitle("Chuvy.BotService.Test")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Chuvy.Logger")]
+[assembly: AssemblyProduct("Chuvy.BotService.Test")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2a6d5b0c-3140-4a80-b5f7-440a88c8fbca")]
+[assembly: Guid("eca207b4-d0e3-42f8-9f35-8f85d81d3e8e")]
 
 // Version information for an assembly consists of the following four values:
 //

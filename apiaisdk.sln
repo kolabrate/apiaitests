@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apiaisdk", "apiaisdk\apiaisdk.csproj", "{27C36998-A6CF-4943-BD3B-B7172E95B9C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apiai.tests", "apiai.tests\apiai.tests.csproj", "{D251C0EF-D2AF-4F11-8764-2F54605A9D6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chuvy.Logger", "Chuvy.Logger\Chuvy.Logger.csproj", "{2A6D5B0C-3140-4A80-B5F7-440A88C8FBCA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chuvy.Logger.Tests", "Chuvy.Logger.Tests\Chuvy.Logger.Tests.csproj", "{E9DD8CF9-AB2A-4B62-BAE3-3E774015385F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chuvy.BotService.Test", "Chuvy.BotService.Test\Chuvy.BotService.Test.csproj", "{ECA207B4-D0E3-42F8-9F35-8F85D81D3E8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{D251C0EF-D2AF-4F11-8764-2F54605A9D6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D251C0EF-D2AF-4F11-8764-2F54605A9D6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D251C0EF-D2AF-4F11-8764-2F54605A9D6A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2A6D5B0C-3140-4A80-B5F7-440A88C8FBCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2A6D5B0C-3140-4A80-B5F7-440A88C8FBCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2A6D5B0C-3140-4A80-B5F7-440A88C8FBCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2A6D5B0C-3140-4A80-B5F7-440A88C8FBCA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E9DD8CF9-AB2A-4B62-BAE3-3E774015385F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E9DD8CF9-AB2A-4B62-BAE3-3E774015385F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9DD8CF9-AB2A-4B62-BAE3-3E774015385F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9DD8CF9-AB2A-4B62-BAE3-3E774015385F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECA207B4-D0E3-42F8-9F35-8F85D81D3E8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECA207B4-D0E3-42F8-9F35-8F85D81D3E8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECA207B4-D0E3-42F8-9F35-8F85D81D3E8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECA207B4-D0E3-42F8-9F35-8F85D81D3E8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
