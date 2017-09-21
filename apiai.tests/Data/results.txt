@@ -1,9 +1,6 @@
-Case:  1. New Customer: booking a free time slot (Expression:  1. Appointment Request Expression with Service Name & Date &  Time)
-user:  Hi 
-Booka: Expected:  Hi there, How can I help you? <GeneralGreeting>; Actual: Hello, how can I help you with booking?
-user:  Book me in for mobile dev on 30th Aug at 12:30 PM
+Case:  3. New Customer: asking a booked time slot 	 (Expression:  2. Appointment Request Expression  with Service Name Only		)
+user: Hi
+Booka: Expected: Hi there, How can I help you? <GeneralGreeting>; Actual: Hello, how can I help you with the appointment?
+user: Book me in for reports dev on 22nd Sep at 12PM
 Booka: Expected:  Name of the person attending the appointment 2?<ValidationException>; Actual: Name of the person attending the appointment?
-user:  Its for Anthony Gill
-Booka: Expected:  Appointment Booked <Booked>; Actual: Wont be long
-AI Session:8670cc06-ba50-42eb-a7d7-5c059299b8bb
-----------------------------------------------------
+user:  Donald Trump

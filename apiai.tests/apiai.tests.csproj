@@ -36,6 +36,14 @@
     <Reference Include="apiaisdk">
       <HintPath>..\apiaisdk\bin\Debug\apiaisdk.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.IdentityModel.Logging, Version=1.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IdentityModel.Logging.1.1.2\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
       <Private>True</Private>
@@ -49,12 +57,15 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.1.2\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,18 +81,56 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookaDb.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookaDb.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BookaDb.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookaDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BookaDb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookaDb.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="Message.cs">
+      <DependentUpon>BookaDb.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <EntityDeploy Include="BookaDb.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BookaDb.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BookaDb.edmx.diagram">
+      <DependentUpon>BookaDb.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BookaDb.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BookaDb.Context.cs</LastGenOutput>
+      <DependentUpon>BookaDb.edmx</DependentUpon>
+    </Content>
+    <Content Include="BookaDb.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BookaDb.edmx</DependentUpon>
+      <LastGenOutput>BookaDb.cs</LastGenOutput>
+    </Content>
     <Content Include="Data\conversationsSingle.txt" />
     <Content Include="Data\conversations.txt" />
     <Content Include="Data\data.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

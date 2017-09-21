@@ -25,8 +25,8 @@ namespace apiai.tests
             try
             {
                 //IndividualConvo();
-                //AllConversations();
-                AllConversationsViaTwilio();
+                AllConversations();
+                //AllConversationsViaTwilio();
             }
             catch (Exception e)
             {
@@ -438,9 +438,9 @@ namespace apiai.tests
             else
                 return string.Empty;
         }
-        private static string bookedDt = "27th August at 10.30AM";
-        private static string freeDt = "17th August 12.30PM";
-        private static string freeDtConfirm = "3.30 pm on 17th Aug";
+        private static string bookedDt = "22nd Sep at 12PM";
+        private static string freeDt = "22nd Sep at 12PM";
+        private static string freeDtConfirm = "3.30 pm on 21st Sep";
         private static string serviceName = "mobile dev";
         private static void ProcessCase(List<Conversation> conversations, string caseName)
         {
@@ -475,14 +475,59 @@ namespace apiai.tests
                 {
                     if (response != null)
                     {
-                        if (response.Result.Fulfillment.DisplayText == "SlotsAvailable" || response.Result.Fulfillment.DisplayText == "AlternateSlotsOnly")
+                        var displayText = response.Result.Fulfillment.DisplayText;
+                        if (displayText == "Checking" || displayText == "CheckingConfirmation")
                         {
-                            freeDtConfirm = response.Result.Fulfillment.Speech.Split(',')[2];
-                            freeDtConfirm = freeDtConfirm.Replace("Aug", "Aug at ");
+                            var mins = 15000;
+                            System.Threading.Thread.Sleep(mins);
+                            using (var chat = new ChatbookaEntities())
+                            {
+                                var latestMessage = chat.Messages.Where(c => c.AiSessionId == response.SessionId).OrderByDescending(c => c.ModifieDateTime).FirstOrDefault();
+                                var reply = latestMessage.BookaReply;
+                                var foundResponse = false;
+                                if (reply.Contains("Exception"))
+                                {
+                                    BookaResponse = reply + latestMessage.ActionName;
+                                }
+                                if (!reply.Contains("ServiceAvailabilityChecked"))
+                                {
+                                    while (!foundResponse)
+                                    {
+                                        if (mins < 200000)
+                                        {
+                                            latestMessage = chat.Messages.Where(c => c.AiSessionId == response.SessionId).OrderByDescending(c => c.ModifieDateTime).FirstOrDefault();
+                                            reply = latestMessage.BookaReply;
+                                            if (!reply.Contains("ServiceAvailabilityChecked"))
+                                            {
+                                                mins = mins + 15000;
+                                                System.Threading.Thread.Sleep(15000);
+                                            }
+                                            else
+                                            {
+                                                foundResponse = true;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            foundResponse = true;
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    BookaResponse = reply.Split(';')[1];
+                                    displayText = latestMessage.ActionName.Split(';')[1];
+                                }
+                                if (BookaResponse.Contains("AlternateSlotsOnly") || BookaResponse.Contains("SlotsAvailable"))
+                                {
+                                    freeDtConfirm = response.Result.Fulfillment.Speech.Split(',')[2];
+                                    //freeDtConfirm = freeDtConfirm.Replace("Aug", "Aug at ");
+                                }
+                            }
                         }
                         convo.ActualResponse = BookaResponse;
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
-                        if (response == null || !convo.Text.Contains("<" + response.Result.Fulfillment.DisplayText + ">"))
+                        if (response == null || !convo.Text.Contains("<" + displayText + ">"))
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
                         }
