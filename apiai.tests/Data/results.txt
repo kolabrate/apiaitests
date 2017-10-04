@@ -1,8 +1,8 @@
-Case:  1. Existing Customer: asking a free time slot 	 (Expression:  4. Appointment Rquest expression with Date & Time & NO SERVICE		)
-user: 	Hi
-Booka: Expected: 	Hi Priya, How can I help you?<NamedGreeting>; Actual: Hello, how can I help you with booking?
-user: 	Book me in tomorrow at 4
-Booka: Expected: 	Sure, what service you are looking for? <ValidationException>; Actual:  All done!The appointment has been booked!
-user:  	mobile dev
-Booka: Expected: 	Appointment Booked.<Booked>; Actual:  You already have this appointment booked, Anything else that you I can help you with?
-AI Session:3e0048ae-61e2-4a4d-aeea-6ae6cdc25fa5
+user:  Book me in for a mobile dev
+Booka: Sure, let me find next availabilities.
+Booka: message not found
+user:  Get the middle one.3.30 pm on 21st Sep 
+Booka: Sure, checking that...
+Booka: message not found
+AI Session:4665c5f0-bdf0-4f7b-8c0c-23341c719d26
+----------------------------------------------------

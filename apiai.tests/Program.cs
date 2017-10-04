@@ -275,7 +275,10 @@ namespace apiai.tests
             #endregion
 
             #region All convos 
-            foreach(var expression in newExpressions)
+            var fs = File.Create(@"..\..\Data\results.txt");
+            fs.Close();
+
+            foreach (var expression in newExpressions)
             {
                 foreach (var thisCase in expression.Cases)
                 {
@@ -348,8 +351,7 @@ namespace apiai.tests
             }
             var freeSlotCases = masterCaseList.Where(c => c.Name.Contains("free time slot")).ToList();
             var bookedSlotCases = masterCaseList.Where(c => c.Name.Contains("booked time slot")).ToList();
-            var fs = File.Create(@"..\..\Data\results.txt");
-            fs.Close();
+
             int ji = 0;
             foreach (var caseItem in freeSlotCases)
             {
@@ -485,10 +487,22 @@ namespace apiai.tests
                 }
                 if (convo.Type == ConvoType.Response)
                 {
+                    var secondResponse = "";
+                    var secondResponseDisplayText = "";
                     if (response != null)
                     {
                         var displayText = response.Result.Fulfillment.DisplayText;
-                        if (displayText == "Checking" || displayText == "CheckingConfirmation")
+                        convo.ActualResponse = BookaResponse;
+                        Console.ForegroundColor = ConsoleColor.DarkGreen;
+                        if (response == null || !convo.Text.Contains("<" + displayText + ">"))
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                        }
+                        var respText = response == null ? "Empty" : BookaResponse;
+                        Console.Write($"Booka:{respText} \n");
+                        WriteToFile("Booka: " + respText);
+                        #region Second Confirmation
+                        if (displayText == "Checking" || displayText == "CheckingConfirmation" || displayText == "Booked")
                         {
                             try
                             {
@@ -497,63 +511,77 @@ namespace apiai.tests
                                 using (var chat = new ChatbookaEntities())
                                 {
                                     var latestMessage = chat.Messages.Where(c => c.AiSessionId == response.SessionId).OrderByDescending(c => c.ModifieDateTime).FirstOrDefault();
-                                    var reply = latestMessage.BookaReply;
-                                    var foundResponse = false;
-                                    if (reply.Contains("Exception"))
+                                    if (latestMessage != null)
+
                                     {
-                                        BookaResponse = reply + latestMessage.ActionName;
-                                    }
-                                    if (!reply.Contains("ServiceAvailabilityChecked"))
-                                    {
-                                        while (!foundResponse)
+                                        var reply = latestMessage.BookaReply;
+                                        var foundResponse = false;
+                                        if (reply.Contains("Exception"))
                                         {
-                                            if (mins < 200000)
+                                            secondResponse = reply + latestMessage.ActionName;
+                                        }
+                                        if (!reply.Contains("ServiceAvailabilityChecked"))
+                                        {
+                                            while (!foundResponse)
                                             {
-                                                latestMessage = chat.Messages.Where(c => c.AiSessionId == response.SessionId).OrderByDescending(c => c.ModifieDateTime).FirstOrDefault();
-                                                reply = latestMessage.BookaReply;
-                                                if (!reply.Contains("ServiceAvailabilityChecked"))
+                                                if (mins < 200000)
                                                 {
-                                                    mins = mins + 15000;
-                                                    System.Threading.Thread.Sleep(15000);
+                                                    latestMessage = chat.Messages.Where(c => c.AiSessionId == response.SessionId).OrderByDescending(c => c.ModifieDateTime).FirstOrDefault();
+                                                    reply = latestMessage.BookaReply;
+                                                    if (!reply.Contains("ServiceAvailabilityChecked"))
+                                                    {
+                                                        mins = mins + 15000;
+                                                        System.Threading.Thread.Sleep(15000);
+                                                    }
+                                                    else
+                                                    {
+                                                        foundResponse = true;
+                                                    }
                                                 }
                                                 else
                                                 {
                                                     foundResponse = true;
                                                 }
                                             }
-                                            else
-                                            {
-                                                foundResponse = true;
-                                            }
+                                        }
+                                        else
+                                        {
+                                            secondResponse = reply.Split(';')[1];
+                                            secondResponseDisplayText = latestMessage.ActionName.Split(';')[1];
                                         }
                                     }
                                     else
                                     {
-                                        BookaResponse = reply.Split(';')[1];
-                                        displayText = latestMessage.ActionName.Split(';')[1];
+                                        secondResponse = "message not found";
+                                        secondResponseDisplayText = "message not found";
                                     }
                                     if (BookaResponse.Contains("AlternateSlotsOnly") || BookaResponse.Contains("SlotsAvailable"))
                                     {
-                                        freeDtConfirm = response.Result.Fulfillment.Speech.Split(',')[2];
+                                        var slots = response.Result.Fulfillment.Speech.Split(',');
+                                        if (slots.Length >= 2)
+                                        {
+                                            freeDtConfirm = slots[2];
+                                        }
                                     }
                                 }
                             }
                             catch (Exception e)
                             {
-                                BookaResponse = e.Message;
-                                displayText = "ErrorInDb";
+                                secondResponse = e.Message;
+                                secondResponseDisplayText = "ErrorInDb";
+                            }
+                            if (!string.IsNullOrEmpty(secondResponse))
+                            {
+                                if (!convo.Text.Contains("<" + secondResponseDisplayText + ">"))
+                                    Console.ForegroundColor = ConsoleColor.Red;
+                                else
+                                    Console.ForegroundColor = ConsoleColor.Green;
+                                Console.Write($"Booka:{secondResponse} \n");
+                                WriteToFile("Booka: " + secondResponse);
                             }
                         }
-                        convo.ActualResponse = BookaResponse;
-                        Console.ForegroundColor = ConsoleColor.DarkGreen;
-                        if (response == null || !convo.Text.Contains("<" + displayText + ">"))
-                        {
-                            Console.ForegroundColor = ConsoleColor.Red;
-                        }
+                        #endregion
                     }
-                    var r = response == null ? "Empty" : BookaResponse;
-                    Console.Write($"Booka:{r} \n");
-                    WriteToFile(string.Format("Booka: Expected: {0}; Actual: {1}", convo.Text, r));
                 }
             }
             if (response != null)
