@@ -125,7 +125,7 @@
       <DependentUpon>BookaDb.edmx</DependentUpon>
       <LastGenOutput>BookaDb.cs</LastGenOutput>
     </Content>
-    <Content Include="Data\conversationsSingle.txt" />
+    <Content Include="Data\ExistingCustomerForFreeSlots.txt" />
     <Content Include="Data\conversations.txt" />
     <Content Include="Data\data.txt" />
   </ItemGroup>

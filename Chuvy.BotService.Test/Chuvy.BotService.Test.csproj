@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="json\changesCronofy.json" />
     <None Include="json\fullfillment.json" />
   </ItemGroup>
   <ItemGroup />

@@ -1,0 +1,11 @@
+{
+  "notification": {
+    "type": "change",
+    "changes_since": "2017-09-28T07:06:47Z"
+  },
+  "channel": {
+    "channel_id": "chn_59cc8044f09b010ae8000c5d",
+    "callback_url": "http://chatbooka.azurewebsites.net/api/appointments/Channel?calendarId=cal_WNkJ1@CbARBvAAzP_6JKd-7aXQrEMD3fIKdepzg",
+    "filters": { "only_managed": true }
+  }
+}

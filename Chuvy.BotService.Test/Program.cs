@@ -1,22 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Configuration;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
-using System.Threading.Tasks;
 using ApiAiSDK;
-using ApiAiSDK.Model;
-using Chuvy.BotService.Test.apiai;
-using NUnit.Framework.Api;
-using NUnit.Framework.Internal.Execution;
-using System.Web.Script.Serialization;
 
 namespace Chuvy.BotService.Test
 {
-    
+
     class Program
     {
         
@@ -27,6 +18,7 @@ namespace Chuvy.BotService.Test
         {
             ProcessRequest();
             //TestEntities();
+            //ProcessRequestWeb();
         }
         private static void ProcessRequest()
         {
@@ -38,7 +30,7 @@ namespace Chuvy.BotService.Test
                 //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("text/plain"));
 
                 HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, "botservice");
-                var httpContent = new StringContent(InputRequest(), Encoding.UTF8, "application/json");
+                var httpContent = new StringContent(InputRequest("../../json/fullfillment.json"), Encoding.UTF8, "application/json");
 
                 //var responseTask = client.SendAsync(request).Result;
                 var responseTask = client.PostAsync("botservice", httpContent);
@@ -52,9 +44,9 @@ namespace Chuvy.BotService.Test
             return "http://localhost:12995/";
         }
 
-        private static string InputRequest()
+        private static string InputRequest(string fileName)
         {
-            using (var r = new StreamReader("../../json/fullfillment.json"))
+            using (var r = new StreamReader(fileName))
             {
                 return r.ReadToEnd();
             }
@@ -70,6 +62,23 @@ namespace Chuvy.BotService.Test
                 var response = client.GetAsync("https://api.api.ai/v1/entities?v=20150910");
                 var res = response.Result;
                 var s = res.Content.ReadAsStringAsync();
+            }
+        }
+
+        private static void ProcessRequestWeb()
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://localhost:6492/");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, "api/appointments/Channel");
+                var httpContent = new StringContent(InputRequest("../../json/changesCronofy.json"), Encoding.UTF8, "application/json");
+
+                //var responseTask = client.SendAsync(request).Result;
+                var responseTask = client.PostAsync("api/appointments/Channel", httpContent);
+                string val = responseTask.Result.ToString();
             }
         }
 

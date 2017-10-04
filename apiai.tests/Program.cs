@@ -183,8 +183,9 @@ namespace apiai.tests
             var appmtRequestConfirmVariations = new List<string>();
             var variations = new Dictionary<string, List<string>>();
             var exits = Directory.Exists(@"..\Data\");
-            var list = File.ReadAllLines(@"..\..\Data\conversations.txt");
+            var list = File.ReadAllLines(@"..\..\Data\ExistingCustomerForFreeSlots.txt");
             var expressions = new List<Expression>();
+            var newExpressions = new List<Expression>();
             Expression currentExpr = null;
             Case currentCase = null;
             Conversation currentConvo = null;
@@ -192,16 +193,16 @@ namespace apiai.tests
             #region Build Expressions
             foreach (var str in list)
             {
-                if (!str.StartsWith("#"))
+                if (!str.StartsWith("#") && !string.IsNullOrEmpty(str.Trim()))
                 {
                     if (str.StartsWith("variations:"))
                     {
-                        var firstPortion = str.IndexOf("variations: Name=") > -1 ? "variations: Name=" : "variations:Name="; 
-                        var lastPortion = str.IndexOf("; Values=")>-1? "; Values=": ";Values=";
+                        var firstPortion = str.IndexOf("variations: Name=") > -1 ? "variations: Name=" : "variations:Name=";
+                        var lastPortion = str.IndexOf("; Values=") > -1 ? "; Values=" : ";Values=";
                         var variationName = str.Replace(firstPortion, "");
-                        var endofName = variationName.IndexOf(lastPortion);                                                
+                        var endofName = variationName.IndexOf(lastPortion);
                         variationName = variationName.Substring(0, endofName);
-                        var variationValuesStr = str.Replace(firstPortion + variationName + lastPortion, ""); 
+                        var variationValuesStr = str.Replace(firstPortion + variationName + lastPortion, "");
                         var variationValues = variationValuesStr.Split(',');
                         var listValues = new List<string>();
                         foreach (var val in variationValues)
@@ -245,7 +246,7 @@ namespace apiai.tests
                             Name = exprName,
                             Cases = new List<Case>()
                         };
-                        expressions.Add(currentExpr);
+                        newExpressions.Add(currentExpr);
                     }
                     if (str.Contains("Case:"))
                     {
@@ -271,6 +272,17 @@ namespace apiai.tests
                     }
                 }
             }
+            #endregion
+
+            #region All convos 
+            foreach(var expression in newExpressions)
+            {
+                foreach (var thisCase in expression.Cases)
+                {
+                    ProcessCase(thisCase.Conversations, thisCase.Name);
+                }
+            }
+            
             #endregion
 
             #region New Process Expressions 
@@ -478,51 +490,58 @@ namespace apiai.tests
                         var displayText = response.Result.Fulfillment.DisplayText;
                         if (displayText == "Checking" || displayText == "CheckingConfirmation")
                         {
-                            var mins = 15000;
-                            System.Threading.Thread.Sleep(mins);
-                            using (var chat = new ChatbookaEntities())
+                            try
                             {
-                                var latestMessage = chat.Messages.Where(c => c.AiSessionId == response.SessionId).OrderByDescending(c => c.ModifieDateTime).FirstOrDefault();
-                                var reply = latestMessage.BookaReply;
-                                var foundResponse = false;
-                                if (reply.Contains("Exception"))
+                                var mins = 15000;
+                                //System.Threading.Thread.Sleep(mins);
+                                using (var chat = new ChatbookaEntities())
                                 {
-                                    BookaResponse = reply + latestMessage.ActionName;
-                                }
-                                if (!reply.Contains("ServiceAvailabilityChecked"))
-                                {
-                                    while (!foundResponse)
+                                    var latestMessage = chat.Messages.Where(c => c.AiSessionId == response.SessionId).OrderByDescending(c => c.ModifieDateTime).FirstOrDefault();
+                                    var reply = latestMessage.BookaReply;
+                                    var foundResponse = false;
+                                    if (reply.Contains("Exception"))
                                     {
-                                        if (mins < 200000)
+                                        BookaResponse = reply + latestMessage.ActionName;
+                                    }
+                                    if (!reply.Contains("ServiceAvailabilityChecked"))
+                                    {
+                                        while (!foundResponse)
                                         {
-                                            latestMessage = chat.Messages.Where(c => c.AiSessionId == response.SessionId).OrderByDescending(c => c.ModifieDateTime).FirstOrDefault();
-                                            reply = latestMessage.BookaReply;
-                                            if (!reply.Contains("ServiceAvailabilityChecked"))
+                                            if (mins < 200000)
                                             {
-                                                mins = mins + 15000;
-                                                System.Threading.Thread.Sleep(15000);
+                                                latestMessage = chat.Messages.Where(c => c.AiSessionId == response.SessionId).OrderByDescending(c => c.ModifieDateTime).FirstOrDefault();
+                                                reply = latestMessage.BookaReply;
+                                                if (!reply.Contains("ServiceAvailabilityChecked"))
+                                                {
+                                                    mins = mins + 15000;
+                                                    System.Threading.Thread.Sleep(15000);
+                                                }
+                                                else
+                                                {
+                                                    foundResponse = true;
+                                                }
                                             }
                                             else
                                             {
                                                 foundResponse = true;
                                             }
                                         }
-                                        else
-                                        {
-                                            foundResponse = true;
-                                        }
+                                    }
+                                    else
+                                    {
+                                        BookaResponse = reply.Split(';')[1];
+                                        displayText = latestMessage.ActionName.Split(';')[1];
+                                    }
+                                    if (BookaResponse.Contains("AlternateSlotsOnly") || BookaResponse.Contains("SlotsAvailable"))
+                                    {
+                                        freeDtConfirm = response.Result.Fulfillment.Speech.Split(',')[2];
                                     }
                                 }
-                                else
-                                {
-                                    BookaResponse = reply.Split(';')[1];
-                                    displayText = latestMessage.ActionName.Split(';')[1];
-                                }
-                                if (BookaResponse.Contains("AlternateSlotsOnly") || BookaResponse.Contains("SlotsAvailable"))
-                                {
-                                    freeDtConfirm = response.Result.Fulfillment.Speech.Split(',')[2];
-                                    //freeDtConfirm = freeDtConfirm.Replace("Aug", "Aug at ");
-                                }
+                            }
+                            catch (Exception e)
+                            {
+                                BookaResponse = e.Message;
+                                displayText = "ErrorInDb";
                             }
                         }
                         convo.ActualResponse = BookaResponse;

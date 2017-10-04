@@ -1,21 +1,100 @@
-﻿variations: Name=Greeting; Values=Hi,Hello,Hi Booka,Hello,Hello Booka,Hey,Hi there,Hi chatbooka,good morning,good evening,good afternoon
-variations: Name=AppmtRequest1; Values=Book me in for [service] on [Datetime],can I make an appointment for [service] on [Datetime],I need an appointment for [service] on [Datetime],can  you book me in for [service] on [Datetime],Appointment needed for [service] on [Datetime],when is the next available appointment for this [service] on [Datetime],I want an appointment for [service] on [Datetime]
+﻿variations: Name=Greeting; Values=Hi
+#,Hello,Hi Booka,Hello,Hello Booka,Hey,Hi there,Hi chatbooka,good morning,good evening,good afternoon
 variations: Name=AppmtRequestConfirm; Values=I will go for [ConfirmDatetime],[ConfirmDatetime],do [ConfirmDatetime], book the [Datetime],I want [ConfirmDatetime], book [ConfirmDatetime]
-#variations: Name=AppmtRequest2; Values=Book me in for a [service],can I make an appointment for [service],I need an appointment for [service],can  you book me in for [service],Appointment needed for [service],when is the next available appointment for this [service] on [Datetime],I want an appointment for [service]
-#variations: Name=AppmtRequest3; Values=Book appoinment,Can I make an appointment,Can you book me in ,I need an appointment,Book appmnt,Appoinment needed,Find me the next appointment,Book me in
+variations: Name=AppmtRequest1; Values=Book me in for a [service] asap,Book me in today at 4 PM for a [service],Book me in tommorrow at 4 PM for a [service],Book me in at 4 today for a [service],Can I make an appointment today at 3 for a [service],I would like an appointment on Wed at 3,Can I make an appointment on Tue the 26th at 4 PM,Can I get an appointment on 26th of Sep at 9 in the morning
+variations: Name=AppmtRequest2; Values=Book me in for a [service],can I make an appointment for a [service],I need an appointment for a [service],can  you book me in for a [service],Appointment needed for a [service],when is the next available appointment for this [service],I am after a [service],I would like a [service]
+variations: Name=AppmtRequest3; Values=Book appoinment,Can I make an appointment,Can you book me in,I need an appointment,Book appmnt,Appoinment needed,Find me the next appointment,Book me in
 variations: Name=FullDateTime; Values=asap,tomorrow at 9AM, wed at 3PM, 21st the Monday at 2PM, 25th Aug at 1PM, today at 4PM
 #variations: Name=OnlyDate; Values=I will go for [Datetime],[Datetime],do [Datetime], book the [Datetime],I want [Datetime], book [Datetime]
 #variations: Name=OnlyTime; Values=I will go for [Datetime],[Datetime],do [Datetime], book the [Datetime],I want [Datetime], book [Datetime]
-#variations: Name=AppmtRequest4; Values=Book me in [Datetime],Can I make an appointment on [Datetime],Can I get an appointment on [Datetime] in the morning,Book an appointment on [Datetime],can I get an appointment on [Datetime],Can I make an appointment on [Datetime]
-#variations: Name=AppmtRequest5; Values=book me in this afternoon for [service],can I make an appointment tomorrow afternoon for [service],Can I make an appointment tomorrow morning for [service],book me in for monday morning for [service],I need [service] next week afternoon
-#variations: Name=AppmtRequest6; Values=book me in for monday morning for [service],I need [service] appointment next week afternoon
-Expression: 2. Appointment Request Expression  with Service Name Only		
-Case: 3. New Customer: asking a booked time slot 	
-Customer:[Greeting]
-Booka:Hi there, How can I help you? <GeneralGreeting>
-Customer:[AppmtRequest1]
-Booka: Name of the person attending the appointment 2?<ValidationException>
-Customer: Donald Trump
-Booka:Sorry, that time is not available. Next available is time is 27th July 2PM, 28th July 11pm <Checking>
-Customer: [AppmtRequestConfirm]
-Booka:Appointment Booked <Booked>
+variations: Name=AppmtRequest4; Values=Book me in tomorrow at 4,Can I make an appointment today at 10 PM,Can I get an appointment next monday at 9 in the morning,Book an appointment at noon,I need an appointment asap,can I get an appointment next monday at 10,Can I make an appointment tommorrow noon
+variations: Name=AppmtRequest5; Values=book me in this afternoon for [service],can I make an appointment tomorrow afternoon for [service],Can I make an appointment tomorrow morning for [service],book me in for monday morning for [service],I need [service] next week afternoon
+variations: Name=AppmtRequest6; Values=book me in this afternoon,Can I get an appointment tomorrow morning,I need an appointment next monday afternoon,Can I make an appointment next tuesday morning,can I make an appointment tomorrow morning,Can I get an appointment today,Need an appointment for today,Is there any time today?,got anything for today?,Can I make an appointment next week,Book Tuesday,book me in next thursday,book me in this weekend,book me for this thursday,Book me in anytime today
+Expression: 4. Appointment Rquest expression with Date & Time & NO SERVICE		
+Case: 1. Existing Customer: asking a free time slot 	
+Customer:	[Greeting]
+Booka:	Hi Priya, How can I help you?<NamedGreeting>
+Customer:	[AppmtRequest4]
+Booka:	Sure, what service you are looking for? <ValidationException>
+Customer: 	[service]
+Booka:	Appointment Booked.<Booked>
+Case: 2. Existing Customer: asking a booked time slot without greetings	
+Customer:	[AppmtRequest4]
+Booka:	Sure Priya, what service you are looking for? <ValidationException>
+Customer: 	[service]
+Booka:	The next available appointments are 3PM tomorrow, 28th July 4PM and 29th July 11AM. What is your preference? <AlternateSlotsOnly>
+Customer:	[AppmtRequestConfirm]
+Booka:	Appointment Booked.<Booked>
+Case: 3. New Customer: asking a free time slot without greetings	
+Customer:	[AppmtRequest4]
+Booka:	Sure, what service you are looking for? <ValidationException>
+Customer: [service]
+Booka:	Name of the person attending the appointment? <ValidationException>
+Customer: 	Jack Jill
+Booka:	Appointment Booked.<Booked>
+Case:4. New Customer: asking a booked time slot without greetings	
+Customer:	[AppmtRequest4]
+Booka:	Sure, what service you are looking for? <ValidationException>
+Customer: [service]
+Booka:	Name of the person attending the appointment? <ValidationException>
+Customer: 	Jack Jill
+Booka:	The next available appointments are 3PM tomorrow, 28th July 4PM and 29th July 11AM. What is your preference? <AlternateSlotsOnly>
+Customer:	[AppmtRequestConfirm]
+Booka:	Appointment Booked.<Booked>
+Expression: 5. Appointment Request expression with time range & service	
+Case: 2. New Customer asking a free time range slot 	
+Customer:	[Greeting]
+Booka:	Hi There, How can I help you? <GeneralGreeting>
+Customer:	[AppmtRequest5]
+Booka:	Name of the person attending the appointment?<ValidationException>
+Customer: 	Jack Jill
+Booka:	The next available appointments are 3PM tomorrow, 28th July 4PM and 29th July 12PM. What is your preference? <SlotsAvailable>
+Customer:	[AppmtRequestConfirm]
+Booka:	Appointment Booked <Booked>
+Case: 3. New Customer asking a booked time range slot 	
+Customer:	[Greeting]
+Booka:	Hi There, How can I help you?<GeneralGreeting>
+Customer:	[AppmtRequest5]
+Booka:	Name of the person attending the appointment?<ValidationException>
+Customer: 	Jack Jill
+Booka:	The next available appointments are 3PM tomorrow, 28th July 4PM and 29th July 12PM. What is your preference? <SlotsAvailable>
+Customer:	[AppmtRequestConfirm]
+Booka:	Appointment Booked.<Booked>
+Expression:6. Appointment Request expression with time range & NO SERVICE		
+Case: 1. Existing Customer asking a free time slot 	
+Customer:	[Greeting]
+Booka:	Hi Priya, How can I help you?<NamedGreeting>
+Customer:	[AppmtRequest6]
+Booka:	Appointment Booked.<Booked>
+Case: 2. New Customer: asking a free time range slot 	
+Customer:	[Greeting]
+Booka:	Hi There, How can I help you?<GeneralGreeting>
+Customer:	[AppmtRequest6]
+Booka:	Sure, what service are you looking for? <ValidationException>
+Customer:	[service]
+Booka:	The next available appointments are 3PM tomorrow, 28th July 4PM and 29th July 12PM. What is your preference? <SlotsAvailable>
+Customer:	[AppmtRequestConfirm]
+Booka:	Name of the person attending the appointment? <ValidationException>
+Customer: 	Jack Jill
+Booka:	Appointment Booked.<Booked>
+Case: 3. Existing Customer: asking a booked time range slot 	
+Customer:	[Greeting]
+Booka:	Hi Priya, How can I help you? <NamedGreeting>
+Customer:	[AppmtRequest6]
+Booka:	Sure, what service you are looking for? <ValidationException>
+Customer: 	[service]
+Booka:	The next available appointments are 3PM tomorrow, 28th July 4PM and 29th July 12PM. What is your preference? <SlotsAvailable>
+Customer:	[AppmtRequestConfirm]
+Booka:	Appointment Booked.<Booked>
+Case: 4. New Customer: asking a booked time range slot 	
+Customer:	[Greeting]
+Booka:	Hi There, How can I help you? <GeneralGreeting>
+Customer:	[AppmtRequest6]
+Booka:	Sure, what service are you looking for?<ValidationException>
+Customer:	[service]
+Booka:	The next available appointments are 3PM tomorrow, 28th July 4PM and 29th July 12PM. What is your preference? <SlotsAvailable>
+Customer:	[AppmtRequestConfirm]
+Booka:	Name of the person attending the appointment? <ValidationException>
+Customer: 	Jack Jill
+Booka:	Appointment Booked.<Booked>
+
