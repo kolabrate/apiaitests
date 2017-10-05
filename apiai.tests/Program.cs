@@ -501,18 +501,17 @@ namespace apiai.tests
                         var respText = response == null ? "Empty" : BookaResponse;
                         Console.Write($"Booka:{respText} \n");
                         WriteToFile("Booka: " + respText);
+
                         #region Second Confirmation
                         if (displayText == "Checking" || displayText == "CheckingConfirmation" || displayText == "Booked")
                         {
                             try
                             {
                                 var mins = 15000;
-                                //System.Threading.Thread.Sleep(mins);
-                                using (var chat = new ChatbookaEntities())
+                                using (var chat = new ChatbookaEntities2())
                                 {
                                     var latestMessage = chat.Messages.Where(c => c.AiSessionId == response.SessionId).OrderByDescending(c => c.ModifieDateTime).FirstOrDefault();
                                     if (latestMessage != null)
-
                                     {
                                         var reply = latestMessage.BookaReply;
                                         var foundResponse = false;
@@ -536,6 +535,7 @@ namespace apiai.tests
                                                     else
                                                     {
                                                         foundResponse = true;
+                                                        GetSecondResponse(reply, latestMessage.ActionName, out secondResponse, out secondResponseDisplayText);
                                                     }
                                                 }
                                                 else
@@ -546,22 +546,13 @@ namespace apiai.tests
                                         }
                                         else
                                         {
-                                            secondResponse = reply.Split(';')[1];
-                                            secondResponseDisplayText = latestMessage.ActionName.Split(';')[1];
+                                            GetSecondResponse(reply, latestMessage.ActionName, out secondResponse, out secondResponseDisplayText);
                                         }
                                     }
                                     else
                                     {
                                         secondResponse = "message not found";
                                         secondResponseDisplayText = "message not found";
-                                    }
-                                    if (BookaResponse.Contains("AlternateSlotsOnly") || BookaResponse.Contains("SlotsAvailable"))
-                                    {
-                                        var slots = response.Result.Fulfillment.Speech.Split(',');
-                                        if (slots.Length >= 2)
-                                        {
-                                            freeDtConfirm = slots[2];
-                                        }
                                     }
                                 }
                             }
@@ -582,6 +573,12 @@ namespace apiai.tests
                         }
                         #endregion
                     }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write("Booka: Api.Ai not responding");
+                        WriteToFile("Booka: Api.Ai not responding");
+                    }
                 }
             }
             if (response != null)
@@ -592,6 +589,23 @@ namespace apiai.tests
             WriteToFile(breakLine);
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(breakLine);
+        }
+        private static void GetSecondResponse(string reply,string actionName, out string secondResponse,out string secondResponseDisplayText)
+        {
+            secondResponse = "Response not available";
+            secondResponseDisplayText = "Response not available";
+            var slots = reply.Split(',');
+            if (slots.Length > 1)
+            {
+                freeDtConfirm = slots[1];
+                secondResponse = reply.Replace("ServiceAvailabilityChecked;", "");
+                secondResponseDisplayText = (actionName.Split(';')[1]).Trim();
+            }
+            if (slots.Length == 1)
+            {
+                secondResponse = reply.Replace("ServiceAvailabilityChecked;", "");
+                secondResponseDisplayText = (actionName.Split(';')[1]).Trim();
+            }
         }
         private static void ProcessCase(List<Conversation> conversations, string greetingReplacement, string AppmtRequest, string AppmtRequestConfirm, string caseName)
         {

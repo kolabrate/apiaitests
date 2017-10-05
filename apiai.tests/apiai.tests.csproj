@@ -117,8 +117,8 @@
   <ItemGroup>
     <Content Include="BookaDb.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>BookaDb.Context.cs</LastGenOutput>
       <DependentUpon>BookaDb.edmx</DependentUpon>
+      <LastGenOutput>BookaDb.Context.cs</LastGenOutput>
     </Content>
     <Content Include="BookaDb.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

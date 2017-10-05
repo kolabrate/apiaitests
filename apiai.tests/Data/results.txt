@@ -1,8 +1,5 @@
 user:  Book me in for a mobile dev
-Booka: Sure, let me find next availabilities.
-Booka: message not found
-user:  Get the middle one.3.30 pm on 21st Sep 
-Booka: Sure, checking that...
-Booka: message not found
-AI Session:4665c5f0-bdf0-4f7b-8c0c-23341c719d26
+Booka: No response avaialble
+user:  3.30 pm on 21st Sep 
+Booka: No response avaialble
 ----------------------------------------------------

@@ -13,10 +13,10 @@ namespace apiai.tests
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ChatbookaEntities : DbContext
+    public partial class ChatbookaEntities2 : DbContext
     {
-        public ChatbookaEntities()
-            : base("name=ChatbookaEntities")
+        public ChatbookaEntities2()
+            : base("name=ChatbookaEntities2")
         {
         }
     

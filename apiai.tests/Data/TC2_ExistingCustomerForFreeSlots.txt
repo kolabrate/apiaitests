@@ -2,43 +2,43 @@
 Case: 1. Book me in for a [service]
 Customer: Book me in for a [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: Get the middle one.[ConfirmDatetime] 
+Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 2. can I make an appointment for a [service]
 Customer: can I make an appointment for a [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: Get the middle one.[ConfirmDatetime] 
+Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 3. I need an appointment for a [service] 
 Customer: I need an appointment for a [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: Get the middle one.[ConfirmDatetime] 
+Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 4. can you book me in for a [service]
 Customer: can you book me in for a [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: Get the middle one.[ConfirmDatetime] 
+Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 5. Appointment needed for a [service]
 Customer: Appointment needed for a [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: Get the middle one.[ConfirmDatetime] 
+Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 2. when is the next available appointment for this [service]
 Customer: when is the next available appointment for this [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: Get the middle one.[ConfirmDatetime] 
+Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 6. I am after a [service]
 Customer: I am after a [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: Get the middle one.[ConfirmDatetime] 
+Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 7. I would like a [service] 
@@ -48,28 +48,33 @@ Customer: [ConfirmDatetime]
 Booka: <CheckingConfirmation><Booked>
 
 Expression: 2. Appointment Request Expression with Service Name & Date & Time
-Case: 8. Book me in for a [service] asap 
-Booka: <Checking><Booked> 
 
-Case: 10. Book me in today at 2 PM for a [service]
+Case: 10. Book me in today at 4 PM for a [service]
+Customer: Book me in today at 4 PM for a [service]
 Booka: <Checking><Booked> 
 
 Case: 11. Book me in tomorrow at 2 PM for a [service]
+Customer: Book me in tomorrow at 2 PM for a [service]
 Booka: <Checking><Booka: <Checking><Booked> 
 
 Case: 12. Book me in at 4 today for a [service]
+Customer: Book me in at 4 today for a [service]
 Booka: <Checking><Booked> 
 
-Case: 13. Can I make an appointment today at 3 for a [service]
+Case: 13. Can I make an appointment today at 4 for a [service]
+Customer: Can I make an appointment today at 4 for a [service]
 Booka: <Checking><Booked> 
 
 Case: 14. I would like an appointment for [service] on Fri at 3
+Customer: I would like an appointment for [service] on Fri at 3
 Booka: <Checking><Booked> 
 
-Case: 15. Can I make an appointment on Wed the 4th at 4 PM for [service]
+Case: 15. Can I make an appointment on Fri the 6th at 4 PM for [service]
+Customer: Can I make an appointment on Fri the 6th at 4 PM for [service]
 Booka: <Checking><Booked>
 
-Case: 16. Can I get an appointment on 4th of Oct at 9 in the morning for [service]
+Case: 16. Can I get an appointment on 6th of Oct at 9 in the morning for [service]
+Customer: Can I get an appointment on 6th of Oct at 9 in the morning for [service]
 Booka: <Checking><Booked>
 
 Expression: 3. Appointment Request expression with time range & service
@@ -80,66 +85,73 @@ Customer: [ConfirmDatetime]
 Booka: <CheckingConfirmation><Booked>
 
 Case: 18. can I make an appointment tomorrow afternoon for a [service]
-Booka: can I make an appointment tomorrow afternoon for a [service]
+Customer: can I make an appointment tomorrow afternoon for a [service]
 Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 19. Can I make an appointment this morning for [service]
-Booka: Can I make an appointment this morning for [service]
+Customer: Can I make an appointment this morning for [service]
 Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 20. book me in for a friday monring for a [service]
-Booka: book me in for a friday monring for a [service]
+Customer: book me in for a friday monring for a [service]
 Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 21. I need a [service] today afternoon
-Booka: I need a [service] today afternoon
+Customer: I need a [service] today afternoon
 Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 22. Can you book me in today for [service]
-Booka: Can you book me in today for [service]
+Customer: Can you book me in today for [service]
 Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 23. Can you book me in tomorrow for [service]
-Booka: Can you book me in tomorrow for [service]
+Customer: Can you book me in tomorrow for [service]
 Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 24. Book me in next week for [service]
-Booka: Book me in next week for [service]
+Customer: Book me in next week for [service]
 Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 25. I want an appointment tomorrow for [service]
-Booka: I want an appointment tomorrow for [service]
+Customer: I want an appointment tomorrow for [service]
 Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 26. [service] tuesday
-Booka: [service] tuesday
+Customer: [service] tuesday
 Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 27. doctor appointment
-Booka: doctor appointment
+Customer: doctor appointment
 Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
 Expression: 4. Appointment Request Expression & NO SERVICE & NO Datetime
+
+Case: 8. Book me in for a [service] asap 
+Customer: Book me in for a [service] asap 
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
 Case: 28. Book appointment
 Customer: Book appointment
 Booka: what type of service are you looking for?<ValidationException> 
@@ -213,8 +225,8 @@ Booka: <Checking><SlotsAvailable>
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
-Case: 37. Can I make an appointment today at 10 PM
-Customer: Can I make an appointment today at 10 PM
+Case: 37. Can I make an appointment today at 4 PM
+Customer: Can I make an appointment today at 4 PM
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
 Booka: <Checking><SlotsAvailable> 
@@ -354,8 +366,7 @@ Case: 54. book me in next thursday
 Customer: book me in next thursday
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
-Booka: <Checking><SlotsAvailable>
- 
+Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation>
 
@@ -371,8 +382,7 @@ Case: 56. book me for this thursday
 Customer: book me for this thursday
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
-Booka: <Checking><SlotsAvailable>
- 
+Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation>
 

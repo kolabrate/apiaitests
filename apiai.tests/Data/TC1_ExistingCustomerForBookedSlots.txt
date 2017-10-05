@@ -1,0 +1,160 @@
+﻿Expression: 2. Appointment Request Expression with Service Name & Date & Time
+
+Case: 1. Book me in today at 4 PM for a [service]
+Customer: Book me in today at 4 PM for a [service]
+Booka: <Checking><AlternateSlotsOnly> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 2. Book me in tomorrow at 2 PM for a [service]
+Customer: Book me in tomorrow at 2 PM for a [service]
+Booka: <Checking><AlternateSlotsOnly> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 3. Book me in at 4 today for a [service]
+Customer: Book me in at 4 today for a [service]
+Booka: <Checking><AlternateSlotsOnly> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 4. Can I make an appointment today at 4 for a [service]
+Customer: Can I make an appointment today at 4 for a [service]
+Booka: <Checking><AlternateSlotsOnly> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 5. I would like an appointment for [service] on Fri at 3
+Customer: I would like an appointment for [service] on Fri at 3
+Booka: <Checking><AlternateSlotsOnly> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 6. Can I make an appointment on Fri the 6th at 4 PM for [service]
+Customer: Can I make an appointment on Fri the 6th at 4 PM for [service]
+Booka: <Checking><AlternateSlotsOnly> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 16. Can I get an appointment on 6th of Oct at 9 in the morning for [service]
+Customer: Can I get an appointment on 6th of Oct at 9 in the morning for [service]
+Booka: <Checking><AlternateSlotsOnly> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Expression: 3. Appointment Request expression with time range & service
+Case: 7. book me in this afternoon for a [service]
+Customer: book me in this afternoon for a [service]
+Booka: <Checking><AlternateSlotsOnly> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 8. can I make an appointment tomorrow afternoon for a [service]
+Customer: can I make an appointment tomorrow afternoon for a [service]
+Booka: <Checking><AlternateSlotsOnly> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 9. Can I make an appointment this morning for [service]
+Customer: Can I make an appointment this morning for [service]
+Booka: <Checking><AlternateSlotsOnly> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 10. book me in for a friday morning for a [service]
+Customer: book me in for a friday morning for a [service]
+Booka: <Checking><AlternateSlotsOnly> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 11. I need a [service] today afternoon
+Customer: I need a [service] today afternoon
+Booka: <Checking><AlternateSlotsOnly> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 12. Can you book me in today for [service]
+Customer: Can you book me in today for [service]
+Booka: <Checking><AlternateSlotsOnly> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 13. Can you book me in tomorrow for [service]
+Customer: Can you book me in tomorrow for [service]
+Booka: <Checking><AlternateSlotsOnly> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Expression: 5. Appointment Request expression with Date & Time & NO SERVICE
+Case: 14. Book me in tomorrow at 3
+Customer: Book me in tomorrow at 3
+Booka: what type of service are you looking for?<ValidationException>
+Customer: [service]
+Booka: <Checking><AlternateSlotsOnly> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 15. Can I make an appointment today at 4 PM
+Customer: Can I make an appointment today at 4 PM
+Booka: what type of service are you looking for?<ValidationException>
+Customer: [service]
+Booka: <Checking><AlternateSlotsOnly> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 16. Can I get an appointment next monday at 9 in the morning
+Customer: Can I get an appointment next monday at 9 in the morning
+Booka: what type of service are you looking for?<ValidationException>
+Customer: [service]
+Booka: <Checking><AlternateSlotsOnly> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 17. Book an appointment at noon
+Customer: Book an appointment at noon
+Booka: what type of service are you looking for?<ValidationException>
+Customer: [service]
+Booka: <Checking><AlternateSlotsOnly> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 18. can I get an appointment next monday at 10
+Customer: can I get an appointment next monday at 10
+Booka: what type of service are you looking for?<ValidationException>
+Customer: [service]
+Booka: <Checking><AlternateSlotsOnly> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 19. Can I make an appointment tommorrow noon
+Customer: Can I make an appointment tommorrow noon
+Booka: what type of service are you looking for?<ValidationException>
+Customer: [service]
+Booka: <Checking><AlternateSlotsOnly> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Expression: 6. Appointment Request expression with date & time range & NO SERVICE
+Case: 20. book me in this afternoon
+Customer: book me in this afternoon
+Booka: what type of service are you looking for?<ValidationException>
+Customer: [service]
+Booka: <Checking><AlternateSlotsOnly> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 21. book me for this thursday
+Customer: book me for this thursday
+Booka: what type of service are you looking for?<ValidationException>
+Customer: [service]
+Booka: <Checking><AlternateSlotsOnly> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation>
+
+Case: 22. Book me in anytime today
+Customer: Book me in anytime today
+Booka: what type of service are you looking for?<ValidationException>
+Customer: [service]
+Booka: <Checking><AlternateSlotsOnly> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
