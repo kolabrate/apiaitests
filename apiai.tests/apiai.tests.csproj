@@ -125,7 +125,12 @@
       <DependentUpon>BookaDb.edmx</DependentUpon>
       <LastGenOutput>BookaDb.cs</LastGenOutput>
     </Content>
-    <Content Include="Data\ExistingCustomerForFreeSlots.txt" />
+    <Content Include="Data\TC6_ExistingCustomerShowMore.txt" />
+    <Content Include="Data\TC5_ConfirmationVariations.txt" />
+    <Content Include="Data\TC1_ExistingCustomerForBookedSlots.txt" />
+    <Content Include="Data\TC3_NewCustomerForBookedSlots.txt" />
+    <Content Include="Data\TC4_NewCustomerForFreeSlots.txt" />
+    <Content Include="Data\TC2_ExistingCustomerForFreeSlots.txt" />
     <Content Include="Data\conversations.txt" />
     <Content Include="Data\data.txt" />
   </ItemGroup>

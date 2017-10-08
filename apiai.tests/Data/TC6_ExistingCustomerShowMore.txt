@@ -4,7 +4,8 @@ Customer: book me in this afternoon
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: I will go for 3PM on 14th August
+Customer: Show more
+Booka: <Checking><SlotsAvailable> 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 44. Can I get an appointment tomorrow morning
@@ -12,7 +13,8 @@ Customer: Can I get an appointment tomorrow morning
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: 4PM 14th Aug
+Customer: none of these 
+Booka: <Checking><SlotsAvailable> 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 45. I need an appointment next monday afternoon
@@ -20,7 +22,8 @@ Customer: I need an appointment next monday afternoon
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: do 8PM tonight 
+Customer: more
+Booka: <Checking><SlotsAvailable> 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 46. Can I make an appointment next tuesday morning
@@ -28,7 +31,8 @@ Customer: Can I make an appointment next tuesday morning
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: book the 4PM on 14th August
+Customer: what you have after that?
+Booka: <Checking><SlotsAvailable> 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 47. can I make an appointment tomorrow morning

@@ -1,5 +1,122 @@
-user:  Book me in for a mobile dev
-Booka: No response avaialble
-user:  3.30 pm on 21st Sep 
-Booka: No response avaialble
+user:  Book me in for a henna
+Booka: Name of the person attending the appointment?
+user:  Anthony Gill
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 9th Oct @ 10:10 AM, 9th Oct @ 11:10 AM, 9th Oct @ 12:10 PM. What date & time do you prefer?
+user:   9th Oct @ 11:10 AM 
+Booka: Sure, checking that...
+Booka:  All done!The appointment has been booked!
+AI Session:24ed3a27-c6f7-4f6b-b867-9eb87d8613a2
 ----------------------------------------------------
+user:  can I make an appointment for a henna
+Booka: Name of the person attending the appointment?
+user:  Anthony Gill
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 9th Oct @ 11:00 AM, 9th Oct @ 12:00 PM, 9th Oct @ 01:00 PM. What date & time do you prefer?
+user:   9th Oct @ 12:00 PM 
+Booka: Sure, checking that...
+Booka:  All done!The appointment has been booked!
+AI Session:4225dece-534d-4220-9097-58beab5d1b29
+----------------------------------------------------
+user:  I need an appointment for a henna
+Booka: Name of the person attending the appointment?
+user:  Anthony Gill
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 9th Oct @ 11:00 AM, 9th Oct @ 01:00 PM, 9th Oct @ 02:00 PM. What date & time do you prefer?
+user:   9th Oct @ 01:00 PM 
+Booka: Sure, checking that...
+Booka:  All done!The appointment has been booked!
+AI Session:917e00de-d6e2-4c27-ab2e-416a9f16f94b
+----------------------------------------------------
+user:  can you book me in for a henna
+Booka: Name of the person attending the appointment?
+user:  Anthony Gill
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 9th Oct @ 11:00 AM, 9th Oct @ 01:00 PM, 9th Oct @ 02:00 PM. What date & time do you prefer?
+user:   9th Oct @ 01:00 PM 
+Booka: Sure, checking that...
+Booka:  All done!The appointment has been booked!
+AI Session:4a350537-0b66-4c78-94f9-cf027de1aed9
+----------------------------------------------------
+user:  Appointment needed for a henna
+Booka: Name of the person attending the appointment?
+user:  Anthony Gill
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 9th Oct @ 11:00 AM, 9th Oct @ 01:00 PM, 9th Oct @ 02:00 PM. What date & time do you prefer?
+user:   9th Oct @ 01:00 PM 
+Booka: Sure, checking that...
+Booka:  All done!The appointment has been booked!
+AI Session:41fdfa79-8213-41ba-a7ae-cd022308bf94
+----------------------------------------------------
+user:  when is the next available appointment for this henna
+Booka: Name of the person attending the appointment?
+user:  Anthony Gill
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 9th Oct @ 11:00 AM, 9th Oct @ 01:00 PM, 9th Oct @ 02:00 PM. What date & time do you prefer?
+user:   9th Oct @ 01:00 PM 
+Booka: Sure, checking that...
+Booka:  All done!The appointment has been booked!
+AI Session:4e2bbf95-f44a-4fca-b484-2044aeac5f1d
+----------------------------------------------------
+user:  I am after a henna
+Booka: Name of the person attending the appointment?
+user:  Anthony Gill
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 9th Oct @ 11:00 AM, 9th Oct @ 01:00 PM, 9th Oct @ 02:00 PM. What date & time do you prefer?
+user:   9th Oct @ 01:00 PM 
+Booka: Sure, checking that...
+Booka:  All done!The appointment has been booked!
+AI Session:cbcf3c91-cdb0-4e82-a893-0110d517bf85
+----------------------------------------------------
+user:  I would like a henna
+Booka: Name of the person attending the appointment?
+user:  Anthony Gill
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 9th Oct @ 11:00 AM, 9th Oct @ 01:00 PM, 9th Oct @ 02:00 PM. What date & time do you prefer?
+user:   9th Oct @ 01:00 PM 
+Booka: Sure, checking that...
+Booka:  All done!The appointment has been booked!
+AI Session:e64ffbce-bc11-46e0-b54b-02d2b1d07230
+----------------------------------------------------
+user:  Book me in for a henna asap
+Booka: Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 9th Oct @ 11:00 AM, 9th Oct @ 01:00 PM, 9th Oct @ 02:00 PM. What date & time do you prefer?
+user:   9th Oct @ 01:00 PM 
+Booka: Sure, checking that...
+Booka:  All done!The appointment has been booked!
+AI Session:5cf837db-56f8-4176-8748-23f8e08de9c4
+----------------------------------------------------
+user:  Book me in today at 4 PM for a henna
+Booka: Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 9th Oct @ 11:00 AM, 9th Oct @ 01:00 PM, 9th Oct @ 02:00 PM. What date & time do you prefer?
+AI Session:58820a15-be54-481d-96df-95a675b62b47
+----------------------------------------------------
+user:  Book me in tomorrow at 2 PM for a henna
+Booka: Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 9th Oct @ 11:00 AM, 9th Oct @ 01:00 PM, 9th Oct @ 02:00 PM. What date & time do you prefer?
+AI Session:62dd8d44-7f3e-40fc-b484-c74a6f9f6567
+----------------------------------------------------
+user:  Book me in at 4 today for a henna
+Booka: Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 9th Oct @ 11:00 AM, 9th Oct @ 01:00 PM, 9th Oct @ 02:00 PM. What date & time do you prefer?
+AI Session:f93f0109-d5dc-4425-896e-e46c5313e900
+----------------------------------------------------
+user:  Can I make an appointment today at 4 for a henna
+Booka: Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  All done!The appointment has been booked!
+AI Session:5490799a-6b2b-457d-90b8-ca5490d32d2d
+----------------------------------------------------
+user:  I would like an appointment for henna on Fri at 3
+Booka: Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
