@@ -1,0 +1,22 @@
+﻿Expression: 6. Appointment Request expression with date & time range & NO SERVICE
+Case: 1. book me in this afternoon
+Customer: book me in this afternoon
+Booka: what type of service are you looking for?<ValidationException>
+Customer: I dont know
+Booka: Can't be sure of what service you are looking for. Try any of these: <ValidationException> 
+Customer: I dont know
+Booka: Do you want to try one or more of these options: <ValidationException> 
+Customer: I dont know 
+Booka: Popular Services: . If you want help in finding the right service, please contact provider<ValidationException>
+Customer: none of these 
+Booka: Popular Services: . If you want help in finding the right service, please contact provider<ValidationException>
+
+Case: 2. book me in this afternoon
+Customer: book me in this afternoon
+Booka: what type of service are you looking for?<ValidationException>
+Customer: [shortService]
+Booka: <ManyServices> 
+Customer: [fullService]
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation>

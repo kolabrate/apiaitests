@@ -1,0 +1,16 @@
+﻿Expression: 6. Exception Scenarios
+Case: 1. book me in this afternoon for haircut (Change of Datetime in the conversation)
+Customer: book me in this afternoon for [service]
+Booka: <Checking><SlotsAvailable> 
+Customer: check tomorrow afernoon
+Booka: <Checking><SlotsAvailable>
+Customer: check after Monday
+Booka: <Checking><SlotsAvailable>
+Customer: check after Tuesday
+Booka: Do you have prefered date & time?
+
+Case: 2. book me in this afternoon for haircut with Mark (Remembering last asked booking date, daterange etc)
+Customer: book me in this afternoon for [service]
+Booka: <Checking><SlotsAvailable> 
+Customer: check tomorrow
+Booka: <Checking><SlotsAvailable>

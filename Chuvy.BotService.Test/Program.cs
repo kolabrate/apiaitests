@@ -55,7 +55,7 @@ namespace Chuvy.BotService.Test
         {
             using (HttpClient client = new HttpClient())
             {                
-                client.DefaultRequestHeaders.Add("Authorization", "Bearer " + "9b66dae2ac8644bbb9c24b7c19d92234");
+                client.DefaultRequestHeaders.Add("Authorization", "Bearer " + "9cd21fc46a5a4a7c8a68fe78ff4cc4de");
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 

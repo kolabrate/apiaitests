@@ -184,15 +184,24 @@ namespace apiai.tests
             var variations = new Dictionary<string, List<string>>();
             var exits = Directory.Exists(@"..\Data\");
             var list = new List<string>();
-            var fileNames = new List<string>();            
+            var fileNames = new List<string>();
+            var filesNamesArray = Directory.GetFiles(@"..\..\Data\");
+            fileNames = filesNamesArray.Where(c => c.StartsWith("..\\..\\Data\\TC")).ToList();
+
             //fileNames.Add(@"..\..\Data\TC1_ExistingCustomerForBookedSlots.txt");
+            //fileNames.Add(@"..\..\Data\TC10_NewCustomerExceptions.txt");
             //fileNames.Add(@"..\..\Data\TC2_ExistingCustomerForFreeSlots.txt");
             //fileNames.Add(@"..\..\Data\TC3_NewCustomerForBookedSlots.txt");
-            fileNames.Add(@"..\..\Data\TC4_NewCustomerForFreeSlots.txt");
+            //fileNames.Add(@"..\..\Data\TC4_NewCustomerForFreeSlots.txt");
+            //fileNames.Add(@"..\..\Data\TC41_NewCustomerForFreeSlots.txt");
             //fileNames.Add(@"..\..\Data\TC5_ConfirmationVariations.txt");
             //fileNames.Add(@"..\..\Data\TC6_ExistingCustomerShowMore.txt");
+            //fileNames.Add(@"..\..\Data\TC7_NewCustomerForFreeSlots.txt");
+            //fileNames.Add(@"..\..\Data\TC8_ConfirmationVariations.txt");
+            //fileNames.Add(@"..\..\Data\TC81_ExistingCustomerShowMore.txt");
+            //fileNames.Add(@"..\..\Data\TC9_ExistingCustomerShowMore.txt");
 
-            foreach(var fileName in fileNames)
+            foreach (var fileName in fileNames)
             {
                 var allLines = File.ReadAllLines(fileName);
                 list.AddRange(allLines);
