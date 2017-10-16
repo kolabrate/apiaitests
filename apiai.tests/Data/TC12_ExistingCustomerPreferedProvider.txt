@@ -1,0 +1,5 @@
+﻿Expression: 6. Appointment Request expression with range, SERVICE & Provider
+Case: 1. book me in this afternoon for haircut with Mark
+Customer: book me in this afternoon for [service] with [Provider]
+Booka: <Checking><SlotsAvailable> 
+Booka: <CheckingConfirmation><Booked>

@@ -129,7 +129,9 @@
     <Content Include="Data\TC81_NewCustomerUnknown_MultipleServices.txt" />
     <Content Include="Data\TC8_ExistingCustomerUnknown_MultipleServices.txt" />
     <Content Include="Data\TC10_NewCustomerExceptions.txt" />
-    <Content Include="Data\TC9_ExistingCustomerPreferedProvider.txt" />
+    <Content Include="Data\TC9_ExistingCustomerCancelAppointments.txt" />
+    <Content Include="Data\TC12_ExistingCustomerPreferedProvider.txt" />
+    <Content Include="Data\TC11_ExistingCustomerEnquireAppointments.txt" />
     <Content Include="Data\TC7_ExistingCustomerCancelAppmt.txt" />
     <Content Include="Data\TC6_ExistingCustomerShowMore.txt" />
     <Content Include="Data\TC5_ConfirmationVariations.txt" />
