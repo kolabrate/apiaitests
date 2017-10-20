@@ -18,5 +18,5 @@ Customer: book me in this afternoon for [service]
 Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Anthony Gill
 Booka: <Checking><SlotsAvailable> 
-Customer: check tomorrow
+Customer: check 24th
 Booka: <Checking><SlotsAvailable>

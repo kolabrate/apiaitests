@@ -1,11 +1,54 @@
-user:  book me in this afternoon for henna with Kolabrate
+Issue#1: "Check 24th" is not returning results for 24th.  
+user:  book me in this afternoon for henna
+Booka: Name of the person attending the appointment?
+user:  Anthony Gill
 Booka: Sure, let me find next availabilities.
 Booka:  The next available slots are: 23rd Oct @ 12:00 PM, 23rd Oct @ 01:00 PM, 23rd Oct @ 02:00 PM. What date & time do you prefer?
-user:   23rd Oct @ 01:00 PM 
-Booka: Sure, checking that...
-Booka:  All done!The appointment has been booked!
-AI Session:ff105891-8e18-4a63-a150-aece7f25c0e4
+user:  check 24th
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 23rd Oct @ 02:30 PM, 23rd Oct @ 03:30 PM, 24th Oct @ 09:00 AM. What date & time do you prefer?
+AI Session:186ee44b-134b-48bc-885f-a4760aa7c417
 ----------------------------------------------------
+Issue#2: 2.1 When customer says Check Morning and the slots are not available on Monday morning, show message AlternateSlotsOnly instead of SlotsAvailable.
+		 2.2 Object reference error when asked for a date that the staff is not working.
+		 2.3 After 3 attempts, the question for "Do you have prefered date & time?" is not coming up.
+user:  book me in this afternoon for henna
+Booka: Name of the person attending the appointment?
+user:  Anthony Gill
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 23rd Oct @ 12:00 PM, 23rd Oct @ 01:00 PM, 23rd Oct @ 02:00 PM. What date & time do you prefer?
+user:  check morning
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 23rd Oct @ 12:00 PM, 23rd Oct @ 01:00 PM, 23rd Oct @ 02:00 PM. What date & time do you prefer?
+user:  check after Tuesday
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 23rd Oct @ 02:30 PM, 23rd Oct @ 03:30 PM, 24th Oct @ 09:00 AM. What date & time do you prefer?
+user:  check after Wednesday
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 24th Oct @ 09:30 AM, 24th Oct @ 10:30 AM, 24th Oct @ 11:30 AM. What date & time do you prefer?
+user:  check after Thursday
+Booka: Sure, let me find next availabilities.
+Booka: Sure, let me find next availabilities.; Exception in task; Object reference not set to an instance of an object.   at Chuvy.BotService.Manager.Managers.AppointmentManager.PrepareAvailabilityRequest(Int32 messageId) in C:\Priya\Chuvy\Chuvy.BotService.Manager\Managers\AppointmentManager.cs:line 272
+   at Chuvy.BotService.Manager.Managers.AppointmentManager.GetServiceAvailabilities(Int32 messageId) in C:\Priya\Chuvy\Chuvy.BotService.Manager\Managers\AppointmentManager.cs:line 57
+   at Chuvy.Botservice.Controllers.FulfillRequestController.<>c__DisplayClass19_0.<CheckAvailabilityAsync>b__0() in C:\Priya\Chuvy\Chuvy.Botservice\Controllers\FulfillRequestController.cs:line 1031
+AI Session:a7e7ebb8-6d47-4288-9418-ed6878a058d6
+----------------------------------------------------
+Issue#3: 3.1 when no appointments are found, it should say you have no upcoming appointments
+		 3.2 you had henna appointment on 10th Oct, No upcoming henna appointments
+		 3.3 third case is a failure
+user:  When is my next appointment?
+Booka: I am not able to check your appointments, please contact provider
+AI Session:9b8ae014-dc4d-4552-b4b3-9fb28543d178
+----------------------------------------------------
+user:  When is my next henna appointment?
+Booka: Your had henna appointment on 10th Oct @ 12:00 AM
+AI Session:ddb53c2c-f081-4cba-8b84-c960c1fa1e8d
+----------------------------------------------------
+user:  what appointment i got tomorrow?
+Booka: what type of Service are your looking for ?
+AI Session:9040b907-e18c-43a0-b043-1d8c0f1f94a8
+----------------------------------------------------
+Issue#4 Message from Booka is not alternateslots only. 
 user:  Book me in today at 4 PM for a henna
 Booka: Sure, let me find next availabilities.
 Booka:  The next available slots are: 23rd Oct @ 09:00 AM, 23rd Oct @ 10:00 AM, 23rd Oct @ 11:00 AM. What date & time do you prefer?
@@ -14,30 +57,7 @@ Booka: Sure, checking that...
 Booka:  All done!The appointment has been booked!
 AI Session:f49396ca-8432-468e-9a5d-081d0cdd5da3
 ----------------------------------------------------
-user:  Book me in tomorrow at 2 PM for a henna
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 23rd Oct @ 09:00 AM, 23rd Oct @ 10:00 AM, 23rd Oct @ 11:00 AM. What date & time do you prefer?
-user:   23rd Oct @ 10:00 AM 
-Booka: Sure, checking that...
-Booka:  All done!The appointment has been booked!
-AI Session:76a0d3ef-2835-475d-9899-aa1380110546
-----------------------------------------------------
-user:  Book me in at 4 today for a henna
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 23rd Oct @ 09:00 AM, 23rd Oct @ 10:00 AM, 23rd Oct @ 11:00 AM. What date & time do you prefer?
-user:   23rd Oct @ 10:00 AM 
-Booka: Sure, checking that...
-Booka:  All done!The appointment has been booked!
-AI Session:82a16fa6-1ee9-45b7-80b8-4cf49e56a7ca
-----------------------------------------------------
-user:  Can I make an appointment today at 4 for a henna
-Booka: Sure, let me find next availabilities.
-Booka:  All done!The appointment has been booked!
-user:   23rd Oct @ 10:00 AM 
-Booka: Sure, checking that...
-Booka:  All done!The appointment has been booked!
-AI Session:c49e80c8-9a06-417f-81a7-09deffef2cb0
-----------------------------------------------------
+Issue#5 two bookings in one conversation. In same session booking two appointments for same service for same customer should be fixed.
 user:  I would like an appointment for henna on Fri at 3
 Booka: Sure, let me find next availabilities.
 Booka:  All done!The appointment has been booked!
@@ -46,14 +66,7 @@ Booka: Sure, checking that...
 Booka:  All done!The appointment has been booked!
 AI Session:d094a570-ca54-4e05-b870-914c30bcfc16
 ----------------------------------------------------
-user:  Can I make an appointment on Fri the 6th at 4 PM for henna
-Booka: Sure, let me find next availabilities.
-Booka:  All done!The appointment has been booked!
-user:   23rd Oct @ 10:00 AM 
-Booka: Sure, checking that...
-Booka:  All done!The appointment has been booked!
-AI Session:5d8eb79a-4502-46d5-ad58-3658904efbfb
-----------------------------------------------------
+Issue#6 Past date throwing an exception
 user:  Can I get an appointment on 6th of Oct at 9 in the morning for henna
 Booka: Sure, let me find next availabilities.
 Booka: Sure, let me find next availabilities.; Exception in task; Validation failed   at Cronofy.IHttpClientExtensions.GetValidResponse(IHttpClient httpClient, HttpRequest request)
@@ -70,6 +83,7 @@ Booka: Sure, checking that...
 Booka:  All done!The appointment has been booked!
 AI Session:c4a087d4-3efc-415d-a35b-88797f28eab4
 ----------------------------------------------------
+Issue#6 This afternoon is not giving correct results. Should give next available alternate slot
 user:  book me in this afternoon for a henna
 Booka: Sure, let me find next availabilities.
 Booka:  The next available slots are: 23rd Oct @ 10:00 AM, 23rd Oct @ 11:00 AM, 23rd Oct @ 01:00 PM. What date & time do you prefer?
@@ -78,14 +92,7 @@ Booka: Sure, checking that...
 Booka:  All done!The appointment has been booked!
 AI Session:e51e4942-a696-4985-9f95-cb70a0fd07af
 ----------------------------------------------------
-user:  can I make an appointment tomorrow afternoon for a henna
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 23rd Oct @ 10:00 AM, 23rd Oct @ 11:00 AM, 23rd Oct @ 01:00 PM. What date & time do you prefer?
-user:   23rd Oct @ 11:00 AM 
-Booka: Sure, checking that...
-Booka:  All done!The appointment has been booked!
-AI Session:a2209957-6c5f-4d86-8174-b21ecfda912c
-----------------------------------------------------
+Issue#7 this morning is giving out of office hours like 8AM
 user:  Can I make an appointment this morning for henna
 Booka: Sure, let me find next availabilities.
 Booka:  The next available slots are: 23rd Oct @ 08:00 AM, 23rd Oct @ 10:00 AM, 23rd Oct @ 11:00 AM. What date & time do you prefer?
@@ -94,26 +101,3 @@ Booka: Sure, checking that...
 Booka:  All done!The appointment has been booked!
 AI Session:99939f9a-5f09-41a5-a7dd-801a18cabbac
 ----------------------------------------------------
-user:  book me in for a friday morning for a henna
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 30th Oct @ 08:00 AM, 30th Oct @ 09:00 AM, 30th Oct @ 10:00 AM. What date & time do you prefer?
-user:   30th Oct @ 09:00 AM 
-Booka: Sure, checking that...
-Booka:  All done!The appointment has been booked!
-AI Session:fda17aa0-4a8a-474f-945c-2a055e1ca271
-----------------------------------------------------
-user:  I need a henna today afternoon
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 23rd Oct @ 10:00 AM, 23rd Oct @ 11:00 AM, 23rd Oct @ 01:00 PM. What date & time do you prefer?
-user:   23rd Oct @ 11:00 AM 
-Booka: Sure, checking that...
-Booka:  All done!The appointment has been booked!
-AI Session:7b632112-d5dc-46dd-a2f7-3bd95eeebcd1
-----------------------------------------------------
-user:  Can you book me in today for henna
-Booka: Api.Ai not responding
-user:   23rd Oct @ 11:00 AM 
-Booka: Api.Ai not responding
-----------------------------------------------------
-user:  Can you book me in tomorrow for henna
-Booka: Api.Ai not responding

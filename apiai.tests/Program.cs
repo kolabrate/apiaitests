@@ -305,7 +305,7 @@ namespace apiai.tests
             {
                 foreach (var thisCase in expression.Cases)
                 {
-                    ProcessCase(thisCase.Conversations, thisCase.Name);
+                    ProcessCase(thisCase.Conversations, thisCase.Name,expression.IsNewCustomer);
                 }
             }
             
@@ -479,13 +479,14 @@ namespace apiai.tests
         private static string freeDt = "22nd Sep at 12PM";
         private static string freeDtConfirm = "3.30 pm on 21st Sep";
         private static string serviceName = "henna";
-        private static void ProcessCase(List<Conversation> conversations, string caseName)
+        private static string providerName = "Kolabrate";
+        private static void ProcessCase(List<Conversation> conversations, string caseName, bool isNewCustomer = true)
         {
             response = null;
             Initialise();
-            //var number = "+61400000000";
-            //if (caseName.Contains("New Customer"))
-            var number = "+61" + (new string(DateTime.Now.Ticks.ToString().Reverse().ToArray())).Substring(0, 8);
+            var number = "+61400000000";
+            if (isNewCustomer)
+                number = "+61" + (new string(DateTime.Now.Ticks.ToString().Reverse().ToArray())).Substring(0, 8);
 
             foreach (var convo in conversations)
             {
@@ -503,6 +504,7 @@ namespace apiai.tests
                         UserQuery = UserQuery.Replace("[Datetime]", bookedDt);
                     }
                     UserQuery = UserQuery.Replace("[ConfirmDatetime]", freeDtConfirm);
+                    UserQuery = UserQuery.Replace("[Provider]", providerName);
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine(string.Format("user: {0}", UserQuery));
                     ProcessUserQueryAsync(number).Wait();

@@ -1,0 +1,10 @@
+﻿Expression: 6. Appointment Request expression with range, SERVICE & Provider
+Case: 1. When is my next appointment?
+Customer: When is my next appointment?
+Booka: 
+Case: 2. When is my next henna appointment?
+Customer: When is my next [service] appointment?
+Booka: 
+Case: 3. what appointment i got tomorrow?
+Customer: what appointment i got tomorrow?
+Booka: 

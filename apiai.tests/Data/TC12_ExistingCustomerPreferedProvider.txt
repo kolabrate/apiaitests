@@ -2,4 +2,5 @@
 Case: 1. book me in this afternoon for haircut with Mark
 Customer: book me in this afternoon for [service] with [Provider]
 Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
