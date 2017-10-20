@@ -1,0 +1,10 @@
+user:  book me in this afternoon for henna
+Booka: Name of the person attending the appointment?
+user:  Anthony Gill
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 23rd Oct @ 12:00 PM, 23rd Oct @ 01:00 PM, 23rd Oct @ 02:00 PM. What date & time do you prefer?
+user:  check tomorrow
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 23rd Oct @ 02:30 PM, 23rd Oct @ 03:30 PM, 24th Oct @ 09:00 AM. What date & time do you prefer?
+AI Session:05df3596-ae19-4730-8c16-70e34f96ae1b
+----------------------------------------------------

@@ -1,4 +1,4 @@
-﻿Expression: 1. Appointment Request Expression  with Service Name
+﻿Expression: 1. Appointment Request Expression  with Service Name (New Customer)
 Case: 1. Book me in for a [service]
 Customer: Book me in for a [service]
 Booka: Name of the person attending the appointment?<ValidationException>

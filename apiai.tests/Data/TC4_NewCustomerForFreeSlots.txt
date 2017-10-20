@@ -1,4 +1,4 @@
-﻿Expression: 1. Appointment Request Expression  with Service Name
+﻿Expression: 1. Appointment Request Expression  with Service Name(New Customer)
 Case: 1. Book me in for a [service]
 Customer: Book me in for a [service]
 Booka: Name of the person attending the appointment?<ValidationException>
@@ -63,7 +63,7 @@ Booka: <Checking><SlotsAvailable>
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
-Expression: 2. Appointment Request Expression with Service Name & Date & Time
+Expression: 2. Appointment Request Expression with Service Name & Date & Time (New Customer)
 Case: 8. Book me in for a [service] asap 
 Customer: Book me in for a [service] asap
 Booka: Name of the person attending the appointment?<ValidationException>
@@ -114,7 +114,7 @@ Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Anthony Gill 
 Booka: <Checking><Booked>
 
-Expression: 3. Appointment Request expression with time range & service
+Expression: 3. Appointment Request expression with time range & service (New Customer)
 Case: 17. book me in this afternoon for a [service]
 Customer: book me in this afternoon for a [service]
 Booka: Name of the person attending the appointment?<ValidationException>
@@ -201,7 +201,7 @@ Booka: <Checking><SlotsAvailable>
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
-Expression: 4. Appointment Request Expression & NO SERVICE & NO Datetime
+Expression: 4. Appointment Request Expression & NO SERVICE & NO Datetime (New Customer)
 Case: 28. Book appointment
 Customer: Book appointment
 Booka: what type of service are you looking for?<ValidationException> 
@@ -282,7 +282,7 @@ Booka: <Checking><SlotsAvailable>
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
-Expression: 5. Appointment Request expression with Date & Time & NO SERVICE
+Expression: 5. Appointment Request expression with Date & Time & NO SERVICE (New Customer)
 Case: 36. Book me in tomorrow at 3
 Customer: Book me in tomorrow at 3
 Booka: what type of service are you looking for?<ValidationException>
@@ -353,7 +353,7 @@ Booka: <Checking><SlotsAvailable>
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
-Expression: 6. Appointment Request expression with date & time range & NO SERVICE
+Expression: 6. Appointment Request expression with date & time range & NO SERVICE (New Customer)
 Case: 43. book me in this afternoon
 Customer: book me in this afternoon
 Booka: what type of service are you looking for?<ValidationException>

@@ -1,4 +1,4 @@
-﻿Expression: 6. Appointment Request expression with date & time range & NO SERVICE
+﻿Expression: 6. Appointment Request expression with date & time range & NO SERVICE (New Customer)
 Case: 1. book me in this afternoon
 Customer: book me in this afternoon
 Booka: what type of service are you looking for?<ValidationException>

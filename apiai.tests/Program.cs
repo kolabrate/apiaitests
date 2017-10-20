@@ -266,7 +266,8 @@ namespace apiai.tests
                         currentExpr = new Expression()
                         {
                             Name = exprName,
-                            Cases = new List<Case>()
+                            Cases = new List<Case>(),
+                            IsNewCustomer = exprName.Contains("(New Customer)")
                         };
                         newExpressions.Add(currentExpr);
                     }
@@ -607,6 +608,7 @@ namespace apiai.tests
             WriteToFile(breakLine);
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(breakLine);
+            Console.Clear(); 
         }
         private static Message GetLatestMessage(string sessionId)
         {

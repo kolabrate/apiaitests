@@ -1,16 +1,22 @@
-﻿Expression: 6. Exception Scenarios
+﻿Expression: 6. Exception Scenarios (New Customer)
 Case: 1. book me in this afternoon for haircut (Change of Datetime in the conversation)
 Customer: book me in this afternoon for [service]
+Booka: Name of the person attending the appointment?<ValidationException>
+Customer: Anthony Gill
 Booka: <Checking><SlotsAvailable> 
-Customer: check tomorrow afernoon
-Booka: <Checking><SlotsAvailable>
-Customer: check after Monday
+Customer: check morning
 Booka: <Checking><SlotsAvailable>
 Customer: check after Tuesday
+Booka: <Checking><SlotsAvailable>
+Customer: check after Wednesday
+Booka: <Checking><SlotsAvailable>
+Customer: check after Thursday
 Booka: Do you have prefered date & time?
 
 Case: 2. book me in this afternoon for haircut with Mark (Remembering last asked booking date, daterange etc)
 Customer: book me in this afternoon for [service]
+Booka: Name of the person attending the appointment?<ValidationException>
+Customer: Anthony Gill
 Booka: <Checking><SlotsAvailable> 
 Customer: check tomorrow
 Booka: <Checking><SlotsAvailable>

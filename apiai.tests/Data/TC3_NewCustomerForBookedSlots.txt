@@ -1,4 +1,4 @@
-﻿Expression: 2. Appointment Request Expression with Service Name & Date & Time
+﻿Expression: 2. Appointment Request Expression with Service Name & Date & Time(New Customer)
 Case: 8. Book me in for a [service] asap 
 Customer: Book me in for a [service] asap
 Booka: Name of the person attending the appointment?<ValidationException>
