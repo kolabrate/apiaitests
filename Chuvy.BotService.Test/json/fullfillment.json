@@ -1,169 +1,86 @@
 {
-  "id": "4b23d919-3b0d-47ab-a7fe-23413144723a",
-  "timestamp": "2017-10-20T04:38:01.788Z",
+  "originalRequest": {
+    "source": "twilio",
+    "data": {
+      "ApiVersion": "2010-04-01",
+      "SmsSid": "SMd7d54129f9814fe31f6ac9038bd6ed65",
+      "SmsStatus": "received",
+      "SmsMessageSid": "SMd7d54129f9814fe31f6ac9038bd6ed65",
+      "NumSegments": "1",
+      "ToState": "",
+      "From": "+61409094754",
+      "MessageSid": "SMd7d54129f9814fe31f6ac9038bd6ed65",
+      "AccountSid": "AC525398cbca285a1781a4e8a4287bcb43",
+      "ToCity": "",
+      "FromCountry": "AU",
+      "ToZip": "",
+      "FromCity": "",
+      "To": "+61451562335",
+      "FromZip": "",
+      "ToCountry": "AU",
+      "Body": "Do 4pm",
+      "NumMedia": "0",
+      "FromState": ""
+    }
+  },
+  "id": "b463bf90-c956-4907-98b3-4bdfb0f0d420",
+  "timestamp": "2017-10-25T03:53:14.418Z",
   "lang": "en",
   "result": {
     "source": "agent",
-    "resolvedQuery": "afternoon",
+    "resolvedQuery": "Do 4pm",
     "speech": "",
-    "action": "ScheduleAppointment",
-    "actionIncomplete": true,
-    "parameters": {
-      "Bookingdate": "",
-      "BookingDateTimePeriod": "",
-      "genericTimeSlots": "afternoons",
-      "service": [],
-      "Bookingtime": "",
-      "beforeAfter": "",
-      "Bookingdateperiod": "",
-      "Bookingtimeperiod": "",
-      "providerName": ""
-    },
+    "action": "Fallback",
+    "actionIncomplete": false,
+    "parameters": {},
     "contexts": [
       {
-        "name": "scheduleappointment-followup",
+        "name": "generic",
         "parameters": {
-          "genericTimeSlots.original": "afternoon",
+          "genericTimeSlots.original": "",
           "BookingDateTimePeriod.original": "",
           "beforeAfter.original": "",
           "listedSlotValues.original": "",
           "providerName.original": "",
-          "service.original": "",
-          "beforeAfter": "",
-          "askMoreAttempts.original": "",
-          "Bookingtimeperiod": "",
-          "Bookingdateperiod.original": "",
-          "Bookingtimeperiod.original": "",
-          "Bookingdate.original": "",
-          "BookingDateTimePeriod": "",
-          "Bookingdate": "",
-          "genericTimeSlots": "afternoons",
-          "service": [],
-          "Bookingtime": "",
-          "askMoreAttempts": "1",
-          "listedSlotValues": "636441768000000000,636441804000000000,636441840000000000",
-          "providerName": "",
-          "Bookingdateperiod": "",
-          "Bookingtime.original": ""
-        },
-        "lifespan": 9
-      },
-      {
-        "name": "scheduleappointment_dialog_context",
-        "parameters": {
-          "genericTimeSlots.original": "afternoon",
-          "BookingDateTimePeriod.original": "",
-          "beforeAfter.original": "",
-          "providerName.original": "",
-          "service.original": "",
-          "beforeAfter": "",
-          "Bookingtimeperiod": "",
-          "Bookingdateperiod.original": "",
-          "Bookingtimeperiod.original": "",
-          "Bookingdate.original": "",
-          "BookingDateTimePeriod": "",
-          "Bookingdate": "",
-          "genericTimeSlots": "afternoons",
-          "service": [],
-          "Bookingtime": "",
-          "providerName": "",
-          "Bookingdateperiod": "",
-          "Bookingtime.original": ""
-        },
-        "lifespan": 2
-      },
-      {
-        "name": "e1710622-ec4a-4cf7-a117-856873ef4b3b_id_dialog_context",
-        "parameters": {
-          "genericTimeSlots.original": "afternoon",
-          "BookingDateTimePeriod.original": "",
-          "beforeAfter.original": "",
-          "providerName.original": "",
-          "service.original": "",
-          "beforeAfter": "",
-          "Bookingtimeperiod": "",
-          "Bookingdateperiod.original": "",
-          "Bookingtimeperiod.original": "",
-          "Bookingdate.original": "",
-          "BookingDateTimePeriod": "",
-          "Bookingdate": "",
-          "genericTimeSlots": "afternoons",
-          "service": [],
-          "Bookingtime": "",
-          "providerName": "",
-          "Bookingdateperiod": "",
-          "Bookingtime.original": ""
-        },
-        "lifespan": 2
-      },
-      {
-        "name": "scheduleappointment-contextout",
-        "parameters": {
-          "LastAskedBookingDate": "2017-10-21",
-          "genericTimeSlots.original": "afternoon",
-          "BookingDateTimePeriod.original": "",
-          "beforeAfter.original": "",
-          "listedSlotValues.original": "",
-          "providerName.original": "",
-          "service.original": "",
+          "service.original": "blowdry",
           "beforeAfter": "",
           "Bookingtimeperiod": "",
           "askMoreAttempts.original": "",
-          "Bookingdateperiod.original": "",
+          "Bookingdateperiod.original": "this week",
           "Bookingtimeperiod.original": "",
           "Bookingdate.original": "",
           "Bookingdate": "",
           "BookingDateTimePeriod": "",
-          "genericTimeSlots": "afternoons",
-          "service": [],
+          "twilio_sender_id": "+61409094754",
+          "genericTimeSlots": "",
+          "service": [
+            "Blow-dry"
+          ],
+          "booka-showMore.original": "",
           "Bookingtime": "",
-          "askMoreAttempts": "1",
-          "Bookingdateperiod": "",
-          "listedSlotValues": "636441768000000000,636441804000000000,636441840000000000",
+          "askMoreAttempts": "2",
+          "booka-showMore": "",
+          "listedSlotValues": "636445404000000000,636445413000000000,636445422000000000",
+          "Bookingdateperiod": "2017-10-23/2017-10-29",
           "providerName": "",
-          "Bookingtime.original": "",
-          "currentAction": "ScheduleAppointment"
-        },
-        "lifespan": 9
-      },
-      {
-        "name": "scheduleappointment_dialog_params_service",
-        "parameters": {
-          "genericTimeSlots.original": "afternoon",
-          "BookingDateTimePeriod.original": "",
-          "beforeAfter.original": "",
-          "providerName.original": "",
-          "service.original": "",
-          "beforeAfter": "",
-          "Bookingtimeperiod": "",
-          "Bookingdateperiod.original": "",
-          "Bookingtimeperiod.original": "",
-          "Bookingdate.original": "",
-          "BookingDateTimePeriod": "",
-          "Bookingdate": "",
-          "genericTimeSlots": "afternoons",
-          "service": [],
-          "Bookingtime": "",
-          "providerName": "",
-          "Bookingdateperiod": "",
           "Bookingtime.original": ""
         },
-        "lifespan": 1
+        "lifespan": 0
       }
     ],
     "metadata": {
-      "intentId": "e1710622-ec4a-4cf7-a117-856873ef4b3b",
+      "intentId": "6f57d819-1696-43bf-aec5-0a74583c7e2e",
       "webhookUsed": "true",
-      "webhookForSlotFillingUsed": "true",
-      "intentName": "ScheduleAppointment"
+      "webhookForSlotFillingUsed": "false",
+      "intentName": "Default Fallback Intent"
     },
     "fulfillment": {
-      "speech": "what service are you looking for?",
+      "speech": "Bummer!! I did not understand what you said :-(.  If you can try something like ' book  me in next Thursday' or' get me next available time slot for haircut', I promise, I  can be quite helpful.",
       "messages": [
         {
           "type": 0,
-          "id": "29caded1-c07b-44bb-9712-c0adec2dda7d",
-          "speech": "what service are you looking for?"
+          "id": "c77d569d-5577-4dc7-8c1e-ceade8c6bf50",
+          "speech": "Bummer!! I did not understand what you said :-(.  If you can try something like ' book  me in next Thursday' or' get me next available time slot for haircut', I promise, I  can be quite helpful."
         }
       ]
     },
@@ -173,5 +90,5 @@
     "code": 200,
     "errorType": "success"
   },
-  "sessionId": "4b55322e-71ae-4775-b317-463382e848ff"
+  "sessionId": "531074f2-8b54-4fff-9433-b2ea01a54315"
 }

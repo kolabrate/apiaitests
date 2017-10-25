@@ -20,3 +20,8 @@ Customer: Anthony Gill
 Booka: <Checking><SlotsAvailable> 
 Customer: check 24th
 Booka: <Checking><SlotsAvailable>
+
+Case 3. Book time not given in the options
+Customer: Book a womens haircut with Anna
+Booka: <Checking><SlotsAvailable>  The next available slots are: 23rd Oct @ 10:00 AM, 23rd Oct @ 11:00 AM, 23rd Oct @ 12:00 PM. What date & time do you prefer?
+Customer: 2pm <CheckingConfirmation2>

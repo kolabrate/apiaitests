@@ -1,4 +1,5 @@
 ﻿Expression: 1. Appointment Request Expression  with Service Name(New Customer)
+
 Case: 1. Book me in for a [service]
 Customer: Book me in for a [service]
 Booka: Name of the person attending the appointment?<ValidationException>
@@ -78,6 +79,20 @@ Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Anthony Gill 
 Booka: <Checking><Booked> 
 
+Expression: 2. Appointment Request Expression with Service Name & Date & Time (New Customer)
+
+Case: 10. Book me in this afternoon for a [service]
+Customer: Book me in this afternoon for a [service]
+Booka: Name of the person attending the appointment?<ValidationException>
+Customer: Anthony Gill 
+Booka: <Checking><Booked> 
+
+Case: 10. Book me in today at 5 PM for a [service]
+Customer: Book me in today at 5 PM for a [service]
+Booka: Name of the person attending the appointment?<ValidationException>
+Customer: Anthony Gill 
+Booka: <Checking><Booked> 
+
 Case: 11. Book me in tomorrow at 2 PM for a [service]
 Customer: Book me in tomorrow at 2 PM for a [service]
 Booka: Name of the person attending the appointment?<ValidationException>
@@ -102,14 +117,14 @@ Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Anthony Gill 
 Booka: <Checking><Booked> 
 
-Case: 15. Can I make an appointment on Fri the 6th at 4 PM for [service]
-Customer: Can I make an appointment on Fri the 6th at 4 PM for [service]
+Case: 15. Can I make an appointment on Fri the 27th at 4 PM for [service]
+Customer: Can I make an appointment on Fri the 27th at 4 PM for [service]
 Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Anthony Gill 
 Booka: <Checking><Booked>
 
-Case: 16. Can I get an appointment on 6th of Oct at 9 in the morning for [service]
-Customer: Can I get an appointment on 6th of Oct at 9 in the morning for [service]
+Case: 16. Can I get an appointment on 25th of Oct at 9 in the morning for [service]
+Customer: Can I get an appointment on 25th of Oct at 9 in the morning for [service]
 Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Anthony Gill 
 Booka: <Checking><Booked>
@@ -139,8 +154,8 @@ Booka: <Checking><SlotsAvailable>
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
-Case: 20. book me in for a friday monring for a [service]
-Customer: book me in for a friday monring for a [service]
+Case: 20. book me in for a friday morning for a [service]
+Customer: book me in for a friday morning for a [service]
 Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Anthony Gill 
 Booka: <Checking><SlotsAvailable> 

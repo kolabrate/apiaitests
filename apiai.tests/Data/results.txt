@@ -1,119 +1,533 @@
-user:  book me in this afternoon for henna with Kolabrate
+user:  Book me in this afternoon for a henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
 Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 23rd Oct @ 12:00 PM, 23rd Oct @ 01:00 PM, 23rd Oct @ 02:00 PM. What date & time do you prefer?
-user:   23rd Oct @ 01:00 PM 
-Booka: Sure, checking that...
-Booka:  All done!The appointment has been booked!
-AI Session:ff105891-8e18-4a63-a150-aece7f25c0e4
+Booka:  The next available slots are: 25th Oct @ 09:00 AM, 25th Oct @ 02:00 PM, 25th Oct @ 03:00 PM. What date & time do you prefer?
+AI Session:cfb4bd56-a5ae-44e7-b9cf-dc7f25fc79ec
 ----------------------------------------------------
-user:  Book me in today at 4 PM for a henna
+user:  Book me in today at 5 PM for a henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
 Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 23rd Oct @ 09:00 AM, 23rd Oct @ 10:00 AM, 23rd Oct @ 11:00 AM. What date & time do you prefer?
-user:   23rd Oct @ 10:00 AM 
-Booka: Sure, checking that...
-Booka:  All done!The appointment has been booked!
-AI Session:f49396ca-8432-468e-9a5d-081d0cdd5da3
+Booka:  Sorry, that time is not available. Next available slots are: 25th Oct @ 09:00 AM, 25th Oct @ 02:00 PM, 25th Oct @ 03:00 PM
+AI Session:faa37de9-af01-4c90-9d3a-3f508967ec42
 ----------------------------------------------------
 user:  Book me in tomorrow at 2 PM for a henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
 Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 23rd Oct @ 09:00 AM, 23rd Oct @ 10:00 AM, 23rd Oct @ 11:00 AM. What date & time do you prefer?
-user:   23rd Oct @ 10:00 AM 
-Booka: Sure, checking that...
 Booka:  All done!The appointment has been booked!
-AI Session:76a0d3ef-2835-475d-9899-aa1380110546
+AI Session:8ba918f9-bf4b-447e-9119-c0080ab71943
 ----------------------------------------------------
 user:  Book me in at 4 today for a henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
 Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 23rd Oct @ 09:00 AM, 23rd Oct @ 10:00 AM, 23rd Oct @ 11:00 AM. What date & time do you prefer?
-user:   23rd Oct @ 10:00 AM 
-Booka: Sure, checking that...
-Booka:  All done!The appointment has been booked!
-AI Session:82a16fa6-1ee9-45b7-80b8-4cf49e56a7ca
+Booka:  The next available slots are: 25th Oct @ 09:00 AM, 25th Oct @ 03:00 PM, 25th Oct @ 04:00 PM. What date & time do you prefer?
+AI Session:87e3c303-2fde-428b-b325-0d3ed882d20b
 ----------------------------------------------------
 user:  Can I make an appointment today at 4 for a henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
 Booka: Sure, let me find next availabilities.
-Booka:  All done!The appointment has been booked!
-user:   23rd Oct @ 10:00 AM 
-Booka: Sure, checking that...
-Booka:  All done!The appointment has been booked!
-AI Session:c49e80c8-9a06-417f-81a7-09deffef2cb0
+Booka:  Sorry, that time is not available. Next available slots are: 25th Oct @ 09:00 AM, 25th Oct @ 03:00 PM, 25th Oct @ 04:00 PM
+AI Session:58bf264c-0c25-46e5-922c-cca19133b629
 ----------------------------------------------------
 user:  I would like an appointment for henna on Fri at 3
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
 Booka: Sure, let me find next availabilities.
-Booka:  All done!The appointment has been booked!
-user:   23rd Oct @ 10:00 AM 
-Booka: Sure, checking that...
-Booka:  All done!The appointment has been booked!
-AI Session:d094a570-ca54-4e05-b870-914c30bcfc16
+Booka:  The next available slots are: 30th Oct @ 09:00 AM, 30th Oct @ 10:00 AM, 30th Oct @ 11:00 AM. What date & time do you prefer?
+AI Session:c46da43d-7ca1-4985-a56a-c0d19cbae85d
 ----------------------------------------------------
-user:  Can I make an appointment on Fri the 6th at 4 PM for henna
+user:  Can I make an appointment on Fri the 27th at 4 PM for henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
 Booka: Sure, let me find next availabilities.
-Booka:  All done!The appointment has been booked!
-user:   23rd Oct @ 10:00 AM 
-Booka: Sure, checking that...
-Booka:  All done!The appointment has been booked!
-AI Session:5d8eb79a-4502-46d5-ad58-3658904efbfb
+Booka:  Sorry, that time is not available. Next available slots are: 30th Oct @ 09:00 AM, 30th Oct @ 10:00 AM, 30th Oct @ 11:00 AM
+AI Session:219dd3af-4ce6-496f-a1ae-d048bb834363
 ----------------------------------------------------
-user:  Can I get an appointment on 6th of Oct at 9 in the morning for henna
+user:  Can I get an appointment on 25th of Oct at 9 in the morning for henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
 Booka: Sure, let me find next availabilities.
-Booka: Sure, let me find next availabilities.; Exception in task; Validation failed   at Cronofy.IHttpClientExtensions.GetValidResponse(IHttpClient httpClient, HttpRequest request)
-   at Cronofy.IHttpClientExtensions.GetJsonResponse[T](IHttpClient httpClient, HttpRequest request)
-   at Cronofy.CronofyAccountClient.GetAvailability(AvailabilityRequest availabilityRequest)
-   at Cronofy.CronofyAccountClient.GetAvailability(IBuilder`1 builder)
-   at Chuvy.Calendar.ExternalAPI.Cronofy.Helper.ExecuteAvailabilityRequest(StaffAvailability request) in C:\Priya\Chuvy\Chuvy.Calendar\ExternalAPI\Cronofy\Helper.cs:line 313
-   at Chuvy.Calendar.ExternalAPI.Cronofy.CronofyManager.ExecuteAvailabilityRequest(StaffAvailability request) in C:\Priya\Chuvy\Chuvy.Calendar\ExternalAPI\Cronofy\CronofyManager.cs:line 35
-   at Chuvy.Calendar.CalendarClient.ExecuteAvailabilityRequest(StaffAvailability request) in C:\Priya\Chuvy\Chuvy.Calendar\CalendarClient.cs:line 42
-   at Chuvy.BotService.Manager.Managers.AppointmentManager.GetServiceAvailabilities(Int32 messageId) in C:\Priya\Chuvy\Chuvy.BotService.Manager\Managers\AppointmentManager.cs:line 62
-   at Chuvy.Botservice.Controllers.FulfillRequestController.<>c__DisplayClass19_0.<CheckAvailabilityAsync>b__0() in C:\Priya\Chuvy\Chuvy.Botservice\Controllers\FulfillRequestController.cs:line 1031{"errors":{"available_periods[0].end":[{"key":"errors.max_date_exceeded","description":"date is too far in the future"}],"available_periods[1].end":[{"key":"errors.max_date_exceeded","description":"date is too far in the future"}],"available_periods[2].end":[{"key":"errors.max_date_exceeded","description":"date is too far in the future"}],"participants[0].members[0].available_periods[0].end":[{"key":"errors.max_date_exceeded","description":"date is too far in the future"}],"participants[0].members[0].available_periods[1].end":[{"key":"errors.max_date_exceeded","description":"date is too far in the future"}]}}
-user:   23rd Oct @ 10:00 AM 
-Booka: Sure, checking that...
 Booka:  All done!The appointment has been booked!
-AI Session:c4a087d4-3efc-415d-a35b-88797f28eab4
+AI Session:f6bcfb0f-3443-433a-9ab6-ea39f43e0cb4
 ----------------------------------------------------
 user:  book me in this afternoon for a henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
 Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 23rd Oct @ 10:00 AM, 23rd Oct @ 11:00 AM, 23rd Oct @ 01:00 PM. What date & time do you prefer?
-user:   23rd Oct @ 11:00 AM 
+Booka:  The next available slots are: 25th Oct @ 03:00 PM, 25th Oct @ 04:00 PM. What date & time do you prefer?
+user:   25th Oct @ 04 PM. What date & time do you prefer? 
 Booka: Sure, checking that...
 Booka:  All done!The appointment has been booked!
-AI Session:e51e4942-a696-4985-9f95-cb70a0fd07af
+AI Session:901cc85c-c446-49c4-b34b-ebf748c95d8b
 ----------------------------------------------------
 user:  can I make an appointment tomorrow afternoon for a henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
 Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 23rd Oct @ 10:00 AM, 23rd Oct @ 11:00 AM, 23rd Oct @ 01:00 PM. What date & time do you prefer?
-user:   23rd Oct @ 11:00 AM 
+Booka:  The next available slots are: 25th Oct @ 03:00 PM, 30th Oct @ 09:00 AM, 30th Oct @ 10:00 AM. What date & time do you prefer?
+user:   30th Oct @ 09 AM 
 Booka: Sure, checking that...
 Booka:  All done!The appointment has been booked!
-AI Session:a2209957-6c5f-4d86-8174-b21ecfda912c
+AI Session:5e921c0e-134a-44c6-a138-9dc00978797a
 ----------------------------------------------------
 user:  Can I make an appointment this morning for henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
 Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 23rd Oct @ 08:00 AM, 23rd Oct @ 10:00 AM, 23rd Oct @ 11:00 AM. What date & time do you prefer?
-user:   23rd Oct @ 10:00 AM 
+Booka: Index was outside the bounds of the array.   at apiai.tests.Program.GetSecondResponse(String reply, String actionName, String& secondResponse, String& secondResponseDisplayText) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 629
+   at apiai.tests.Program.ProcessCase(List`1 conversations, String caseName, Boolean isNewCustomer) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 554
+user:   30th Oct @ 09 AM 
 Booka: Sure, checking that...
-Booka:  All done!The appointment has been booked!
-AI Session:99939f9a-5f09-41a5-a7dd-801a18cabbac
+Booka:  Sorry, that time is not available. Next available slots are: 30th Oct @ 10:00 AM, 30th Oct @ 11:00 AM, 30th Oct @ 01:00 PM
+AI Session:e3a84495-167d-4dc9-8047-0e5e5525069a
 ----------------------------------------------------
 user:  book me in for a friday morning for a henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
 Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 30th Oct @ 08:00 AM, 30th Oct @ 09:00 AM, 30th Oct @ 10:00 AM. What date & time do you prefer?
-user:   30th Oct @ 09:00 AM 
+Booka:  The next available slots are: 30th Oct @ 10:00 AM, 30th Oct @ 11:00 AM, 30th Oct @ 01:00 PM. What date & time do you prefer?
+user:   30th Oct @ 11 AM 
 Booka: Sure, checking that...
-Booka:  All done!The appointment has been booked!
-AI Session:fda17aa0-4a8a-474f-945c-2a055e1ca271
+Booka:  We seemed to have just missed that slot, the next available slots are 30th Oct @ 10:00 AM, 30th Oct @ 01:00 PM, 30th Oct @ 02:00 PM
+AI Session:8c80708b-4e5f-4fa8-a6ad-c140f373f9ab
 ----------------------------------------------------
 user:  I need a henna today afternoon
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 23rd Oct @ 10:00 AM, 23rd Oct @ 11:00 AM, 23rd Oct @ 01:00 PM. What date & time do you prefer?
-user:   23rd Oct @ 11:00 AM 
-Booka: Sure, checking that...
-Booka:  All done!The appointment has been booked!
-AI Session:7b632112-d5dc-46dd-a2f7-3bd95eeebcd1
+Booka: what type of Service are your looking for ?
+user:  Anthony Gill 
+Booka: Can't be sure of what service you are looking for. Try any of these: Mens Haircut, Henna, Womens Haircut, Blow-Dry, Cut & Colour
+user:   30th Oct @ 11 AM 
+Booka: Do you want to try one or more of these options: Mens Haircut, Henna, Womens Haircut, Blow-Dry, Cut & Colour
+AI Session:ade34eda-c88a-46df-8bb3-35e87802d225
 ----------------------------------------------------
 user:  Can you book me in today for henna
-Booka: Api.Ai not responding
-user:   23rd Oct @ 11:00 AM 
-Booka: Api.Ai not responding
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka: Index was outside the bounds of the array.   at apiai.tests.Program.GetSecondResponse(String reply, String actionName, String& secondResponse, String& secondResponseDisplayText) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 629
+   at apiai.tests.Program.ProcessCase(List`1 conversations, String caseName, Boolean isNewCustomer) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 554
+user:   30th Oct @ 11 AM 
+Booka: Sure, checking that...
+Booka:  We seemed to have just missed that slot, the next available slots are 30th Oct @ 10:00 AM, 30th Oct @ 01:00 PM, 30th Oct @ 02:00 PM
+AI Session:be2db7b7-45a2-4c3e-9cc2-e1d1a712725b
 ----------------------------------------------------
 user:  Can you book me in tomorrow for henna
-Booka: Api.Ai not responding
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 25th Oct @ 03:00 PM, 30th Oct @ 10:00 AM, 30th Oct @ 11:00 AM. What date & time do you prefer?
+user:   30th Oct @ 10 AM 
+Booka: Sure, checking that...
+Booka:  All done!The appointment has been booked!
+AI Session:eebf1c32-0e2b-44c5-8e14-403002d5bc88
+----------------------------------------------------
+user:  Book me in next week for henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Index was outside the bounds of the array.
+user:   30th Oct @ 10 AM 
+Booka: Index was outside the bounds of the array.
+AI Session:3612d1a1-6689-49b0-abf3-776be8091885
+----------------------------------------------------
+user:  I want an appointment tomorrow for henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 25th Oct @ 03:00 PM, 30th Oct @ 11:00 AM, 30th Oct @ 01:00 PM. What date & time do you prefer?
+user:   30th Oct @ 11 AM 
+Booka: Sure, checking that...
+Booka:  All done!The appointment has been booked!
+AI Session:80449218-591d-43d8-be00-62436d8bfd2d
+----------------------------------------------------
+user:  henna tuesday
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka: Index was outside the bounds of the array.   at apiai.tests.Program.GetSecondResponse(String reply, String actionName, String& secondResponse, String& secondResponseDisplayText) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 629
+   at apiai.tests.Program.ProcessCase(List`1 conversations, String caseName, Boolean isNewCustomer) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 554
+user:   30th Oct @ 11 AM 
+Booka: Sure, checking that...
+Booka:  Sorry, that time is not available. Next available slots are: 30th Oct @ 01:00 PM, 30th Oct @ 02:00 PM, 30th Oct @ 03:00 PM
+AI Session:ddb00c34-2188-4e29-b0b6-7e5a99a4b5e7
+----------------------------------------------------
+user:  doctor appointment
+Booka: First Name & Last Name of the person attending the appointment?
+user:   that time is not available. Next available slots are: 30th Oct @ 01 PM 
+Booka: First Name & Last Name of the person attending the appointment?
+AI Session:0a0ca785-6a21-4ec6-91bb-3d11435f70a4
+----------------------------------------------------
+user:  Book appointment
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka: Index was outside the bounds of the array.   at apiai.tests.Program.GetSecondResponse(String reply, String actionName, String& secondResponse, String& secondResponseDisplayText) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 629
+   at apiai.tests.Program.ProcessCase(List`1 conversations, String caseName, Boolean isNewCustomer) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 554
+user:   that time is not available. Next available slots are: 30th Oct @ 01 PM 
+Booka: Sure, checking that...
+Booka:  All done!The appointment has been booked!
+AI Session:04f25cec-8e4a-4335-b866-868151dbb142
+----------------------------------------------------
+user:  Can I make an appointment
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka: Index was outside the bounds of the array.   at apiai.tests.Program.GetSecondResponse(String reply, String actionName, String& secondResponse, String& secondResponseDisplayText) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 629
+   at apiai.tests.Program.ProcessCase(List`1 conversations, String caseName, Boolean isNewCustomer) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 554
+user:   that time is not available. Next available slots are: 30th Oct @ 01 PM 
+Booka: Sure, checking that...
+Booka:  Sorry, that time is not available. Next available slots are: 30th Oct @ 02:00 PM, 30th Oct @ 03:00 PM, 30th Oct @ 04:00 PM
+AI Session:1bf6606c-c8f6-4c32-ac5e-91c265c81ee5
+----------------------------------------------------
+user:  Can you book me in 
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka: Index was outside the bounds of the array.   at apiai.tests.Program.GetSecondResponse(String reply, String actionName, String& secondResponse, String& secondResponseDisplayText) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 629
+   at apiai.tests.Program.ProcessCase(List`1 conversations, String caseName, Boolean isNewCustomer) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 554
+user:   that time is not available. Next available slots are: 30th Oct @ 02 PM 
+Booka: Sure, checking that...
+Booka:  All done!The appointment has been booked!
+AI Session:abef4fa9-f5ca-4285-bd76-6e277ec50187
+----------------------------------------------------
+user:  I need an appointment
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka: Index was outside the bounds of the array.   at apiai.tests.Program.GetSecondResponse(String reply, String actionName, String& secondResponse, String& secondResponseDisplayText) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 629
+   at apiai.tests.Program.ProcessCase(List`1 conversations, String caseName, Boolean isNewCustomer) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 554
+user:   that time is not available. Next available slots are: 30th Oct @ 02 PM 
+Booka: Sure, checking that...
+Booka:  Sorry, that time is not available. Next available slots are: 30th Oct @ 03:00 PM, 30th Oct @ 04:00 PM, 31st Oct @ 09:00 AM
+AI Session:b75b9870-8e96-4139-b1dd-91572f5ab02b
+----------------------------------------------------
+user:  Book appmnt
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka: Index was outside the bounds of the array.   at apiai.tests.Program.GetSecondResponse(String reply, String actionName, String& secondResponse, String& secondResponseDisplayText) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 629
+   at apiai.tests.Program.ProcessCase(List`1 conversations, String caseName, Boolean isNewCustomer) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 554
+user:   that time is not available. Next available slots are: 30th Oct @ 03 PM 
+Booka: Sure, checking that...
+Booka:  All done!The appointment has been booked!
+AI Session:e0c2164e-0f2c-4689-b7b9-5cb38745c4fa
+----------------------------------------------------
+user:  Appointment needed
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka: Index was outside the bounds of the array.   at apiai.tests.Program.GetSecondResponse(String reply, String actionName, String& secondResponse, String& secondResponseDisplayText) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 629
+   at apiai.tests.Program.ProcessCase(List`1 conversations, String caseName, Boolean isNewCustomer) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 554
+user:   that time is not available. Next available slots are: 30th Oct @ 03 PM 
+Booka: Sure, checking that...
+Booka:  Sorry, that time is not available. Next available slots are: 30th Oct @ 04:00 PM, 31st Oct @ 09:00 AM, 31st Oct @ 10:00 AM
+AI Session:e70eeba2-e2ca-4d82-a02c-4e7aa22b91bf
+----------------------------------------------------
+user:  Find me the next appointment
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka: Index was outside the bounds of the array.   at apiai.tests.Program.GetSecondResponse(String reply, String actionName, String& secondResponse, String& secondResponseDisplayText) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 629
+   at apiai.tests.Program.ProcessCase(List`1 conversations, String caseName, Boolean isNewCustomer) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 554
+user:   that time is not available. Next available slots are: 30th Oct @ 04 PM 
+Booka: Sure, checking that...
+Booka:  All done!The appointment has been booked!
+AI Session:617c641d-537c-4f41-b591-7cd58333ac09
+----------------------------------------------------
+user:  Book me in
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka: Index was outside the bounds of the array.   at apiai.tests.Program.GetSecondResponse(String reply, String actionName, String& secondResponse, String& secondResponseDisplayText) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 629
+   at apiai.tests.Program.ProcessCase(List`1 conversations, String caseName, Boolean isNewCustomer) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 554
+user:   that time is not available. Next available slots are: 30th Oct @ 04 PM 
+Booka: Sure, checking that...
+Booka:  Sorry, that time is not available. Next available slots are: 31st Oct @ 09:00 AM, 31st Oct @ 10:00 AM, 31st Oct @ 11:00 AM
+AI Session:7b48f37f-29cd-4d7a-9540-c4ade887652a
+----------------------------------------------------
+user:  Book me in tomorrow at 3
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  All done!The appointment has been booked!
+user:   that time is not available. Next available slots are: 31st Oct @ 09 AM 
+Booka: Sure, checking that...
+Booka:  We seemed to have just missed that slot, the next available slots are 31st Oct @ 09:00 AM, 31st Oct @ 10:00 AM, 31st Oct @ 11:00 AM
+AI Session:548ed72a-a8f1-460d-bb8c-b7e84b7c1e11
+----------------------------------------------------
+user:  Can I make an appointment today at 4 PM
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  Sorry, that time is not available. Next available slots are: 
+user:   that time is not available. Next available slots are:  
+Booka: Sure, let me find next availabilities.
+Booka:  Sorry, that time is not available. Next available slots are: 
+AI Session:430b4c7a-211e-444c-b3aa-997777204b5f
+----------------------------------------------------
+user:  Can I get an appointment next monday at 9 in the morning
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  Sorry, that time is not available. Next available slots are: 31st Oct @ 09:00 AM, 31st Oct @ 10:00 AM, 31st Oct @ 11:00 AM
+user:   that time is not available. Next available slots are: 31st Oct @ 09 AM 
+Booka: Sure, checking that...
+Booka:  All done!The appointment has been booked!
+AI Session:27108254-2fb5-4b4e-9066-fe2db4223aec
+----------------------------------------------------
+user:  Book an appointment at noon
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka: Sure, let me find next availabilities.; Exception in task; BookingError;  I am having a little trouble with your booking, please call the provider directly to make this booking.; String was not recognized as a valid DateTime.   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at Chuvy.BotService.Manager.Managers.AppointmentManager.PrepareAvailabilityRequest(Int32 messageId) in C:\Priya\Chuvy\Chuvy.BotService.Manager\Managers\AppointmentManager.cs:line 178
+   at Chuvy.BotService.Manager.Managers.AppointmentManager.GetServiceAvailabilities(Int32 messageId) in C:\Priya\Chuvy\Chuvy.BotService.Manager\Managers\AppointmentManager.cs:line 57
+   at Chuvy.Botservice.Controllers.FulfillRequestController.<>c__DisplayClass19_0.<CheckAvailabilityAsync>b__0() in C:\Priya\Chuvy\Chuvy.Botservice\Controllers\FulfillRequestController.cs:line 1053; BookingError; ServiceAvailabilityCheckedTwilio
+user:   that time is not available. Next available slots are: 31st Oct @ 09 AM 
+Booka: Sure, checking that...
+Booka:  We seemed to have just missed that slot, the next available slots are 31st Oct @ 10:00 AM, 31st Oct @ 11:00 AM, 31st Oct @ 01:00 PM
+AI Session:1ae24cb5-28ee-4034-9fc7-1c0caccd9e31
+----------------------------------------------------
+user:  I need an appointment asap
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  I am sorry, the requested time is not available.Can you please try another time.
+user:   the requested time is not available.Can you please try another time. 
+Booka: Sure, let me find next availabilities.
+Booka:  I am sorry, the requested time is not available.Can you please try another time.
+AI Session:2189da20-510d-443b-b3e5-78c8f17debc6
+----------------------------------------------------
+user:  can I get an appointment next monday at 10
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  Sorry, that time is not available. Next available slots are: 31st Oct @ 10:00 AM, 31st Oct @ 11:00 AM, 31st Oct @ 12:00 PM
+user:   that time is not available. Next available slots are: 31st Oct @ 10 AM 
+Booka: Sure, checking that...
+Booka:  All done!The appointment has been booked!
+AI Session:a1ab6b3e-4888-42f6-9db5-57647ff5fb42
+----------------------------------------------------
+user:  Can I make an appointment tommorrow noon
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  I am sorry, the requested time is not available.Can you please try another time.
+user:   the requested time is not available.Can you please try another time. 
+Booka: Sure, let me find next availabilities.
+Booka:  I am sorry, the requested time is not available.Can you please try another time.
+AI Session:2d36a031-059a-42b4-9a54-8b63fd58fc02
+----------------------------------------------------
+user:  book me in this afternoon
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  I am sorry, the requested time is not available.Can you please try another time.
+user:   the requested time is not available.Can you please try another time. 
+Booka: Sure, let me find next availabilities.
+Booka:  I am sorry, the requested time is not available.Can you please try another time.
+AI Session:2b89ec74-0a11-4c1d-9712-b2ec22c63eb4
+----------------------------------------------------
+user:  Can I get an appointment tomorrow morning
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  I am sorry, the requested time is not available.Can you please try another time.
+user:   the requested time is not available.Can you please try another time. 
+Booka: Sure, let me find next availabilities.
+Booka:  I am sorry, the requested time is not available.Can you please try another time.
+AI Session:13fc3ced-9a80-424b-bd0c-3d7d17fe3554
+----------------------------------------------------
+user:  I need an appointment next monday afternoon
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 31st Oct @ 11:00 AM, 31st Oct @ 12:00 PM, 31st Oct @ 01:00 PM. What date & time do you prefer?
+user:   31st Oct @ 12 PM 
+Booka: Sure, checking that...
+Booka:  All done!The appointment has been booked!
+AI Session:25310b00-4721-46b8-8fe5-5122d45a907f
+----------------------------------------------------
+user:  Can I make an appointment next tuesday morning
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 31st Oct @ 11:00 AM, 31st Oct @ 01:00 PM, 31st Oct @ 02:00 PM. What date & time do you prefer?
+user:   31st Oct @ 01 PM 
+Booka: Sure, checking that...
+Booka:  All done!The appointment has been booked!
+AI Session:6cc73187-b0a0-4168-b13f-9412331eda64
+----------------------------------------------------
+user:  can I make an appointment tomorrow morning
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  I am sorry, the requested time is not available.Can you please try another time.
+user:   the requested time is not available.Can you please try another time. 
+Booka: Sure, let me find next availabilities.
+Booka:  I am sorry, the requested time is not available.Can you please try another time.
+AI Session:b2d681b6-cb66-49f1-b60b-a275c029bdb3
+----------------------------------------------------
+user:  Can I get an appointment today
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  I am sorry, the requested time is not available.Can you please try another time.
+user:   the requested time is not available.Can you please try another time. 
+Booka: Sure, let me find next availabilities.
+Booka:  I am sorry, the requested time is not available.Can you please try another time.
+AI Session:8ed822b6-6efc-4e10-8d41-fe6de00e10eb
+----------------------------------------------------
+user:  Need an appointment for today 
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  I am sorry, the requested time is not available.Can you please try another time.
+user:   the requested time is not available.Can you please try another time. 
+Booka: Sure, let me find next availabilities.
+Booka:  I am sorry, the requested time is not available.Can you please try another time.
+AI Session:654b0905-0e61-47af-9e08-87aeb33bee21
+----------------------------------------------------
+user:  Is there any time today?
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  I am sorry, the requested time is not available.Can you please try another time.
+user:   the requested time is not available.Can you please try another time. 
+Booka: Sure, let me find next availabilities.
+Booka:  I am sorry, the requested time is not available.Can you please try another time.
+AI Session:4b9af954-1dd9-48dc-95d2-543140a5bd1b
+----------------------------------------------------
+user:  got anything for today?
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  I am sorry, the requested time is not available.Can you please try another time.
+user:   the requested time is not available.Can you please try another time. 
+Booka: Sure, let me find next availabilities.
+Booka:  I am sorry, the requested time is not available.Can you please try another time.
+AI Session:45d19625-d68b-4efd-a812-271b32252d36
+----------------------------------------------------
+user:  Can I make an appointment next week
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 31st Oct @ 11:00 AM, 31st Oct @ 02:00 PM, 31st Oct @ 03:00 PM. What date & time do you prefer?
+user:   31st Oct @ 02 PM 
+Booka: Sure, checking that...
+Booka:  All done!The appointment has been booked!
+AI Session:dcb5bf40-ed29-4b3b-a410-bcc1a35ce68d
+----------------------------------------------------
+user:  Book Tuesday
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  I am sorry, the requested time is not available.Can you please try another time.
+user:   the requested time is not available.Can you please try another time. 
+Booka: Sure, let me find next availabilities.
+Booka:  I am sorry, the requested time is not available.Can you please try another time.
+AI Session:4ff25372-2833-4a77-94ef-d96836219b77
+----------------------------------------------------
+user:  book me in next thursday
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 6th Nov @ 09:00 AM, 6th Nov @ 10:00 AM, 6th Nov @ 11:00 AM. What date & time do you prefer?
+user:   6th Nov @ 10 AM 
+Booka: Sure, checking that...
+Booka:  All done!The appointment has been booked!
+AI Session:2c9f951f-f4b0-4de4-99c7-11434062b941
+----------------------------------------------------
+user:  book me in this weekend
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 31st Oct @ 11:00 AM, 31st Oct @ 03:00 PM, 31st Oct @ 04:00 PM. What date & time do you prefer?
+user:   31st Oct @ 03 PM 
+Booka: Sure, checking that...
+Booka:  All done!The appointment has been booked!
+AI Session:6702b908-b7a1-4759-bcdd-5e071e9c02bb
+----------------------------------------------------
+user:  book me for this thursday
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 31st Oct @ 11:00 AM, 31st Oct @ 04:00 PM. What date & time do you prefer?
+user:   31st Oct @ 04 PM. What date & time do you prefer? 
+Booka: Sure, checking that...
+Booka:  All done!The appointment has been booked!
+AI Session:2f418f40-8b4f-430b-9672-125b9d6e1c57
+----------------------------------------------------
+user:  Book me in anytime today
+Booka: what type of Service are your looking for ?
+user:  henna
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: Sure, let me find next availabilities.
+Booka:  I am sorry, the requested time is not available.Can you please try another time.
+user:   the requested time is not available.Can you please try another time. 
+Booka: Sure, let me find next availabilities.
+Booka: Response not available
+AI Session:435baa00-fe75-4b2d-ae6b-8efaced58481
+----------------------------------------------------

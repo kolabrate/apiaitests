@@ -127,6 +127,7 @@
     </Content>
     <Content Include="Data\IssuesList.txt" />
     <Content Include="Data\results.txt" />
+    <Content Include="Data\TC11_ExistingCustomerEnquireAppointments.txt" />
     <Content Include="Data\TC4_NewCustomerForFreeSlots.txt" />
     <Content Include="Data\TC81_NewCustomerUnknown_MultipleServices.txt" />
     <Content Include="Data\TC8_ExistingCustomerUnknown_MultipleServices.txt" />

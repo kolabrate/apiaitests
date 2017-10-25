@@ -186,13 +186,13 @@ namespace apiai.tests
             var list = new List<string>();
             var fileNames = new List<string>();
             var filesNamesArray = Directory.GetFiles(@"..\..\Data\");
-            fileNames = filesNamesArray.Where(c => c.StartsWith("..\\..\\Data\\TC")).ToList();
+            //fileNames = filesNamesArray.Where(c => c.StartsWith("..\\..\\Data\\TC")).ToList();
 
             //fileNames.Add(@"..\..\Data\TC1_ExistingCustomerForBookedSlots.txt");
             //fileNames.Add(@"..\..\Data\TC10_NewCustomerExceptions.txt");
             //fileNames.Add(@"..\..\Data\TC2_ExistingCustomerForFreeSlots.txt");
             //fileNames.Add(@"..\..\Data\TC3_NewCustomerForBookedSlots.txt");
-            //fileNames.Add(@"..\..\Data\TC4_NewCustomerForFreeSlots.txt");
+            fileNames.Add(@"..\..\Data\TC4_NewCustomerForFreeSlots.txt");
             //fileNames.Add(@"..\..\Data\TC41_NewCustomerForFreeSlots.txt");
             //fileNames.Add(@"..\..\Data\TC5_ConfirmationVariations.txt");
             //fileNames.Add(@"..\..\Data\TC6_ExistingCustomerShowMore.txt");
@@ -623,15 +623,16 @@ namespace apiai.tests
         {
             secondResponse = "Response not available";
             secondResponseDisplayText = "Response not available";
-            if (reply.Contains("SlotsAvailable") || reply.Contains("SlotsAvailable"))
+            if (reply.Contains("SlotsAvailable") || reply.Contains("AlternateSlotsOnly"))
             {
                 var slots = reply.Split(',');
                 freeDtConfirm = slots[1];
                 var text = reply.Split(';');
+                freeDtConfirm = freeDtConfirm.Replace(":00", "");
                 if (text.Length == 3)
                 {
-                    secondResponse = text[2];
-                    secondResponseDisplayText = reply.Contains("SlotsAvailable") ? "SlotsAvailable" : "SlotsAvailable";
+                    secondResponse = text[2];                    
+                    secondResponseDisplayText = reply.Contains("SlotsAvailable") ? "SlotsAvailable" : "AlternateSlotsOnly";
                 }
             }
             if (reply.Contains("Booked") || reply.Contains("DuplicateAppointment") || reply.Contains("JustMissedAppointment"))
