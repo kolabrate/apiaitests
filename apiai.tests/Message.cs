@@ -26,7 +26,8 @@ namespace apiai.tests
         public string AiSessionId { get; set; }
         public string IntentName { get; set; }
         public string ActionName { get; set; }
-        public string FulFilmentResponseName { get; set; }
-        public string ActionExecuted { get; set; }
+        public string AskedServices { get; set; }
+        public string AiRawMessage { get; set; }
+        public Nullable<int> AppointmentId { get; set; }
     }
 }

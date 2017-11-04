@@ -1,86 +1,30 @@
 {
-  "originalRequest": {
-    "source": "twilio",
-    "data": {
-      "ApiVersion": "2010-04-01",
-      "SmsSid": "SMd7d54129f9814fe31f6ac9038bd6ed65",
-      "SmsStatus": "received",
-      "SmsMessageSid": "SMd7d54129f9814fe31f6ac9038bd6ed65",
-      "NumSegments": "1",
-      "ToState": "",
-      "From": "+61409094754",
-      "MessageSid": "SMd7d54129f9814fe31f6ac9038bd6ed65",
-      "AccountSid": "AC525398cbca285a1781a4e8a4287bcb43",
-      "ToCity": "",
-      "FromCountry": "AU",
-      "ToZip": "",
-      "FromCity": "",
-      "To": "+61451562335",
-      "FromZip": "",
-      "ToCountry": "AU",
-      "Body": "Do 4pm",
-      "NumMedia": "0",
-      "FromState": ""
-    }
-  },
-  "id": "b463bf90-c956-4907-98b3-4bdfb0f0d420",
-  "timestamp": "2017-10-25T03:53:14.418Z",
+  "id": "ce1aca28-edfa-4b4c-84ff-10de2f5f016f",
+  "timestamp": "2017-11-04T05:47:00.106Z",
   "lang": "en",
   "result": {
     "source": "agent",
-    "resolvedQuery": "Do 4pm",
+    "resolvedQuery": "when is my henna appointment",
     "speech": "",
-    "action": "Fallback",
+    "action": "EnquireAppointments",
     "actionIncomplete": false,
-    "parameters": {},
-    "contexts": [
-      {
-        "name": "generic",
-        "parameters": {
-          "genericTimeSlots.original": "",
-          "BookingDateTimePeriod.original": "",
-          "beforeAfter.original": "",
-          "listedSlotValues.original": "",
-          "providerName.original": "",
-          "service.original": "blowdry",
-          "beforeAfter": "",
-          "Bookingtimeperiod": "",
-          "askMoreAttempts.original": "",
-          "Bookingdateperiod.original": "this week",
-          "Bookingtimeperiod.original": "",
-          "Bookingdate.original": "",
-          "Bookingdate": "",
-          "BookingDateTimePeriod": "",
-          "twilio_sender_id": "+61409094754",
-          "genericTimeSlots": "",
-          "service": [
-            "Blow-dry"
-          ],
-          "booka-showMore.original": "",
-          "Bookingtime": "",
-          "askMoreAttempts": "2",
-          "booka-showMore": "",
-          "listedSlotValues": "636445404000000000,636445413000000000,636445422000000000",
-          "Bookingdateperiod": "2017-10-23/2017-10-29",
-          "providerName": "",
-          "Bookingtime.original": ""
-        },
-        "lifespan": 0
-      }
-    ],
+    "parameters": {
+      "enquiringServiceName": "henna",
+      "enquiringDate": ""
+    },
+    "contexts": [],
     "metadata": {
-      "intentId": "6f57d819-1696-43bf-aec5-0a74583c7e2e",
+      "intentId": "e6194cd8-9bb5-4683-b8a6-dd57e15765ec",
       "webhookUsed": "true",
       "webhookForSlotFillingUsed": "false",
-      "intentName": "Default Fallback Intent"
+      "intentName": "EnquireAppointments"
     },
     "fulfillment": {
-      "speech": "Bummer!! I did not understand what you said :-(.  If you can try something like ' book  me in next Thursday' or' get me next available time slot for haircut', I promise, I  can be quite helpful.",
+      "speech": "I am not able to check that for you at the moment, please contact your service provider",
       "messages": [
         {
           "type": 0,
-          "id": "c77d569d-5577-4dc7-8c1e-ceade8c6bf50",
-          "speech": "Bummer!! I did not understand what you said :-(.  If you can try something like ' book  me in next Thursday' or' get me next available time slot for haircut', I promise, I  can be quite helpful."
+          "speech": "I am not able to check that for you at the moment, please contact your service provider"
         }
       ]
     },
@@ -90,5 +34,5 @@
     "code": 200,
     "errorType": "success"
   },
-  "sessionId": "531074f2-8b54-4fff-9433-b2ea01a54315"
+  "sessionId": "0b45c216-5884-4bdc-b95a-903801b2225e"
 }

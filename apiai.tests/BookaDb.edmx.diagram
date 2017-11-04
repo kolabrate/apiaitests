@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0a7daa0cc6d645c4a7d26a3961d01211" Name="Diagram1">
-        <EntityTypeShape EntityType="ChatbookaModel.Message" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="0a7daa0cc6d645c4a7d26a3961d01211" Name="Diagram1" ZoomLevel="85">
+        <EntityTypeShape EntityType="ChatbookaModel.Message" Width="1.5" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ChatbookaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ChatbookaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Messages">
           <Key>
             <PropertyRef Name="Id" />
@@ -21,17 +21,20 @@
           <Property Name="AiSessionId" Type="nvarchar(max)" />
           <Property Name="IntentName" Type="nvarchar(max)" />
           <Property Name="ActionName" Type="nvarchar(max)" />
-          <Property Name="FulFilmentResponseName" Type="nvarchar(max)" />
-          <Property Name="ActionExecuted" Type="nvarchar(max)" />
+          <Property Name="AskedServices" Type="nvarchar(max)" />
+          <Property Name="AiRawMessage" Type="nvarchar(max)" />
+          <Property Name="AppointmentId" Type="int" />
         </EntityType>
         <EntityContainer Name="ChatbookaModelStoreContainer">
           <EntitySet Name="Messages" EntityType="Self.Messages" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ChatbookaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ChatbookaEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Messages" EntityType="ChatbookaModel.Message" />
+        </EntityContainer>
         <EntityType Name="Message">
           <Key>
             <PropertyRef Name="Id" />
@@ -39,8 +42,8 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CreateDateTime" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="ModifieDateTime" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="SenderId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="SenderMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SenderId" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SenderMessage" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Messagesourcename" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="MessagesourceId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="BookaReply" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -48,12 +51,10 @@
           <Property Name="AiSessionId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="IntentName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ActionName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="FulFilmentResponseName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="ActionExecuted" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AskedServices" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AiRawMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AppointmentId" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="ChatbookaEntities2" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Messages" EntityType="Self.Message" />
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -63,20 +64,21 @@
           <EntitySetMapping Name="Messages">
             <EntityTypeMapping TypeName="ChatbookaModel.Message">
               <MappingFragment StoreEntitySet="Messages">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
-                <ScalarProperty Name="ModifieDateTime" ColumnName="ModifieDateTime" />
-                <ScalarProperty Name="SenderId" ColumnName="SenderId" />
-                <ScalarProperty Name="SenderMessage" ColumnName="SenderMessage" />
-                <ScalarProperty Name="Messagesourcename" ColumnName="Messagesourcename" />
-                <ScalarProperty Name="MessagesourceId" ColumnName="MessagesourceId" />
-                <ScalarProperty Name="BookaReply" ColumnName="BookaReply" />
-                <ScalarProperty Name="AiRequestId" ColumnName="AiRequestId" />
-                <ScalarProperty Name="AiSessionId" ColumnName="AiSessionId" />
-                <ScalarProperty Name="IntentName" ColumnName="IntentName" />
+                <ScalarProperty Name="AppointmentId" ColumnName="AppointmentId" />
+                <ScalarProperty Name="AiRawMessage" ColumnName="AiRawMessage" />
+                <ScalarProperty Name="AskedServices" ColumnName="AskedServices" />
                 <ScalarProperty Name="ActionName" ColumnName="ActionName" />
-                <ScalarProperty Name="FulFilmentResponseName" ColumnName="FulFilmentResponseName" />
-                <ScalarProperty Name="ActionExecuted" ColumnName="ActionExecuted" />
+                <ScalarProperty Name="IntentName" ColumnName="IntentName" />
+                <ScalarProperty Name="AiSessionId" ColumnName="AiSessionId" />
+                <ScalarProperty Name="AiRequestId" ColumnName="AiRequestId" />
+                <ScalarProperty Name="BookaReply" ColumnName="BookaReply" />
+                <ScalarProperty Name="MessagesourceId" ColumnName="MessagesourceId" />
+                <ScalarProperty Name="Messagesourcename" ColumnName="Messagesourcename" />
+                <ScalarProperty Name="SenderMessage" ColumnName="SenderMessage" />
+                <ScalarProperty Name="SenderId" ColumnName="SenderId" />
+                <ScalarProperty Name="ModifieDateTime" ColumnName="ModifieDateTime" />
+                <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
