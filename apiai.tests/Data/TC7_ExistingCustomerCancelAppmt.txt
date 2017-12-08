@@ -1,127 +1,45 @@
-﻿Expression: 6. Appointment Request expression with date & time range & NO SERVICE
-Case: 43. book me in this afternoon
-Customer: book me in this afternoon
-Booka: what type of service are you looking for?<ValidationException>
-Customer: [service]
-Booka: <Checking><SlotsAvailable> 
-Customer: Show more
-Booka: <Checking><SlotsAvailable> 
-Customer: none of these 
-Booka: <Checking><SlotsAvailable> 
-Customer: none of these 
-Booka: Do you have any preferred date and time?<ValidationException>
+﻿Expression: 6. Existing Customer Cancel Appointments
+Case: 43. Cancel my appointment today (Customer got only one appointment for today)
+Customer: Cancel my appointment today
+Booka: Done. Your appointment is cancelled
 
-Case: 44. Can I get an appointment tomorrow morning
-Customer: Can I get an appointment tomorrow morning
-Booka: what type of service are you looking for?<ValidationException>
-Customer: [service]
-Booka: <Checking><SlotsAvailable> 
-Customer: none of these 
-Booka: <Checking><SlotsAvailable> 
-Booka: <CheckingConfirmation><Booked>
+Case: 44. Cancel my appointment tomorrow (Customer got only one appointment for tomorrow)
+Customer: Cancel my appointment tomorrow
+Booka: Done. Your appointment is cancelled
 
-Case: 45. I need an appointment next monday afternoon
-Customer: I need an appointment next monday afternoon
-Booka: what type of service are you looking for?<ValidationException>
-Customer: [service]
-Booka: <Checking><SlotsAvailable> 
-Customer: more
-Booka: <Checking><SlotsAvailable> 
-Booka: <CheckingConfirmation><Booked>
+Case: 44. Cancel my appointment tomorrow morning(Customer got only one appointment for tomorrow morning)
+Customer: Cancel my appointment tomorrow morning
+Booka: Done. Your appointment is cancelled
 
-Case: 46. Can I make an appointment next tuesday morning
-Customer: Can I make an appointment next tuesday morning
-Booka: what type of service are you looking for?<ValidationException>
-Customer: [service]
-Booka: <Checking><SlotsAvailable> 
-Customer: what you have after that?
-Booka: <Checking><SlotsAvailable> 
-Booka: <CheckingConfirmation><Booked>
+Case: 44. Cancel my appointment at 1PM (Customer got only one appointment today at 1PM)
+Customer: Cancel my appointment at 1PM
+Booka: Done. Your appointment is cancelled
 
-Case: 47. can I make an appointment tomorrow morning
-Customer: can I make an appointment tomorrow morning
-Booka: what type of service are you looking for?<ValidationException>
-Customer: [service]
-Booka: <Checking><SlotsAvailable> 
-Customer: I want 10.30 AM on 11th August 
-Booka: <CheckingConfirmation><Booked>
+Case: 44. Cancel my appointment at 1PM (Customer got only one appointment today at 1.30 PM and customer gives wrong time)
+Customer: Cancel my appointment at 1PM
+Booka: There are no appointments at that time.
 
-Case: 48. Can I get an appointment today
-Customer: Can I get an appointment today
-Booka: what type of service are you looking for?<ValidationException>
-Customer: [service]
-Booka: <Checking><SlotsAvailable> 
-Customer: 11AM this thursday 
-Booka: <CheckingConfirmation><Booked>
+Case: 48. cancel my appointment this afternoon (Customer got only one appointment today afternoon)
+Customer: cancel my appointment this afternoon
+Booka: Done. Your appointment is cancelled
 
-Case: 49. Need an appointment for today 
-Customer: Need an appointment for today 
-Booka: what type of service are you looking for?<ValidationException>
-Customer: 3:00
-Booka: <Checking><SlotsAvailable> 
-Customer: [ConfirmDatetime] 
-Booka: <CheckingConfirmation><Booked>
+Case: 48. cancel my appointment next week (Customer got only one appointment next week)
+Customer: cancel my appointment next week
+Booka: Done. Your appointment is cancelled
 
-Case: 50. Is there any time today?
-Customer: Is there any time today?
-Booka: what type of service are you looking for?<ValidationException>
-Customer: [service]
-Booka: <Checking><SlotsAvailable> 
-Customer: 12
-Booka: <CheckingConfirmation><Booked>
+Case: 49. cancel my appointment  (Customer got only one appointment today and its upcoming)
+Customer: cancel my appointment
+Booka: Done. Your appointment is cancelled
 
-Case: 51. got anything for today?
-Customer: got anything for today?
-Booka: what type of service are you looking for?<ValidationException>
-Customer: [service]
-Booka: <Checking><SlotsAvailable> 
-Customer: 6 sep @ 12
-Booka: <CheckingConfirmation><Booked>
+Case: 49. cancel it (Customer got only one appointment today and its upcoming)
+Customer: cancel it
+Booka: Done. Your appointment is cancelled
 
-Case: 52. Can I make an appointment next week
-Customer: Can I make an appointment next week
-Booka: what type of service are you looking for?<ValidationException>
-Customer: [service]
-Booka: <Checking><SlotsAvailable> 
-Customer: 6 sep at 12PM 
-Booka: <CheckingConfirmation><Booked>
+Case: 49. cancel my haircut appointment (Customer got only one appointment for haircut and its upcoming)
+Customer: cancel my haircut appointment
+Booka: Done. Your appointment is cancelled
 
-Case: 53. Book Tuesday
-Customer: Book Tuesday
-Booka: what type of service are you looking for?<ValidationException>
-Customer: [service]
-Booka: <Checking><SlotsAvailable> 
-Customer: i will go for 9 am 
-Booka: <CheckingConfirmation><Booked>
+Case: 49. cancel my monday's appointment (Customer got only one upcoming appointment on monday)
+Customer: cancel my monday's appointment
+Booka: Done. Your appointment is cancelled
 
-Case: 54. book me in next thursday
-Customer: book me in next thursday
-Booka: what type of service are you looking for?<ValidationException>
-Customer: [service]
-Booka: <Checking><SlotsAvailable> 
-Customer: 9am 
-Booka: <CheckingConfirmation>
-
-Case: 55. book me in this weekend
-Customer: book me in this weekend
-Booka: what type of service are you looking for?<ValidationException>
-Customer: [service]
-Booka: <Checking><SlotsAvailable> 
-Customer: @9 
-Booka: <CheckingConfirmation><Booked>
-
-Case: 56. book me for this thursday
-Customer: book me for this thursday
-Booka: what type of service are you looking for?<ValidationException>
-Customer: [service]
-Booka: <Checking><SlotsAvailable> 
-Customer: 10 pm 
-Booka: <CheckingConfirmation>
-
-Case: 57. Book me in anytime today
-Customer: Book me in anytime today
-Booka: what type of service are you looking for?<ValidationException>
-Customer: [service]
-Booka: <Checking><SlotsAvailable> 
-Customer: 11 pm
-Booka: <CheckingConfirmation><Booked>

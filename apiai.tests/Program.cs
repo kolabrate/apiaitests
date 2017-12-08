@@ -478,7 +478,7 @@ namespace apiai.tests
         private static string bookedDt = "22nd Sep at 12PM";
         private static string freeDt = "22nd Sep at 12PM";
         private static string freeDtConfirm = "3.30 pm on 21st Sep";
-        private static string serviceName = "henna";
+        private static string serviceName = "mobile dev";
         private static string providerName = "Kolabrate";
         private static void ProcessCase(List<Conversation> conversations, string caseName, bool isNewCustomer = true)
         {

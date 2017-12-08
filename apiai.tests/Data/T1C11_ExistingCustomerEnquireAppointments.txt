@@ -8,3 +8,6 @@ Booka:
 Case: 3. what appointment i got tomorrow?
 Customer: what appointment i got tomorrow?
 Booka: 
+Case: 3. List my appointments
+Customer: List my appointments
+Booka: 

@@ -50,7 +50,7 @@ Booka: <CheckingConfirmation><Booked>
 Case: 49. Need an appointment for today 
 Customer: Need an appointment for today 
 Booka: what type of service are you looking for?<ValidationException>
-Customer: 3:00
+Customer: [service]
 Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>

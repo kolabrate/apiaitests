@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using ApiAiSDK;
+using Chuvy.Data.Persistence;
 
 namespace Chuvy.BotService.Test
 {
@@ -19,6 +20,7 @@ namespace Chuvy.BotService.Test
             ProcessRequest();
             //TestEntities();
             //ProcessRequestWeb();
+            //TestUpcomingAppointments();
         }
         private static void ProcessRequest()
         {
@@ -81,6 +83,16 @@ namespace Chuvy.BotService.Test
                 string val = responseTask.Result.ToString();
             }
         }
+        private static void TestUpcomingAppointments()
+        {
+            var _unitofwork = new UnitofWork(new ChuvyDbContext());
 
+            var appointments = _unitofwork.Appointments.GetAllUpcomingAppointments(30);
+
+
+            Console.WriteLine(appointments.ToString());
+            
+
+        }
     }
 }

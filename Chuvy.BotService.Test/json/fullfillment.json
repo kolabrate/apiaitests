@@ -1,38 +1,126 @@
 {
-  "id": "ce1aca28-edfa-4b4c-84ff-10de2f5f016f",
-  "timestamp": "2017-11-04T05:47:00.106Z",
+  "originalRequest": {
+    "source": "twilio",
+    "data": {
+      "ApiVersion": "2010-04-01",
+      "SmsSid": "SM548a36d8ae7935bd1fbef2b2a15791d9",
+      "SmsStatus": "received",
+      "SmsMessageSid": "SM548a36d8ae7935bd1fbef2b2a15791d9",
+      "NumSegments": "1",
+      "ToState": "",
+      "From": "+61411268455",
+      "MessageSid": "SM548a36d8ae7935bd1fbef2b2a15791d9",
+      "AccountSid": "AC525398cbca285a1781a4e8a4287bcb43",
+      "ToCity": "",
+      "FromCountry": "AU",
+      "ToZip": "",
+      "FromCity": "",
+      "To": "+61451266887",
+      "FromZip": "",
+      "ToCountry": "AU",
+      "Body": "Book cut with Tanya ",
+      "NumMedia": "0",
+      "FromState": ""
+    }
+  },
+  "id": "d11a9d81-42dc-47a7-88ef-7beb5c51e542",
+  "timestamp": "2017-12-06T07:40:39.69Z",
   "lang": "en",
   "result": {
     "source": "agent",
-    "resolvedQuery": "when is my henna appointment",
+    "resolvedQuery": "Book cut with Tanya ",
     "speech": "",
-    "action": "EnquireAppointments",
+    "action": "ScheduleAppointment",
     "actionIncomplete": false,
     "parameters": {
-      "enquiringServiceName": "henna",
-      "enquiringDate": ""
+      "Bookingdate": "",
+      "BookingDateTimePeriod": "",
+      "genericTimeSlots": "",
+      "service": [
+        "Tanya"
+      ],
+      "Bookingtime": "",
+      "beforeAfter": "",
+      "Bookingdateperiod": "",
+      "Bookingtimeperiod": "",
+      "providerName": ""
     },
-    "contexts": [],
+    "contexts": [
+      {
+        "name": "scheduleappointment-followup",
+        "parameters": {
+          "genericTimeSlots.original": "",
+          "BookingDateTimePeriod.original": "",
+          "beforeAfter.original": "",
+          "providerName.original": "",
+          "service.original": "Tanya",
+          "beforeAfter": "",
+          "Bookingtimeperiod": "",
+          "Bookingdateperiod.original": "",
+          "Bookingtimeperiod.original": "",
+          "Bookingdate.original": "",
+          "BookingDateTimePeriod": "",
+          "Bookingdate": "",
+          "genericTimeSlots": "",
+          "service": [
+            "Tanya"
+          ],
+          "Bookingtime": "",
+          "providerName": "",
+          "Bookingdateperiod": "",
+          "Bookingtime.original": ""
+        },
+        "lifespan": 10
+      },
+      {
+        "name": "generic",
+        "parameters": {
+          "genericTimeSlots.original": "",
+          "BookingDateTimePeriod.original": "",
+          "beforeAfter.original": "",
+          "providerName.original": "",
+          "service.original": "Tanya",
+          "beforeAfter": "",
+          "Bookingtimeperiod": "",
+          "Bookingdateperiod.original": "",
+          "Bookingtimeperiod.original": "",
+          "Bookingdate.original": "",
+          "BookingDateTimePeriod": "",
+          "Bookingdate": "",
+          "genericTimeSlots": "",
+          "twilio_sender_id": "+61411268455",
+          "service": [
+            "Tanya"
+          ],
+          "Bookingtime": "",
+          "providerName": "",
+          "Bookingdateperiod": "",
+          "Bookingtime.original": ""
+        },
+        "lifespan": 4
+      }
+    ],
     "metadata": {
-      "intentId": "e6194cd8-9bb5-4683-b8a6-dd57e15765ec",
+      "intentId": "e1710622-ec4a-4cf7-a117-856873ef4b3b",
       "webhookUsed": "true",
-      "webhookForSlotFillingUsed": "false",
-      "intentName": "EnquireAppointments"
+      "webhookForSlotFillingUsed": "true",
+      "intentName": "ScheduleAppointment"
     },
     "fulfillment": {
-      "speech": "I am not able to check that for you at the moment, please contact your service provider",
+      "speech": "",
       "messages": [
         {
           "type": 0,
-          "speech": "I am not able to check that for you at the moment, please contact your service provider"
+          "speech": ""
         }
       ]
     },
-    "score": 1.0
+    "score": 0.41999998688697815
   },
   "status": {
     "code": 200,
-    "errorType": "success"
+    "errorType": "success",
+    "webhookTimedOut": false
   },
-  "sessionId": "0b45c216-5884-4bdc-b95a-903801b2225e"
+  "sessionId": "787e68c3-7603-4601-bfa0-5123e8a5979a"
 }

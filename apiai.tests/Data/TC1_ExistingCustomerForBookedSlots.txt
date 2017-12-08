@@ -1,7 +1,7 @@
 ﻿Expression: 2. Appointment Request Expression with Service Name & Date & Time
 
-Case: 1. Book me in today at 4 PM for a [service]
-Customer: Book me in today at 4 PM for a [service]
+Case: 1. Book me in today at [todayAtXPM] for a [service]
+Customer: Book me in today at [todayAtXPM] for a [service]
 Booka: <Checking><AlternateSlotsOnly> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
@@ -12,14 +12,14 @@ Booka: <Checking><AlternateSlotsOnly>
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
-Case: 3. Book me in at 4 today for a [service]
-Customer: Book me in at 4 today for a [service]
+Case: 3. Book me in at 4 tomorrow for a [service]
+Customer: Book me in at 4 tomorrow for a [service]
 Booka: <Checking><AlternateSlotsOnly> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
-Case: 4. Can I make an appointment today at 4 for a [service]
-Customer: Can I make an appointment today at 4 for a [service]
+Case: 4. Can I make an appointment tomorrow at 4 for a [service]
+Customer: Can I make an appointment tomorrow at 4 for a [service]
 Booka: <Checking><AlternateSlotsOnly> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
@@ -30,14 +30,14 @@ Booka: <Checking><AlternateSlotsOnly>
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
-Case: 6. Can I make an appointment on Fri the 6th at 4 PM for [service]
-Customer: Can I make an appointment on Fri the 6th at 4 PM for [service]
+Case: 6. Can I make an appointment on Fri the 15th at 4 PM for [service]
+Customer: Can I make an appointment on Fri the 15th at 4 PM for [service]
 Booka: <Checking><AlternateSlotsOnly> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
-Case: 16. Can I get an appointment on 6th of Oct at 9 in the morning for [service]
-Customer: Can I get an appointment on 6th of Oct at 9 in the morning for [service]
+Case: 16. Can I get an appointment on 11th of Dec at 9 in the morning for [service]
+Customer: Can I get an appointment on 11th of Dec at 9 in the morning for [service]
 Booka: <Checking><AlternateSlotsOnly> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
