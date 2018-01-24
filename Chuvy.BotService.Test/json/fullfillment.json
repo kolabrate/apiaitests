@@ -1,126 +1,1 @@
-{
-  "originalRequest": {
-    "source": "twilio",
-    "data": {
-      "ApiVersion": "2010-04-01",
-      "SmsSid": "SM548a36d8ae7935bd1fbef2b2a15791d9",
-      "SmsStatus": "received",
-      "SmsMessageSid": "SM548a36d8ae7935bd1fbef2b2a15791d9",
-      "NumSegments": "1",
-      "ToState": "",
-      "From": "+61411268455",
-      "MessageSid": "SM548a36d8ae7935bd1fbef2b2a15791d9",
-      "AccountSid": "AC525398cbca285a1781a4e8a4287bcb43",
-      "ToCity": "",
-      "FromCountry": "AU",
-      "ToZip": "",
-      "FromCity": "",
-      "To": "+61451266887",
-      "FromZip": "",
-      "ToCountry": "AU",
-      "Body": "Book cut with Tanya ",
-      "NumMedia": "0",
-      "FromState": ""
-    }
-  },
-  "id": "d11a9d81-42dc-47a7-88ef-7beb5c51e542",
-  "timestamp": "2017-12-06T07:40:39.69Z",
-  "lang": "en",
-  "result": {
-    "source": "agent",
-    "resolvedQuery": "Book cut with Tanya ",
-    "speech": "",
-    "action": "ScheduleAppointment",
-    "actionIncomplete": false,
-    "parameters": {
-      "Bookingdate": "",
-      "BookingDateTimePeriod": "",
-      "genericTimeSlots": "",
-      "service": [
-        "Tanya"
-      ],
-      "Bookingtime": "",
-      "beforeAfter": "",
-      "Bookingdateperiod": "",
-      "Bookingtimeperiod": "",
-      "providerName": ""
-    },
-    "contexts": [
-      {
-        "name": "scheduleappointment-followup",
-        "parameters": {
-          "genericTimeSlots.original": "",
-          "BookingDateTimePeriod.original": "",
-          "beforeAfter.original": "",
-          "providerName.original": "",
-          "service.original": "Tanya",
-          "beforeAfter": "",
-          "Bookingtimeperiod": "",
-          "Bookingdateperiod.original": "",
-          "Bookingtimeperiod.original": "",
-          "Bookingdate.original": "",
-          "BookingDateTimePeriod": "",
-          "Bookingdate": "",
-          "genericTimeSlots": "",
-          "service": [
-            "Tanya"
-          ],
-          "Bookingtime": "",
-          "providerName": "",
-          "Bookingdateperiod": "",
-          "Bookingtime.original": ""
-        },
-        "lifespan": 10
-      },
-      {
-        "name": "generic",
-        "parameters": {
-          "genericTimeSlots.original": "",
-          "BookingDateTimePeriod.original": "",
-          "beforeAfter.original": "",
-          "providerName.original": "",
-          "service.original": "Tanya",
-          "beforeAfter": "",
-          "Bookingtimeperiod": "",
-          "Bookingdateperiod.original": "",
-          "Bookingtimeperiod.original": "",
-          "Bookingdate.original": "",
-          "BookingDateTimePeriod": "",
-          "Bookingdate": "",
-          "genericTimeSlots": "",
-          "twilio_sender_id": "+61411268455",
-          "service": [
-            "Tanya"
-          ],
-          "Bookingtime": "",
-          "providerName": "",
-          "Bookingdateperiod": "",
-          "Bookingtime.original": ""
-        },
-        "lifespan": 4
-      }
-    ],
-    "metadata": {
-      "intentId": "e1710622-ec4a-4cf7-a117-856873ef4b3b",
-      "webhookUsed": "true",
-      "webhookForSlotFillingUsed": "true",
-      "intentName": "ScheduleAppointment"
-    },
-    "fulfillment": {
-      "speech": "",
-      "messages": [
-        {
-          "type": 0,
-          "speech": ""
-        }
-      ]
-    },
-    "score": 0.41999998688697815
-  },
-  "status": {
-    "code": 200,
-    "errorType": "success",
-    "webhookTimedOut": false
-  },
-  "sessionId": "787e68c3-7603-4601-bfa0-5123e8a5979a"
-}
+{  "originalRequest": {    "source": "twilio",    "data": {      "ApiVersion": "2010-04-01",      "SmsSid": "SMbfeebb0a237088fb08056b3ede9946a0",      "SmsStatus": "received",      "SmsMessageSid": "SMbfeebb0a237088fb08056b3ede9946a0",      "NumSegments": "1",      "ToState": "",      "From": "+61411268455",      "MessageSid": "SMbfeebb0a237088fb08056b3ede9946a0",      "AccountSid": "AC525398cbca285a1781a4e8a4287bcb43",      "ToCity": "",      "FromCountry": "AU",      "ToZip": "",      "FromCity": "",      "To": "+61451266887",      "FromZip": "",      "ToCountry": "AU",      "Body": "Pleas cancel",      "NumMedia": "0",      "FromState": ""    }  },  "id": "97fb163b-5b1f-45ab-bd39-a7a2cf46c982",  "timestamp": "2018-01-23T01:15:33.9Z",  "lang": "en",  "result": {    "source": "agent",    "resolvedQuery": "Pleas cancel",    "speech": "",    "action": "CancelAppointment",    "actionIncomplete": false,    "parameters": {      "Bookingdate": "",      "service": "",      "date-time": "",      "Bookingtime": "",      "Bookingdateperiod": "",      "Bookingtimeperiod": ""    },    "contexts": [      {        "name": "generic",        "parameters": {          "Bookingtimeperiod.original": "",          "date-time.original": "",          "Bookingdate.original": "",          "Bookingdate": "",          "twilio_sender_id": "+61411268455",          "service": "",          "date-time": "",          "Bookingtime": "",          "service.original": "",          "Bookingdateperiod": "",          "Bookingtimeperiod": "",          "Bookingtime.original": "",          "Bookingdateperiod.original": ""        },        "lifespan": 4      }    ],    "metadata": {      "intentId": "b99264f5-36e4-4f93-9014-ad739f5440ea",      "webhookUsed": "true",      "webhookForSlotFillingUsed": "false",      "intentName": "CancelAppointment"    },    "fulfillment": {      "speech": "Oops! You may need to call the provider to cancel your appointment.",      "messages": [        {          "type": 0,          "speech": "Oops! You may need to call the provider to cancel your appointment."        }      ]    },    "score": 1.0  },  "status": {    "code": 200,    "errorType": "success",    "webhookTimedOut": false  },  "sessionId": "14a767ea-8647-42e4-a74a-5f0d4243dc61"}

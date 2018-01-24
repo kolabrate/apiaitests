@@ -127,12 +127,12 @@
     </Content>
     <Content Include="Data\IssuesList.txt" />
     <Content Include="Data\results.txt" />
-    <Content Include="Data\TC11_ExistingCustomerEnquireAppointments.txt" />
+    <Content Include="Data\TC11_ExistingCustomerFamilyBooking.txt" />
     <Content Include="Data\TC4_NewCustomerForFreeSlots.txt" />
     <Content Include="Data\TC81_NewCustomerUnknown_MultipleServices.txt" />
     <Content Include="Data\TC8_ExistingCustomerUnknown_MultipleServices.txt" />
     <Content Include="Data\T1C10_NewCustomerExceptions.txt" />
-    <Content Include="Data\TC9_ExistingCustomerCancelAppointments.txt" />
+    <Content Include="Data\TC13_ExistingCustomerBeforeAfter.txt" />
     <Content Include="Data\TC12_ExistingCustomerPreferedProvider.txt" />
     <Content Include="Data\T1C11_ExistingCustomerEnquireAppointments.txt" />
     <Content Include="Data\TC7_ExistingCustomerCancelAppmt.txt" />

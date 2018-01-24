@@ -1,0 +1,41 @@
+﻿Expression: 6. Existing Customer before and after queries
+Case: 1. book me in today after 5 PM for haircut with Paul
+Customer: book me in today after 5 PM for [service] with [Provider]
+Booka: <Checking><SlotsAvailable> 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 2. book me in tomorrow after 5 for haircut with Paul
+Customer: book me in tomorrow after 5 for [service] with [Provider]
+Booka: <Checking><SlotsAvailable> 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 3. I want an appointment after 10th Feb for haircut with Paul
+Customer: I want an appointment after 10th Feb for [service] with [Provider]
+Booka: <Checking><SlotsAvailable> 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 4. I want an appointment after this week for haircut
+Customer: I want an appointment after this week for [service]
+Booka: <Checking><SlotsAvailable> 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 5. I want an appointment after this friday
+Customer: I want an appointment after this friday for [service]
+Booka: <Checking><SlotsAvailable> 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 6. I want an appointment after 21st jan 3PM for haircut
+Customer: I want an appointment after 21st jan 3PM for [service]
+Booka: <Checking><SlotsAvailable> 
+Booka: <CheckingConfirmation><Booked>
+
+
+Case: 7. I want an appointment before 21st jan 3PM for haircut
+Customer: I want an appointment before 21st jan 3PM for [service]
+Booka: <Checking><SlotsAvailable> 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 8. I want an appointment before this week for haircut
+Customer: I want an appointment before this week for [service]
+Booka: <Checking><SlotsAvailable> 
+Booka: <CheckingConfirmation><Booked>

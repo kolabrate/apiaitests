@@ -21,6 +21,7 @@ namespace Chuvy.BotService.Test
             //TestEntities();
             //ProcessRequestWeb();
             //TestUpcomingAppointments();
+            //ProcessRequestWebFn();
         }
         private static void ProcessRequest()
         {
@@ -94,5 +95,19 @@ namespace Chuvy.BotService.Test
             
 
         }
+        private static void ProcessRequestWebFn()
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://localhost:6492/");
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                //var responseTask = client.SendAsync(request).Result;
+                var responseTask = client.GetAsync("api/services/UploadServiceEntities");
+                string val = responseTask.Result.ToString();
+            }
+        }
     }
+    
 }

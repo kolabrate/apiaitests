@@ -20,3 +20,13 @@ Customer: [fullService]
 Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation>
+
+Case: 4. Only one service is unavailable of the list of services
+Customer: book me in this afternoon for [service] and [unknownService]
+Booka: what type of service are you looking for?<ValidationException>
+Customer: [shortService]
+Booka: <ManyServices> 
+Customer: [fullService]
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation>
