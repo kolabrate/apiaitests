@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apiaisdk", "apiaisdk\apiaisdk.csproj", "{27C36998-A6CF-4943-BD3B-B7172E95B9C6}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chuvy.Logger.Tests", "Chuvy.Logger.Tests\Chuvy.Logger.Tests.csproj", "{E9DD8CF9-AB2A-4B62-BAE3-3E774015385F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chuvy.BotService.Test", "Chuvy.BotService.Test\Chuvy.BotService.Test.csproj", "{ECA207B4-D0E3-42F8-9F35-8F85D81D3E8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DialogFlowTest", "DialogFlowTest\DialogFlowTest.csproj", "{E4E522B0-2796-42D2-A3C1-AEC7746844E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,8 +35,15 @@ Global
 		{ECA207B4-D0E3-42F8-9F35-8F85D81D3E8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECA207B4-D0E3-42F8-9F35-8F85D81D3E8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECA207B4-D0E3-42F8-9F35-8F85D81D3E8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4E522B0-2796-42D2-A3C1-AEC7746844E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4E522B0-2796-42D2-A3C1-AEC7746844E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4E522B0-2796-42D2-A3C1-AEC7746844E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4E522B0-2796-42D2-A3C1-AEC7746844E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {653E6E2E-48B3-48CA-BE13-2D65D3A5C5D6}
 	EndGlobalSection
 EndGlobal

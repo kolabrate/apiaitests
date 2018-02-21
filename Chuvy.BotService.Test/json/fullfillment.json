@@ -1,1 +1,60 @@
-{  "originalRequest": {    "source": "twilio",    "data": {      "ApiVersion": "2010-04-01",      "SmsSid": "SMbfeebb0a237088fb08056b3ede9946a0",      "SmsStatus": "received",      "SmsMessageSid": "SMbfeebb0a237088fb08056b3ede9946a0",      "NumSegments": "1",      "ToState": "",      "From": "+61411268455",      "MessageSid": "SMbfeebb0a237088fb08056b3ede9946a0",      "AccountSid": "AC525398cbca285a1781a4e8a4287bcb43",      "ToCity": "",      "FromCountry": "AU",      "ToZip": "",      "FromCity": "",      "To": "+61451266887",      "FromZip": "",      "ToCountry": "AU",      "Body": "Pleas cancel",      "NumMedia": "0",      "FromState": ""    }  },  "id": "97fb163b-5b1f-45ab-bd39-a7a2cf46c982",  "timestamp": "2018-01-23T01:15:33.9Z",  "lang": "en",  "result": {    "source": "agent",    "resolvedQuery": "Pleas cancel",    "speech": "",    "action": "CancelAppointment",    "actionIncomplete": false,    "parameters": {      "Bookingdate": "",      "service": "",      "date-time": "",      "Bookingtime": "",      "Bookingdateperiod": "",      "Bookingtimeperiod": ""    },    "contexts": [      {        "name": "generic",        "parameters": {          "Bookingtimeperiod.original": "",          "date-time.original": "",          "Bookingdate.original": "",          "Bookingdate": "",          "twilio_sender_id": "+61411268455",          "service": "",          "date-time": "",          "Bookingtime": "",          "service.original": "",          "Bookingdateperiod": "",          "Bookingtimeperiod": "",          "Bookingtime.original": "",          "Bookingdateperiod.original": ""        },        "lifespan": 4      }    ],    "metadata": {      "intentId": "b99264f5-36e4-4f93-9014-ad739f5440ea",      "webhookUsed": "true",      "webhookForSlotFillingUsed": "false",      "intentName": "CancelAppointment"    },    "fulfillment": {      "speech": "Oops! You may need to call the provider to cancel your appointment.",      "messages": [        {          "type": 0,          "speech": "Oops! You may need to call the provider to cancel your appointment."        }      ]    },    "score": 1.0  },  "status": {    "code": 200,    "errorType": "success",    "webhookTimedOut": false  },  "sessionId": "14a767ea-8647-42e4-a74a-5f0d4243dc61"}
+{
+  "originalRequest": {
+    "source": "Portal Testing",
+    "data": {
+      "ApiVersion": "",
+      "SmsSid": "",
+      "SmsStatus": "",
+      "SmsMessageSid": "",
+      "NumSegments": "",
+      "ToState": "",
+      "From": "-61309326965",
+      "MessageSid": "SMf0000000000000000000000",
+      "AccountSid": "",
+      "ToCity": "",
+      "FromCountry": "",
+      "ToZip": "",
+      "FromCity": "",
+      "To": "",
+      "FromZip": "",
+      "ToCountry": "",
+      "Body": "kik corman",
+      "NumMedia": "",
+      "FromState": ""
+    }
+  },
+  "id": "0824b22a-c4b3-478f-bb9f-c9707b810535",
+  "timestamp": "2018-02-15T04:02:47.12Z",
+  "lang": "en",
+  "result": {
+    "source": "agent",
+    "resolvedQuery": "kik corman",
+    "speech": "",
+    "action": "Fallback",
+    "actionIncomplete": false,
+    "parameters": {},
+    "contexts": [],
+    "metadata": {
+      "intentId": "6f57d819-1696-43bf-aec5-0a74583c7e2e",
+      "webhookUsed": "true",
+      "webhookForSlotFillingUsed": "false",
+      "intentName": "Default Fallback Intent"
+    },
+    "fulfillment": {
+      "speech": "Bummer!! I did not understand what you said :-(. If you can try something like ' book me in next Thursday' or' get me next available time slot for haircut', I promise, I can be quite helpful.",
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Bummer!! I did not understand what you said :-(.  If you can try something like ' book  me in next Thursday' or' get me next available time slot for haircut', I promise, I  can be quite helpful."
+        }
+      ]
+    },
+    "score": 1.0
+  },
+  "status": {
+    "code": 200,
+    "errorType": "success",
+    "webhookTimedOut": false
+  },
+  "sessionId": "f498c6bb-e107-4a6f-94c6-430de1a2f3ca"
+}
