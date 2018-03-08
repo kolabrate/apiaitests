@@ -1,51 +1,146 @@
 {
-  "originalRequest": {
-    "source": "Portal Testing",
-    "data": {
-      "ApiVersion": "",
-      "SmsSid": "",
-      "SmsStatus": "",
-      "SmsMessageSid": "",
-      "NumSegments": "",
-      "ToState": "",
-      "From": "-61309326965",
-      "MessageSid": "SMf0000000000000000000000",
-      "AccountSid": "",
-      "ToCity": "",
-      "FromCountry": "",
-      "ToZip": "",
-      "FromCity": "",
-      "To": "",
-      "FromZip": "",
-      "ToCountry": "",
-      "Body": "kik corman",
-      "NumMedia": "",
-      "FromState": ""
-    }
-  },
-  "id": "0824b22a-c4b3-478f-bb9f-c9707b810535",
-  "timestamp": "2018-02-15T04:02:47.12Z",
+  "id": "1ea62408-07da-4753-862a-19350be0da25",
+  "timestamp": "2018-03-02T04:40:00.751Z",
   "lang": "en",
   "result": {
     "source": "agent",
-    "resolvedQuery": "kik corman",
+    "resolvedQuery": "i want to book an appointment for haircut",
     "speech": "",
-    "action": "Fallback",
-    "actionIncomplete": false,
-    "parameters": {},
-    "contexts": [],
+    "action": "ScheduleAppointment",
+    "actionIncomplete": true,
+    "parameters": {
+      "attendees": [],
+      "businessName": "",
+      "beforeAfter": "",
+      "Bookingtimeperiod": "",
+      "Bookingdate": "",
+      "BookingDateTimePeriod": "",
+      "genericTimeSlots": "",
+      "service": [
+        "Hair cut"
+      ],
+      "Bookingtime": "",
+      "given-name": "",
+      "Bookingdateperiod": "",
+      "providerName": "",
+      "last-name": ""
+    },
+    "contexts": [
+      {
+        "name": "scheduleappointment_dialog_params_businessname",
+        "parameters": {
+          "businessName.original": "",
+          "genericTimeSlots.original": "",
+          "businessName": "",
+          "providerName.original": "",
+          "beforeAfter": "",
+          "Bookingtimeperiod.original": "",
+          "last-name.original": "",
+          "BookingDateTimePeriod": "",
+          "genericTimeSlots": "",
+          "attendees.original": "",
+          "Bookingtime": "",
+          "providerName": "",
+          "last-name": "",
+          "BookingDateTimePeriod.original": "",
+          "attendees": [],
+          "beforeAfter.original": "",
+          "service.original": "haircut",
+          "Bookingtimeperiod": "",
+          "Bookingdateperiod.original": "",
+          "given-name.original": "",
+          "Bookingdate.original": "",
+          "Bookingdate": "",
+          "service": [
+            "Hair cut"
+          ],
+          "given-name": "",
+          "Bookingdateperiod": "",
+          "Bookingtime.original": ""
+        },
+        "lifespan": 1
+      },
+      {
+        "name": "scheduleappointment_dialog_context",
+        "parameters": {
+          "businessName.original": "",
+          "genericTimeSlots.original": "",
+          "businessName": "",
+          "providerName.original": "",
+          "beforeAfter": "",
+          "Bookingtimeperiod.original": "",
+          "last-name.original": "",
+          "BookingDateTimePeriod": "",
+          "genericTimeSlots": "",
+          "attendees.original": "",
+          "Bookingtime": "",
+          "providerName": "",
+          "last-name": "",
+          "BookingDateTimePeriod.original": "",
+          "attendees": [],
+          "beforeAfter.original": "",
+          "service.original": "haircut",
+          "Bookingtimeperiod": "",
+          "Bookingdateperiod.original": "",
+          "given-name.original": "",
+          "Bookingdate.original": "",
+          "Bookingdate": "",
+          "service": [
+            "Hair cut"
+          ],
+          "given-name": "",
+          "Bookingdateperiod": "",
+          "Bookingtime.original": ""
+        },
+        "lifespan": 2
+      },
+      {
+        "name": "e1710622-ec4a-4cf7-a117-856873ef4b3b_id_dialog_context",
+        "parameters": {
+          "businessName.original": "",
+          "genericTimeSlots.original": "",
+          "businessName": "",
+          "providerName.original": "",
+          "beforeAfter": "",
+          "Bookingtimeperiod.original": "",
+          "last-name.original": "",
+          "BookingDateTimePeriod": "",
+          "genericTimeSlots": "",
+          "attendees.original": "",
+          "Bookingtime": "",
+          "providerName": "",
+          "last-name": "",
+          "BookingDateTimePeriod.original": "",
+          "attendees": [],
+          "beforeAfter.original": "",
+          "service.original": "haircut",
+          "Bookingtimeperiod": "",
+          "Bookingdateperiod.original": "",
+          "given-name.original": "",
+          "Bookingdate.original": "",
+          "Bookingdate": "",
+          "service": [
+            "Hair cut"
+          ],
+          "given-name": "",
+          "Bookingdateperiod": "",
+          "Bookingtime.original": ""
+        },
+        "lifespan": 2
+      }
+    ],
     "metadata": {
-      "intentId": "6f57d819-1696-43bf-aec5-0a74583c7e2e",
+      "intentId": "e1710622-ec4a-4cf7-a117-856873ef4b3b",
       "webhookUsed": "true",
-      "webhookForSlotFillingUsed": "false",
-      "intentName": "Default Fallback Intent"
+      "webhookForSlotFillingUsed": "true",
+      "intentName": "ScheduleAppointment"
     },
     "fulfillment": {
-      "speech": "Bummer!! I did not understand what you said :-(. If you can try something like ' book me in next Thursday' or' get me next available time slot for haircut', I promise, I can be quite helpful.",
+      "speech": "which business do you want to book with?",
       "messages": [
         {
           "type": 0,
-          "speech": "Bummer!! I did not understand what you said :-(.  If you can try something like ' book  me in next Thursday' or' get me next available time slot for haircut', I promise, I  can be quite helpful."
+          "speech": "which business do you want to book with?"
         }
       ]
     },
@@ -56,5 +151,5 @@
     "errorType": "success",
     "webhookTimedOut": false
   },
-  "sessionId": "f498c6bb-e107-4a6f-94c6-430de1a2f3ca"
+  "sessionId": "57d20930-927e-4c0d-b328-73a470c894cb"
 }
