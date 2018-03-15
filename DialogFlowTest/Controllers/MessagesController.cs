@@ -24,17 +24,12 @@ namespace DialogFlowTest.Controllers
         }
 
         // GET: api/Messages/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST: api/Messages
-        public string Post([FromBody]string value)
+        public string Get(string value)
         {
             try
             {
-                var latestMessage = _unitofwork.Messages.Find(x => x.SenderId == value).OrderByDescending(x => x.CreateDateTime).FirstOrDefault();
+                string senderId = value.ToString();
+                var latestMessage = _unitofwork.Messages.Find(x => x.SenderId == senderId).OrderByDescending(x => x.CreateDateTime).FirstOrDefault();
 
                 if (latestMessage != null && (latestMessage.ActionName.Contains("Checking") || latestMessage.ActionName.Contains("CheckingConfirmation")))
                 {
@@ -46,7 +41,7 @@ namespace DialogFlowTest.Controllers
                     else
                     {
                         Thread.Sleep(5000);
-                        latestMessage = _unitofwork.Messages.Find(x => x.SenderId == value).OrderByDescending(x => x.CreateDateTime).FirstOrDefault();
+                        latestMessage = _unitofwork.Messages.Find(x => x.SenderId == senderId).OrderByDescending(x => x.CreateDateTime).FirstOrDefault();
 
                         bookaReplies = latestMessage.BookaReply.Split(';');
                         if (bookaReplies.Length >= 1)
@@ -65,6 +60,12 @@ namespace DialogFlowTest.Controllers
             {
                 return "Error in reading second message" + ex.ToString();
             }
+        }
+
+        // POST: api/Messages
+        public string Post([FromUri]string value)
+        {
+            return "";
         }
 
         // PUT: api/Messages/5

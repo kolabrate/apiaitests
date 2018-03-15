@@ -51,46 +51,42 @@
   }
 
   function queryInputKeyDown(event) {
-    if (event.which !== ENTER_KEY_CODE) {
-      return;
-    }
+      if (event.which !== ENTER_KEY_CODE) {
+          return;
+      }
 
-    var value = queryInput.value;
-    queryInput.value = "";
+      var value = queryInput.value;
+      queryInput.value = "";
 
-    createQueryNode(value);
-    var responseNode = createResponseNode();
+      createQueryNode(value);
+      var responseNode = createResponseNode();
 
-    var fromNum = numberInUseInput.value;
-    
-    sendText(value, fromNum)
-      .then(function(response) {
-        var result;
-        try {
-            result = response.result.fulfillment.speech
+      var fromNum = numberInUseInput.value;
 
-            var secondResponse = '';
-            $.ajax({
-                type: 'POST',
-                url: '/api/Messages',
-                data: {
-                    'fromNum': fromNum
-                },
-                success: function (msg) {
-                    secondResponse = msg;
-                    result = result + secondResponse;
-                }
-            });
-        } catch(error) {
-          result = "";
-        }
-        setResponseJSON(response);
-        setResponseOnNode(result, responseNode);
-      })
-      .catch(function(err) {
-        setResponseJSON(err);
-        setResponseOnNode("Something goes wrong", responseNode);
-      });
+      sendText(value, fromNum)
+          .then(function (response) {
+              setResponseJSON(response);
+              setResponseOnNode(response.result.fulfillment.speech, responseNode);
+
+              var fromNum = numberInUseInput.value;
+              $.ajax({
+                  type: 'GET',
+                  url: '/api/Messages',
+                  data: jQuery.param({ value: fromNum}),
+                  success: function (msg) {
+                      setSecondResponseOnNode(msg, responseNode);
+                  },
+                  error: function (msg) {
+                      console.log(JSON.stringify(msg));
+                      var errorMsg = response.result.fulfillment.speech + " (Details not available)";
+                      setSecondResponseOnNode(errorMsg, responseNode);
+                  }
+              });
+          })
+          .catch(function (err) {
+              setResponseJSON(err);
+              setResponseOnNode("Something goes wrong", responseNode);
+          });
   }
 
   function createQueryNode(query) {
@@ -111,6 +107,10 @@
   function setResponseOnNode(response, node) {
     node.innerHTML = response ? response : "[empty response]";
     node.setAttribute('data-actual-response', response);
+  }
+
+  function setSecondResponseOnNode(response, node) {
+      node.innerHTML = node.innerHTML+ response;
   }
 
   function setResponseJSON(response) {
