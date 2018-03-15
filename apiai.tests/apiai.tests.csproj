@@ -126,6 +126,7 @@
       <LastGenOutput>BookaDb.cs</LastGenOutput>
     </Content>
     <Content Include="Data\IssuesList.txt" />
+    <Content Include="Data\allNewConvo.txt" />
     <Content Include="Data\results.txt" />
     <Content Include="Data\TC11_ExistingCustomerFamilyBooking.txt" />
     <Content Include="Data\TC4_NewCustomerForFreeSlots.txt" />

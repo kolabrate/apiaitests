@@ -1,155 +1,1 @@
-{
-  "id": "1ea62408-07da-4753-862a-19350be0da25",
-  "timestamp": "2018-03-02T04:40:00.751Z",
-  "lang": "en",
-  "result": {
-    "source": "agent",
-    "resolvedQuery": "i want to book an appointment for haircut",
-    "speech": "",
-    "action": "ScheduleAppointment",
-    "actionIncomplete": true,
-    "parameters": {
-      "attendees": [],
-      "businessName": "",
-      "beforeAfter": "",
-      "Bookingtimeperiod": "",
-      "Bookingdate": "",
-      "BookingDateTimePeriod": "",
-      "genericTimeSlots": "",
-      "service": [
-        "Hair cut"
-      ],
-      "Bookingtime": "",
-      "given-name": "",
-      "Bookingdateperiod": "",
-      "providerName": "",
-      "last-name": ""
-    },
-    "contexts": [
-      {
-        "name": "scheduleappointment_dialog_params_businessname",
-        "parameters": {
-          "businessName.original": "",
-          "genericTimeSlots.original": "",
-          "businessName": "",
-          "providerName.original": "",
-          "beforeAfter": "",
-          "Bookingtimeperiod.original": "",
-          "last-name.original": "",
-          "BookingDateTimePeriod": "",
-          "genericTimeSlots": "",
-          "attendees.original": "",
-          "Bookingtime": "",
-          "providerName": "",
-          "last-name": "",
-          "BookingDateTimePeriod.original": "",
-          "attendees": [],
-          "beforeAfter.original": "",
-          "service.original": "haircut",
-          "Bookingtimeperiod": "",
-          "Bookingdateperiod.original": "",
-          "given-name.original": "",
-          "Bookingdate.original": "",
-          "Bookingdate": "",
-          "service": [
-            "Hair cut"
-          ],
-          "given-name": "",
-          "Bookingdateperiod": "",
-          "Bookingtime.original": ""
-        },
-        "lifespan": 1
-      },
-      {
-        "name": "scheduleappointment_dialog_context",
-        "parameters": {
-          "businessName.original": "",
-          "genericTimeSlots.original": "",
-          "businessName": "",
-          "providerName.original": "",
-          "beforeAfter": "",
-          "Bookingtimeperiod.original": "",
-          "last-name.original": "",
-          "BookingDateTimePeriod": "",
-          "genericTimeSlots": "",
-          "attendees.original": "",
-          "Bookingtime": "",
-          "providerName": "",
-          "last-name": "",
-          "BookingDateTimePeriod.original": "",
-          "attendees": [],
-          "beforeAfter.original": "",
-          "service.original": "haircut",
-          "Bookingtimeperiod": "",
-          "Bookingdateperiod.original": "",
-          "given-name.original": "",
-          "Bookingdate.original": "",
-          "Bookingdate": "",
-          "service": [
-            "Hair cut"
-          ],
-          "given-name": "",
-          "Bookingdateperiod": "",
-          "Bookingtime.original": ""
-        },
-        "lifespan": 2
-      },
-      {
-        "name": "e1710622-ec4a-4cf7-a117-856873ef4b3b_id_dialog_context",
-        "parameters": {
-          "businessName.original": "",
-          "genericTimeSlots.original": "",
-          "businessName": "",
-          "providerName.original": "",
-          "beforeAfter": "",
-          "Bookingtimeperiod.original": "",
-          "last-name.original": "",
-          "BookingDateTimePeriod": "",
-          "genericTimeSlots": "",
-          "attendees.original": "",
-          "Bookingtime": "",
-          "providerName": "",
-          "last-name": "",
-          "BookingDateTimePeriod.original": "",
-          "attendees": [],
-          "beforeAfter.original": "",
-          "service.original": "haircut",
-          "Bookingtimeperiod": "",
-          "Bookingdateperiod.original": "",
-          "given-name.original": "",
-          "Bookingdate.original": "",
-          "Bookingdate": "",
-          "service": [
-            "Hair cut"
-          ],
-          "given-name": "",
-          "Bookingdateperiod": "",
-          "Bookingtime.original": ""
-        },
-        "lifespan": 2
-      }
-    ],
-    "metadata": {
-      "intentId": "e1710622-ec4a-4cf7-a117-856873ef4b3b",
-      "webhookUsed": "true",
-      "webhookForSlotFillingUsed": "true",
-      "intentName": "ScheduleAppointment"
-    },
-    "fulfillment": {
-      "speech": "which business do you want to book with?",
-      "messages": [
-        {
-          "type": 0,
-          "speech": "which business do you want to book with?"
-        }
-      ]
-    },
-    "score": 1.0
-  },
-  "status": {
-    "code": 200,
-    "errorType": "success",
-    "webhookTimedOut": false
-  },
-  "sessionId": "57d20930-927e-4c0d-b328-73a470c894cb"
-}
+{  "originalRequest": {    "source": "Portal Testing Test",    "data": {      "ApiVersion": "",      "SmsSid": "",      "SmsStatus": "",      "SmsMessageSid": "",      "NumSegments": "",      "ToState": "",      "From": "-611521081160787",      "MessageSid": "SMf0000000000000000000000",      "AccountSid": "",      "ToCity": "",      "FromCountry": "",      "ToZip": "",      "FromCity": "",      "To": "",      "FromZip": "",      "ToCountry": "",      "Body": "when is my appointment",      "NumMedia": "",      "FromState": ""    }  },  "id": "1bbec998-c951-4622-8961-cd3ee9de58f3",  "timestamp": "2018-03-15T04:24:03.249Z",  "lang": "en",  "result": {    "source": "agent",    "resolvedQuery": "when is my appointment",    "speech": "",    "action": "EnquireAppointments",    "actionIncomplete": false,    "parameters": {      "enquiringServiceName": "",      "enquiringDate": ""    },    "contexts": [      {        "name": "scheduleappointment-contextout",        "parameters": {          "enquiringServiceName": "",          "expectingParameter": "EnquireAppointments",          "enquiringDate.original": "",          "enquiringServiceName.original": "",          "enquiringDate": "",          "currentAction": "EnquireAppointments"        },        "lifespan": 9      }    ],    "metadata": {      "intentId": "e6194cd8-9bb5-4683-b8a6-dd57e15765ec",      "webhookUsed": "true",      "webhookForSlotFillingUsed": "false",      "intentName": "EnquireAppointments"    },    "fulfillment": {      "speech": "I am not able to check that for you at the moment, please contact your service provider",      "messages": [        {          "type": 0,          "speech": "I am not able to check that for you at the moment, please contact your service provider"        }      ]    },    "score": 1.0  },  "status": {    "code": 200,    "errorType": "success",    "webhookTimedOut": false  },  "sessionId": "e0fad5fd-21c6-6153-9c45-0d1156f4a556"}

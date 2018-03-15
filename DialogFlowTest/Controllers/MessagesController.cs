@@ -32,32 +32,39 @@ namespace DialogFlowTest.Controllers
         // POST: api/Messages
         public string Post([FromBody]string value)
         {
-            var latestMessage = _unitofwork.Messages.Find(x => x.SenderId == value).OrderByDescending(x => x.CreateDateTime).FirstOrDefault();
-
-            if (latestMessage != null && (latestMessage.ActionName.Contains("Checking") || latestMessage.ActionName.Contains("CheckingConfirmation")))
+            try
             {
-                var bookaReplies = latestMessage.BookaReply.Split(';');
-                if (bookaReplies.Length >= 1)
-                {
-                    return bookaReplies[1];
-                }
-                else
-                {
-                    Thread.Sleep(5000);
-                    latestMessage = _unitofwork.Messages.Find(x => x.SenderId == value).OrderByDescending(x => x.CreateDateTime).FirstOrDefault();
+                var latestMessage = _unitofwork.Messages.Find(x => x.SenderId == value).OrderByDescending(x => x.CreateDateTime).FirstOrDefault();
 
-                    bookaReplies = latestMessage.BookaReply.Split(';');
+                if (latestMessage != null && (latestMessage.ActionName.Contains("Checking") || latestMessage.ActionName.Contains("CheckingConfirmation")))
+                {
+                    var bookaReplies = latestMessage.BookaReply.Split(';');
                     if (bookaReplies.Length >= 1)
                     {
                         return bookaReplies[1];
                     }
                     else
                     {
-                        return "";
+                        Thread.Sleep(5000);
+                        latestMessage = _unitofwork.Messages.Find(x => x.SenderId == value).OrderByDescending(x => x.CreateDateTime).FirstOrDefault();
+
+                        bookaReplies = latestMessage.BookaReply.Split(';');
+                        if (bookaReplies.Length >= 1)
+                        {
+                            return bookaReplies[1];
+                        }
+                        else
+                        {
+                            return "";
+                        }
                     }
                 }
+                return "";
             }
-            return "";
+            catch (Exception ex)
+            {
+                return "Error in reading second message" + ex.ToString();
+            }
         }
 
         // PUT: api/Messages/5

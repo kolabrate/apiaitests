@@ -1,0 +1,9 @@
+Expression: 1. From Production 
+
+Case: Books haircut with Paul 
+Customer: Books haircut with Paul 
+Booka: which business would you like to make the booking with?
+Customer: paradise cutters 
+Booka: <Checking><AlternateSlotsOnly> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>

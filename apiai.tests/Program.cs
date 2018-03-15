@@ -16,7 +16,7 @@ namespace apiai.tests
 {
     class Program
     {
-        private const string accessToken = "9b66dae2ac8644bbb9c24b7c19d92234";
+        private const string accessToken = "3e6c9aff32be480aabf56bfd796929e5";
         //private static string accessToken = "e0cdd76a123a48f194e626e15af15c02";
         private static ApiAi apiAi;
         private static AIDataService dataService;
@@ -188,11 +188,11 @@ namespace apiai.tests
             var filesNamesArray = Directory.GetFiles(@"..\..\Data\");
             //fileNames = filesNamesArray.Where(c => c.StartsWith("..\\..\\Data\\TC")).ToList();
 
-            //fileNames.Add(@"..\..\Data\TC1_ExistingCustomerForBookedSlots.txt");
+            fileNames.Add(@"..\..\Data\allNewConvo.txt");
             //fileNames.Add(@"..\..\Data\TC10_NewCustomerExceptions.txt");
             //fileNames.Add(@"..\..\Data\TC2_ExistingCustomerForFreeSlots.txt");
             //fileNames.Add(@"..\..\Data\TC3_NewCustomerForBookedSlots.txt");
-            fileNames.Add(@"..\..\Data\TC4_NewCustomerForFreeSlots.txt");
+            //fileNames.Add(@"..\..\Data\TC4_NewCustomerForFreeSlots.txt");
             //fileNames.Add(@"..\..\Data\TC41_NewCustomerForFreeSlots.txt");
             //fileNames.Add(@"..\..\Data\TC5_ConfirmationVariations.txt");
             //fileNames.Add(@"..\..\Data\TC6_ExistingCustomerShowMore.txt");
