@@ -11,11 +11,11 @@ namespace DialogFlowTest.Controllers
 {
     public class MessagesController : ApiController
     {
-        private readonly UnitofWork _unitofwork;
+        private UnitofWork _unitofwork;
 
         public MessagesController()
         {
-            _unitofwork = new UnitofWork(new ChuvyDbContext());
+            
         }
         // GET: api/Messages
         public IEnumerable<string> Get()
@@ -28,6 +28,7 @@ namespace DialogFlowTest.Controllers
         {
             try
             {
+                _unitofwork = new UnitofWork(new ChuvyDbContext());
                 string senderId = value.ToString();
                 var latestMessage = _unitofwork.Messages.Find(x => x.SenderId == senderId).OrderByDescending(x => x.CreateDateTime).FirstOrDefault();
 

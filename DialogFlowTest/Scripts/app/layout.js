@@ -68,20 +68,21 @@
               setResponseJSON(response);
               setResponseOnNode(response.result.fulfillment.speech, responseNode);
 
-              var fromNum = numberInUseInput.value;
-              $.ajax({
-                  type: 'GET',
-                  url: '/api/Messages',
-                  data: jQuery.param({ value: fromNum}),
-                  success: function (msg) {
-                      setSecondResponseOnNode(msg, responseNode);
-                  },
-                  error: function (msg) {
-                      console.log(JSON.stringify(msg));
-                      var errorMsg = response.result.fulfillment.speech + " (Details not available)";
-                      setSecondResponseOnNode(errorMsg, responseNode);
-                  }
-              });
+              if (response.result.fulfillment.DisplayText == "Checking" || response.result.fulfillment.DisplayText == "CheckingConfirmation") {
+                  var fromNum = numberInUseInput.value;
+                  $.ajax({
+                      type: 'GET',
+                      url: '/api/Messages',
+                      data: jQuery.param({ value: fromNum }),
+                      success: function (msg) {
+                          setSecondResponseOnNode(msg, responseNode);
+                      },
+                      error: function (msg) {
+                          console.log(JSON.stringify(msg));                          
+                          setSecondResponseOnNode("[Error]", responseNode);
+                      }
+                  });
+              }
           })
           .catch(function (err) {
               setResponseJSON(err);
