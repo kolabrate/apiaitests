@@ -74,7 +74,7 @@
                   $.ajax({
                       type: 'GET',
                       //url: '/api/Messages',
-                      url: 'http://localhost:6492/api/services/LatestMessage',
+                      url: 'http://bookastagingonboarding.azurewebsites.net/api/services/LatestMessage',
                       data: jQuery.param({ value: fromNum }),
                       success: function (msg) {
                           setSecondResponseOnNode(msg, responseNode);
