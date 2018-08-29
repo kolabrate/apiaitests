@@ -73,8 +73,7 @@
                   var fromNum = numberInUseInput.value;
                   $.ajax({
                       type: 'GET',
-                      //url: '/api/Messages',
-                      url: 'https://bookastagingonboarding.azurewebsites.net/api/services/LatestMessage',
+                      url: '/api/Messages',
                       data: jQuery.param({ value: fromNum }),
                       success: function (msg) {
                           setSecondResponseOnNode(msg, responseNode);
