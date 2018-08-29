@@ -32,7 +32,7 @@ namespace DialogFlowTest.Controllers
                 string senderId = value.ToString();
                 var latestMessage = _unitofwork.Messages.Find(x => x.SenderId == senderId).OrderByDescending(x => x.CreateDateTime).FirstOrDefault();
 
-                if (latestMessage != null && (latestMessage.ActionName.Contains("Checking") || latestMessage.ActionName.Contains("CheckingConfirmation")))
+                if (latestMessage != null && (latestMessage.ActionName.Contains("ServiceAvailabilityChecked")))
                 {
                     var bookaReplies = latestMessage.BookaReply.Split(';');
                     if (bookaReplies.Length >= 1)

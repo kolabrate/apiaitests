@@ -68,11 +68,13 @@
               setResponseJSON(response);
               setResponseOnNode(response.result.fulfillment.speech, responseNode);
 
-              if (response.result.fulfillment.DisplayText == "Checking" || response.result.fulfillment.DisplayText == "CheckingConfirmation") {
+              if (response.result.fulfillment.displayText == "Checking" || response.result.fulfillment.displayText == "CheckingConfirmation") {                  
+                  responseNode = createResponseNode();
                   var fromNum = numberInUseInput.value;
                   $.ajax({
                       type: 'GET',
-                      url: '/api/Messages',
+                      //url: '/api/Messages',
+                      url: 'http://localhost:6492/api/services/LatestMessage',
                       data: jQuery.param({ value: fromNum }),
                       success: function (msg) {
                           setSecondResponseOnNode(msg, responseNode);
