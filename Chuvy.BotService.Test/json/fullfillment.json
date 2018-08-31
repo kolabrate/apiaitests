@@ -1,1 +1,171 @@
-{  "originalRequest": {    "source": "Portal Testing Test",    "data": {      "ApiVersion": "",      "SmsSid": "",      "SmsStatus": "",      "SmsMessageSid": "",      "NumSegments": "",      "ToState": "",      "From": "-611535352802098",      "MessageSid": "SMf0000000000000000000000",      "AccountSid": "",      "ToCity": "",      "FromCountry": "",      "ToZip": "",      "FromCity": "",      "To": "",      "FromZip": "",      "ToCountry": "",      "Body": "Book me for a car service with toyota at airport west",      "NumMedia": "",      "FromState": ""    }  },  "id": "5b3b02e7-21fe-46d5-89e3-532dd70e6d37",  "timestamp": "2018-08-27T06:53:28.497Z",  "lang": "en",  "result": {    "source": "agent",    "resolvedQuery": "Book me for a car service with toyota at airport west",    "speech": "",    "action": "ScheduleAppointment",    "actionIncomplete": false,    "parameters": {      "attendees": [],      "businessName": "Toyota",      "beforeAfter": "",      "Bookingtimeperiod": "",      "lastname": "",      "Bookingdate": "",      "BookingDateTimePeriod": "",      "genericTimeSlots": "",      "service": [        "car service"      ],      "givenname": "",      "Bookingtime": "",      "Bookingdateperiod": "",      "providerName": ""    },    "contexts": [      {        "name": "scheduleappointment-followup",        "parameters": {          "businessName.original": "toyota",          "genericTimeSlots.original": "",          "businessName": "Toyota",          "providerName.original": "",          "lastname.original": "",          "beforeAfter": "",          "Bookingtimeperiod.original": "",          "BookingDateTimePeriod": "",          "genericTimeSlots": "",          "attendees.original": "",          "givenname": "",          "givenname.original": "",          "Bookingtime": "",          "providerName": "",          "BookingDateTimePeriod.original": "",          "attendees": [],          "beforeAfter.original": "",          "service.original": "car service",          "Bookingtimeperiod": "",          "lastname": "",          "Bookingdateperiod.original": "",          "Bookingdate.original": "",          "Bookingdate": "",          "service": [            "car service"          ],          "Bookingdateperiod": "",          "Bookingtime.original": ""        },        "lifespan": 10      }    ],    "metadata": {      "intentId": "e1710622-ec4a-4cf7-a117-856873ef4b3b",      "webhookUsed": "true",      "webhookForSlotFillingUsed": "true",      "isFallbackIntent": "false",      "intentName": "ScheduleAppointment"    },    "fulfillment": {      "speech": "",      "messages": [        {          "type": 0,          "speech": ""        }      ]    },    "score": 1.0  },  "status": {    "code": 200,    "errorType": "success"  },  "sessionId": "fa1a459c-00ab-8bd4-9691-1da70018dcfg"}
+{
+  "originalRequest": {
+    "source": "Portal Testing Test",
+    "data": {
+      "ApiVersion": "",
+      "SmsSid": "",
+      "SmsStatus": "",
+      "SmsMessageSid": "",
+      "NumSegments": "",
+      "ToState": "",
+      "From": "-611535691185308",
+      "MessageSid": "SMf0000000000000000000000",
+      "AccountSid": "",
+      "ToCity": "",
+      "FromCountry": "",
+      "ToZip": "",
+      "FromCity": "",
+      "To": "",
+      "FromZip": "",
+      "ToCountry": "",
+      "Body": "Book me in for car sevice today ",
+      "NumMedia": "",
+      "FromState": ""
+    }
+  },
+  "id": "d03ffc83-f220-4876-8e7d-cc3291451727",
+  "timestamp": "2018-08-31T04:53:22.065Z",
+  "lang": "en",
+  "result": {
+    "source": "agent",
+    "resolvedQuery": "Book me in for car sevice today ",
+    "speech": "",
+    "action": "ScheduleAppointment",
+    "actionIncomplete": true,
+    "parameters": {
+      "attendees": [],
+      "businessName": "",
+      "beforeAfter": "",
+      "Bookingtimeperiod": "",
+      "lastname": "",
+      "Bookingdate": "2018-08-31",
+      "BookingDateTimePeriod": "",
+      "genericTimeSlots": "",
+      "service": [],
+      "givenname": "",
+      "Bookingtime": "",
+      "Bookingdateperiod": "",
+      "providerName": ""
+    },
+    "contexts": [
+      {
+        "name": "scheduleappointment_dialog_context",
+        "parameters": {
+          "businessName.original": "",
+          "genericTimeSlots.original": "",
+          "businessName": "",
+          "providerName.original": "",
+          "lastname.original": "",
+          "beforeAfter": "",
+          "Bookingtimeperiod.original": "",
+          "BookingDateTimePeriod": "",
+          "genericTimeSlots": "",
+          "attendees.original": "",
+          "givenname": "",
+          "givenname.original": "",
+          "Bookingtime": "",
+          "providerName": "",
+          "BookingDateTimePeriod.original": "",
+          "attendees": [],
+          "beforeAfter.original": "",
+          "service.original": "",
+          "Bookingtimeperiod": "",
+          "lastname": "",
+          "Bookingdateperiod.original": "",
+          "Bookingdate.original": "today",
+          "Bookingdate": "2018-08-31",
+          "service": [],
+          "Bookingdateperiod": "",
+          "Bookingtime.original": ""
+        },
+        "lifespan": 2
+      },
+      {
+        "name": "e1710622-ec4a-4cf7-a117-856873ef4b3b_id_dialog_context",
+        "parameters": {
+          "businessName.original": "",
+          "genericTimeSlots.original": "",
+          "businessName": "",
+          "providerName.original": "",
+          "lastname.original": "",
+          "beforeAfter": "",
+          "Bookingtimeperiod.original": "",
+          "BookingDateTimePeriod": "",
+          "genericTimeSlots": "",
+          "attendees.original": "",
+          "givenname": "",
+          "givenname.original": "",
+          "Bookingtime": "",
+          "providerName": "",
+          "BookingDateTimePeriod.original": "",
+          "attendees": [],
+          "beforeAfter.original": "",
+          "service.original": "",
+          "Bookingtimeperiod": "",
+          "lastname": "",
+          "Bookingdateperiod.original": "",
+          "Bookingdate.original": "today",
+          "Bookingdate": "2018-08-31",
+          "service": [],
+          "Bookingdateperiod": "",
+          "Bookingtime.original": ""
+        },
+        "lifespan": 2
+      },
+      {
+        "name": "scheduleappointment_dialog_params_service",
+        "parameters": {
+          "businessName.original": "",
+          "genericTimeSlots.original": "",
+          "businessName": "",
+          "providerName.original": "",
+          "lastname.original": "",
+          "beforeAfter": "",
+          "Bookingtimeperiod.original": "",
+          "BookingDateTimePeriod": "",
+          "genericTimeSlots": "",
+          "attendees.original": "",
+          "givenname": "",
+          "givenname.original": "",
+          "Bookingtime": "",
+          "providerName": "",
+          "BookingDateTimePeriod.original": "",
+          "attendees": [],
+          "beforeAfter.original": "",
+          "service.original": "",
+          "Bookingtimeperiod": "",
+          "lastname": "",
+          "Bookingdateperiod.original": "",
+          "Bookingdate.original": "today",
+          "Bookingdate": "2018-08-31",
+          "service": [],
+          "Bookingdateperiod": "",
+          "Bookingtime.original": ""
+        },
+        "lifespan": 1
+      }
+    ],
+    "metadata": {
+      "intentId": "e1710622-ec4a-4cf7-a117-856873ef4b3b",
+      "webhookUsed": "true",
+      "webhookForSlotFillingUsed": "true",
+      "isFallbackIntent": "false",
+      "intentName": "ScheduleAppointment"
+    },
+    "fulfillment": {
+      "speech": "what service are you looking for?",
+      "messages": [
+        {
+          "type": 0,
+          "speech": "what service are you looking for?"
+        }
+      ]
+    },
+    "score": 1.0
+  },
+  "status": {
+    "code": 200,
+    "errorType": "success"
+  },
+  "sessionId": "a02d6ca9-6e10-a28c-cb94-5868a34c918c"
+}
