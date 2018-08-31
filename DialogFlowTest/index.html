@@ -27,46 +27,26 @@
     </style>
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <h5>Configure demo2:</h5>
-    </div>
-    <div class="row">
-        <div class="col input-field">
-            <a class="waves-effect waves-light btn" id="getNewNumber">Get New Number</a>
-        </div>
-        <div class="input-field col s10" style="visibility:collapse">
-            <input id="access_token" type="text" value="3e6c9aff32be480aabf56bfd796929e5">
-            <label for="access_token">Access token</label>
-        </div>
-        <div class="input-field col s10">
-            <input id="numberInUse" type="text" value="-04090904754">
-            <label for="numberInUse">Number in Use</label>
-        </div>
-    </div>
-</div>
-<div id="placeholder">
-    <h5>Please, fill access token before start</h5>
-</div>
-<div id="main-wrapper">
     <div class="container">
         <div class="row">
-            <div class="col s5">
+            <div class="input-field col s6">
+                <input id="numberInUse" type="text" value="-04090904754">
+                <label for="numberInUse">Number in Use</label>
+            </div>
+            <div class="col input-field s4">
+                <a class="waves-effect waves-light btn" id="getNewNumber">Get New Number</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s10">
                 <div class="input-field">
-                    <input placeholder="Hey, ask me something..." id="q" type="text" >
+                    <input placeholder="Hey, ask me something..." id="q" type="text">
                 </div>
                 <div id="result">
                 </div>
             </div>
-            <div class="col s2"></div>
-            <div class="col s5">
-            <h5>Response payload:</h5>
-            <pre id="jsonResponse"></pre>
-            </div>
         </div>
     </div>
-</div>
-<script defer src="Scripts/app/layout.js"></script>
-
+    <script defer src="Scripts/app/layout.js"></script>
 </body>
 </html>

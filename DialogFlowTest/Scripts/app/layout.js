@@ -45,9 +45,10 @@
   }
 
   function setAccessToken() {
-    document.getElementById("placeholder").style.display = "none";
-    document.getElementById("main-wrapper").style.display = "block";
-    window.init(accessTokenInput.value);
+    //document.getElementById("placeholder").style.display = "none";
+    //document.getElementById("main-wrapper").style.display = "block";
+    //window.init(accessTokenInput.value);
+    window.init("3e6c9aff32be480aabf56bfd796929e5");
   }
 
   function queryInputKeyDown(event) {
@@ -95,14 +96,16 @@
     var node = document.createElement('div');
     node.className = "clearfix left-align left card-panel green accent-1";
     node.innerHTML = query;
-    resultDiv.appendChild(node);
+    //resultDiv.appendChild(node);
+    resultDiv.insertBefore(node, resultDiv.firstChild);
   }
 
   function createResponseNode() {
     var node = document.createElement('div');
     node.className = "clearfix right-align right card-panel blue-text text-darken-2 hoverable";
     node.innerHTML = "...";
-    resultDiv.appendChild(node);
+    //resultDiv.appendChild(node);
+    resultDiv.insertBefore(node, resultDiv.firstChild);
     return node;
   }
 
@@ -116,8 +119,8 @@
   }
 
   function setResponseJSON(response) {
-    var node = document.getElementById("jsonResponse");
-    node.innerHTML = JSON.stringify(response, null, 2);
+    //var node = document.getElementById("jsonResponse");
+    //node.innerHTML = JSON.stringify(response, null, 2);
   }
 
   function sendRequest() {
