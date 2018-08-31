@@ -81,7 +81,7 @@
                       },
                       error: function (msg) {
                           console.log(JSON.stringify(msg));                          
-                          setSecondResponseOnNode("[Error]", responseNode);
+                          setSecondResponseOnNode(msg, responseNode);
                       }
                   });
               }
