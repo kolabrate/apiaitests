@@ -64,32 +64,47 @@
 
       var fromNum = numberInUseInput.value;
 
-      sendText(value, fromNum)
-          .then(function (response) {
-              setResponseJSON(response);
-              setResponseOnNode(response.result.fulfillment.speech, responseNode);
+      //sendText(value, fromNum)
+      //    .then(function (response) {
+      //        setResponseJSON(response);
+      //        setResponseOnNode(response.result.fulfillment.speech, responseNode);
 
-              if (response.result.fulfillment.displayText == "Checking" || response.result.fulfillment.displayText == "CheckingConfirmation") {                  
-                  responseNode = createResponseNode();
-                  var fromNum = numberInUseInput.value;
-                  $.ajax({
-                      type: 'GET',
-                      url: '/api/Messages',
-                      data: jQuery.param({ value: fromNum }),
-                      success: function (msg) {
-                          setSecondResponseOnNode(msg, responseNode);
-                      },
-                      error: function (msg) {
-                          console.log(JSON.stringify(msg));                          
-                          setSecondResponseOnNode(JSON.stringify(msg), responseNode);
-                      }
-                  });
-              }
-          })
-          .catch(function (err) {
-              setResponseJSON(err);
-              setResponseOnNode("Something goes wrong", responseNode);
-          });
+      //        if (response.result.fulfillment.displayText == "Checking" || response.result.fulfillment.displayText == "CheckingConfirmation") {                  
+      //            responseNode = createResponseNode();
+      //            var fromNum = numberInUseInput.value;
+      //            $.ajax({
+      //                type: 'GET',
+      //                url: '/api/Messages',
+      //                data: jQuery.param({ value: fromNum }),
+      //                success: function (msg) {
+      //                    setSecondResponseOnNode(msg, responseNode);
+      //                },
+      //                error: function (msg) {
+      //                    console.log(JSON.stringify(msg));                          
+      //                    setSecondResponseOnNode(JSON.stringify(msg), responseNode);
+      //                }
+      //            });
+      //        }
+      //    })
+      //    .catch(function (err) {
+      //        setResponseJSON(err);
+      //        setResponseOnNode("Something goes wrong", responseNode);
+      //    });
+
+      $.ajax({
+          type: 'GET',
+          url: '/api/Messages/SendTextAsync',
+          data: jQuery.param({ value: value, number: fromNum }),
+          success: function (msg) {
+              //setSecondResponseOnNode(msg, responseNode);
+              return msg;
+          },
+          error: function (msg) {
+              //console.log(JSON.stringify(msg));
+              //setSecondResponseOnNode(JSON.stringify(msg), responseNode);
+              return msg;
+          }
+      });
   }
 
   function createQueryNode(query) {

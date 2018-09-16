@@ -11,6 +11,7 @@ using Newtonsoft.Json;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
 using Twilio.Types;
+using System.Threading;
 
 namespace apiai.tests
 {
@@ -186,9 +187,10 @@ namespace apiai.tests
             var list = new List<string>();
             var fileNames = new List<string>();
             var filesNamesArray = Directory.GetFiles(@"..\..\Data\");
-            //fileNames = filesNamesArray.Where(c => c.StartsWith("..\\..\\Data\\TC")).ToList();
+            fileNames = filesNamesArray.Where(c => c.StartsWith("..\\..\\Data\\TC61_NewCustomerShowMore")).ToList(); 
+            //fileNames = filesNamesArray.Where(c => c.StartsWith("..\\..\\Data\\allNewConvo")).ToList();
 
-            fileNames.Add(@"..\..\Data\allNewConvo.txt");
+            //fileNames.Add(@"..\..\Data\allNewConvo.txt");
             //fileNames.Add(@"..\..\Data\TC10_NewCustomerExceptions.txt");
             //fileNames.Add(@"..\..\Data\TC2_ExistingCustomerForFreeSlots.txt");
             //fileNames.Add(@"..\..\Data\TC3_NewCustomerForBookedSlots.txt");
@@ -477,8 +479,8 @@ namespace apiai.tests
         }
         private static string bookedDt = "22nd Sep at 12PM";
         private static string freeDt = "22nd Sep at 12PM";
-        private static string freeDtConfirm = "3.30 pm on 21st Sep";
-        private static string serviceName = "mobile dev";
+        private static string freeDtConfirm = null;
+        private static string serviceName = "tint";
         private static string providerName = "Kolabrate";
         private static void ProcessCase(List<Conversation> conversations, string caseName, bool isNewCustomer = true)
         {
@@ -503,12 +505,22 @@ namespace apiai.tests
                     {
                         UserQuery = UserQuery.Replace("[Datetime]", bookedDt);
                     }
-                    UserQuery = UserQuery.Replace("[ConfirmDatetime]", freeDtConfirm);
-                    UserQuery = UserQuery.Replace("[Provider]", providerName);
-                    Console.ForegroundColor = ConsoleColor.White;
-                    Console.WriteLine(string.Format("user: {0}", UserQuery));
-                    ProcessUserQueryAsync(number).Wait();
-                    WriteToFile(string.Format("user: {0}", UserQuery));
+                    if (!UserQuery.Contains("[ConfirmDatetime]") || (UserQuery.Contains("[ConfirmDatetime]") && !string.IsNullOrEmpty(freeDtConfirm)))
+                    {
+                        UserQuery = UserQuery.Replace("[ConfirmDatetime]", freeDtConfirm);
+                        UserQuery = UserQuery.Replace("[Provider]", providerName);
+                        UserQuery = UserQuery.Replace("[todayAtXPM]", "3 PM");
+                        UserQuery = UserQuery.Replace("[businessName]", "In2Style");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.WriteLine(string.Format("user: {0}", UserQuery));
+                        ProcessUserQueryAsync(number).Wait();
+                        WriteToFile(string.Format("user: {0}", UserQuery));
+                    }
+                    else
+                    {
+                        Console.WriteLine("Tester: No confirm date");
+                        WriteToFile(string.Format("Tester: No confirm date"));
+                    }
                 }
                 if (convo.Type == ConvoType.Response)
                 {
@@ -527,7 +539,7 @@ namespace apiai.tests
                         Console.Write($"Booka:{respText} \n");
                         WriteToFile("Booka: " + respText);
 
-                        #region Second Confirmation
+                        #region Second Confirmation                        
                         if (displayText == "Checking" || displayText == "CheckingConfirmation")
                         {
                             try
@@ -539,32 +551,21 @@ namespace apiai.tests
                                     var foundResponse = false;
                                     if (!reply.Contains("Exception"))
                                     {
-                                        if (!reply.Contains("ServiceAvailabilityChecked"))
+                                        if (!string.IsNullOrEmpty(latestMessage.ActionName))
                                         {
-                                            while (!foundResponse)
+                                            if (!latestMessage.ActionName.Contains("Booked") &&
+                                                !latestMessage.ActionName.Contains("SlotsAvailable") &&
+                                                !latestMessage.ActionName.Contains("AlternateSlotsOnly"))
                                             {
-                                                latestMessage = GetLatestMessage(response.SessionId);
-                                                reply = latestMessage.BookaReply;
-                                                if (!reply.Contains("Exception"))
-                                                {
-                                                    
-                                                    if (reply.Contains("SlotsAvailable") || reply.Contains("AlternateSlotsOnly") || reply.Contains("Booked") || reply.Contains("DuplicateAppointment") || reply.Contains("JustMissedAppointment"))
-                                                    {
-                                                        foundResponse = true;
-                                                        GetSecondResponse(reply, latestMessage.ActionName, out secondResponse, out secondResponseDisplayText);
-                                                    }                                                    
-                                                }
-                                                else
-                                                {
-                                                    foundResponse = true;
-                                                    secondResponse = reply + latestMessage.ActionName;
-                                                }
+                                                foundResponse = TrySecondMsgAgain(out secondResponse,out secondResponseDisplayText);
+                                            }
+                                            else
+                                            {
+                                                GetSecondResponse(reply, latestMessage.ActionName, out secondResponse, out secondResponseDisplayText);
                                             }
                                         }
                                         else
-                                        {
-                                            GetSecondResponse(reply, latestMessage.ActionName, out secondResponse, out secondResponseDisplayText);
-                                        }
+                                            foundResponse = TrySecondMsgAgain(out secondResponse, out secondResponseDisplayText);
                                     }
                                     else
                                     {
@@ -612,6 +613,39 @@ namespace apiai.tests
             Console.WriteLine(breakLine);
             Console.Clear(); 
         }
+
+        private static bool TrySecondMsgAgain(out string secondResponse, out string secondResponseDisplayText)
+        {
+            int i = 0;
+            bool foundResponse = false;
+            secondResponse = "Response not available";
+            secondResponseDisplayText = "Response not available";
+            while (!foundResponse)
+            {
+                if (i == 10) break;
+                Thread.Sleep(10000);
+                var latestMessage = GetLatestMessage(response.SessionId);
+                var reply = latestMessage.BookaReply;
+                if (!reply.Contains("Exception"))
+                {
+                    if (latestMessage.ActionName.Contains("Booked") ||
+                        latestMessage.ActionName.Contains("SlotsAvailable") ||
+                        latestMessage.ActionName.Contains("AlternateSlotsOnly"))
+                    {
+                        foundResponse = true;
+                        GetSecondResponse(reply, latestMessage.ActionName, out secondResponse, out secondResponseDisplayText);
+                    }
+                }
+                else
+                {
+                    foundResponse = true;
+                    secondResponse = reply + latestMessage.ActionName;
+                }
+                i = i + 1;
+            }
+            return foundResponse;
+        }
+
         private static Message GetLatestMessage(string sessionId)
         {
             using (var chat = new ChatbookaEntities2())
@@ -623,28 +657,31 @@ namespace apiai.tests
         {
             secondResponse = "Response not available";
             secondResponseDisplayText = "Response not available";
-            if (reply.Contains("SlotsAvailable") || reply.Contains("AlternateSlotsOnly"))
+            if (actionName.Contains("SlotsAvailable") ||
+                actionName.Contains("AlternateSlotsOnly"))
             {
-                var slots = reply.Split(',');
+                var slots = reply.Substring(reply.IndexOf("next available slots are:", 0, StringComparison.OrdinalIgnoreCase) + "Next available slots are:".Length).Split(',');
                 freeDtConfirm = slots[1];
                 var text = reply.Split(';');
                 freeDtConfirm = freeDtConfirm.Replace(":00", "");
-                if (text.Length == 3)
+
+                if (text.Length > 1)
                 {
-                    secondResponse = text[2];                    
-                    secondResponseDisplayText = reply.Contains("SlotsAvailable") ? "SlotsAvailable" : "AlternateSlotsOnly";
+                    secondResponse = text[1];
                 }
+                secondResponseDisplayText = actionName.Contains("SlotsAvailable") ? "SlotsAvailable" : "AlternateSlotsOnly";
             }
-            if (reply.Contains("Booked") || reply.Contains("DuplicateAppointment") || reply.Contains("JustMissedAppointment"))
-            {                
+            if (actionName.Contains("Booked"))
+            {
                 var text = reply.Split(';');
-                if (text.Length == 3)
+                if (text.Length > 1)
                 {
-                    secondResponse = text[2];
-                    secondResponseDisplayText = reply.Contains("DuplicateAppointment") ? "DuplicateAppointment" : reply.Contains("JustMissedAppointment") ? "JustMissedAppointment" : "Booked";
+                    secondResponse = text[1];
+                    secondResponseDisplayText = actionName.Contains("DuplicateAppointment") ? "DuplicateAppointment" : actionName.Contains("JustMissedAppointment") ? "JustMissedAppointment" : "Booked";
                 }
             }
         }
+
         private static void ProcessCase(List<Conversation> conversations, string greetingReplacement, string AppmtRequest, string AppmtRequestConfirm, string caseName)
         {
             response = null;

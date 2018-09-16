@@ -1,0 +1,64 @@
+TC5_ExistingCustomerConfirmationVariations - nothing worked. Come back to this later
+
+user:  book me in this afternoon
+Booka: what service are you looking for?
+user:  haircut
+Booka: 
+user:  Show more
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 25th Sep @ 01:00 PM, 25th Sep @ 02:00 PM, 25th Sep @ 03:00 PM. What date & time do you prefer?
+user:  none of these 
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 25th Sep @ 01:00 PM, 25th Sep @ 02:00 PM, 25th Sep @ 03:00 PM. What date & time do you prefer?
+user:  none of these 
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 25th Sep @ 01:00 PM, 25th Sep @ 02:00 PM, 25th Sep @ 03:00 PM. What date & time do you prefer?
+AI Session:44ab0809-05a5-48f4-a5b7-1f8b6fea0699
+Issue: 1) going on for more than 3 attempts as well
+2) Show more is showing same date & time all the attempts
+----------------------------------------------------
+user:  Can I make an appointment next tuesday morning
+Booka: what type of Service are your looking for ?
+user:  haircut
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 25th Sep @ 01:00 PM, 25th Sep @ 02:00 PM, 25th Sep @ 03:00 PM. What date & time do you prefer?
+user:  what you have after that?
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for haircut', I promise, I  can be quite helpful.
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for haircut', I promise, I  can be quite helpful.
+AI Session:9e3fe866-d403-44fe-8ed7-69f66703d4a0
+Issue: show more intent is not triggered. But atleast the bummer should be more relevant.
+----------------------------------------------------
+user:  can I make an appointment tomorrow morning for haircut
+Booka: Sure, let me find next availabilities.
+Booka:  Sorry, that time is not available. Next available slots are: 25th Sep @ 01:00 PM, 25th Sep @ 02:00 PM, 25th Sep @ 03:00 PM
+user:  anything after 5PM?
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 26th Sep @ 10:00 AM, 26th Sep @ 11:00 AM, 26th Sep @ 12:00 PM. What date & time do you prefer?
+user:   26th Sep @ 11 AM
+Booka: Sure, checking that...
+Booka:  Sorry, that time is not available. Next available slots are: 27th Sep @ 10:00 AM, 27th Sep @ 11:00 AM, 27th Sep @ 12:00 PM
+AI Session:d47a2fbf-cc58-4275-af60-1b25224e2900
+Issue: 1) anything after 5PM should include 5PM as well.
+2) After confirmation, why is it so confused.
+----------------------------------------------------
+user:  can I make an appointment tomorrow morning for haircut
+Booka: Sure, let me find next availabilities.
+Booka:  Sorry, that time is not available. Next available slots are: 25th Sep @ 01:00 PM, 25th Sep @ 02:00 PM, 25th Sep @ 03:00 PM
+user:  check after this week
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 26th Sep @ 10:00 AM, 26th Sep @ 11:00 AM, 26th Sep @ 12:00 PM. What date & time do you prefer?
+user:   26th Sep @ 11 AM
+Booka: Sure, checking that...
+Booka:  All Done! Your appointment for hair cut booked at 26th Sep @ 11:00 AM with Paradise Cutters
+AI Session:8734fa2e-284e-477b-b185-2968acc1fad7
+Issue: why after this week does not include 25th sep?
+----------------------------------------------------
+user:  can I make an appointment tomorrow morning for haircut
+Booka: Sure, let me find next availabilities.
+Booka: Sorry, that time is not available. Next available slots are: 25th Sep @ 01:00 PM, 25th Sep @ 02:00 PM, 25th Sep @ 03:00 PM
+user:  find for next week
+Booka: I am having a little trouble with your booking, please call the provider directly to make this booking.
+user:  25th Sep @ 02 PM
+Booka: I am having a little trouble with your booking, please call the provider directly to make this booking.
+AI Session:d17dd7eb-3eb3-446c-9022-dd65a6dcc3c1
+----------------------------------------------------

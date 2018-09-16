@@ -35,7 +35,7 @@ namespace ApiAiSDK.Model
 		public string Language { get; set; }
 
 		[JsonProperty("sessionId")]
-		internal string SessionId { get; set; }
+		public string SessionId { get; set; }
 
         [JsonProperty("entities")]
         public List<Entity> Entities { get; set; }

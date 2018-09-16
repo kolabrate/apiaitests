@@ -1,10 +1,16 @@
-﻿using Chuvy.Data.Persistence;
+﻿using ApiAiSDK;
+using ApiAiSDK.Model;
+using Chuvy.Data.Persistence;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace DialogFlowTest.Controllers
@@ -12,10 +18,15 @@ namespace DialogFlowTest.Controllers
     public class MessagesController : ApiController
     {
         private UnitofWork _unitofwork;
-
+        private const string accessToken = "3e6c9aff32be480aabf56bfd796929e5";
+        //private static string accessToken = "e0cdd76a123a48f194e626e15af15c02";
+        private static ApiAi apiAi;
+        private static AIDataService dataService;
+        private static AIResponse response = null;
         public MessagesController()
         {
-            
+            var config = new AIConfiguration(accessToken, SupportedLanguage.English);
+            dataService = new AIDataService(config);
         }
         // GET: api/Messages
         public IEnumerable<string> Get()
@@ -63,11 +74,23 @@ namespace DialogFlowTest.Controllers
             }
         }
 
-        // POST: api/Messages
-        public string Post([FromUri]string value)
+        [HttpGet]
+        public async Task<AIResponse> SendTextAsync(string value,string number)
         {
-            return "";
-        }
+            var request = new AIRequest(value);
+            request.OriginalRequest = PopulateOriginalRequest(number);
+            response = await dataService.RequestAsync(request);
+
+            if (response.Status.Code == 200)
+            {
+
+                return response;
+            }
+            else
+            {
+                return response;
+            }
+        }        
 
         // PUT: api/Messages/5
         public void Put(int id, [FromBody]string value)
@@ -108,6 +131,36 @@ namespace DialogFlowTest.Controllers
                 }
             }
             return latestMessage.AiRawMessage;
+        }
+        private OriginalRequest PopulateOriginalRequest(string userQuery, string number = "+61400000000")
+        {
+            return new OriginalRequest()
+            {
+                Data = new
+                {
+                    ApiVersion = "",
+                    SmsSid = "",
+                    SmsStatus = "",
+                    SmsMessageSid = "",
+                    NumSegments = "",
+                    ToState = "",
+                    From = number, //a temp phone number that represents its from console app.
+                    MessageSid = "SMf0000000000000000000000",//a rep of console.
+                    AccountSid = "",
+                    ToCity = "",
+                    FromCountry = "",
+                    ToZip = "",
+                    FromCity = "",
+                    To = "",
+                    FromZip = "",
+                    ToCountry = "",
+                    Body = userQuery,
+                    NumMedia = "",
+                    FromState = ""
+                },
+                Source = "console"
+            };
+
         }
     }
 }

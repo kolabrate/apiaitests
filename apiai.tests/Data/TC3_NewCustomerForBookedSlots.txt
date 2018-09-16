@@ -3,6 +3,8 @@ Case: 8. Book me in for a [service] asap
 Customer: Book me in for a [service] asap
 Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Anthony Gill 
+Booka: <UnknownBusiness>
+Customer: [businessName]
 Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked> 
@@ -11,40 +13,68 @@ Case: 10. Book me in today at 4 PM for a [service]
 Customer: Book me in today at 4 PM for a [service]
 Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Anthony Gill 
-Booka: <Checking><Booked> 
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked> 
 
 Case: 11. Book me in tomorrow at 2 PM for a [service]
 Customer: Book me in tomorrow at 2 PM for a [service]
 Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Anthony Gill 
-Booka: <Checking><Booka: <Checking><Booked> 
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked> 
 
 Case: 12. Book me in at 4 today for a [service]
 Customer: Book me in at 4 today for a [service]
 Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Anthony Gill 
-Booka: <Checking><Booked> 
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked> 
 
 Case: 13. Can I make an appointment today at 4 for a [service]
 Customer: Can I make an appointment today at 4 for a [service]
 Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Anthony Gill 
-Booka: <Checking><Booked> 
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked> 
 
 Case: 14. I would like an appointment for [service] on Fri at 3
 Customer: I would like an appointment for [service] on Fri at 3
 Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Anthony Gill 
-Booka: <Checking><Booked> 
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked> 
 
-Case: 15. Can I make an appointment on Fri the 6th at 4 PM for [service]
-Customer: Can I make an appointment on Fri the 6th at 4 PM for [service]
+Case: 15. Can I make an appointment on Fri the 8th at 4 PM for [service]
+Customer: Can I make an appointment on Fri the 8th at 4 PM for [service]
 Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Anthony Gill 
-Booka: <Checking><Booked>
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked> 
 
-Case: 16. Can I get an appointment on 6th of Oct at 9 in the morning for [service]
-Customer: Can I get an appointment on 6th of Oct at 9 in the morning for [service]
+Case: 16. Can I get an appointment on 12th of Sept at 9 in the morning for [service]
+Customer: Can I get an appointment on 12th of Sept at 9 in the morning for [service]
 Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Anthony Gill 
-Booka: <Checking><Booked>
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked> 

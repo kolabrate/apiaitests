@@ -1,6 +1,6 @@
 {
   "originalRequest": {
-    "source": "Portal Testing Test",
+    "source": "console",
     "data": {
       "ApiVersion": "",
       "SmsSid": "",
@@ -8,7 +8,7 @@
       "SmsMessageSid": "",
       "NumSegments": "",
       "ToState": "",
-      "From": "-611535691185308",
+      "From": "+6160780146",
       "MessageSid": "SMf0000000000000000000000",
       "AccountSid": "",
       "ToCity": "",
@@ -18,146 +18,82 @@
       "To": "",
       "FromZip": "",
       "ToCountry": "",
-      "Body": "Book me in for car sevice today ",
+      "Body": " none of these ",
       "NumMedia": "",
       "FromState": ""
     }
   },
-  "id": "d03ffc83-f220-4876-8e7d-cc3291451727",
-  "timestamp": "2018-08-31T04:53:22.065Z",
+  "id": "596dd428-a395-4f70-a02c-8a5420be1019",
+  "timestamp": "2018-09-13T07:09:57.498Z",
   "lang": "en",
   "result": {
     "source": "agent",
-    "resolvedQuery": "Book me in for car sevice today ",
+    "resolvedQuery": " none of these ",
     "speech": "",
-    "action": "ScheduleAppointment",
-    "actionIncomplete": true,
+    "action": "ScheduleAppointment.AskMore",
+    "actionIncomplete": false,
     "parameters": {
-      "attendees": [],
-      "businessName": "",
-      "beforeAfter": "",
-      "Bookingtimeperiod": "",
-      "lastname": "",
-      "Bookingdate": "2018-08-31",
-      "BookingDateTimePeriod": "",
-      "genericTimeSlots": "",
-      "service": [],
-      "givenname": "",
+      "Bookingdate": "",
       "Bookingtime": "",
-      "Bookingdateperiod": "",
-      "providerName": ""
+      "beforeAfter": "",
+      "booka-showMore": "",
+      "Bookingdateperiod": ""
     },
     "contexts": [
       {
-        "name": "scheduleappointment_dialog_context",
+        "name": "scheduleappointment-followup",
         "parameters": {
-          "businessName.original": "",
+          "businessName.original": "In2Style",
           "genericTimeSlots.original": "",
-          "businessName": "",
+          "businessName": "In2Style",
           "providerName.original": "",
-          "lastname.original": "",
+          "lastname.original": "Gill",
           "beforeAfter": "",
+          "askMoreAttempts.original": "",
           "Bookingtimeperiod.original": "",
-          "BookingDateTimePeriod": "",
+          "BookingDateTimePeriod": "2018-09-13T12:00:00Z/2018-09-13T16:00:00Z",
           "genericTimeSlots": "",
           "attendees.original": "",
-          "givenname": "",
-          "givenname.original": "",
+          "givenname": "Anthony",
+          "givenname.original": "Anthony",
           "Bookingtime": "",
+          "askMoreAttempts": "2",
           "providerName": "",
-          "BookingDateTimePeriod.original": "",
+          "BookingDateTimePeriod.original": "this afternoon",
           "attendees": [],
           "beforeAfter.original": "",
-          "service.original": "",
+          "listedSlotValues.original": "",
+          "service.original": "tint",
           "Bookingtimeperiod": "",
-          "lastname": "",
+          "lastname": "Gill",
           "Bookingdateperiod.original": "",
-          "Bookingdate.original": "today",
-          "Bookingdate": "2018-08-31",
-          "service": [],
+          "Bookingdate.original": "",
+          "Bookingdate": "",
+          "service": [
+            "Tint"
+          ],
+          "booka-showMore.original": "",
+          "booka-showMore": "",
+          "listedSlotValues": "636726888000000000,636726924000000000,636726960000000000",
           "Bookingdateperiod": "",
           "Bookingtime.original": ""
         },
-        "lifespan": 2
-      },
-      {
-        "name": "e1710622-ec4a-4cf7-a117-856873ef4b3b_id_dialog_context",
-        "parameters": {
-          "businessName.original": "",
-          "genericTimeSlots.original": "",
-          "businessName": "",
-          "providerName.original": "",
-          "lastname.original": "",
-          "beforeAfter": "",
-          "Bookingtimeperiod.original": "",
-          "BookingDateTimePeriod": "",
-          "genericTimeSlots": "",
-          "attendees.original": "",
-          "givenname": "",
-          "givenname.original": "",
-          "Bookingtime": "",
-          "providerName": "",
-          "BookingDateTimePeriod.original": "",
-          "attendees": [],
-          "beforeAfter.original": "",
-          "service.original": "",
-          "Bookingtimeperiod": "",
-          "lastname": "",
-          "Bookingdateperiod.original": "",
-          "Bookingdate.original": "today",
-          "Bookingdate": "2018-08-31",
-          "service": [],
-          "Bookingdateperiod": "",
-          "Bookingtime.original": ""
-        },
-        "lifespan": 2
-      },
-      {
-        "name": "scheduleappointment_dialog_params_service",
-        "parameters": {
-          "businessName.original": "",
-          "genericTimeSlots.original": "",
-          "businessName": "",
-          "providerName.original": "",
-          "lastname.original": "",
-          "beforeAfter": "",
-          "Bookingtimeperiod.original": "",
-          "BookingDateTimePeriod": "",
-          "genericTimeSlots": "",
-          "attendees.original": "",
-          "givenname": "",
-          "givenname.original": "",
-          "Bookingtime": "",
-          "providerName": "",
-          "BookingDateTimePeriod.original": "",
-          "attendees": [],
-          "beforeAfter.original": "",
-          "service.original": "",
-          "Bookingtimeperiod": "",
-          "lastname": "",
-          "Bookingdateperiod.original": "",
-          "Bookingdate.original": "today",
-          "Bookingdate": "2018-08-31",
-          "service": [],
-          "Bookingdateperiod": "",
-          "Bookingtime.original": ""
-        },
-        "lifespan": 1
+        "lifespan": 5
       }
     ],
     "metadata": {
-      "intentId": "e1710622-ec4a-4cf7-a117-856873ef4b3b",
+      "intentId": "8adc6c8e-9854-4b75-9ab5-0f3272a16783",
       "webhookUsed": "true",
-      "webhookForSlotFillingUsed": "true",
+      "webhookForSlotFillingUsed": "false",
       "isFallbackIntent": "false",
-      "intentName": "ScheduleAppointment"
+      "intentName": "ScheduleAppointment.AskMore"
     },
     "fulfillment": {
-      "speech": "what service are you looking for?",
+      "speech": "",
       "messages": [
         {
           "type": 0,
-          "speech": "what service are you looking for?"
+          "speech": ""
         }
       ]
     },
@@ -167,5 +103,5 @@
     "code": 200,
     "errorType": "success"
   },
-  "sessionId": "a02d6ca9-6e10-a28c-cb94-5868a34c918c"
+  "sessionId": "fb9bd0fc-bcaf-492d-8d5b-b3bf72a0e8c8"
 }

@@ -3,6 +3,8 @@ Case: 1. book me in this afternoon for haircut (Change of Datetime in the conver
 Customer: book me in this afternoon for [service]
 Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Anthony Gill
+Booka: <UnknownBusiness>
+Customer: [businessName]
 Booka: <Checking><SlotsAvailable> 
 Customer: check morning
 Booka: <Checking><SlotsAvailable>
@@ -17,11 +19,15 @@ Case: 2. book me in this afternoon for haircut with Mark (Remembering last asked
 Customer: book me in this afternoon for [service]
 Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Anthony Gill
+Booka: <UnknownBusiness>
+Customer: [businessName]
 Booka: <Checking><SlotsAvailable> 
 Customer: check 24th
 Booka: <Checking><SlotsAvailable>
 
 Case 3. Book time not given in the options
 Customer: Book a womens haircut with [Provider]
+Booka: <UnknownBusiness>
+Customer: [businessName]
 Booka: <Checking><SlotsAvailable>  The next available slots are: 23rd Oct @ 10:00 AM, 23rd Oct @ 11:00 AM, 23rd Oct @ 12:00 PM. What date & time do you prefer?
 Customer: 2pm <CheckingConfirmation2>

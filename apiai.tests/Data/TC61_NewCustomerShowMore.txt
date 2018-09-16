@@ -1,10 +1,18 @@
-﻿Expression: 6. Appointment Request expression with date & time range & NO SERVICE
+﻿Expression: 6. Appointment Request expression with date & time range & NO SERVICE(New Customer)
 Case: 43. book me in this afternoon
 Customer: book me in this afternoon
+Booka: Name of the person attending the appointment?<ValidationException>
+Customer: Anthony Gill 
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
+Booka: <UnknownBusiness>
+Customer: [businessName]
 Booka: <Checking><SlotsAvailable> 
 Customer: Show more
+Booka: <Checking><SlotsAvailable> 
+Customer: none of these 
+Booka: <Checking><SlotsAvailable> 
+Customer: none of these 
 Booka: <Checking><SlotsAvailable> 
 Customer: none of these 
 Booka: <Checking><SlotsAvailable> 
@@ -13,33 +21,52 @@ Booka: Do you have any preferred date and time?<ValidationException>
 
 Case: 44. Can I get an appointment tomorrow morning
 Customer: Can I get an appointment tomorrow morning
+Booka: Name of the person attending the appointment?<ValidationException>
+Customer: Anthony Gill 
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
+Booka: <UnknownBusiness>
+Customer: [businessName]
 Booka: <Checking><SlotsAvailable> 
-Customer: check after the thursaday
+Customer: none of these 
 Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime]
 Booka: <CheckingConfirmation><Booked>
 
 Case: 45. I need an appointment next monday afternoon
 Customer: I need an appointment next monday afternoon
+Booka: Name of the person attending the appointment?<ValidationException>
+Customer: Anthony Gill 
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
+Booka: <UnknownBusiness>
+Customer: [businessName]
 Booka: <Checking><SlotsAvailable> 
 Customer: more
 Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime]
 Booka: <CheckingConfirmation><Booked>
 
 Case: 46. Can I make an appointment next tuesday morning
 Customer: Can I make an appointment next tuesday morning
+Booka: Name of the person attending the appointment?<ValidationException>
+Customer: Anthony Gill 
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
+Booka: <UnknownBusiness>
+Customer: [businessName]
 Booka: <Checking><SlotsAvailable> 
 Customer: what you have after that?
 Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime]
 Booka: <CheckingConfirmation><Booked>
 
 Case: 47. can I make an appointment tomorrow morning for haircut
 Customer: can I make an appointment tomorrow morning for [service]
+Booka: Name of the person attending the appointment?<ValidationException>
+Customer: Anthony Gill 
+Booka: <UnknownBusiness>
+Customer: [businessName]
 Booka: <Checking><SlotsAvailable>
 Customer: anything after 5PM?
 Booka: <Checking><SlotsAvailable> 
@@ -48,6 +75,10 @@ Booka: <CheckingConfirmation><Booked>
 
 Case: 47. can I make an appointment tomorrow morning for haircut
 Customer: can I make an appointment tomorrow morning for [service]
+Booka: Name of the person attending the appointment?<ValidationException>
+Customer: Anthony Gill 
+Booka: <UnknownBusiness>
+Customer: [businessName]
 Booka: <Checking><SlotsAvailable>
 Customer: check after this week
 Booka: <Checking><SlotsAvailable> 
@@ -56,6 +87,10 @@ Booka: <CheckingConfirmation><Booked>
 
 Case: 47. can I make an appointment tomorrow morning for haircut
 Customer: can I make an appointment tomorrow morning for [service]
+Booka: Name of the person attending the appointment?<ValidationException>
+Customer: Anthony Gill 
+Booka: <UnknownBusiness>
+Customer: [businessName]
 Booka: <Checking><SlotsAvailable>
 Customer: find for next week
 Booka: <Checking><SlotsAvailable> 
@@ -64,6 +99,10 @@ Booka: <CheckingConfirmation><Booked>
 
 Case: 47. can I make an appointment tomorrow morning for haircut
 Customer: can I make an appointment tomorrow morning for [service]
+Booka: Name of the person attending the appointment?<ValidationException>
+Customer: Anthony Gill 
+Booka: <UnknownBusiness>
+Customer: [businessName]
 Booka: <Checking><SlotsAvailable>
 Customer: find after the weekend 
 Booka: <Checking><SlotsAvailable> 
@@ -72,6 +111,10 @@ Booka: <CheckingConfirmation><Booked>
 
 Case: 47. can I make an appointment tomorrow morning for haircut
 Customer: can I make an appointment tomorrow morning for [service]
+Booka: Name of the person attending the appointment?<ValidationException>
+Customer: Anthony Gill 
+Booka: <UnknownBusiness>
+Customer: [businessName]
 Booka: <Checking><SlotsAvailable>
 Customer: find before the next week
 Booka: <Checking><SlotsAvailable> 

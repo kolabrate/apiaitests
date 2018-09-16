@@ -3,6 +3,8 @@ Case: 1. Book me in for a [service]
 Customer: Book me in for a [service]
 Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Arjun Maran
+Booka: <UnknownBusiness>
+Customer: [businessName]
 Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
@@ -11,6 +13,8 @@ Case: 2. can I make an appointment for a [service]
 Customer: can I make an appointment for a [service]
 Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Chi Tsu
+Booka: <UnknownBusiness>
+Customer: [businessName]
 Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
@@ -19,6 +23,8 @@ Case: 3. I need an appointment for a [service]
 Customer: I need an appointment for a [service]
 Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Oviya Helen
+Booka: <UnknownBusiness>
+Customer: [businessName]
 Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
@@ -27,6 +33,8 @@ Case: 4. can you book me in for a [service]
 Customer: can you book me in for a [service]
 Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Trigger Shakti
+Booka: <UnknownBusiness>
+Customer: [businessName]
 Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
@@ -35,6 +43,8 @@ Case: 5. Appointment needed for a [service]
 Customer: Appointment needed for a [service]
 Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Arav Gayathri Raguram
+Booka: <UnknownBusiness>
+Customer: [businessName]
 Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
@@ -43,6 +53,8 @@ Case: 2. when is the next available appointment for this [service]
 Customer: when is the next available appointment for this [service]
 Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Thanh Ngugen
+Booka: <UnknownBusiness>
+Customer: [businessName]
 Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>

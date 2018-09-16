@@ -27,6 +27,5 @@ window.init = function(token) {
 };
 
 function sendText(text,fromNum) {    
-    return client.textRequest(text, fromNum);   
-
+    return client.textRequest(text, fromNum);       
 }
