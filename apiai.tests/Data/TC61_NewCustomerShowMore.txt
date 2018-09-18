@@ -15,9 +15,9 @@ Booka: <Checking><SlotsAvailable>
 Customer: none of these 
 Booka: <Checking><SlotsAvailable> 
 Customer: none of these 
-Booka: <Checking><SlotsAvailable> 
-Customer: none of these 
 Booka: Do you have any preferred date and time?<ValidationException>
+Customer: none of these 
+Booka: Please contact service provider<ValidationException>
 
 Case: 44. Can I get an appointment tomorrow morning
 Customer: Can I get an appointment tomorrow morning
@@ -116,7 +116,35 @@ Customer: Anthony Gill
 Booka: <UnknownBusiness>
 Customer: [businessName]
 Booka: <Checking><SlotsAvailable>
+Customer: find after the weekend 
+Booka: <Checking><SlotsAvailable> 
+Customer: find for next week
+Booka: <Checking><SlotsAvailable> 
+Customer: tell me more after that
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked>
+
+Case: 47. can I make an appointment tomorrow morning for haircut
+Customer: can I make an appointment tomorrow morning for [service]
+Booka: Name of the person attending the appointment?<ValidationException>
+Customer: Anthony Gill 
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable>
 Customer: find before the next week
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked>
+
+Case: 47. can I make an appointment for haircut
+Customer: can I make an appointment for [service]
+Booka: Name of the person attending the appointment?<ValidationException>
+Customer: Anthony Gill 
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable>
+Customer: find something after 25th Sept
 Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime]
 Booka: <CheckingConfirmation><Booked>
