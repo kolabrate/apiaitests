@@ -8,7 +8,7 @@
       "SmsMessageSid": "",
       "NumSegments": "",
       "ToState": "",
-      "From": "+6180295314",
+      "From": "+6132634939",
       "MessageSid": "SMf0000000000000000000000",
       "AccountSid": "",
       "ToCity": "",
@@ -18,67 +18,86 @@
       "To": "",
       "FromZip": "",
       "ToCountry": "",
-      "Body": " In2Style",
+      "Body": " in the afternoon?",
       "NumMedia": "",
       "FromState": ""
     }
   },
-  "id": "a9d20c0a-b76b-40fa-80bd-82c00d703c00",
-  "timestamp": "2018-09-17T06:35:26.682Z",
+  "id": "8fa43cbd-40e9-4ce4-80f0-9268d0507acd",
+  "timestamp": "2018-09-19T05:31:05.604Z",
   "lang": "en",
   "result": {
     "source": "agent",
-    "resolvedQuery": " In2Style",
+    "resolvedQuery": " in the afternoon?",
     "speech": "",
-    "action": "ScheduleAppointment.AskBusinessName",
+    "action": "ScheduleAppointment.Confirm",
     "actionIncomplete": false,
     "parameters": {
-      "businessName": "In2Style"
+      "confirmedDate": "",
+      "confirmedTime": ""
     },
     "contexts": [
       {
         "name": "scheduleappointment-followup",
         "parameters": {
+          "confirmedTime.original": "",
           "businessName.original": "In2Style",
+          "confirmedDate.original": "",
           "genericTimeSlots.original": "",
           "businessName": "In2Style",
           "providerName.original": "",
           "lastname.original": "Gill",
           "beforeAfter": "",
-          "Bookingtimeperiod.original": "morning",
+          "askMoreAttempts.original": "",
+          "Bookingtimeperiod.original": "",
           "BookingDateTimePeriod": "",
           "genericTimeSlots": "",
           "attendees.original": "",
           "givenname": "Anthony",
+          "confirmedTime": "",
           "givenname.original": "Anthony",
           "Bookingtime": "",
+          "askMoreAttempts": "1",
           "providerName": "",
           "BookingDateTimePeriod.original": "",
           "attendees": [],
           "anyName": "",
           "beforeAfter.original": "",
+          "listedSlotValues.original": "",
           "service.original": "tint",
-          "Bookingtimeperiod": "08:00:00/12:00:00",
+          "Bookingtimeperiod": "",
           "lastname": "Gill",
           "Bookingdateperiod.original": "",
-          "Bookingdate.original": "tomorrow",
-          "Bookingdate": "2018-09-18",
+          "Bookingdate.original": "on 24th",
+          "Bookingdate": "2018-09-24",
           "service": [
             "Tint"
           ],
           "anyName.original": "",
+          "confirmedDate": "",
+          "listedSlotValues": "636733800000000000,636733980000000000,636734664000000000",
           "Bookingdateperiod": "",
           "Bookingtime.original": ""
         },
-        "lifespan": 8
+        "lifespan": 6
+      },
+      {
+        "name": "scheduleappointmentconfirm-followup",
+        "parameters": {
+          "confirmedTime.original": "",
+          "confirmedDate.original": "",
+          "confirmedTime": "",
+          "confirmedDate": ""
+        },
+        "lifespan": 2
       }
     ],
     "metadata": {
-      "intentId": "7b5ec526-017a-46c7-9d48-95faee709415",
+      "intentId": "51c43d27-350f-4639-817d-f58f82d30485",
       "webhookUsed": "true",
-      "webhookForSlotFillingUsed": "false",
+      "webhookForSlotFillingUsed": "true",
       "isFallbackIntent": "false",
-      "intentName": "ScheduleAppointment.AskBusinessName"
+      "intentName": "ScheduleAppointment.Confirm"
     },
     "fulfillment": {
       "speech": "",
@@ -89,11 +108,11 @@
         }
       ]
     },
-    "score": 0.92000001668930054
+    "score": 0.97000002861022949
   },
   "status": {
     "code": 200,
     "errorType": "success"
   },
-  "sessionId": "f7135dbc-0ca5-4e2f-b9c8-3e4c790952f8"
+  "sessionId": "4b827d6a-2455-491c-94c5-13760379a0a6"
 }

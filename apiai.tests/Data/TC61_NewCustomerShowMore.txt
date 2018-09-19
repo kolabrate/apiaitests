@@ -73,6 +73,18 @@ Booka: <Checking><SlotsAvailable>
 Customer: [ConfirmDatetime]
 Booka: <CheckingConfirmation><Booked>
 
+Case: 47. can I make an appointment for haircut on 24th Sept
+Customer: can I make an appointment for [service] on 24th Sept
+Booka: Name of the person attending the appointment?<ValidationException>
+Customer: Anthony Gill 
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable>
+Customer: in the afternoon?
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked>
+
 Case: 47. can I make an appointment tomorrow morning for haircut
 Customer: can I make an appointment tomorrow morning for [service]
 Booka: Name of the person attending the appointment?<ValidationException>
@@ -122,6 +134,8 @@ Customer: find for next week
 Booka: <Checking><SlotsAvailable> 
 Customer: tell me more after that
 Booka: <Checking><SlotsAvailable> 
+Customer: check after 24th 
+Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime]
 Booka: <CheckingConfirmation><Booked>
 
@@ -148,3 +162,60 @@ Customer: find something after 25th Sept
 Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime]
 Booka: <CheckingConfirmation><Booked>
+
+Case: 47. can I make an appointment for haircut
+user:  Can I make an appointment next tuesday morning
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+user:  Anthony Gill 
+Booka: what type of service are you looking for?<ValidationException>
+Customer: [service]
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable>
+user:  what you have after that?
+Booka: Bummer!! I dint get that, try again to tell me a date and/or time that you want me to check
+user:  check 28th Sep
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime]
+Booka: Sure, checking that...
+Booka:  All Done! Your appointment for Tint booked at 26th Sep @ 05:00 PM with In2Style
+
+Case: 47. can I make an appointment for haircut this weekend
+Customer: can I make an appointment for [service] this weekend
+Booka: Name of the person attending the appointment?<ValidationException>
+Customer: Anthony Gill 
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable>
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked>
+
+Case: 47. can I make an appointment for haircut
+user:  Can I make an appointment next tuesday morning
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+user:  Anthony Gill 
+Booka: what type of service are you looking for?<ValidationException>
+Customer: [service]
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable>
+user:  check after 24th Sept
+Booka: <Checking><SlotsAvailable>
+user:  check in the afternoon
+Booka: <Checking><SlotsAvailable> 
+Customer: check after 3 PM
+Booka: Do you have any preferred date and time?<ValidationException>
+
+Case: 47. can I make an appointment for haircut
+user:  Can I make an appointment next tuesday morning
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+user:  Anthony Gill 
+Booka: what type of service are you looking for?<ValidationException>
+Customer: [service]
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable>
+user:  check after 24th Sept 3 PM
+Booka: <Checking><SlotsAvailable>
+user:  check in the 26th Sept afternoon
+Booka: <Checking><SlotsAvailable> 

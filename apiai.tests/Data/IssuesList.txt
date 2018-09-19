@@ -1,18 +1,45 @@
-user:  can I make an appointment tomorrow morning for tint
+user:  book me in this afternoon
 Booka: First Name & Last Name of the person attending the appointment?
 user:  Anthony Gill 
+Booka: what type of Service are your looking for ?
+user:  tint
 Booka: which business do you want to book with?
 user:  In2Style
 Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 18th Sep @ 11:00 AM, 18th Sep @ 01:00 PM, 18th Sep @ 02:00 PM. What date & time do you prefer?
-user:  find after the weekend 
+Booka:  The next available slots are: 19th Sep @ 03:00 PM, 19th Sep @ 04:00 PM, 19th Sep @ 05:00 PM. What date & time do you prefer?
+user:  Show more
 Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 18th Sep @ 03:00 PM, 19th Sep @ 01:00 PM, 19th Sep @ 02:00 PM. What date & time do you prefer?
-user:   19th Sep @ 01 PM
+Booka:  The next available slots are: 20th Sep @ 10:00 AM, 20th Sep @ 05:00 PM, 23rd Sep @ 10:00 AM. What date & time do you prefer?
+user:  none of these 
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 19th Sep @ 03:00 PM, 19th Sep @ 04:00 PM, 19th Sep @ 05:00 PM. What date & time do you prefer?
+user:  none of these 
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 20th Sep @ 10:00 AM, 20th Sep @ 05:00 PM, 23rd Sep @ 10:00 AM. What date & time do you prefer?
+user:  none of these 
+Booka: Do you have any preferred date and time?
+user:  none of these 
+Booka: Do you have any preferred date and time?
+AI Session:d5cef1df-cfa9-4a12-9790-f0daf29fe5b3
+Issue: second error message is not correct.
+----------------------------------------------------
+user:  Can I get an appointment tomorrow morning
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: what type of Service are your looking for ?
+user:  tint
+Booka: which business do you want to book with?
+user:  In2Style
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 19th Sep @ 03:00 PM, 19th Sep @ 04:00 PM, 19th Sep @ 05:00 PM. What date & time do you prefer?
+user:  none of these 
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 20th Sep @ 10:00 AM, 20th Sep @ 05:00 PM, 23rd Sep @ 10:00 AM. What date & time do you prefer?
+user:   20th Sep @ 05 PM
 Booka: Sure, checking that...
-Booka:  All Done! Your appointment for Tint booked at 19th Sep @ 01:00 PM with In2Style
-AI Session:81770a2e-39e4-46e5-969d-a6a6668c402d
-Issue: "find after the weekend" is not working correctly
+Booka:  All Done! Your appointment for Tint booked at 20th Sep @ 05:00 PM with In2Style
+AI Session:8f7f28d8-c44c-4119-aa2b-62696258cb9d
+Issue: no sorry 
 ----------------------------------------------------
 user:  can I make an appointment tomorrow morning for tint
 Booka: First Name & Last Name of the person attending the appointment?
@@ -20,13 +47,14 @@ user:  Anthony Gill
 Booka: which business do you want to book with?
 user:  In2Style
 Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 18th Sep @ 11:00 AM, 18th Sep @ 01:00 PM, 18th Sep @ 02:00 PM. What date & time do you prefer?
-user:  find for next week
+Booka:  The next available slots are: 19th Sep @ 03:00 PM, 19th Sep @ 04:00 PM, 19th Sep @ 05:00 PM. What date & time do you prefer?
+user:  anything after 5PM?
 Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 18th Sep @ 03:00 PM, 19th Sep @ 12:00 PM, 19th Sep @ 01:00 PM. What date & time do you prefer?
-user:   19th Sep @ 12 PM
+Booka:  The next available slots are: 20th Sep @ 10:00 AM, 23rd Sep @ 10:00 AM, 23rd Sep @ 12:00 PM. What date & time do you prefer?
+user:   23rd Sep @ 10 AM
 Booka: Sure, checking that...
-Booka:  All Done! Your appointment for Tint booked at 19th Sep @ 12:00 PM with In2Style
-AI Session:8dcfa36b-b236-44a3-a746-811961b7cb74
-Issue: Find for next week is not working
+Booka:  The next available slots are: 23rd Sep @ 10:00 AM, 23rd Sep @ 12:00 PM, 23rd Sep @ 01:00 PM. What date & time do you prefer?
+AI Session:64563cc4-4fb9-4e8e-871f-ace966ecc0f6\
+Issue: 1) no sorry 
+2) anything after 5 PM dint work
 ----------------------------------------------------
