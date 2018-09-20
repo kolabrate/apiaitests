@@ -1,13 +1,19 @@
 Expression: 2. Appointment Request Expression with Service Name & Date & Time (New Customer)
 
-Case: 47. can I make an appointment for haircut on 24th Sept
-Customer: can I make an appointment for [service] on 24th Sept
+Case: 47. can I make an appointment tomorrow morning for haircut
+Customer: can I make an appointment tomorrow morning for [service]
 Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Anthony Gill 
 Booka: <UnknownBusiness>
 Customer: [businessName]
 Booka: <Checking><SlotsAvailable>
-Customer: in the afternoon?
+Customer: find after the weekend 
+Booka: <Checking><SlotsAvailable> 
+Customer: find for next week
+Booka: <Checking><SlotsAvailable> 
+Customer: tell me more after that
+Booka: <Checking><SlotsAvailable> 
+Customer: check after 3rd Oct
 Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime]
 Booka: <CheckingConfirmation><Booked>
