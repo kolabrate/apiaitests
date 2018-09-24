@@ -1,6 +1,6 @@
 ﻿Expression: 6. Exception Scenarios (New Customer)
-Case: 1. book me in this afternoon for haircut (Change of Datetime in the conversation)
-Customer: book me in this afternoon for [service]
+Case: 1. book me in on tuesday afternoon for haircut (Change of Datetime in the conversation)
+Customer: book me in tuesday afternoon for [service]
 Booka: Name of the person attending the appointment?<ValidationException>
 Customer: Anthony Gill
 Booka: <UnknownBusiness>
@@ -25,9 +25,12 @@ Booka: <Checking><SlotsAvailable>
 Customer: check 24th
 Booka: <Checking><SlotsAvailable>
 
-Case 3. Book time not given in the options
-Customer: Book a womens haircut with [Provider]
+Case: 3. Book time not given in the options
+Customer: Book an appointment for [service]
+Booka: Name of the person attending the appointment?<ValidationException>
+Customer: Anthony Gill
 Booka: <UnknownBusiness>
 Customer: [businessName]
 Booka: <Checking><SlotsAvailable>  The next available slots are: 23rd Oct @ 10:00 AM, 23rd Oct @ 11:00 AM, 23rd Oct @ 12:00 PM. What date & time do you prefer?
-Customer: 2pm <CheckingConfirmation2>
+Customer: 5pm 
+Booka: <CheckingConfirmation><Booked>

@@ -44,3 +44,235 @@ Booka: Sure, checking that...
 Booka:  All Done! Your appointment for Tint booked at 2nd Oct @ 12:00 PM with In2Style
 AI Session:af7541a8-12d4-492f-83da-0dc3565c9c9c
 ----------------------------------------------------
+user:  cancel my In2Style appointment
+Booka: Oops! You may need to call the provider to cancel your appointment.
+user:  25th Sept @ 10 AM
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for haircut', I promise, I  can be quite helpful.
+AI Session:fbb6b4e1-af43-4e56-a192-88becabe6b64
+----------------------------------------------------
+user:  book me in this afternoon
+Booka: what type of Service are your looking for ?
+user:  haircut & wash
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 25th Sep @ 01:00 PM, 25th Sep @ 04:00 PM, 25th Sep @ 05:00 PM. What date & time do you prefer?
+user:   25th Sep @ 04 PM 
+Booka: Sure, checking that...
+Booka:  All Done! Your appointment for hair cut booked at 25th Sep @ 04:00 PM with Paradise Cutters
+AI Session:8bcb3392-1235-4fe7-8e61-89d3dcbcf675
+Issue: multiple master services but one business service. But two appointments are booked.
+----------------------------------------------------
+user:  book me in this afternoon for haircut and bleech
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 25th Sep @ 01:00 PM, 25th Sep @ 05:00 PM, 26th Sep @ 10:00 AM. What date & time do you prefer?
+user:  Cut & Wash
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 25th Sep @ 01:00 PM, 25th Sep @ 05:00 PM, 26th Sep @ 10:00 AM. What date & time do you prefer?
+user:   25th Sep @ 05 PM 
+Booka: Sure, checking that...
+Booka:  All Done! Your appointment for hair cut booked at 25th Sep @ 05:00 PM with Paradise Cutters
+AI Session:a4685fbb-0139-4cd7-b2ad-bbaaa2185eaf
+Issue: Missing service not confirmed with user
+----------------------------------------------------
+user:  book me in this afternoon
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: what type of Service are your looking for ?
+user:  haircut & wash
+Booka: which business do you want to book with?
+user:  In2Style
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 2nd Oct @ 05:00 PM, 3rd Oct @ 10:00 AM, 3rd Oct @ 11:00 AM. What date & time do you prefer?
+user:  Cut & Wash
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 3rd Oct @ 10:00 AM, 3rd Oct @ 12:00 PM, 3rd Oct @ 02:00 PM. What date & time do you prefer?
+user:   3rd Oct @ 12 PM 
+Booka: I am having a little trouble with your booking, please call the provider directly to make this booking.
+AI Session:47833275-49bb-4e74-88b8-79a22a76c73d
+Issue: In this conversation, when service name was given the second time, the same time should have been shown. Low priority issue. 
+----------------------------------------------------
+user:  book me in tuesday afternoon for tint
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill
+Booka: which business do you want to book with?
+user:  In2Style
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 3rd Oct @ 10:00 AM, 3rd Oct @ 11:00 AM, 3rd Oct @ 12:00 PM. What date & time do you prefer?
+user:  check morning
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 3rd Oct @ 01:00 PM, 3rd Oct @ 02:00 PM, 3rd Oct @ 03:00 PM. What date & time do you prefer?
+user:  check after Tuesday
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 3rd Oct @ 10:00 AM, 3rd Oct @ 11:00 AM, 3rd Oct @ 12:00 PM. What date & time do you prefer?
+user:  check after Wednesday
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 3rd Oct @ 10:00 AM, 3rd Oct @ 11:00 AM, 3rd Oct @ 12:00 PM. What date & time do you prefer?
+user:  check after Thursday
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 3rd Oct @ 10:00 AM, 3rd Oct @ 11:00 AM, 3rd Oct @ 12:00 PM. What date & time do you prefer?
+AI Session:190fb170-7d83-409d-a624-af642f3ce8f9
+Issue: Can't do anything about this now. We'll see
+----------------------------------------------------
+user:  When is my next tint appointment?
+Booka: You have the following appointment(s): for hair cut on 25th Sep @ 10:00 AM, for hair cut on 25th Sep @ 12:00 PM, for hair cut on 25th Sep @ 11:00 AM, for hair cut on 26th Sep @ 11:00 AM, for hair cut on 26th Sep @ 12:00 PM, for hair cut on 26th Sep @ 01:00 PM, for hair cut on 25th Sep @ 02:00 PM, for hair cut on 25th Sep @ 03:00 PM, for hair cut on 25th Sep @ 04:00 PM, for hair cut on 25th Sep @ 05:00 PM
+AI Session:9863d135-64c8-4273-a202-eff1a24a5fac
+Issue: service name is changed here, still showing haircut appointment
+Find out limit of sms outbound in twilio and limit the message to that number.
+----------------------------------------------------
+user:  what appointment i got tomorrow?
+Booka: what type of Service are your looking for ?
+AI Session:a83ab86f-0a6b-409b-9cab-72e634317249
+Issue: train dialog flow
+----------------------------------------------------
+user:  book me an appointment for tint for my son
+Booka: which business do you want to book with?
+user:  In2Style
+Booka: I am having a little trouble with your booking, please call the provider directly to make this booking.
+Tester: No confirm date
+Booka: I am having a little trouble with your booking, please call the provider directly to make this booking.
+AI Session:7d8694c1-fe3d-4cf2-9ba5-23399c8e1e09
+Issue: check why the error is happening
+----------------------------------------------------
+user:  book tint and haircut & wash appointment for me and tint for my son
+Booka: I am having a little trouble with your booking, please call the provider directly to make this booking.
+user:  In2Style
+Booka: I am having a little trouble with your booking, please call the provider directly to make this booking.
+user:   3rd Oct @ 02 PM 
+Booka: I am having a little trouble with your booking, please call the provider directly to make this booking.
+AI Session:7e61b8e6-e142-44f6-b72c-ebc4b6a44d29
+----------------------------------------------------
+user:  book tint appointment for my son and daughter
+Booka: I am having a little trouble with your booking, please call the provider directly to make this booking.
+user:  In2Style
+Booka: I am having a little trouble with your booking, please call the provider directly to make this booking.
+user:   3rd Oct @ 02 PM 
+Booka: I am having a little trouble with your booking, please call the provider directly to make this booking.
+AI Session:dddf02b1-acf9-469c-9a88-41d80e58fd93
+----------------------------------------------------
+user:  book me in this afternoon for tint with Kolabrate
+Booka: which business do you want to book with?
+user:  In2Style
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 3rd Oct @ 10:00 AM, 3rd Oct @ 03:00 PM, 3rd Oct @ 04:00 PM. What date & time do you prefer?
+user:   3rd Oct @ 03 PM 
+Booka: Sure, checking that...
+Booka:  All Done! Your appointment for Tint booked at 3rd Oct @ 03:00 PM with In2Style
+AI Session:c57c44ac-54dd-42b2-b108-e37840695278
+issue: no master data
+----------------------------------------------------
+user:  book me in this afternoon for tint with Kolabrate with In2Style
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 3rd Oct @ 10:00 AM, 3rd Oct @ 04:00 PM, 3rd Oct @ 05:00 PM. What date & time do you prefer?
+user:   3rd Oct @ 04 PM 
+Booka: Sure, checking that...
+Booka:  All Done! Your appointment for Tint booked at 3rd Oct @ 04:00 PM with In2Style
+AI Session:f5cbd7f4-4ab7-4641-b9bc-cc6066963ca4
+issue: no master data
+----------------------------------------------------
+user:  I want an appointment before 3rd Oct 3PM for tint
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 3rd Oct @ 10:00 AM, 4th Oct @ 03:00 PM, 4th Oct @ 05:00 PM. What date & time do you prefer?
+user:  In2Style
+Booka: Sure, let me find next availabilities.
+Booka:  Sorry, that time is not available. Next available slots are: 4th Oct @ 03:00 PM, 4th Oct @ 05:00 PM, 7th Oct @ 10:00 AM
+user:   4th Oct @ 05 PM 
+Booka: Sure, checking that...
+Booka:  All Done! Your appointment for Tint booked at 4th Oct @ 05:00 PM with In2Style
+AI Session:7bfe9a71-4241-476a-bf45-d87677c486a9
+issue: confusing exception handling. 
+----------------------------------------------------
+user:  book me in for car service
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: 
+user:  Toyota
+Booka: Which location you want to go to? For example:Airport West,Airport West,Taylors Lakes
+user:  Airport West
+Booka: what is your car rego?
+user:  sdkhgf
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 25th Sep @ 07:00 AM, 25th Sep @ 06:00 PM, 30th Sep @ 09:00 AM. What date & time do you prefer?
+user:  any other date/time
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 1st Oct @ 09:00 AM, 2nd Oct @ 08:00 AM, 2nd Oct @ 09:00 AM. What date & time do you prefer?
+user:  any other date/time
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 2nd Oct @ 06:00 PM, 7th Oct @ 09:00 AM, 7th Oct @ 10:00 AM. What date & time do you prefer?
+user:  any other date/time
+Booka: Do you have any preferred date and time?
+AI Session:0f73a376-c1b5-4c70-818a-4a1a03a9dd3f
+Issue: check if there are no slots after 30th Sep 9 AM 
+----------------------------------------------------
+user:  book me in for car service
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Anthony Gill 
+Booka: which business do you want to book with?
+user:  Toyota
+Booka: Which location you want to go to? For example:Airport West,Airport West,Taylors Lakes
+user:  asdf
+Booka: The requested service - asdf is not available with the provider
+user:  asdf
+Booka: The requested service - asdf is not available with the provider
+user:  asdf
+AI Session:90d15c32-e46f-4387-b953-c0edbf6b284d
+Issue: wrong message when location is not found
+----------------------------------------------------
+user:  book me in today after 5 PM for car service with toyota at Airport West
+Booka: what is your car rego?
+user:  sdkhgf
+Booka: Sure, let me find next availabilities.
+Booka: Index was outside the bounds of the array.   at apiai.tests.Program.GetSecondResponse(String reply, String actionName, String& secondResponse, String& secondResponseDisplayText) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 672
+   at apiai.tests.Program.TrySecondMsgAgain(String& secondResponse, String& secondResponseDisplayText) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 644
+   at apiai.tests.Program.ProcessCase(List`1 conversations, String caseName, Boolean isNewCustomer) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 568
+Tester: No confirm date
+Booka: Sure, let me find next availabilities.
+Booka: Index was outside the bounds of the array.   at apiai.tests.Program.GetSecondResponse(String reply, String actionName, String& secondResponse, String& secondResponseDisplayText) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 672
+   at apiai.tests.Program.ProcessCase(List`1 conversations, String caseName, Boolean isNewCustomer) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 572
+AI Session:1a891dbb-c85b-4ff5-ba1a-463f0f20df5e
+----------------------------------------------------
+user:  book me tomorrow for car service with toyota at Airport West
+Booka: what is your car rego?
+user:  sdkhgf
+Booka: Sure, let me find next availabilities.
+Booka: Index was outside the bounds of the array.   at apiai.tests.Program.GetSecondResponse(String reply, String actionName, String& secondResponse, String& secondResponseDisplayText) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 672
+   at apiai.tests.Program.TrySecondMsgAgain(String& secondResponse, String& secondResponseDisplayText) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 644
+   at apiai.tests.Program.ProcessCase(List`1 conversations, String caseName, Boolean isNewCustomer) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 568
+Tester: No confirm date
+Booka: Sure, let me find next availabilities.
+Booka: Index was outside the bounds of the array.   at apiai.tests.Program.GetSecondResponse(String reply, String actionName, String& secondResponse, String& secondResponseDisplayText) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 672
+   at apiai.tests.Program.ProcessCase(List`1 conversations, String caseName, Boolean isNewCustomer) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 572
+AI Session:fe3888f6-0872-4645-b659-28e168d401fc
+----------------------------------------------------
+user:  book me tomorrow for car service with toyota at Airport West
+Booka: what is your car rego?
+user:  sdkhgf
+Booka: Sure, let me find next availabilities.
+Booka: Index was outside the bounds of the array.   at apiai.tests.Program.GetSecondResponse(String reply, String actionName, String& secondResponse, String& secondResponseDisplayText) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 672
+   at apiai.tests.Program.TrySecondMsgAgain(String& secondResponse, String& secondResponseDisplayText) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 644
+   at apiai.tests.Program.ProcessCase(List`1 conversations, String caseName, Boolean isNewCustomer) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 568
+Tester: No confirm date
+Booka: Sure, let me find next availabilities.
+Booka: Index was outside the bounds of the array.   at apiai.tests.Program.GetSecondResponse(String reply, String actionName, String& secondResponse, String& secondResponseDisplayText) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 672
+   at apiai.tests.Program.ProcessCase(List`1 conversations, String caseName, Boolean isNewCustomer) in C:\Priya\apiaitests\apiai.tests\Program.cs:line 572
+AI Session:543f7d24-ddeb-43d0-8c37-d48285911c4b
+----------------------------------------------------
+user:  Can I get an appointment tomorrow morning
+Booka: what type of Service are your looking for ?
+user:  tint
+Booka: Sure, let me find next availabilities.
+Booka:  Sorry, that time is not available. Next available slots are: 7th Oct @ 10:00 AM, 7th Oct @ 11:00 AM, 7th Oct @ 01:00 PM
+user:  4PM 14th Aug
+Booka: Sure, checking that...
+Booka:  Sorry, that time is not available. Next available slots are: 7th Oct @ 10:00 AM, 7th Oct @ 11:00 AM, 7th Oct @ 01:00 PM
+AI Session:685eeb55-ed4c-4f88-aa58-d80dd1e48600
+issue: If its the past date time, send a message straightaway that its not available instead of "Sure, checking that..". Do this for confirm intent only.
+----------------------------------------------------
+user:  can I make an appointment tomorrow morning
+Booka: what type of Service are your looking for ?
+user:  tint
+Booka: Sure, let me find next availabilities.
+Booka:  Sorry, that time is not available. Next available slots are: 7th Oct @ 10:00 AM, 7th Oct @ 11:00 AM, 7th Oct @ 05:00 PM
+user: I want 10AM 
+Booka: Sure, checking that...
+Booka:  Sorry, that time is not available. Next available slots are: 7th Oct @ 10:00 AM, 7th Oct @ 11:00 AM, 7th Oct @ 05:00 PM
+AI Session:70d998b4-51c2-4456-b98c-1f3047780083
+----------------------------------------------------

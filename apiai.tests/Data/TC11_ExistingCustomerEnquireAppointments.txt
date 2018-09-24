@@ -11,3 +11,9 @@ Booka:
 Case: 3. List my appointments
 Customer: List my appointments
 Booka: 
+Case: 3. find all my appointments 
+Customer: find all my appointments 
+Booka: 
+Case: 3. what all appointments have I made with you
+Customer: what all appointments have I made with you
+Booka: 

@@ -1,273 +1,149 @@
 user:  book me in this afternoon
-Booka: First Name & Last Name of the person attending the appointment?
-user:  Anthony Gill 
 Booka: what type of Service are your looking for ?
 user:  tint
-Booka: which business do you want to book with?
-user:  In2Style
 Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 23rd Sep @ 04:00 PM, 1st Oct @ 10:00 AM, 1st Oct @ 01:00 PM. What date & time do you prefer?
-user:  Show more
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 1st Oct @ 02:00 PM, 1st Oct @ 03:00 PM, 1st Oct @ 04:00 PM. What date & time do you prefer?
-user:  none of these 
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 1st Oct @ 05:00 PM, 2nd Oct @ 10:00 AM, 2nd Oct @ 11:00 AM. What date & time do you prefer?
-user:  none of these 
-Booka: Do you have any preferred date and time?
-user:  none of these 
-Booka: Please contact service provider for more help.
-user:  none of these 
-Booka: Please contact service provider for more help.
-AI Session:82e40c24-7392-4bf7-ab3b-4030b5b6fdc0
+Booka:  The next available slots are: 7th Oct @ 10:00 AM, 7th Oct @ 11:00 AM, 7th Oct @ 01:00 PM. What date & time do you prefer?
+user: i will go for 1pm on 7th oct
+Booka: Sure, checking that...
+Booka:  All Done! Your appointment for Tint booked at 7th Oct @ 01:00 PM with In2Style
+AI Session:89bd0232-9516-4c11-89cf-177a920fb361
 ----------------------------------------------------
 user:  Can I get an appointment tomorrow morning
-Booka: First Name & Last Name of the person attending the appointment?
-user:  Anthony Gill 
 Booka: what type of Service are your looking for ?
 user:  tint
-Booka: which business do you want to book with?
-user:  In2Style
 Booka: Sure, let me find next availabilities.
-Booka:  Sorry, that time is not available. Next available slots are: 23rd Sep @ 04:00 PM, 1st Oct @ 10:00 AM, 1st Oct @ 01:00 PM
-user:  none of these 
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 1st Oct @ 02:00 PM, 1st Oct @ 03:00 PM, 1st Oct @ 04:00 PM. What date & time do you prefer?
-user:   1st Oct @ 03 PM
+Booka:  Sorry, that time is not available. Next available slots are: 7th Oct @ 10:00 AM, 7th Oct @ 11:00 AM, 7th Oct @ 02:00 PM
+user: 2Pm 7th oct
 Booka: Sure, checking that...
-Booka:  All Done! Your appointment for Tint booked at 1st Oct @ 03:00 PM with In2Style
-AI Session:1d4d9982-8dd7-4995-a436-033fa67aabee
+Booka:  All Done! Your appointment for Tint booked at 7th Oct @ 02:00 PM with In2Style
+AI Session:5f11f9de-14ba-4dcc-aa43-f8f48a100204
 ----------------------------------------------------
 user:  I need an appointment next monday afternoon
-Booka: First Name & Last Name of the person attending the appointment?
-user:  Anthony Gill 
 Booka: what type of Service are your looking for ?
 user:  tint
-Booka: which business do you want to book with?
-user:  In2Style
 Booka: Sure, let me find next availabilities.
-Booka:  Sorry, that time is not available. Next available slots are: 1st Oct @ 10:00 AM, 1st Oct @ 01:00 PM, 1st Oct @ 02:00 PM
-user:  more
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 1st Oct @ 04:00 PM, 1st Oct @ 05:00 PM, 2nd Oct @ 10:00 AM. What date & time do you prefer?
-user:   1st Oct @ 05 PM
+Booka:  Sorry, that time is not available. Next available slots are: 7th Oct @ 10:00 AM, 7th Oct @ 11:00 AM, 7th Oct @ 03:00 PM
+user: do 3pm 
 Booka: Sure, checking that...
-Booka:  All Done! Your appointment for Tint booked at 1st Oct @ 05:00 PM with In2Style
-AI Session:b694e9ed-0c0b-429d-b464-b24d90d31492
+Booka:  All Done! Your appointment for Tint booked at 7th Oct @ 03:00 PM with In2Style
+AI Session:38fcebb6-6a6f-49bc-a027-207eac9649e1
 ----------------------------------------------------
 user:  Can I make an appointment next tuesday morning
-Booka: First Name & Last Name of the person attending the appointment?
-user:  Anthony Gill 
 Booka: what type of Service are your looking for ?
 user:  tint
-Booka: which business do you want to book with?
-user:  In2Style
 Booka: Sure, let me find next availabilities.
-Booka:  Sorry, that time is not available. Next available slots are: 1st Oct @ 10:00 AM, 1st Oct @ 01:00 PM, 1st Oct @ 02:00 PM
-user:  what you have after that?
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 1st Oct @ 04:00 PM, 2nd Oct @ 10:00 AM, 2nd Oct @ 11:00 AM. What date & time do you prefer?
-user:   2nd Oct @ 10 AM
+Booka:  Sorry, that time is not available. Next available slots are: 7th Oct @ 10:00 AM, 7th Oct @ 11:00 AM, 7th Oct @ 04:00 PM
+user: book the 4PM on 7th oct
 Booka: Sure, checking that...
-Booka:  All Done! Your appointment for Tint booked at 2nd Oct @ 10:00 AM with In2Style
-AI Session:32d86294-ed7e-4b37-8225-2963b51f279e
+Booka:  All Done! Your appointment for Tint booked at 7th Oct @ 04:00 PM with In2Style
+AI Session:febd9908-165a-4745-a91a-915f333dce2d
 ----------------------------------------------------
-user:  can I make an appointment tomorrow morning for tint
-Booka: First Name & Last Name of the person attending the appointment?
-user:  Anthony Gill 
-Booka: which business do you want to book with?
-user:  In2Style
-Booka: Sure, let me find next availabilities.
-Booka:  Sorry, that time is not available. Next available slots are: 23rd Sep @ 04:00 PM, 1st Oct @ 10:00 AM, 1st Oct @ 01:00 PM
-user:  anything after 5PM?
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 1st Oct @ 02:00 PM, 1st Oct @ 04:00 PM, 2nd Oct @ 11:00 AM. What date & time do you prefer?
-user:   1st Oct @ 04 PM
-Booka: Sure, checking that...
-Booka:  All Done! Your appointment for Tint booked at 1st Oct @ 04:00 PM with In2Style
-AI Session:7870daba-14a1-45a1-a412-7da8551223d3
-----------------------------------------------------
-user:  can I make an appointment for tint on 24th Sept
-Booka: First Name & Last Name of the person attending the appointment?
-user:  Anthony Gill 
-Booka: which business do you want to book with?
-user:  In2Style
-Booka: Sure, let me find next availabilities.
-Booka:  Sorry, that time is not available. Next available slots are: 1st Oct @ 10:00 AM, 1st Oct @ 01:00 PM, 1st Oct @ 02:00 PM
-user:  in the afternoon?
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 2nd Oct @ 11:00 AM, 2nd Oct @ 12:00 PM, 2nd Oct @ 01:00 PM. What date & time do you prefer?
-user:   2nd Oct @ 12 PM
-Booka: Sure, checking that...
-Booka:  All Done! Your appointment for Tint booked at 2nd Oct @ 12:00 PM with In2Style
-AI Session:af7541a8-12d4-492f-83da-0dc3565c9c9c
-----------------------------------------------------
-user:  can I make an appointment tomorrow morning for tint
-Booka: First Name & Last Name of the person attending the appointment?
-user:  Anthony Gill 
-Booka: which business do you want to book with?
-user:  In2Style
-Booka: Sure, let me find next availabilities.
-Booka:  Sorry, that time is not available. Next available slots are: 23rd Sep @ 04:00 PM, 1st Oct @ 10:00 AM, 1st Oct @ 01:00 PM
-user:  check after this week
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 1st Oct @ 10:00 AM, 1st Oct @ 01:00 PM, 1st Oct @ 02:00 PM. What date & time do you prefer?
-user:   1st Oct @ 01 PM
-Booka: Sure, checking that...
-Booka:  All Done! Your appointment for Tint booked at 1st Oct @ 01:00 PM with In2Style
-AI Session:e3697420-d4a8-42ba-a490-115523c27dcd
-----------------------------------------------------
-user:  can I make an appointment tomorrow morning for tint
-Booka: First Name & Last Name of the person attending the appointment?
-user:  Anthony Gill 
-Booka: which business do you want to book with?
-user:  In2Style
-Booka: Sure, let me find next availabilities.
-Booka:  Sorry, that time is not available. Next available slots are: 23rd Sep @ 04:00 PM, 1st Oct @ 10:00 AM, 1st Oct @ 02:00 PM
-user:  find for next week
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 1st Oct @ 10:00 AM, 1st Oct @ 02:00 PM, 2nd Oct @ 11:00 AM. What date & time do you prefer?
-user:   1st Oct @ 02 PM
-Booka: Sure, checking that...
-Booka:  All Done! Your appointment for Tint booked at 1st Oct @ 02:00 PM with In2Style
-AI Session:2f35a337-551b-4b15-9fe1-2eb593815e47
-----------------------------------------------------
-user:  can I make an appointment tomorrow morning for tint
-Booka: First Name & Last Name of the person attending the appointment?
-user:  Anthony Gill 
-Booka: which business do you want to book with?
-user:  In2Style
-Booka: Sure, let me find next availabilities.
-Booka:  Sorry, that time is not available. Next available slots are: 23rd Sep @ 04:00 PM, 1st Oct @ 10:00 AM, 2nd Oct @ 11:00 AM
-user:  find after the weekend 
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 1st Oct @ 10:00 AM, 2nd Oct @ 11:00 AM, 2nd Oct @ 01:00 PM. What date & time do you prefer?
-user:   2nd Oct @ 11 AM
-Booka: Sure, checking that...
-Booka:  All Done! Your appointment for Tint booked at 2nd Oct @ 11:00 AM with In2Style
-AI Session:423d4f8c-74ce-478b-8125-fb88184eb691
-----------------------------------------------------
-user:  can I make an appointment tomorrow morning for tint
-Booka: First Name & Last Name of the person attending the appointment?
-user:  Anthony Gill 
-Booka: which business do you want to book with?
-user:  In2Style
-Booka: Sure, let me find next availabilities.
-Booka:  Sorry, that time is not available. Next available slots are: 23rd Sep @ 04:00 PM, 1st Oct @ 10:00 AM, 2nd Oct @ 01:00 PM
-user:  find after the weekend 
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 1st Oct @ 10:00 AM, 2nd Oct @ 01:00 PM, 2nd Oct @ 02:00 PM. What date & time do you prefer?
-user:  find for next week
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 1st Oct @ 10:00 AM, 2nd Oct @ 01:00 PM, 2nd Oct @ 02:00 PM. What date & time do you prefer?
-user:  tell me more after that
-Booka: Do you have any preferred date and time?
-user:  check after 24th 
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 1st Oct @ 10:00 AM, 2nd Oct @ 01:00 PM, 2nd Oct @ 02:00 PM. What date & time do you prefer?
-user:   2nd Oct @ 01 PM
-Booka: Sure, checking that...
-Booka:  All Done! Your appointment for Tint booked at 2nd Oct @ 01:00 PM with In2Style
-AI Session:361c915f-3677-48a3-aae6-f42132c2beb7
-----------------------------------------------------
-user:  can I make an appointment tomorrow morning for tint
-Booka: First Name & Last Name of the person attending the appointment?
-user:  Anthony Gill 
-Booka: which business do you want to book with?
-user:  In2Style
-Booka: Sure, let me find next availabilities.
-Booka:  Sorry, that time is not available. Next available slots are: 23rd Sep @ 04:00 PM, 1st Oct @ 10:00 AM, 2nd Oct @ 02:00 PM
-user:  find before the next week
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 23rd Sep @ 04:00 PM, 1st Oct @ 10:00 AM, 2nd Oct @ 02:00 PM. What date & time do you prefer?
-user:   1st Oct @ 10 AM
-Booka: Sure, checking that...
-Booka:  All Done! Your appointment for Tint booked at 1st Oct @ 10:00 AM with In2Style
-AI Session:62fcf44a-cf2f-433e-86be-0d6faa2ba762
-----------------------------------------------------
-user:  can I make an appointment for tint
-Booka: First Name & Last Name of the person attending the appointment?
-user:  Anthony Gill 
-Booka: which business do you want to book with?
-user:  In2Style
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 23rd Sep @ 04:00 PM, 2nd Oct @ 02:00 PM, 2nd Oct @ 03:00 PM. What date & time do you prefer?
-user:  find something after 25th Sept
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 2nd Oct @ 02:00 PM, 2nd Oct @ 03:00 PM, 2nd Oct @ 04:00 PM. What date & time do you prefer?
-user:   2nd Oct @ 03 PM
-Booka: Sure, checking that...
-Booka:  All Done! Your appointment for Tint booked at 2nd Oct @ 03:00 PM with In2Style
-AI Session:98ba4f00-e78a-4c94-b984-5b763c835d1c
-----------------------------------------------------
-user:   Can I make an appointment next tuesday morning
-Booka: First Name & Last Name of the person attending the appointment?
-user:   Anthony Gill 
+user:  can I make an appointment tomorrow morning
 Booka: what type of Service are your looking for ?
 user:  tint
-Booka: which business do you want to book with?
-user:  In2Style
 Booka: Sure, let me find next availabilities.
-Booka:  Sorry, that time is not available. Next available slots are: 2nd Oct @ 02:00 PM, 2nd Oct @ 04:00 PM, 2nd Oct @ 05:00 PM
-user:   what you have after that?
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 3rd Oct @ 10:00 AM, 3rd Oct @ 11:00 AM, 3rd Oct @ 12:00 PM. What date & time do you prefer?
-user:   check 28th Sep
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 2nd Oct @ 02:00 PM, 2nd Oct @ 04:00 PM, 2nd Oct @ 05:00 PM. What date & time do you prefer?
-user:   2nd Oct @ 04 PM
+Booka:  Sorry, that time is not available. Next available slots are: 7th Oct @ 10:00 AM, 7th Oct @ 11:00 AM, 7th Oct @ 05:00 PM
+user: I want 10AM 
 Booka: Sure, checking that...
-Booka:  All Done! Your appointment for Tint booked at 2nd Oct @ 04:00 PM with In2Style
-Booka: Sure, checking that...
-Booka:  All Done! Your appointment for Tint booked at 2nd Oct @ 04:00 PM with In2Style
-AI Session:c6403d36-dc41-42d7-b3a4-abcd4e83355b
+Booka:  Sorry, that time is not available. Next available slots are: 7th Oct @ 10:00 AM, 7th Oct @ 11:00 AM, 7th Oct @ 05:00 PM
+AI Session:70d998b4-51c2-4456-b98c-1f3047780083
 ----------------------------------------------------
-user:  can I make an appointment for tint this weekend
-Booka: First Name & Last Name of the person attending the appointment?
-user:  Anthony Gill 
-Booka: which business do you want to book with?
-user:  In2Style
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 23rd Sep @ 04:00 PM, 2nd Oct @ 02:00 PM, 2nd Oct @ 05:00 PM. What date & time do you prefer?
-user:   2nd Oct @ 02 PM
-Booka: Sure, checking that...
-Booka:  All Done! Your appointment for Tint booked at 2nd Oct @ 02:00 PM with In2Style
-AI Session:ca6b4f61-78e5-4d32-aa85-ec80193ed25b
-----------------------------------------------------
-user:   Can I make an appointment next tuesday morning
-Booka: First Name & Last Name of the person attending the appointment?
-user:   Anthony Gill 
+user:  Can I get an appointment today
 Booka: what type of Service are your looking for ?
 user:  tint
-Booka: which business do you want to book with?
-user:  In2Style
 Booka: Sure, let me find next availabilities.
-Booka:  Sorry, that time is not available. Next available slots are: 2nd Oct @ 05:00 PM, 3rd Oct @ 10:00 AM, 3rd Oct @ 11:00 AM
-user:   check after 2nd Oct
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 3rd Oct @ 10:00 AM, 3rd Oct @ 11:00 AM, 3rd Oct @ 12:00 PM. What date & time do you prefer?
-user:   check in the afternoon
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 3rd Oct @ 12:00 PM, 3rd Oct @ 01:00 PM, 3rd Oct @ 02:00 PM. What date & time do you prefer?
-user:  check after 3 PM
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 3rd Oct @ 03:00 PM, 3rd Oct @ 04:00 PM, 3rd Oct @ 05:00 PM. What date & time do you prefer?
-AI Session:85da235c-e659-4734-9924-7a418394b87c
+Booka:  The next available slots are: 7th Oct @ 10:00 AM, 7th Oct @ 11:00 AM, 7th Oct @ 05:00 PM. What date & time do you prefer?
+user: 11am
+Booka: Sure, checking that...
+Booka:  All Done! Your appointment for Tint booked at 7th Oct @ 11:00 AM with In2Style
+AI Session:b90eba56-2bf3-4b37-a820-8d56e72328a9
 ----------------------------------------------------
-user:   Can I make an appointment next tuesday morning
-Booka: First Name & Last Name of the person attending the appointment?
-user:   Anthony Gill 
+user:  Need an appointment for today 
 Booka: what type of Service are your looking for ?
 user:  tint
-Booka: which business do you want to book with?
-user:  In2Style
 Booka: Sure, let me find next availabilities.
-Booka:  Sorry, that time is not available. Next available slots are: 2nd Oct @ 05:00 PM, 3rd Oct @ 10:00 AM, 3rd Oct @ 11:00 AM
-user:   check after 24th Sept 3 PM
+Booka:  The next available slots are: 7th Oct @ 10:00 AM, 7th Oct @ 05:00 PM, 8th Oct @ 10:00 AM. What date & time do you prefer?
+user: 10am
+Booka: Sure, checking that...
+Booka:  All Done! Your appointment for Tint booked at 7th Oct @ 10:00 AM with In2Style
+AI Session:7feb354f-0b8d-425b-9e55-42c6366bf321
+----------------------------------------------------
+user:  Is there any time today?
+Booka: what type of Service are your looking for ?
+user:  tint
 Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 2nd Oct @ 05:00 PM, 3rd Oct @ 10:00 AM, 3rd Oct @ 11:00 AM. What date & time do you prefer?
-user:   check in the 26th Sept afternoon
+Booka:  The next available slots are: 7th Oct @ 05:00 PM, 8th Oct @ 10:00 AM, 8th Oct @ 11:00 AM. What date & time do you prefer?
+user: 5
+Booka: Sure, checking that...
+Booka:  All Done! Your appointment for Tint booked at 7th Oct @ 05:00 PM with In2Style
+AI Session:4415c618-77b3-40b2-af04-19dc11581a35
+----------------------------------------------------
+user:  got anything for today?
+Booka: what type of Service are your looking for ?
+user:  tint
 Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 2nd Oct @ 05:00 PM, 3rd Oct @ 10:00 AM, 3rd Oct @ 11:00 AM. What date & time do you prefer?
-AI Session:0fb94cc5-6603-43d5-abee-d8c8f2a0ccec
+Booka:  The next available slots are: 8th Oct @ 10:00 AM, 8th Oct @ 11:00 AM, 8th Oct @ 12:00 PM. What date & time do you prefer?
+user: 8th oct @ 10
+Booka: Sure, checking that...
+Booka:  All Done! Your appointment for Tint booked at 8th Oct @ 10:00 AM with In2Style
+AI Session:bdb6a7f9-c644-44b5-bd45-2a6b77b1e400
+----------------------------------------------------
+user:  Can I make an appointment next week
+Booka: what type of Service are your looking for ?
+user:  tint
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 8th Oct @ 11:00 AM, 8th Oct @ 12:00 PM, 8th Oct @ 01:00 PM. What date & time do you prefer?
+user: 8 oct at 11
+Booka: Sure, checking that...
+Booka:  All Done! Your appointment for Tint booked at 8th Oct @ 11:00 AM with In2Style
+AI Session:13b31bc4-9c8e-4b3b-bf71-2f1b9aaeb1c8
+----------------------------------------------------
+user:  Book Tuesday
+Booka: what type of Service are your looking for ?
+user:  tint
+Booka: Sure, let me find next availabilities.
+Booka:  Sorry, that time is not available. Next available slots are: 8th Oct @ 12:00 PM, 8th Oct @ 01:00 PM, 8th Oct @ 02:00 PM
+user: i will go for 12pm\
+Booka: Sure, checking that...
+Booka:  Sorry, that time is not available. Next available slots are: 8th Oct @ 12:00 PM, 8th Oct @ 01:00 PM, 8th Oct @ 02:00 PM
+AI Session:96c12fbc-9ade-4474-963f-746bdea13a17
+----------------------------------------------------
+user:  book me in next thursday
+Booka: what type of Service are your looking for ?
+user:  tint
+Booka: Sure, let me find next availabilities.
+Booka:  Sorry, that time is not available. Next available slots are: 8th Oct @ 12:00 PM, 8th Oct @ 01:00 PM, 8th Oct @ 02:00 PM
+user: 12pm
+Booka: Sure, checking that...
+Booka:  All Done! Your appointment for Tint booked at 8th Oct @ 12:00 PM with In2Style
+AI Session:4f8ff27a-3d65-4b72-95fb-174b6b781c1b
+----------------------------------------------------
+user:  book me in this weekend
+Booka: what type of Service are your looking for ?
+user:  tint
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 8th Oct @ 01:00 PM, 8th Oct @ 02:00 PM, 8th Oct @ 03:00 PM. What date & time do you prefer?
+user: @2
+Booka: Sure, checking that...
+Booka:  All Done! Your appointment for Tint booked at 8th Oct @ 02:00 PM with In2Style
+AI Session:e3060f68-ab0b-4a1f-b5cb-a6240f387fca
+----------------------------------------------------
+user:  book me for this thursday
+Booka: what type of Service are your looking for ?
+user:  tint
+Booka: Sure, let me find next availabilities.
+Booka:  Sorry, that time is not available. Next available slots are: 8th Oct @ 01:00 PM, 8th Oct @ 03:00 PM, 8th Oct @ 04:00 PM
+user: 1.30
+Booka: Bummer!! I dint get that, try again to tell me a date and/or time that you want me to check
+AI Session:2d9c7845-ca56-4737-b4ab-53d4f9820c28
+----------------------------------------------------
+user:  Book me in anytime today
+Booka: what type of Service are your looking for ?
+user:  tint
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 8th Oct @ 01:00 PM, 8th Oct @ 03:00 PM, 8th Oct @ 04:00 PM. What date & time do you prefer?
+user: 3pm
+Booka: Sure, checking that...
+Booka:  All Done! Your appointment for Tint booked at 8th Oct @ 03:00 PM with In2Style
+AI Session:9f230d14-68e6-4c5c-bf65-794a1b9de8ba
 ----------------------------------------------------

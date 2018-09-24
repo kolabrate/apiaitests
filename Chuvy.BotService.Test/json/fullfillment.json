@@ -8,7 +8,7 @@
       "SmsMessageSid": "",
       "NumSegments": "",
       "ToState": "",
-      "From": "+6167340745",
+      "From": "+61400000000",
       "MessageSid": "SMf0000000000000000000000",
       "AccountSid": "",
       "ToCity": "",
@@ -18,73 +18,67 @@
       "To": "",
       "FromZip": "",
       "ToCountry": "",
-      "Body": " none of these ",
+      "Body": " I want an appointment after 10th Feb for tint with Kolabrate",
       "NumMedia": "",
       "FromState": ""
     }
   },
-  "id": "1b448617-5e23-415d-beda-960cd6966117",
-  "timestamp": "2018-09-20T07:20:57.715Z",
+  "id": "b083cc48-6d47-4fab-ad1e-c7847286b7cc",
+  "timestamp": "2018-09-24T05:13:13.193Z",
   "lang": "en",
   "result": {
     "source": "agent",
-    "resolvedQuery": " none of these ",
+    "resolvedQuery": " I want an appointment after 10th Feb for tint with Kolabrate",
     "speech": "",
-    "action": "ScheduleAppointment.AskMore",
+    "action": "ScheduleAppointment",
     "actionIncomplete": false,
     "parameters": {
+      "attendees": [],
+      "businessName": "Kolabrate Staging Company",
+      "beforeAfter": "after",
+      "Bookingtimeperiod": "",
+      "lastname": "",
+      "Bookingdate": "2019-02-10",
+      "BookingDateTimePeriod": "",
       "genericTimeSlots": "",
-      "AskMoreBookingdate": "",
-      "beforeAfter": "",
-      "booka-showMore": "",
-      "AskMoreTimePeriod": "",
-      "AskMoreBookingtime": "",
-      "AskMoreBookingdateperiod": ""
+      "service": [
+        "Tint"
+      ],
+      "givenname": "",
+      "Bookingtime": "",
+      "Bookingdateperiod": "",
+      "providerName": ""
     },
     "contexts": [
       {
         "name": "scheduleappointment-followup",
         "parameters": {
-          "businessName.original": "In2Style",
-          "AskMoreTimePeriod.original": "",
+          "businessName.original": "Kolabrate",
           "genericTimeSlots.original": "",
-          "AskMoreBookingdate.original": "",
-          "businessName": "In2Style",
+          "businessName": "Kolabrate Staging Company",
           "providerName.original": "",
-          "AskMoreBookingtime.original": "",
-          "lastname.original": "Gill",
-          "beforeAfter": "",
-          "askMoreAttempts.original": "",
+          "lastname.original": "",
+          "beforeAfter": "after",
           "Bookingtimeperiod.original": "",
-          "BookingDateTimePeriod": "2018-09-20T12:00:00Z/2018-09-20T16:00:00Z",
+          "BookingDateTimePeriod": "",
           "genericTimeSlots": "",
           "attendees.original": "",
-          "givenname": "Anthony",
-          "givenname.original": "Anthony",
+          "givenname": "",
+          "givenname.original": "",
           "Bookingtime": "",
-          "askMoreAttempts": "5",
-          "AskMoreBookingdateperiod": "",
           "providerName": "",
-          "BookingDateTimePeriod.original": "this afternoon",
-          "AskMoreBookingdate": "",
+          "BookingDateTimePeriod.original": "",
           "attendees": [],
-          "beforeAfter.original": "",
-          "listedSlotValues.original": "",
+          "beforeAfter.original": "after",
           "service.original": "tint",
           "Bookingtimeperiod": "",
-          "lastname": "Gill",
+          "lastname": "",
           "Bookingdateperiod.original": "",
-          "Bookingdate.original": "",
-          "Bookingdate": "",
+          "Bookingdate.original": "10th Feb",
+          "Bookingdate": "2019-02-10",
           "service": [
             "Tint"
           ],
-          "booka-showMore.original": "",
-          "AskMoreTimePeriod": "",
-          "booka-showMore": "",
-          "AskMoreBookingdateperiod.original": "",
-          "AskMoreBookingtime": "",
-          "listedSlotValues": "636740856000000000,636740892000000000,636740928000000000",
           "Bookingdateperiod": "",
           "Bookingtime.original": ""
         },
@@ -92,11 +86,11 @@
       }
     ],
     "metadata": {
-      "intentId": "8adc6c8e-9854-4b75-9ab5-0f3272a16783",
+      "intentId": "e1710622-ec4a-4cf7-a117-856873ef4b3b",
       "webhookUsed": "true",
-      "webhookForSlotFillingUsed": "false",
+      "webhookForSlotFillingUsed": "true",
       "isFallbackIntent": "false",
-      "intentName": "ScheduleAppointment.AskMore"
+      "intentName": "ScheduleAppointment"
     },
     "fulfillment": {
       "speech": "",
@@ -107,11 +101,11 @@
         }
       ]
     },
-    "score": 1.0
+    "score": 0.949999988079071
   },
   "status": {
     "code": 200,
     "errorType": "success"
   },
-  "sessionId": "02dc23d8-0352-4d85-945f-70837b96f06d"
+  "sessionId": "6fea47f2-c2e5-4f7c-ab72-454b66cc80ab"
 }

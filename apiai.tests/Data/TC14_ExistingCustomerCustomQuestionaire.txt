@@ -1,17 +1,17 @@
 ﻿Expression: 6. Existing Customer custom questionaire
 Case: 1. book me in today after 5 PM for haircut with Toyota
-Customer: book me in today after 5 PM for [service] with [Business]
+Customer: book me in today after 5 PM for [service] with [businessName]
 Booka: <LocationRequired>
-Customer: Airport West
+Customer: [locationName]
 Booka: <CustomAnswerRequired>
 Customer: sdkhgf
 Booka: <Checking><SlotsAvailable> 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 2. book me in for car service with Toyota
-Customer: book me in for [service] with [Business]
+Customer: book me in for [service] with [businessName]
 Booka: <LocationRequired>
-Customer: Airport West
+Customer: [locationName]
 Booka: <CustomAnswerRequired>
 Customer: sdkhgf
 Booka: <Checking><SlotsAvailable> 
@@ -20,9 +20,9 @@ Booka: <CheckingConfirmation><Booked>
 Case: 3. book me in for car service
 Customer: book me in for [service]
 Booka: <UnknownBusiness>
-Customer: Toyota
+Customer: [businessName]
 Booka: <LocationRequired>
-Customer: Airport West
+Customer: [locationName]
 Booka: <CustomAnswerRequired>
 Customer: sdkhgf
 Booka: <Checking><SlotsAvailable> 
@@ -31,9 +31,9 @@ Booka: <CheckingConfirmation><Booked>
 Case: 4. book me in for car service - One show more intent
 Customer: book me in for [service]
 Booka: <UnknownBusiness>
-Customer: Toyota
+Customer: [businessName]
 Booka: <LocationRequired>
-Customer: Airport West
+Customer: [locationName]
 Booka: <CustomAnswerRequired>
 Customer: sdkhgf
 Booka: <Checking><SlotsAvailable> 
@@ -44,9 +44,9 @@ Booka: <CheckingConfirmation><Booked>
 Case: 5. book me in for car service - Many show more intent
 Customer: book me in for [service]
 Booka: <UnknownBusiness>
-Customer: Toyota
+Customer: [businessName]
 Booka: <LocationRequired>
-Customer: Airport West
+Customer: [locationName]
 Booka: <CustomAnswerRequired>
 Customer: sdkhgf
 Booka: <Checking><SlotsAvailable> 
@@ -69,7 +69,7 @@ Customer: asdf
 Case: 6. book me in for car service - Location Name multiple attempts
 Customer: book me in for [service]
 Booka: <UnknownBusiness>
-Customer: Toyota
+Customer: [businessName]
 Booka: <LocationRequired>
 Customer: asdf
 Booka: <LocationRequired>
@@ -80,5 +80,5 @@ Customer: asdf
 Case: 7. book me in for car service - Multiple services
 Customer: book me in for [service] and [service2]
 Booka: <UnknownBusiness>
-Customer: Toyota
+Customer: [businessName]
 Booka: <MissingServices>

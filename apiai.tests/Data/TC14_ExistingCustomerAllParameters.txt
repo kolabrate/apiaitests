@@ -1,14 +1,24 @@
-﻿Expression: 6. Existing Customer custom questionaire
-Case: 1. book me in today after 5 PM for haircut with Toyota
-Customer: book me in today after 5 PM for [service] with [Business] at [location]
+﻿Expression: 6. Existing custom questionaire
+Case: 1. book me in today after 5 PM for car service with Toyota
+Customer: book me in today after 5 PM for [service] with [businessName] at [locationName]
 Booka: <CustomAnswerRequired>
 Customer: sdkhgf
 Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
-Case: 2. book me in today after 5 PM for haircut with Toyota
-Customer: book me tomorrow for [service] with [Business] at [location]
+Case: 2. book me in today after 5 PM for car service with Toyota
+Customer: book me tomorrow for [service] with [businessName] at [locationName]
 Booka: <CustomAnswerRequired>
 Customer: sdkhgf
 Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 2. book me in today after 5 PM for car service with Toyota
+Customer: book me tomorrow for [service] with [businessName] at [locationName]
+Booka: <CustomAnswerRequired>
+Customer: sdkhgf
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>

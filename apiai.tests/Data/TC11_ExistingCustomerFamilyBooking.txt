@@ -4,6 +4,7 @@ Customer: book me an appointment for [service] for my son
 Booka: <UnknownBusiness>
 Customer: [businessName]
 Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 2. book me an appointment for myself and my son 
@@ -13,22 +14,23 @@ Customer: [service]
 Booka: <UnknownBusiness>
 Customer: [businessName]
 Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 3. book an appointment for me and my son 
 Customer: book an appointment for me and my son 
 Booka: what type of service are you looking for?
 Customer: [service]
-Booka: <UnknownBusiness>
-Customer: [businessName]
 Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 4. book haircut and blowdry appointment for me and haircut for my son
-Customer: book [service] and [serviceAdditional] appointment for me and [service] for my son
+Customer: book [service] and [shortService] appointment for me and [service] for my son
 Booka: <UnknownBusiness>
 Customer: [businessName]
 Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 5. book haircut appointment for my son and daughter
@@ -36,4 +38,5 @@ Customer: book [service] appointment for my son and daughter
 Booka: <UnknownBusiness>
 Customer: [businessName]
 Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>

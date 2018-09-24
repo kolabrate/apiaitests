@@ -15,28 +15,14 @@ Case: 2. book me in this afternoon
 Customer: book me in this afternoon
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [shortService]
-Booka: <UnknownBusiness>
-Customer: [businessName]
-Booka: <ManyServices> 
-Customer: [fullService]
+#Booka: <UnknownBusiness>
+#Customer: [businessName]
 Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation>
 
 Case: 3. Missing service
 Customer: book me in this afternoon for [service] and [missingService]
-Booka: what type of service are you looking for?<ValidationException>
-Customer: [shortService]
-Booka: <UnknownBusiness>
-Customer: [businessName]
-Booka: <ManyServices> 
-Customer: [fullService]
-Booka: <Checking><SlotsAvailable> 
-Customer: [ConfirmDatetime] 
-Booka: <CheckingConfirmation>
-
-Case: 4. Only one service is unavailable of the list of services
-Customer: book me in this afternoon for [service] and [unknownService]
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [shortService]
 Booka: <UnknownBusiness>

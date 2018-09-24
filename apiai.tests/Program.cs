@@ -187,7 +187,7 @@ namespace apiai.tests
             var list = new List<string>();
             var fileNames = new List<string>();
             var filesNamesArray = Directory.GetFiles(@"..\..\Data\");
-            fileNames = filesNamesArray.Where(c => c.StartsWith("..\\..\\Data\\TC61_NewCustomerShowMore")).ToList(); 
+            fileNames = filesNamesArray.Where(c => c.StartsWith("..\\..\\Data\\TC5_ExistingCustomerConfirmationVariations")).ToList(); 
             //fileNames = filesNamesArray.Where(c => c.StartsWith("..\\..\\Data\\allNewConvo")).ToList();
 
             //fileNames.Add(@"..\..\Data\allNewConvo.txt");
@@ -482,6 +482,8 @@ namespace apiai.tests
         private static string freeDtConfirm = null;
         private static string serviceName = "tint";
         private static string providerName = "Kolabrate";
+        private static string businessName = "In2Style";
+        private static string locationName = "Airport West";
         private static void ProcessCase(List<Conversation> conversations, string caseName, bool isNewCustomer = true)
         {
             response = null;
@@ -489,6 +491,8 @@ namespace apiai.tests
             var number = "+61400000000";
             if (isNewCustomer)
                 number = "+61" + (new string(DateTime.Now.Ticks.ToString().Reverse().ToArray())).Substring(0, 8);
+            if (caseName.Contains("<") && caseName.Contains(">"))
+                number = caseName.Substring(caseName.IndexOf("<") + 1, caseName.IndexOf(">") - caseName.IndexOf("<") - 1);
 
             foreach (var convo in conversations)
             {
@@ -505,17 +509,29 @@ namespace apiai.tests
                     {
                         UserQuery = UserQuery.Replace("[Datetime]", bookedDt);
                     }
-                    if (!UserQuery.Contains("[ConfirmDatetime]") || (UserQuery.Contains("[ConfirmDatetime]") && !string.IsNullOrEmpty(freeDtConfirm)))
+                    if (UserQuery.Contains("[ReadLine]"))
+                    {
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("user("+UserQuery+"): ");
+                        UserQuery = Console.ReadLine();
+                        ProcessUserQueryAsync(number).Wait();
+                        WriteToFile(string.Format("user: {0}", UserQuery));
+                    }
+                    else if (!UserQuery.Contains("[ConfirmDatetime]") || (UserQuery.Contains("[ConfirmDatetime]") && !string.IsNullOrEmpty(freeDtConfirm)))
                     {
                         UserQuery = UserQuery.Replace("[ConfirmDatetime]", freeDtConfirm);
                         UserQuery = UserQuery.Replace("[Provider]", providerName);
                         UserQuery = UserQuery.Replace("[todayAtXPM]", "3 PM");
-                        UserQuery = UserQuery.Replace("[businessName]", "In2Style");
+                        UserQuery = UserQuery.Replace("[businessName]", businessName);
+                        UserQuery = UserQuery.Replace("[shortService]", "haircut & wash");
+                        UserQuery = UserQuery.Replace("[fullService]", "Cut & Wash");
+                        UserQuery = UserQuery.Replace("[missingService]", "bleech");
+                        UserQuery = UserQuery.Replace("[locationName]", locationName);
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.WriteLine(string.Format("user: {0}", UserQuery));
                         ProcessUserQueryAsync(number).Wait();
                         WriteToFile(string.Format("user: {0}", UserQuery));
-                    }
+                    }                    
                     else
                     {
                         Console.WriteLine("Tester: No confirm date");

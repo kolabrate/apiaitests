@@ -4,7 +4,7 @@ Customer: book me in this afternoon
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: I will go for 3PM on 14th August
+Customer: I will go for 3PM on 14th August[ReadLine]
 Booka: <CheckingConfirmation><Booked>
 
 Case: 44. Can I get an appointment tomorrow morning
@@ -12,7 +12,7 @@ Customer: Can I get an appointment tomorrow morning
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: 4PM 14th Aug
+Customer: 4PM 14th Aug[ReadLine]
 Booka: <CheckingConfirmation><Booked>
 
 Case: 45. I need an appointment next monday afternoon
@@ -20,7 +20,7 @@ Customer: I need an appointment next monday afternoon
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: do 8PM tonight 
+Customer: do 8PM tonight [ReadLine]
 Booka: <CheckingConfirmation><Booked>
 
 Case: 46. Can I make an appointment next tuesday morning
@@ -28,7 +28,7 @@ Customer: Can I make an appointment next tuesday morning
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: book the 4PM on 14th August
+Customer: book the 4PM on 14th August[ReadLine]
 Booka: <CheckingConfirmation><Booked>
 
 Case: 47. can I make an appointment tomorrow morning
@@ -36,7 +36,7 @@ Customer: can I make an appointment tomorrow morning
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: I want 10.30 AM on 11th August 
+Customer: I want 10.30 AM on 11th August [ReadLine]
 Booka: <CheckingConfirmation><Booked>
 
 Case: 48. Can I get an appointment today
@@ -44,7 +44,7 @@ Customer: Can I get an appointment today
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: 11AM this thursday 
+Customer: 11AM this thursday [ReadLine]
 Booka: <CheckingConfirmation><Booked>
 
 Case: 49. Need an appointment for today 
@@ -52,7 +52,7 @@ Customer: Need an appointment for today
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: [ConfirmDatetime] 
+Customer: 3pm [ReadLine] 
 Booka: <CheckingConfirmation><Booked>
 
 Case: 50. Is there any time today?
@@ -60,7 +60,7 @@ Customer: Is there any time today?
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: 12
+Customer: 12[ReadLine]
 Booka: <CheckingConfirmation><Booked>
 
 Case: 51. got anything for today?
@@ -68,7 +68,7 @@ Customer: got anything for today?
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: 6 sep @ 12
+Customer: 6 sep @ 12[ReadLine]
 Booka: <CheckingConfirmation><Booked>
 
 Case: 52. Can I make an appointment next week
@@ -76,7 +76,7 @@ Customer: Can I make an appointment next week
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: 6 sep at 12PM 
+Customer: 6 sep at 12PM [ReadLine]
 Booka: <CheckingConfirmation><Booked>
 
 Case: 53. Book Tuesday
@@ -84,7 +84,7 @@ Customer: Book Tuesday
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: i will go for 9 am 
+Customer: i will go for 9 am [ReadLine]
 Booka: <CheckingConfirmation><Booked>
 
 Case: 54. book me in next thursday
@@ -92,7 +92,7 @@ Customer: book me in next thursday
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: 9am 
+Customer: 9am [ReadLine]
 Booka: <CheckingConfirmation>
 
 Case: 55. book me in this weekend
@@ -100,21 +100,21 @@ Customer: book me in this weekend
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: @9 
+Customer: @9 [ReadLine]
 Booka: <CheckingConfirmation><Booked>
 
-Case: 56. book me for this thursday
+Case: 56. book me for this thursday (a time that is not listed.)
 Customer: book me for this thursday
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: 10 pm 
+Customer: 10.30 pm [ReadLine]
 Booka: <CheckingConfirmation>
 
-Case: 57. Book me in anytime today
+Case: 57. Book me in anytime today(a time that is not listed.)
 Customer: Book me in anytime today
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [service]
 Booka: <Checking><SlotsAvailable> 
-Customer: 11 pm
+Customer: 11:30 PM[ReadLine]
 Booka: <CheckingConfirmation><Booked>

@@ -1,4 +1,5 @@
 ﻿Expression: 6. Existing Customer Cancel Appointments
+
 Case: 43. Cancel my appointment today (Customer got only one appointment for today)
 Customer: Cancel my appointment today
 Booka: Done. Your appointment is cancelled
