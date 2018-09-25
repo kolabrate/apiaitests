@@ -1,0 +1,945 @@
+﻿Expression: All Prod convos
+Case 1: <-81433119785>	
+Customer: Books [service] with Paul 
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Renae Maxwell 
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> The next available slots with Paul Allen are: 7th Dec @ 10:00 AM, 7th Dec @ 10:45 AM, 7th Dec @ 11:30 AM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 5: <-81433119785>	
+Customer: [manyServices] with Paul tomorrow 
+Booka: <Checking><SlotsAvailable> The next available slots with Paul Allen are: 12th Dec @ 10:00 AM, 12th Dec @ 10:45 AM, 12th Dec @ 11:30 AM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 7: <-81438096425>	
+Customer: Hello can I book a appointment with [providerName] on Thursday Oct 11 at 10am for Phil Scissor
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Phil Scissor
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: [service]
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+
+Case 9: <-81429822574>	
+Customer: Book [service] tomorrow 4pm
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Anna Williams
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+
+Case 13: <-81438096425>	
+Customer: Book a [service] with [providerName] 12th Oct
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> The next available slots are: 12th Oct @ 10:00 AM, 12th Oct @ 10:45 AM, 12th Oct @ 11:30 AM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 15: <-81403158131>	
+Customer: Heyyy [businessName], Was hoping to come in tomorrow afternoon (Wed 10th Oct) any time after midday if possible Cheers Sam
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Sam Cummins
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: A [service]
+Booka: <Checking><SlotsAvailable> The next available slots are: 10th Oct @ 12:15 PM, 10th Oct @ 01:00 PM, 10th Oct @ 01:45 PM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 19: <-81411606697>	
+Customer: Hi Paul - can you slot me in for an appointment sometime on Tuesday 16th Oct say in the morning? Cheers David Lawrence 0411 606 697
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: [service] with [businessName]
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: David Lawrence
+Booka: <Checking><SlotsAvailable>
+
+Case 43: <-81414855295>	
+Customer: Hello hair robot. Do you have free appointment late tomorrow for Cyril. Shall I do it like this? 1100000011000011111110
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Cyril Reboul 
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: [service]
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> The next available slots are: 3rd Feb @ 10:45 AM, 3rd Feb @ 01:00 PM, 3rd Feb @ 03:15 PM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+Customer: Thank you hair robot
+
+Case 51: <-81424045198>	
+Customer: Can I book a cloud consulting session 
+Booka: You have not made any bookings
+
+Case 72: <-81411268455>	
+Customer: Book an IT programming appointment 
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Cyril Reboul 
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: <Checking><SlotsAvailable> The next available slots are: 12th Feb @ 10:00 AM, 12th Feb @ 11:00 AM, 12th Feb @ 12:00 PM. What date & time do you prefer?
+Customer: Midday
+Booka: <Checking><SlotsAvailable> The next available slots with mark corrie are: 15th Feb @ 12:00 PM, 15th Feb @ 01:00 PM, 15th Feb @ 02:00 PM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 76: <-81407818427>	
+Customer: Paul Allen March 3rd 10.45am
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+Customer: Book me on March 3rd at 10.45am with Paul Allen
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Paul O'Keefe
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: [service]
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 84: <-81434162328>	
+Customer: It programming please 
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Ryan lawson
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: <Checking><SlotsAvailable> The next available slots with mark corrie are: 15th Feb @ 12:00 PM, 15th Feb @ 01:00 PM, 15th Feb @ 02:00 PM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 86: <-81439768916>	
+Customer: Appointment please!
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Kirsten mckinley
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: It programming
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: <Checking><SlotsAvailable> The next available slots are: 14th Feb @ 10:00 AM, 14th Feb @ 11:00 AM, 14th Feb @ 12:00 PM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 90: <-81410628067>	
+Customer: ???
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+Customer: Book me in for next Tuesday for an IT appointment
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: David Newton
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: IT
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: Can't be sure of what service you are looking for. Try any of these: Mobile Dev, Azure Consulting, Cut, Cut & Wash, Cut, Wash And Blow Out
+Customer: Azure
+Booka: Do you want to try one or more of these options: Mobile Dev, Azure Consulting, Cut, Cut & Wash, Cut, Wash And Blow Out
+Customer: No
+Booka: Popular Services: Mobile Dev, Azure Consulting, Cut, Cut & Wash, Cut, Wash And Blow Out. If you want help in finding the right service, please contact provider
+Customer: Testing testing for an IT appointment
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: IT programming
+Booka: <Checking><SlotsAvailable> The next available slots are: 14th Feb @ 11:00 AM, 14th Feb @ 12:00 PM, 14th Feb @ 01:00 PM. What date & time do you prefer?
+
+Case 99: <-81418760178>	
+Customer: Hi Mark, could I please make an an appointment for an IT programming job. Sue
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Sue Richards 
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: <Checking><SlotsAvailable> The next available slots with mark corrie are: 14th Feb @ 11:00 AM, 14th Feb @ 12:00 PM, 14th Feb @ 01:00 PM. What date & time do you prefer?
+
+Case 101: <-81401419853>	
+Customer: IT programming
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Hayley Todd 
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: <Checking><SlotsAvailable> The next available slots are: 14th Feb @ 11:00 AM, 14th Feb @ 12:00 PM, 14th Feb @ 01:00 PM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+
+Case 108: <-81421394984>	
+Customer: Hello Mark - This the Colonel
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+Customer: I'd like an IT programming appointment please.
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: The Colonel
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: <Checking><SlotsAvailable> The next available slots are: 14th Feb @ 11:00 AM, 14th Feb @ 12:00 PM, 14th Feb @ 03:00 PM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 112: <-81418728294>	
+Customer: Hi Mark ,could I please make an appointment for an IT programming job Warren Richards
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Warren Richards 
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: <Checking><SlotsAvailable> The next available slots with mark corrie are: 14th Feb @ 12:00 PM, 14th Feb @ 03:00 PM, 14th Feb @ 04:00 PM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 117: <-81421202314>	
+Customer: Love u
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+Customer: I said I love you
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+Customer: Forget about it
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+
+Case 120: <-81432388032>	
+Customer: Hello I would like to make a booking please .
+Booka: Hello, how can I help you with the appointment?
+Customer: I need an IT booking
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Lea da Silva Gome
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: I’m booking for a business
+Booka: Can't be sure of what service you are looking for. Try any of these: Mobile Dev, Azure Consulting, Cut, Cut & Wash, Cut, Wash And Blow Out
+Customer: Mobile dev
+Booka: Do you want to try one or more of these options: Mobile Dev, Azure Consulting, Cut, Cut & Wash, Cut, Wash And Blow Out
+Customer: Yes
+Booka: Popular Services: Mobile Dev, Azure Consulting, Cut, Cut & Wash, Cut, Wash And Blow Out. If you want help in finding the right service, please contact provider
+Customer: IT programming
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: <Checking><SlotsAvailable> The next available slots are: 14th Feb @ 03:00 PM, 14th Feb @ 04:00 PM, 15th Feb @ 10:00 AM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 128: <-81459508675>	
+Customer: Hi could I make an appointment for IT programming
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: David Barclay
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: <Checking><SlotsAvailable> The next available slots are: 14th Feb @ 04:00 PM, 15th Feb @ 10:00 AM, 15th Feb @ 11:00 AM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 131: <-81409489901>	
+Customer: Hey mate, can I make an IT programming booking please and thank you?
+Booka: Hello, how can I help you with the appointment?
+Customer: Yes
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+Customer: book me in next Thursday 
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: David Barcas 
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: IT programming
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: <Checking><SlotsAvailable> The next available slots are: 22nd Feb @ 10:00 AM, 22nd Feb @ 11:00 AM, 22nd Feb @ 12:00 PM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 138: <-81403466364>	
+Customer: I want to make a booking 
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Robyn Fawcett 
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: It 
+Booka: Can't be sure of what service you are looking for. Try any of these: Mobile Dev, Azure Consulting, Cut, Cut & Wash, Cut, Wash And Blow Out
+Customer: Mobile dev please 
+Booka: Do you want to try one or more of these options: Mobile Dev, Azure Consulting, Cut, Cut & Wash, Cut, Wash And Blow Out
+Customer: Azure 
+Booka: Popular Services: Mobile Dev, Azure Consulting, Cut, Cut & Wash, Cut, Wash And Blow Out. If you want help in finding the right service, please contact provider
+Customer: [manyServices] 
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> The next available slots are: 14th Feb @ 10:00 AM, 14th Feb @ 10:45 AM, 14th Feb @ 12:15 PM. What date & time do you prefer?
+Customer: 14th 
+Booka: <Checking><SlotsAvailable> The next available slots are: 14th Feb @ 10:00 AM, 14th Feb @ 10:45 AM, 14th Feb @ 12:15 PM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+
+Case 147: <-81417026752>	
+Customer: Hi
+Booka: Hello, how can I help you with the appointment?
+Customer: Yes
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+Customer: Make booking 
+Booka: You have not made any bookings
+Customer: I want to make a booking 
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Allan Allan 
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: It 
+Booka: Can't be sure of what service you are looking for. Try any of these: Mobile Dev, Azure Consulting, Cut, Cut & Wash, Cut, Wash And Blow Out
+Customer: Cut
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> The next available slots are: 14th Feb @ 10:00 AM, 14th Feb @ 12:15 PM, 14th Feb @ 01:00 PM. What date & time do you prefer?
+Customer: 1pm   [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+Customer: Great where ?
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+
+Case 156: <-81403466364>	
+Customer: Please cancel my appointment 
+Booka: Done, your appointment is cancelled
+
+Case 157: <-81417026752>	
+Customer: Please cancel my appt 
+Booka: Done, your appointment is cancelled
+
+Case 158: <-81403466364>	
+Customer: It programming 
+Booka: <Checking><SlotsAvailable> The next available slots are: 14th Feb @ 04:00 PM, 15th Feb @ 11:00 AM, 15th Feb @ 12:00 PM. What date & time do you prefer?
+Customer: 15th 
+Booka: <Checking><SlotsAvailable> The next available slots are: 15th Feb @ 11:00 AM, 15th Feb @ 12:00 PM, 15th Feb @ 02:00 PM. What date & time do you prefer?
+Customer: 12pm 
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 161: <-81417026752>	
+Customer: It prog
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+Customer: Programming 
+Booka: <Checking><SlotsAvailable> The next available slots are: 14th Feb @ 04:00 PM, 15th Feb @ 11:00 AM, 15th Feb @ 02:00 PM. What date & time do you prefer?
+Customer: Program 
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+Customer: 14th 
+Booka: <Checking><SlotsAvailable> The next available slots are: 14th Feb @ 04:00 PM, 15th Feb @ 11:00 AM, 15th Feb @ 02:00 PM. What date & time do you prefer?
+Customer: 2pm 
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots are: 14th Feb @ 04:00 PM, 15th Feb @ 11:00 AM, 15th Feb @ 02:00 PM
+Customer: 5
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots are: 14th Feb @ 04:00 PM, 15th Feb @ 11:00 AM, 15th Feb @ 02:00 PM
+Customer: 14th at 2pm 
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots are: 14th Feb @ 04:00 PM, 15th Feb @ 11:00 AM, 15th Feb @ 02:00 PM
+Customer: 2
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots are: 14th Feb @ 04:00 PM, 15th Feb @ 11:00 AM, 15th Feb @ 02:00 PM
+Customer: 2pm 
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots are: 14th Feb @ 04:00 PM, 15th Feb @ 11:00 AM, 15th Feb @ 02:00 PM
+Customer: 15th
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!	
+Case 171: <-81417026752>	
+Customer: Wait make it 14th 
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots are: 14th Feb @ 04:00 PM, 15th Feb @ 11:00 AM, 15th Feb @ 04:00 PM
+Customer: 4pm 
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+
+Case 179: <-81411268455>	
+Customer: Book a Cloud Consulting appointment
+Booka: <Checking><SlotsAvailable> The next available slots are: 14th Feb @ 09:00 AM, 15th Feb @ 09:00 AM, 15th Feb @ 11:00 AM. What date & time do you prefer?
+Case 180: <-81411268455>	
+Customer: 15th Feb 11am
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 181: <-81423461550>	
+Customer: Can I make a booking for IT Programming?
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Cyril Rioli
+Booka: <Checking><SlotsAvailable> The next available slots are: 15th Feb @ 04:00 PM, 16th Feb @ 11:00 AM, 16th Feb @ 12:00 PM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 184: <-81425762203>	
+Customer: Cloud booking
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: Hi, can I please make an appointment for this Friday
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Daniel Watson
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: Cloud consulting
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: <Checking><SlotsAvailable> The next available slots are: 16th Feb @ 09:00 AM, 16th Feb @ 11:00 AM, 16th Feb @ 12:00 PM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 191: <-81401138306>	
+Customer: 16th Feb at 9am
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 192: <-81433279730>	
+Customer: Hi, just hoping to make a booking for some IT programming. 
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Amy Pottenger 
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: <Checking><SlotsAvailable> The next available slots are: 14th Feb @ 09:00 AM, 15th Feb @ 09:00 AM. What date & time do you prefer?
+
+Case 196: <-81421989212>	
+Customer: Hey Corrie, I need some help with setting up a new program on my laptop, would you be able to come out sometime this week? Cheers Caroline 
+Booka: Hello, how can I help you with the appointment?
+
+Case 197: <-81435574314>	
+Customer: Hi can i book an appointment with Mark at cloud consulting
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Scott Sell
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: <Checking><SlotsAvailable> The next available slots are: 15th Feb @ 09:00 AM, 16th Feb @ 11:00 AM, 16th Feb @ 12:00 PM. What date & time do you prefer?
+Customer: Unavailable for those
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+Customer: Not available for those times
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+
+Case 201: <-81467792978>	
+Customer: Hi Coz. I'd like to make a booking. Gags
+Booka: Hello, how can I help you with the appointment?
+Customer: I'd like to schedule one please. 
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Matt Gallagher
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer:  Cloud Consulting
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: <Checking><SlotsAvailable> The next available slots are: 15th Feb @ 09:00 AM, 16th Feb @ 11:00 AM, 16th Feb @ 12:00 PM. What date & time do you prefer?
+Customer: I'm not available for any of those dates. 
+Booka: <Checking><SlotsAvailable> The next available slots are: 15th Feb @ 09:00 AM, 16th Feb @ 11:00 AM, 16th Feb @ 12:00 PM. What date & time do you prefer?
+Customer: They are the same as the first ones. Do you have any others? 
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 207: <-81430237388>	
+Customer: Cloud consulting booking
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Jack Silvangi
+Booka: <Checking><SlotsAvailable> The next available slots are: 15th Feb @ 09:00 AM, 16th Feb @ 11:00 AM, 16th Feb @ 12:00 PM. What date & time do you prefer?
+Customer:  [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 210: <-81400697807>	
+Customer: Book 
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: Hookers 
+Booka: Can't be sure of what service you are looking for. Try any of these: Mobile Dev, Azure Consulting, Cut, Cut & Wash, Cut, Wash And Blow Out
+Customer: Cloud consulting
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Blow job 
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: <Checking><SlotsAvailable> The next available slots are: 16th Feb @ 11:00 AM, 16th Feb @ 12:00 PM, 18th Feb @ 09:00 AM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!	
+Customer: Can I change my time 
+Booka: You have the following appointment(s): For Cloud Consulting on 20th Feb @ 01:00 PM
+Customer: Change to different date 
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+Customer: Cancel appointment 
+Booka: Done, your appointment is cancelled
+
+Case 217: <-81413968028>	
+Customer: Hi, i am wanting to book an appointment with cloud consulting 
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Rachel jones
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: <Checking><SlotsAvailable> The next available slots are: 16th Feb @ 11:00 AM, 16th Feb @ 12:00 PM, 18th Feb @ 09:00 AM. What date & time do you prefer?
+Customer: I am not available at any of these times. Are there any other times available?
+Booka: <Checking><SlotsAvailable> The next available slots are: 16th Feb @ 11:00 AM, 16th Feb @ 12:00 PM, 18th Feb @ 09:00 AM. What date & time do you prefer?
+Customer: 13:00pm
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots are: 16th Feb @ 11:00 AM, 16th Feb @ 12:00 PM, 18th Feb @ 09:00 AM
+Customer: 1:00pm
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots are: 16th Feb @ 11:00 AM, 16th Feb @ 12:00 PM, 18th Feb @ 09:00 AM
+Customer: 11:00am
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 224: <-81400697807>	
+Customer: Rebook 
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+Customer: Cloud consulting
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: <Checking><SlotsAvailable> The next available slots are: 16th Feb @ 12:00 PM, 18th Feb @ 09:00 AM, 18th Feb @ 10:00 AM. What date & time do you prefer?
+Customer: Other times?
+Booka: <Checking><SlotsAvailable> The next available slots are: 18th Feb @ 11:00 AM, 18th Feb @ 12:00 PM, 19th Feb @ 11:00 AM. What date & time do you prefer?
+Customer: Anything earlier in morning 
+Booka: <Checking><SlotsAvailable> The next available slots are: 18th Feb @ 09:00 AM, 18th Feb @ 10:00 AM, 18th Feb @ 11:00 AM. What date & time do you prefer?
+Customer: Anything hung around 9:30am
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 229: <-81413322323>	
+Customer: Can I make a booking?
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Kellie Lawler
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: Cloud Consulting
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: <Checking><SlotsAvailable> The next available slots are: 16th Feb @ 12:00 PM, 18th Feb @ 10:00 AM, 18th Feb @ 11:00 AM. What date & time do you prefer?
+Customer: I'm not available those times. Can I book for another time?
+Booka: <Checking><SlotsAvailable> The next available slots are: 16th Feb @ 12:00 PM, 18th Feb @ 10:00 AM, 18th Feb @ 11:00 AM. What date & time do you prefer?
+Customer: Can I do 10am on 1st Oct?
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 234: <-81413322323>	
+Customer: Please cancel my appointment. Thanks.
+Booka: Done, your appointment is cancelled
+
+Case 235: <-81412778030>	
+Customer: Can I make an appointment for Cloud Consulting with Mark Corrie please?
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Paula Hanlon
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: <Checking><SlotsAvailable> The next available slots with mark corrie are: 16th Feb @ 12:00 PM, 16th Feb @ 01:00 PM, 16th Feb @ 02:00 PM. What date & time do you prefer?
+Customer: I'm not available this Friday, what about next week?
+Booka: <Checking><SlotsAvailable> The next available slots with mark corrie are: 19th Feb @ 10:00 AM, 19th Feb @ 11:00 AM, 19th Feb @ 12:00 PM. What date & time do you prefer?
+Customer: [ConfirmDatetime] suits me. 
+Booka: <Checking><SlotsAvailable> The next available slots with mark corrie are: 19th Feb @ 10:00 AM, 19th Feb @ 11:00 AM, 19th Feb @ 12:00 PM. What date & time do you prefer?
+Customer: I'll take [ConfirmDatetime] please
+Booka: <Checking><SlotsAvailable> The next available slots with mark corrie are: 19th Feb @ 10:00 AM, 19th Feb @ 11:00 AM, 19th Feb @ 12:00 PM. What date & time do you prefer?
+
+Case 240: <-81419515380>	
+Customer: Appointment 
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Test test
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: Cloud Consulting
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: <Checking><SlotsAvailable> The next available slots are: 16th Feb @ 12:00 PM, 18th Feb @ 10:00 AM, 18th Feb @ 11:00 AM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 244: <-81410162445>	
+Customer: Hi I'd like to make an appt!
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+Customer: Book me in next tuesday
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Natasha Radenkovic
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: Cloud consulting
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: <Checking><SlotsAvailable> The next available slots are: 20th Feb @ 09:00 AM, 20th Feb @ 10:00 AM, 20th Feb @ 11:00 AM. What date & time do you prefer?
+Customer: What about the afternoon?
+Booka: <Checking><SlotsAvailable> The next available slots are: 20th Feb @ 09:00 AM, 20th Feb @ 10:00 AM, 20th Feb @ 11:00 AM. What date & time do you prefer?
+Customer: None it needs to be in the pm
+Booka: <Checking><SlotsAvailable> The next available slots are: 20th Feb @ 09:00 AM, 20th Feb @ 10:00 AM, 20th Feb @ 11:00 AM. What date & time do you prefer?
+Customer: What about 2pm?
+Booka: <Checking><SlotsAvailable> The next available slots are: 20th Feb @ 09:00 AM, 20th Feb @ 10:00 AM, 20th Feb @ 11:00 AM. What date & time do you prefer?
+
+Case 252: <-81424557221>	
+Customer: Hi I’d like to request a booking for cloud consulting please. 
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Dwight Stuchbery 
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: <Checking><SlotsAvailable> The next available slots are: 16th Feb @ 12:00 PM, 18th Feb @ 10:00 AM, 18th Feb @ 11:00 AM. What date & time do you prefer?
+Customer: Can you propose some further dates as these do not work 
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+
+Case 255: <-81401481964>	
+Customer: Hi cloud consulting I would like to make an appointment for Friday at 2:30pm 
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+
+Case 256: <-81415826013>	
+Customer: Can I make appointment for Monday 19th 10:00? 
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Lara Fisher
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: Cloud consulting 
+Booka: <UnknownBusiness>
+Customer: Kolabrate
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots are: 16th Feb @ 12:00 PM, 18th Feb @ 10:00 AM, 18th Feb @ 11:00 AM
+
+Case 264: <-81411268455>	
+Customer: Book a [service] with [providerName] today at 4pm
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Lara Fisher
+Customer: Afternoon today
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots with [providerName] Baur are: 15th Feb @ 10:00 AM, 15th Feb @ 10:45 AM, 15th Feb @ 11:30 AM
+Customer: Later in day
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+
+Case 279: <-81411606697>	
+Customer: My name is David Lawrence and I'd like to make a booking at Paradise Cutters with Paul Allen at either 10 am, 11 am or 12 midday tomorrow Tuesday Feb 20. Thanks
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+Customer: Book me in tomorrow (Tuesday morning) at Paradise Cutters with Paul cheers David Lawrence
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: [service] at [businessName]
+Booka: I am sorry, Requested service is not available.
+Customer: This is the second time this has not worked. Will book direct with your Client in future.
+Booka: I am sorry, Requested service is not available.
+
+Case 283: <-81411268455>	
+Customer: Book a [service] with [providerName] Thursday afternoon
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> The next available slots with [providerName] Baur are: 22nd Feb @ 12:15 PM, 22nd Feb @ 01:45 PM, 22nd Feb @ 02:30 PM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 285: <-81413943069>	
+Customer: Hey Paul. Looking to book a [service] for Teddy and myself for this Sunday 25th Feb. Luke Thompson
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Sorry I mean Saturday 
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Luke Thompson and Teddy Thompson 
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> The next available slots with Paul Allen are: 24th Feb @ 10:45 AM, 24th Feb @ 12:15 PM, 24th Feb @ 02:30 PM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+
+Case 290: <-81413943069>	
+Customer: Can I book the appointment after this for my son as well?
+Booka: I am sorry, Requested service is not available.
+
+Case 295: <-81400620897>	
+Customer: Hi there, looking for a [service] with Paul on Thursday afternoon. 
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Amy Spencer
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> The next available slots with Paul Allen are: 1st Mar @ 10:00 AM, 1st Mar @ 10:45 AM, 1st Mar @ 11:30 AM. What date & time do you prefer?
+Customer: Do you have PM?
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+Customer: Thursday PM
+Booka: <Checking><SlotsAvailable> The next available slots with Paul Allen are: 1st Mar @ 10:00 AM, 1st Mar @ 10:45 AM, 1st Mar @ 11:30 AM. What date & time do you prefer?
+
+Case 308: <-81403158131>	
+Customer: Do you have any free spots today for a [service]
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots are: 17th Mar @ 11:30 AM, 17th Mar @ 04:30 PM, 17th Mar @ 06:15 PM
+Customer: Can I take 4:30?  [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 310: <-81421363827>	
+Customer: Paul 28 April 1pm
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+Customer: [service] with Paul on 28 April
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Casey Mrocki
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> The next available slots with Paul Allen are: 28th Apr @ 10:00 AM, 28th Apr @ 10:45 AM, 28th Apr @ 11:30 AM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 314: <-81468492337>	
+Customer: Hi need a [service] tomorrow 
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots are: 3rd Apr @ 10:00 AM, 3rd Apr @ 10:45 AM, 3rd Apr @ 11:30 AM
+
+Case 324: <-81402168686>	
+Customer: Hi, can I organise an appointment please. Is anything available either Thursday or Friday morning?  Wendy 
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Wendy Lasica 
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: [service] with Paul 
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: I am sorry, Requested service is not available.
+Customer: Anything on Wednesday April 11 in the morning? 
+Booka: <Checking><SlotsAvailable> The next available slots with Paul Allen are: 11th Apr @ 10:00 AM, 11th Apr @ 10:45 AM, 11th Apr @ 11:30 AM. What date & time do you prefer?
+Customer: 10am  [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 329: <-81431419810>	
+Customer: Hi guys, could I please book a colour for next Friday the 13th, at 11am? Stacey Paine 
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: As per my msg: Stacey Paine
+Booka: <Checking><SlotsAvailable> The next available slots are: 13th Apr @ 10:00 AM, 13th Apr @ 10:45 AM, 13th Apr @ 11:30 AM. What date & time do you prefer?
+Customer: 10:45am [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 332: <-81412977059>	
+Customer: Paul Thursday 12th April 6pm
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+Customer: Paul Allen Thursday 12th April 6pm [service] Michelle Lyon
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+Customer: Book me in next Thursday for a [service] with Paul at Paradise Cutters for a [service] at 6pm
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Michelle Lyon
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots with Paul Allen are: 12th Apr @ 10:00 AM, 12th Apr @ 01:45 PM, 12th Apr @ 03:15 PM
+Customer: Wednesday 11th 6pm?
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots with Paul Allen are: 12th Apr @ 10:00 AM, 12th Apr @ 01:45 PM, 12th Apr @ 03:15 PM
+Customer: What's the last appointment on Wednesday 11th ?
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+Customer: Book me in next Wednesday for a [service] with Paul at Paradise Cutters for a [service] at 6pm
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots with Paul Allen are: 11th Apr @ 12:15 PM, 11th Apr @ 03:15 PM, 12th Apr @ 10:00 AM
+
+Case 339: <-81413943069>	
+Customer: Would like to book a [service] for Saturday morning
+Booka: <Checking><SlotsAvailable> The next available slots are: 14th Apr @ 10:45 AM, 14th Apr @ 11:30 AM, 17th Apr @ 10:00 AM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 341: <-81429822574>	
+Customer: Book [service] tomorrow with Paul
+Booka: <Checking><SlotsAvailable> The next available slots with Paul Allen are: 14th Apr @ 02:00 PM, 14th Apr @ 02:45 PM, 14th Apr @ 03:30 PM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 343: <-81411268455>	
+Customer: Book [service] with [providerName] Tuesday afternoon
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> The next available slots with [providerName] Baur are: 17th Apr @ 12:15 PM, 17th Apr @ 01:00 PM, 17th Apr @ 01:45 PM. What date & time do you prefer?
+Customer: Later
+Booka: <Checking><SlotsAvailable> The next available slots with [providerName] Baur are: 17th Apr @ 02:30 PM, 17th Apr @ 03:15 PM, 17th Apr @ 04:00 PM. What date & time do you prefer?
+Customer: 4pm 
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 346: <-81414855295>	
+Customer: [service]
+Booka: <Checking><SlotsAvailable> The next available slots are: 17th Apr @ 10:00 AM, 17th Apr @ 10:45 AM, 17th Apr @ 11:30 AM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 348: <-81421363827>	
+Customer: Appointment with Paul Allen on 2 June
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: [service]
+Booka: <Checking><SlotsAvailable> The next available slots with Paul Allen are: 2nd Jun @ 10:45 AM, 2nd Jun @ 11:30 AM, 2nd Jun @ 12:15 PM. What date & time do you prefer?
+Customer: Is there anything a bit later?
+Booka: <Checking><SlotsAvailable> The next available slots with Paul Allen are: 2nd Jun @ 10:45 AM, 2nd Jun @ 11:30 AM, 2nd Jun @ 12:15 PM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 352: <-81407818427>	
+Customer: Hi this is Paul O'Keefe please book me in for a [service] at 10.45am May 5 with Paul Allen
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots with Paul Allen are: 
+Customer: No times sent back as yet
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+Customer: Hi this is Paul O'Keefe please book me for a [service] at 10.45am on May 12 thanks with Paul Allen
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+Customer: Book me in Friday 11th May at 3.30pm for [service] with Paul Allen. POK
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots with Paul Allen are: 11th May @ 11:30 AM, 11th May @ 12:15 PM, 11th May @ 01:00 PM
+Customer: Book me in Friday 11th May @ 01.00 PM with Paul Allen. POK
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots with Paul Allen are: 11th May @ 11:30 AM, 11th May @ 12:15 PM, 11th May @ 01:00 PM
+
+Case 357: <-81468492337>	
+Customer: Hello
+Booka: Hello Anand, how can I help you with the appointment?
+Customer: Need an appointment next week
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Michelle Lyon
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: [service]
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> The next available slots are: 15th May @ 10:45 AM, 15th May @ 01:45 PM, 15th May @ 02:30 PM. What date & time do you prefer?
+Customer: @ 2.30 please
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 361: <-81468492337>	
+Customer: Please cancel my appointment
+Booka: Done, your appointment is cancelled
+
+Case 362: <-81407818427>	
+Customer: [service] Saturday May 19 at 10.45am with Paul Allen. Paul O'Keefe
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 363: <-81403158131>	
+Customer: Looking for a [service] on Monday 14th May
+Booka: <Checking><SlotsAvailable> The next available slots are: 12th May @ 05:00 PM, 12th May @ 05:15 PM, 12th May @ 05:45 PM. What date & time do you prefer?
+Customer: 14th Oct
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots are: 15th May @ 10:45 AM, 15th May @ 01:45 PM, 15th May @ 02:30 PM
+Customer: 06.30pm on the 15th Oct?
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots are: 15th May @ 10:45 AM, 15th May @ 01:45 PM, 15th May @ 02:30 PM
+Customer: What about 04:30pm 17th Oct?
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 367: <-81468492337>	
+Customer: Hello need an appointment for a [service] tomorrow 
+Booka: <Checking><SlotsAvailable> The next available slots are: 17th May @ 10:15 AM, 17th May @ 10:30 AM, 17th May @ 11:00 AM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+
+Case 369: <-81413943069>	
+Customer: Would like to book a [service] with Paul for Saturday 26th of May for 11am
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 370: <-81411268455>	
+Customer: Book [service] with [providerName] Friday 
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> The next available slots with [providerName] Baur are: 22nd Jun @ 10:45 AM, 22nd Jun @ 11:30 AM, 22nd Jun @ 12:15 PM. What date & time do you prefer?
+Customer: Later
+Booka: <Checking><SlotsAvailable> The next available slots with [providerName] Baur are: 22nd Jun @ 03:15 PM, 22nd Jun @ 04:00 PM, 22nd Jun @ 04:45 PM. What date & time do you prefer?
+Customer: After 6
+Booka: <Checking><SlotsAvailable> The next available slots with [providerName] Baur are: 23rd Jun @ 05:30 PM, 23rd Jun @ 06:15 PM, 26th Jun @ 05:30 PM. What date & time do you prefer?
+Customer: 23rd June 1pm
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots with [providerName] Baur are: 23rd Jun @ 10:00 AM, 23rd Jun @ 10:45 AM, 23rd Jun @ 04:00 PM
+Customer: 4pm 
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 375: <-81468492337>	
+Customer: Hi can I make an appointment next Thursday at 2 pm with Paul
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: [service]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+Customer: Cancel my appointment please
+Booka: Done, your appointment is cancelled
+
+Case 378: <-81413943069>	
+Customer: I would like to book a [service] with Paul for myself and my son Teddy for Saturday 30th of Sept at 10.00am
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+
+Case 381: <-81468492337>	
+Customer: Can I get an appointment for tomorrow 
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: [service]
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> The next available slots are: 5th Jul @ 10:45 AM, 5th Jul @ 11:30 AM, 5th Jul @ 12:15 PM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!	
+
+Case 384: <-81468492337>	
+Customer: Please cancel my appointment
+Booka: Done, your appointment is cancelled
+
+Case 385: <-81407818427>	
+Customer: [service] Saturday July 21 at 10.00 am with Paul Allen. Paul O'Keefe
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 386: <-81468492337>	
+Customer: Hi
+Booka: Hello Anand, how can I help you with the appointment?
+Customer: I need a [service] tomorrow at 10
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: [service]
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots are: 10th Jul @ 10:00 AM, 10th Jul @ 10:45 AM, 10th Jul @ 11:30 AM
+Customer: At 10
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+Customer: Please cancel my appointment 
+Booka: Done, your appointment is cancelled
+
+Case 393: <-81403158131>	
+Customer: Hello
+Booka: Hello Sam Cummins, how can I help you with the appointment?
+Customer: Any spots free tomorrow
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: [service]
+Booka: <Checking><SlotsAvailable> The next available slots are: 12th Jul @ 10:00 AM, 12th Jul @ 10:45 AM, 12th Jul @ 11:30 AM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 398: <-81468492337>	
+Customer: Hi
+Booka: Hello Anand, how can I help you with the appointment?
+Customer: Need a [service] with Paul 
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> The next available slots with Paul Allen are: 12th Jul @ 12:15 PM, 12th Jul @ 01:00 PM, 12th Jul @ 01:45 PM. What date & time do you prefer?
+Customer: 12th July at noon
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots with Paul Allen are: 12th Jul @ 12:15 PM, 12th Jul @ 01:00 PM, 12th Jul @ 01:45 PM
+Customer:[ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 402: <-81468492337>	
+Customer: Please cancel my appointment 
+Booka: Done, your appointment is cancelled
+
+Case 403: <-81413943069>	
+Customer: I'd like to book a [service] with Paul on Friday 10th August at 10am
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots with Paul Allen are: 10th Aug @ 11:30 AM, 10th Aug @ 12:15 PM, 10th Aug @ 01:00 PM
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 405: <-81411268455>	
+Customer: Book a cloud consulting
+Booka: <Checking><SlotsAvailable> The next available slots are: 16th Aug @ 11:15 AM, 16th Aug @ 12:15 PM, 16th Aug @ 01:15 PM. What date & time do you prefer?
+Case 406: <-81411268455>	
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+Customer: Cancel
+Booka: Done, your appointment is cancelled
+
+Case 408: <-81408787592>	
+Customer: Cut with Paul tomorrow Tuesday morning Anna Jeffries 
+Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
+Customer: Anna Jeffries 
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> The next available slots with Paul Allen are: 21st Aug @ 10:00 AM, 21st Aug @ 10:45 AM, 21st Aug @ 11:30 AM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 412: <-81408787592>	
+Customer: Change appointment 
+Booka: I am sorry, Requested service is not available.
+Customer: Cut with Paul tomorrow 
+Booka: <Checking><SlotsAvailable> The next available slots with Paul Allen are: 21st Aug @ 10:00 AM, 21st Aug @ 11:30 AM, 21st Aug @ 12:15 PM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+Customer: 👌🏾 
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+Customer: Cancel appointment 
+Booka: Done, your appointment is cancelled
+Customer: Which one? 
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+
+Case 418: <-81408787592>	
+Customer: Cut with Paul tomorrow
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> The next available slots with Paul Allen are: 21st Aug @ 10:00 AM, 21st Aug @ 11:30 AM, 21st Aug @ 12:15 PM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 420: <-81411268455>	
+Customer: Book a [service] with [providerName] Thu afternoon
+Booka: <Checking><SlotsAvailable> The next available slots with [providerName] Baur are: 23rd Aug @ 12:15 PM, 23rd Aug @ 01:00 PM, 23rd Aug @ 01:45 PM. What date & time do you prefer?; Exception in task; BookingError; I am having a little trouble with your booking, please call the provider directly to make this booking.
+Customer: START
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for [service]', I promise, I  can be quite helpful.
+Customer: Book [service] with [providerName] Thursday
+Booka: <Checking><SlotsAvailable> The next available slots with [providerName] Baur are: 23rd Aug @ 10:00 AM, 23rd Aug @ 10:45 AM, 23rd Aug @ 11:30 AM. What date & time do you prefer?
+Customer: Afternoon
+Booka: <Checking><SlotsAvailable> The next available slots with [providerName] Baur are: 23rd Aug @ 12:15 PM, 23rd Aug @ 01:00 PM, 23rd Aug @ 01:45 PM. What date & time do you prefer?
+Customer: Later
+Booka: <Checking><SlotsAvailable> The next available slots with [providerName] Baur are: 23rd Aug @ 02:30 PM, 23rd Aug @ 03:15 PM, 23rd Aug @ 04:00 PM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 426: <-81407818427>	
+Customer: [service] Saturday Sept 30 at 10.45am with Paul Allen. Paul O'Keefe
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots are: 25th Aug @ 10:00 AM, 25th Aug @ 10:45 AM, 25th Aug @ 11:30 AM
+
+Case 427: <-81407818427>	
+Customer: [service] September 1st at 10.45am with Paul Allen. Paul O'Keefe
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 428: <-81413943069>	
+Customer: I'd like to book a [service] with Paul on Saturday 25th August at 3pm
+Booka: <Checking> <AlternateSlotsOnly> Sorry, that time is not available. Next available slots with Paul Allen are: 25th Aug @ 10:00 AM, 25th Aug @ 10:45 AM, 25th Aug @ 12:15 PM
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 430: <-81403158131>	
+Customer: Hello
+Booka: Hello Sam Cummins, how can I help you with the appointment?
+Customer: Availabilities for Thursday 6th September
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: [service]
+Booka: <Checking><SlotsAvailable> The next available slots are: 6th Sep @ 02:00 PM, 6th Sep @ 04:00 PM, 6th Sep @ 06:15 PM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+	
+Case 434: <-81468492337>	
+Customer: Find my appointments 
+Booka: You have no upcoming appointments
+
+Case 435: <-81408787592>	
+Customer: Appointment with Paul Tues 9 October 
+Booka: what type of Service are your looking for ?<ValidationException>
+Customer: Cut 
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <Checking><SlotsAvailable> The next available slots with Paul Allen are: 9th Oct @ 10:00 AM, 9th Oct @ 10:45 AM, 9th Oct @ 11:30 AM. What date & time do you prefer?
+Customer: [ConfirmDatetime]
+Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!	

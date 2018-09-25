@@ -132,6 +132,7 @@
     <Content Include="Data\TC14_1NewCustomerCustomQuestionaire.txt" />
     <Content Include="Data\TC14_ExistingCustomerCustomQuestionaire.txt" />
     <Content Include="Data\TC14_ExistingCustomerAllParameters.txt" />
+    <Content Include="Data\TC15_NewCustomersAllFromProd.txt" />
     <Content Include="Data\TC4_NewCustomerForFreeSlots.txt" />
     <Content Include="Data\TC61_NewCustomerShowMore.txt" />
     <Content Include="Data\TC81_NewCustomerUnknown_MultipleServices.txt" />

@@ -8,7 +8,7 @@
       "SmsMessageSid": "",
       "NumSegments": "",
       "ToState": "",
-      "From": "+61400000000",
+      "From": "-81411268455",
       "MessageSid": "SMf0000000000000000000000",
       "AccountSid": "",
       "ToCity": "",
@@ -18,32 +18,30 @@
       "To": "",
       "FromZip": "",
       "ToCountry": "",
-      "Body": " I want an appointment after 10th Feb for tint with Kolabrate",
+      "Body": " Afternoon today",
       "NumMedia": "",
       "FromState": ""
     }
   },
-  "id": "b083cc48-6d47-4fab-ad1e-c7847286b7cc",
-  "timestamp": "2018-09-24T05:13:13.193Z",
+  "id": "53737560-eea4-4690-9427-645db64be21d",
+  "timestamp": "2018-09-25T06:10:32.728Z",
   "lang": "en",
   "result": {
     "source": "agent",
-    "resolvedQuery": " I want an appointment after 10th Feb for tint with Kolabrate",
+    "resolvedQuery": " Afternoon today",
     "speech": "",
     "action": "ScheduleAppointment",
-    "actionIncomplete": false,
+    "actionIncomplete": true,
     "parameters": {
       "attendees": [],
-      "businessName": "Kolabrate Staging Company",
-      "beforeAfter": "after",
+      "businessName": "",
+      "beforeAfter": "",
       "Bookingtimeperiod": "",
       "lastname": "",
-      "Bookingdate": "2019-02-10",
+      "Bookingdate": "2018-09-25",
       "BookingDateTimePeriod": "",
-      "genericTimeSlots": "",
-      "service": [
-        "Tint"
-      ],
+      "genericTimeSlots": "afternoons",
+      "service": [],
       "givenname": "",
       "Bookingtime": "",
       "Bookingdateperiod": "",
@@ -53,15 +51,15 @@
       {
         "name": "scheduleappointment-followup",
         "parameters": {
-          "businessName.original": "Kolabrate",
-          "genericTimeSlots.original": "",
-          "businessName": "Kolabrate Staging Company",
+          "businessName.original": "",
+          "genericTimeSlots.original": "Afternoon",
+          "businessName": "",
           "providerName.original": "",
           "lastname.original": "",
-          "beforeAfter": "after",
+          "beforeAfter": "",
           "Bookingtimeperiod.original": "",
           "BookingDateTimePeriod": "",
-          "genericTimeSlots": "",
+          "genericTimeSlots": "afternoons",
           "attendees.original": "",
           "givenname": "",
           "givenname.original": "",
@@ -69,20 +67,114 @@
           "providerName": "",
           "BookingDateTimePeriod.original": "",
           "attendees": [],
-          "beforeAfter.original": "after",
-          "service.original": "tint",
+          "beforeAfter.original": "",
+          "service.original": "",
           "Bookingtimeperiod": "",
           "lastname": "",
           "Bookingdateperiod.original": "",
-          "Bookingdate.original": "10th Feb",
-          "Bookingdate": "2019-02-10",
-          "service": [
-            "Tint"
-          ],
+          "Bookingdate.original": "today",
+          "Bookingdate": "2018-09-25",
+          "service": [],
           "Bookingdateperiod": "",
           "Bookingtime.original": ""
         },
         "lifespan": 10
+      },
+      {
+        "name": "scheduleappointment_dialog_context",
+        "parameters": {
+          "businessName.original": "",
+          "genericTimeSlots.original": "Afternoon",
+          "businessName": "",
+          "providerName.original": "",
+          "lastname.original": "",
+          "beforeAfter": "",
+          "Bookingtimeperiod.original": "",
+          "BookingDateTimePeriod": "",
+          "genericTimeSlots": "afternoons",
+          "attendees.original": "",
+          "givenname": "",
+          "givenname.original": "",
+          "Bookingtime": "",
+          "providerName": "",
+          "BookingDateTimePeriod.original": "",
+          "attendees": [],
+          "beforeAfter.original": "",
+          "service.original": "",
+          "Bookingtimeperiod": "",
+          "lastname": "",
+          "Bookingdateperiod.original": "",
+          "Bookingdate.original": "today",
+          "Bookingdate": "2018-09-25",
+          "service": [],
+          "Bookingdateperiod": "",
+          "Bookingtime.original": ""
+        },
+        "lifespan": 2
+      },
+      {
+        "name": "e1710622-ec4a-4cf7-a117-856873ef4b3b_id_dialog_context",
+        "parameters": {
+          "businessName.original": "",
+          "genericTimeSlots.original": "Afternoon",
+          "businessName": "",
+          "providerName.original": "",
+          "lastname.original": "",
+          "beforeAfter": "",
+          "Bookingtimeperiod.original": "",
+          "BookingDateTimePeriod": "",
+          "genericTimeSlots": "afternoons",
+          "attendees.original": "",
+          "givenname": "",
+          "givenname.original": "",
+          "Bookingtime": "",
+          "providerName": "",
+          "BookingDateTimePeriod.original": "",
+          "attendees": [],
+          "beforeAfter.original": "",
+          "service.original": "",
+          "Bookingtimeperiod": "",
+          "lastname": "",
+          "Bookingdateperiod.original": "",
+          "Bookingdate.original": "today",
+          "Bookingdate": "2018-09-25",
+          "service": [],
+          "Bookingdateperiod": "",
+          "Bookingtime.original": ""
+        },
+        "lifespan": 2
+      },
+      {
+        "name": "scheduleappointment_dialog_params_service",
+        "parameters": {
+          "businessName.original": "",
+          "genericTimeSlots.original": "Afternoon",
+          "businessName": "",
+          "providerName.original": "",
+          "lastname.original": "",
+          "beforeAfter": "",
+          "Bookingtimeperiod.original": "",
+          "BookingDateTimePeriod": "",
+          "genericTimeSlots": "afternoons",
+          "attendees.original": "",
+          "givenname": "",
+          "givenname.original": "",
+          "Bookingtime": "",
+          "providerName": "",
+          "BookingDateTimePeriod.original": "",
+          "attendees": [],
+          "beforeAfter.original": "",
+          "service.original": "",
+          "Bookingtimeperiod": "",
+          "lastname": "",
+          "Bookingdateperiod.original": "",
+          "Bookingdate.original": "today",
+          "Bookingdate": "2018-09-25",
+          "service": [],
+          "Bookingdateperiod": "",
+          "Bookingtime.original": ""
+        },
+        "lifespan": 1
       }
     ],
     "metadata": {
@@ -93,19 +185,19 @@
       "intentName": "ScheduleAppointment"
     },
     "fulfillment": {
-      "speech": "",
+      "speech": "what service are you looking for?",
       "messages": [
         {
           "type": 0,
-          "speech": ""
+          "speech": "what service are you looking for?"
         }
       ]
     },
-    "score": 0.949999988079071
+    "score": 0.85000002384185791
   },
   "status": {
     "code": 200,
     "errorType": "success"
   },
-  "sessionId": "6fea47f2-c2e5-4f7c-ab72-454b66cc80ab"
+  "sessionId": "bed1a4a8-1887-42bd-bc8c-0ef882d9c1bc"
 }

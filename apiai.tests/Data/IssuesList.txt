@@ -1,4 +1,4 @@
-user:  can I make an appointment tomorrow morning for tint
+﻿user:  can I make an appointment tomorrow morning for tint
 Booka: First Name & Last Name of the person attending the appointment?
 user:  Anthony Gill 
 Booka: which business do you want to book with?
@@ -275,4 +275,198 @@ user: I want 10AM
 Booka: Sure, checking that...
 Booka:  Sorry, that time is not available. Next available slots are: 7th Oct @ 10:00 AM, 7th Oct @ 11:00 AM, 7th Oct @ 05:00 PM
 AI Session:70d998b4-51c2-4456-b98c-1f3047780083
+----------------------------------------------------
+user:  Colour and cut with Paul tomorrow 
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots with Paul Something are: 26th Sep @ 05:00 PM, 30th Sep @ 10:00 AM, 30th Sep @ 11:00 AM. What date & time do you prefer?
+user:   30th Sep @ 10 AM
+Booka: Sure, checking that...
+Booka:  All Done! Your appointment for hair cut booked at 30th Sep @ 10:00 AM with Paradise Cutters
+AI Session:d0d05bf8-279b-4144-8149-91117f9fcc34
+Issue: colour is not recognized as a service
+----------------------------------------------------
+user:  Book a haircut with Tanja today at 4pm
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Afternoon today
+Booka: what type of Service are your looking for ?
+user:  Book with Tanja today after 3.30pm
+Booka: Can't be sure of what service you are looking for. Try any of these: Cut & Wash, Cut, Wash & Dry, Cut, Cut & Wash, Cut, Wash And Blow Out
+user:  Book me in for haircut with Tanja this afternoon
+Booka: which business do you want to book with?
+user:  Later in day
+Booka: Sorry, I can't understand the business that you want to make the booking with. Please try again.
+AI Session:bed1a4a8-1887-42bd-bc8c-0ef882d9c1bc
+Issue: 1) ScheduleAppointment intent is taken as "Name" for the customer. Should remember the date time range and ask name again if its not AskName or Default Intent
+2) Service is forgotten in the reset of ScheduleAppointment
+----------------------------------------------------
+user:  My name is David Lawrence and I'd like to make a booking at Paradise Cutters with Paul Allen at either 10 am, 11 am or 12 midday tomorrow Tuesday Feb 20. Thanks
+Booka: I am having a little trouble with your booking, please call the provider directly to make this booking.
+user:  Book me in tomorrow (Tuesday morning) at Paradise Cutters with Paul cheers David Lawrence
+Booka: I am having a little trouble with your booking, please call the provider directly to make this booking.
+user:  haircut at paradise cutters
+Booka: I am having a little trouble with your booking, please call the provider directly to make this booking.
+user:  This is the second time this has not worked. Will book direct with your Client in future.
+Booka: You have no upcoming appointments
+AI Session:499aae05-9425-465e-928b-ec2d4e0f5892
+Issue: check what is wrong with this message.
+----------------------------------------------------
+user:  Hey Paul. Looking to book a haircut for Teddy and myself for this Sunday 25th Feb. Luke Thompson
+Booka: which business do you want to book with?
+user:  Sorry I mean Saturday 
+Booka: Sorry, I can't understand the business that you want to make the booking with. Please try again.
+user:  Luke Thompson and Teddy Thompson 
+Booka: Sorry, I still can't understand which business you are looking to make the booking with. Please call the provider directly.
+user:  paradise cutters
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 30th Sep @ 12:00 PM, 30th Sep @ 01:00 PM, 30th Sep @ 02:00 PM. What date & time do you prefer?
+user:   30th Sep @ 01 PM
+Booka: Sure, checking that...
+Booka:  All Done! Your appointment for hair cut booked at 30th Sep @ 01:00 PM with Paradise Cutters
+AI Session:652acdea-68e9-4374-818c-7a87c230c99a
+Issue: Only one booking is done here
+Family booking should show the double booking in the confirmation message
+----------------------------------------------------
+user:  Hi, can I organise an appointment please. Is anything available either Thursday or Friday morning?  Wendy 
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Wendy Lasica 
+Booka: what type of Service are your looking for ?
+user:  haircut with Paul 
+Booka: which business do you want to book with?
+user:  paradise cutters
+Booka: Sure, let me find next availabilities.
+Booka:  Sorry, that time is not available. Next available slots with Paul Something are: 30th Sep @ 02:00 PM, 30th Sep @ 03:00 PM, 30th Sep @ 04:00 PM
+user:  Anything on Wednesday April 11 in the morning? 
+Booka: Sure, let me find next availabilities.
+Booka: Sure, let me find next availabilities.; Exception in task; I am having a little trouble with your booking, please call the provider directly to make this booking.CheckingConfirmation; Validation failed   at Cronofy.IHttpClientExtensions.GetValidResponse(IHttpClient httpClient, HttpRequest request)
+   at Cronofy.IHttpClientExtensions.GetJsonResponse[T](IHttpClient httpClient, HttpRequest request)
+   at Cronofy.CronofyAccountClient.GetAvailability(AvailabilityRequest availabilityRequest)
+   at Cronofy.CronofyAccountClient.GetAvailability(IBuilder`1 builder)
+   at Chuvy.Calendar.ExternalAPI.Cronofy.Helper.ExecuteAvailabilityRequest(StaffAvailability request)
+   at Chuvy.Calendar.ExternalAPI.Cronofy.CronofyManager.ExecuteAvailabilityRequest(StaffAvailability request)
+   at Chuvy.Calendar.CalendarClient.ExecuteAvailabilityRequest(StaffAvailability request)
+   at Chuvy.BotService.Manager.Managers.AppointmentManager.GetServiceAvailabilities(Int32 messageId)
+   at Chuvy.Botservice.Controllers.FulfillRequestController.<>c__DisplayClass27_0.<CheckAvailabilityAsync>b__0(){"errors":{"available_periods[1].end":[{"key":"errors.max_date_exceeded","description":"date is too far in the future"}],"available_periods[2].end":[{"key":"errors.max_date_exceeded","description":"date is too far in the future"}],"participants[0].members[0].available_periods[1].end":[{"key":"errors.max_date_exceeded","description":"date is too far in the future"}],"participants[0].members[0].available_periods[2].end":[{"key":"errors.max_date_exceeded","description":"date is too far in the future"}]}}; CronofyBookingError; ServiceAvailabilityCheckedTwilio
+user:  10am   that time is not available. Next available slots with Paul Something are: 30th Sep @ 02 PM
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots with Paul Something are: 30th Sep @ 02:00 PM, 30th Sep @ 03:00 PM, 30th Sep @ 04:00 PM. What date & time do you prefer?
+AI Session:fd6c94bb-d8f5-4436-8bec-d4dc79d90d23
+----------------------------------------------------
+user:  Hi guys, could I please book a colour for next Friday the 13th, at 11am? Stacey Paine 
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for haircut', I promise, I  can be quite helpful.
+user:  As per my msg: Stacey Paine
+Booka: I am having a little trouble with your booking, please call the provider directly to make this booking.
+user:  10:45am  30th Sep @ 03 PM
+Booka: I am having a little trouble with your booking, please call the provider directly to make this booking.
+AI Session:4dc342ec-dbb3-4e4c-9c28-80450a055fa6
+issue: review this message, nothing has worked.
+----------------------------------------------------
+user:  Paul Thursday 12th April 6pm
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for haircut', I promise, I  can be quite helpful.
+user:  Paul Allen Thursday 12th April 6pm haircut Michelle Lyon
+Booka: I am having a little trouble with your booking, please call the provider directly to make this booking.
+user:  Book me in next Thursday for a haircut with Paul at Paradise Cutters for a haircut at 6pm
+Booka: First Name & Last Name of the person attending the appointment?
+user:  Michelle Lyon
+Booka: Sure, let me find next availabilities.
+Booka:  Sorry, that time is not available. Next available slots with Paul Something are: 7th Oct @ 10:00 AM, 7th Oct @ 12:00 PM, 7th Oct @ 02:00 PM
+user:  paradise cutters
+Booka: Sure, let me find next availabilities.
+Booka:  Sorry, that time is not available. Next available slots with Paul Something are: 7th Oct @ 10:00 AM, 7th Oct @ 12:00 PM, 7th Oct @ 02:00 PM
+user:  Wednesday 11th 6pm?
+Booka: Sure, checking that...
+Booka:  Sorry, that time is not available. Next available slots with Paul Something are: 7th Oct @ 10:00 AM, 7th Oct @ 12:00 PM, 7th Oct @ 02:00 PM
+user:  What's the last appointment on Wednesday 11th ?
+Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for haircut', I promise, I  can be quite helpful.
+user:  Book me in next Wednesday for a haircut with Paul at Paradise Cutters for a haircut at 6pm
+Booka: Sure, let me find next availabilities.
+Booka:  Sorry, that time is not available. Next available slots with Paul Something are: 4th Oct @ 10:00 AM, 4th Oct @ 12:00 PM, 4th Oct @ 02:00 PM
+AI Session:9898e9e5-e7a7-4cea-badf-d5914b265ebc
+Issue: many issues to be fixed here
+----------------------------------------------------
+user:  Appointment with Paul Allen on 2 June
+Booka: what type of Service are your looking for ?
+user:  haircut
+Booka: Sure, let me find next availabilities.
+Booka:  Sorry, that time is not available. Next available slots are: 30th Sep @ 02:00 PM, 30th Sep @ 04:00 PM, 30th Sep @ 05:00 PM
+user:  Is there anything a bit later?
+Booka: Sure, let me find next availabilities.
+Booka:  Sorry, that time is not available. Next available slots are: 30th Sep @ 02:00 PM, 30th Sep @ 04:00 PM, 30th Sep @ 05:00 PM
+user:   30th Sep @ 04 PM
+Booka: Sure, let me find next availabilities.
+Booka:  Sorry, that time is not available. Next available slots are: 30th Sep @ 02:00 PM, 30th Sep @ 04:00 PM, 30th Sep @ 05:00 PM
+AI Session:90cd15bd-d053-4c91-b491-99112f0f5a58
+Issue: ask more intent has not worked
+----------------------------------------------------
+user:  Hi this is Paul O'Keefe please book me in for a haircut at 10.45am May 5 with Paul Allen
+Booka: which business do you want to book with?
+user:  No times sent back as yet
+Booka: Sorry, I can't understand the business that you want to make the booking with. Please try again.
+user:  Hi this is Paul O'Keefe please book me for a haircut at 10.45am on May 12 thanks with Paul Allen
+Booka: Sorry, I still can't understand which business you are looking to make the booking with. Please call the provider directly.
+user:  Book me in Friday 11th May at 3.30pm for haircut with Paul Allen. POK
+Booka: Sorry, I still can't understand which business you are looking to make the booking with. Please call the provider directly.
+user:  Book me in Friday 11th May @ 01.00 PM with Paul Allen. POK
+Booka: what type of Service are your looking for ?
+AI Session:6cdb69d0-ebc9-442b-ad94-66baf2e82891
+Issue: service should be remembered on reset of ScheduleAppointment intent
+----------------------------------------------------
+user:  Looking for a haircut on Monday 14th May
+Booka: Sure, let me find next availabilities.
+Booka:  Sorry, that time is not available. Next available slots are: 30th Sep @ 02:00 PM, 30th Sep @ 04:00 PM, 30th Sep @ 05:00 PM
+user:  14th Oct
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 14th Oct @ 10:00 AM, 14th Oct @ 02:00 PM, 14th Oct @ 03:00 PM. What date & time do you prefer?
+user:  06.30pm on the 15th Oct?
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 14th Oct @ 10:00 AM, 14th Oct @ 02:00 PM, 14th Oct @ 03:00 PM. What date & time do you prefer?
+user:  What about 04:30pm 17th Oct?
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 14th Oct @ 10:00 AM, 14th Oct @ 02:00 PM, 14th Oct @ 03:00 PM. What date & time do you prefer?
+AI Session:5b787111-3e67-4714-bd3c-0997496faefb
+Issue: Wierd, the booking should have been done.
+----------------------------------------------------
+user:  Hello need an appointment for a haircut tomorrow 
+Booka: what type of Service are your looking for ?
+user:   14th Oct @ 02 PM
+Booka: Can't be sure of what service you are looking for. Try any of these: Cut & Wash, Cut, Wash & Dry, Cut, Cut & Wash, Cut, Wash And Blow Out
+AI Session:b42925b5-4bc0-4ed0-a1ed-ad462f7ba012
+Issue: Check why service name is not recognized
+----------------------------------------------------
+user:  I'd like to book a haircut with Paul on Friday 10th August at 10am
+Booka: Sure, let me find next availabilities.
+Booka:  Sorry, that time is not available. Next available slots with Paul Something are: 30th Sep @ 02:00 PM, 30th Sep @ 04:00 PM, 30th Sep @ 05:00 PM
+user:  ConfirmDatetime]
+Booka: You have an appointment for hair cut on 30th Sep @ 01:00 PM
+AI Session:c44461ad-3952-4529-869f-9a9372b94d56
+Issue: check whats going on here
+----------------------------------------------------
+user:  Change appointment 
+Booka: what type of Service are your looking for ?
+user:  Cut with Paul tomorrow 
+Booka: which business do you want to book with?
+user:   that time is not available. Next available slots with Paul Something are: 30th Sep @ 02 PM
+Booka: Can't be sure of what service you are looking for. Try any of these: Cut & Wash, Cut, Wash & Dry, Cut, Cut & Wash, Cut, Wash And Blow Out
+user:  👌🏾 
+Booka: Do you want to try one or more of these options: Cut & Wash, Cut, Wash & Dry, Cut, Cut & Wash, Cut, Wash And Blow Out
+user:  Cancel appointment 
+Booka: Popular Services: Cut & Wash, Cut, Wash & Dry, Cut, Cut & Wash, Cut, Wash And Blow Out. If you want help in finding the right service, please contact provider
+user:  Which one? 
+Booka: Popular Services: Cut & Wash, Cut, Wash & Dry, Cut, Cut & Wash, Cut, Wash And Blow Out. If you want help in finding the right service, please contact provider
+AI Session:96cdf342-c292-44d6-9b45-755e4f6e948d
+Issue: its change appointment
+----------------------------------------------------
+user:  Book a haircut with Tanja Thu afternoon
+Booka: which business do you want to book with?
+user:  START
+Booka: Sorry, I can't understand the business that you want to make the booking with. Please try again.
+user:  Book haircut with Tanja Thursday
+Booka: Sorry, I still can't understand which business you are looking to make the booking with. Please call the provider directly.
+user:  Afternoon
+Booka: what type of Service are your looking for ?
+user:  Later
+Booka: Can't be sure of what service you are looking for. Try any of these: Cut & Wash, Cut, Wash & Dry, Cut, Cut & Wash, Cut, Wash And Blow Out
+user:   that time is not available. Next available slots with Paul Something are: 30th Sep @ 02 PM
+Booka: Do you want to try one or more of these options: Cut & Wash, Cut, Wash & Dry, Cut, Cut & Wash, Cut, Wash And Blow Out
+AI Session:a81db263-9e7e-4d0b-a0d3-4f8d663446e7
+Issue: Service should be remember when intent resets
 ----------------------------------------------------

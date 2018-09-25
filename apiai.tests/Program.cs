@@ -187,7 +187,7 @@ namespace apiai.tests
             var list = new List<string>();
             var fileNames = new List<string>();
             var filesNamesArray = Directory.GetFiles(@"..\..\Data\");
-            fileNames = filesNamesArray.Where(c => c.StartsWith("..\\..\\Data\\TC5_ExistingCustomerConfirmationVariations")).ToList(); 
+            fileNames = filesNamesArray.Where(c => c.StartsWith("..\\..\\Data\\TC15_NewCustomersAllFromProd")).ToList(); 
             //fileNames = filesNamesArray.Where(c => c.StartsWith("..\\..\\Data\\allNewConvo")).ToList();
 
             //fileNames.Add(@"..\..\Data\allNewConvo.txt");
@@ -273,9 +273,9 @@ namespace apiai.tests
                         };
                         newExpressions.Add(currentExpr);
                     }
-                    if (str.Contains("Case:"))
+                    if (str.StartsWith("Case"))
                     {
-                        var caseName = str.Replace("Case:", "");
+                        var caseName = str.Replace("Case", "");
                         currentCase = new Case()
                         {
                             Name = caseName,
@@ -293,7 +293,14 @@ namespace apiai.tests
                             Text = text,
                             Type = str.Contains("Customer:") ? ConvoType.Request : ConvoType.Response
                         };
-                        currentCase.Conversations.Add(currentConvo);
+                        try
+                        {
+                            currentCase.Conversations.Add(currentConvo);
+                        }
+                        catch (Exception ex)
+                        {
+                            throw ex;
+                        }
                     }
                 }
             }
@@ -480,10 +487,11 @@ namespace apiai.tests
         private static string bookedDt = "22nd Sep at 12PM";
         private static string freeDt = "22nd Sep at 12PM";
         private static string freeDtConfirm = null;
-        private static string serviceName = "tint";
-        private static string providerName = "Kolabrate";
-        private static string businessName = "In2Style";
+        private static string serviceName = "haircut";
+        private static string providerName = "Tanja";
+        private static string businessName = "paradise cutters";
         private static string locationName = "Airport West";
+        private static string manyServices = "Colour and cut";
         private static void ProcessCase(List<Conversation> conversations, string caseName, bool isNewCustomer = true)
         {
             response = null;
@@ -520,13 +528,14 @@ namespace apiai.tests
                     else if (!UserQuery.Contains("[ConfirmDatetime]") || (UserQuery.Contains("[ConfirmDatetime]") && !string.IsNullOrEmpty(freeDtConfirm)))
                     {
                         UserQuery = UserQuery.Replace("[ConfirmDatetime]", freeDtConfirm);
-                        UserQuery = UserQuery.Replace("[Provider]", providerName);
+                        UserQuery = UserQuery.Replace("[providerName]", providerName);
                         UserQuery = UserQuery.Replace("[todayAtXPM]", "3 PM");
                         UserQuery = UserQuery.Replace("[businessName]", businessName);
                         UserQuery = UserQuery.Replace("[shortService]", "haircut & wash");
                         UserQuery = UserQuery.Replace("[fullService]", "Cut & Wash");
                         UserQuery = UserQuery.Replace("[missingService]", "bleech");
                         UserQuery = UserQuery.Replace("[locationName]", locationName);
+                        UserQuery = UserQuery.Replace("[manyServices]", manyServices);
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.WriteLine(string.Format("user: {0}", UserQuery));
                         ProcessUserQueryAsync(number).Wait();
