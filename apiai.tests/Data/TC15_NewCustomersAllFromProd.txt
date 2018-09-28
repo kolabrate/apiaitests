@@ -1,4 +1,5 @@
 ﻿Expression: All Prod convos
+
 Case 1: <-81433119785>	
 Customer: Books [service] with Paul 
 Booka: First Name & Last Name of the person attending the appointment?<ValidationException>
@@ -11,9 +12,17 @@ Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
 	
 Case 5: <-81433119785>	
 Customer: [manyServices] with Paul tomorrow 
-Booka: <Checking><SlotsAvailable> The next available slots with Paul Allen are: 12th Dec @ 10:00 AM, 12th Dec @ 10:45 AM, 12th Dec @ 11:30 AM. What date & time do you prefer?
+Booka: <ErrorMissingServices>
+Customer: Yes
+Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime]
 Booka: <CheckingConfirmation><Booked> All done!The appointment has been booked!
+
+Case 5: <-81433119785>	
+Customer: [manyServices] with Paul tomorrow 
+Booka: <ErrorMissingServices>
+Customer: No
+Booka: <UserTerminatingBooking>
 	
 Case 7: <-81438096425>	
 Customer: Hello can I book a appointment with [providerName] on Thursday Oct 11 at 10am for Phil Scissor

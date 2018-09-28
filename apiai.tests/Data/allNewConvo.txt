@@ -1,9 +1,8 @@
 Expression: 6. Family booking
 
-Case: 4. book haircut and blowdry appointment for me and haircut for my son
-Customer: book [service] and [shortService] appointment for me and [service] for my son
-Booka: <UnknownBusiness>
-Customer: [businessName]
+Customer: book me tomorrow for [service] with [businessName] at [locationName]
+Booka: <CustomAnswerRequired>
+Customer: sdkhgf
 Booka: <Checking><SlotsAvailable> 
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation><Booked>

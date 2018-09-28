@@ -187,8 +187,8 @@ namespace apiai.tests
             var list = new List<string>();
             var fileNames = new List<string>();
             var filesNamesArray = Directory.GetFiles(@"..\..\Data\");
-            fileNames = filesNamesArray.Where(c => c.StartsWith("..\\..\\Data\\TC15_NewCustomersAllFromProd")).ToList(); 
-            //fileNames = filesNamesArray.Where(c => c.StartsWith("..\\..\\Data\\allNewConvo")).ToList();
+            //fileNames = filesNamesArray.Where(c => c.StartsWith("..\\..\\Data\\TC15_NewCustomersAllFromProd")).ToList(); 
+            fileNames = filesNamesArray.Where(c => c.StartsWith("..\\..\\Data\\allNewConvo")).ToList();
 
             //fileNames.Add(@"..\..\Data\allNewConvo.txt");
             //fileNames.Add(@"..\..\Data\TC10_NewCustomerExceptions.txt");
