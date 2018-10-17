@@ -44,14 +44,16 @@ user:   2nd Oct @ 12 PM
 Booka: Sure, checking that...
 Booka:  All Done! Your appointment for Tint booked at 2nd Oct @ 12:00 PM with In2Style
 AI Session:af7541a8-12d4-492f-83da-0dc3565c9c9c
-Issue: in the afternoon dint work
+Issue: in the afternoon dint work - Update: Cronofy returning wrong results. May be the issue with the calendar.
 ----------------------------------------------------
 user:  cancel my In2Style appointment
-Booka: Oops! You may need to call the provider to cancel your appointment.
-user:  25th Sept @ 10 AM
-Booka: Bummer!! I did not understand what you said :-(.  If you can try something like ' book me in next Thursday' or' get me an appointment for haircut', I promise, I  can be quite helpful.
-AI Session:fbb6b4e1-af43-4e56-a192-88becabe6b64
-Issue: context based nummber, find solution to the root cause of bummer
+Booka: You have 34 appointments, let me know the date/time of the appointment that you want to cancel?
+user:  9th Oct at 10AM
+Booka: Bummer!! I dint get that, try again to tell something like 'cancel my appointment on 1st Oct @ 01:22 PM'
+user:  Cancel my appointment on 9th Oct at 10AM
+Booka: what type of Service are your looking for ?
+AI Session:76525670-d1e1-46b3-90f3-3b936f29c241
+Issue: Try again to see if Dialog flow has improved and resolving correctly. - even after retrying and retraining, dialogflow is not resolving this intent correctly.
 ----------------------------------------------------
 user:  book me in this afternoon
 Booka: what type of Service are your looking for ?
@@ -115,34 +117,10 @@ Booka:  The next available slots are: 3rd Oct @ 10:00 AM, 3rd Oct @ 11:00 AM, 3r
 AI Session:190fb170-7d83-409d-a624-af642f3ce8f9
 Issue: Can't do anything about this now. We'll see
 ----------------------------------------------------
-user:  When is my next tint appointment?
-Booka: You have the following appointment(s): for hair cut on 25th Sep @ 10:00 AM, for hair cut on 25th Sep @ 12:00 PM, for hair cut on 25th Sep @ 11:00 AM, for hair cut on 26th Sep @ 11:00 AM, for hair cut on 26th Sep @ 12:00 PM, for hair cut on 26th Sep @ 01:00 PM, for hair cut on 25th Sep @ 02:00 PM, for hair cut on 25th Sep @ 03:00 PM, for hair cut on 25th Sep @ 04:00 PM, for hair cut on 25th Sep @ 05:00 PM
-AI Session:9863d135-64c8-4273-a202-eff1a24a5fac
-Issue: service name is changed here, still showing haircut appointment
-Find out limit of sms outbound in twilio and limit the message to that number.
-----------------------------------------------------
 user:  what appointment i got tomorrow?
 Booka: what type of Service are your looking for ?
 AI Session:a83ab86f-0a6b-409b-9cab-72e634317249
 Issue: train dialog flow
-----------------------------------------------------
-user:  book me an appointment for tint for my son
-Booka: which business do you want to book with?
-user:  In2Style
-Booka: I am having a little trouble with your booking, please call the provider directly to make this booking.
-Tester: No confirm date
-Booka: I am having a little trouble with your booking, please call the provider directly to make this booking.
-AI Session:7d8694c1-fe3d-4cf2-9ba5-23399c8e1e09
-Issue: check why the error is happening
-----------------------------------------------------
-user:  book tint and haircut & wash appointment for me and tint for my son
-Booka: I am having a little trouble with your booking, please call the provider directly to make this booking.
-user:  In2Style
-Booka: I am having a little trouble with your booking, please call the provider directly to make this booking.
-user:   3rd Oct @ 02 PM 
-Booka: I am having a little trouble with your booking, please call the provider directly to make this booking.
-AI Session:7e61b8e6-e142-44f6-b72c-ebc4b6a44d29
-Issue: some exceptions here
 ----------------------------------------------------
 user:  book tint appointment for my son and daughter
 Booka: I am having a little trouble with your booking, please call the provider directly to make this booking.
@@ -151,7 +129,7 @@ Booka: I am having a little trouble with your booking, please call the provider 
 user:   3rd Oct @ 02 PM 
 Booka: I am having a little trouble with your booking, please call the provider directly to make this booking.
 AI Session:dddf02b1-acf9-469c-9a88-41d80e58fd93
-Issue: why so many exceptions
+Issue (Update): why so many exceptions - Too complicated, will come back to this later.
 ----------------------------------------------------
 user:  book me in this afternoon for tint with Kolabrate
 Booka: which business do you want to book with?
@@ -185,42 +163,6 @@ Booka:  All Done! Your appointment for Tint booked at 4th Oct @ 05:00 PM with In
 AI Session:7bfe9a71-4241-476a-bf45-d87677c486a9
 issue: confusing exception handling. 
 ----------------------------------------------------
-user:  book me in for car service
-Booka: First Name & Last Name of the person attending the appointment?
-user:  Anthony Gill 
-Booka: 
-user:  Toyota
-Booka: Which location you want to go to? For example:Airport West,Airport West,Taylors Lakes
-user:  Airport West
-Booka: what is your car rego?
-user:  sdkhgf
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 25th Sep @ 07:00 AM, 25th Sep @ 06:00 PM, 30th Sep @ 09:00 AM. What date & time do you prefer?
-user:  any other date/time
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 1st Oct @ 09:00 AM, 2nd Oct @ 08:00 AM, 2nd Oct @ 09:00 AM. What date & time do you prefer?
-user:  any other date/time
-Booka: Sure, let me find next availabilities.
-Booka:  The next available slots are: 2nd Oct @ 06:00 PM, 7th Oct @ 09:00 AM, 7th Oct @ 10:00 AM. What date & time do you prefer?
-user:  any other date/time
-Booka: Do you have any preferred date and time?
-AI Session:0f73a376-c1b5-4c70-818a-4a1a03a9dd3f
-Issue: check if there are no slots after 30th Sep 9 AM 
-----------------------------------------------------
-user:  book me in for car service
-Booka: First Name & Last Name of the person attending the appointment?
-user:  Anthony Gill 
-Booka: which business do you want to book with?
-user:  Toyota
-Booka: Which location you want to go to? For example:Airport West,Airport West,Taylors Lakes
-user:  asdf
-Booka: The requested service - asdf is not available with the provider
-user:  asdf
-Booka: The requested service - asdf is not available with the provider
-user:  asdf
-AI Session:90d15c32-e46f-4387-b953-c0edbf6b284d
-Issue: wrong message when location is not found
-----------------------------------------------------
 user:  Can I get an appointment tomorrow morning
 Booka: what type of Service are your looking for ?
 user:  tint
@@ -231,17 +173,6 @@ Booka: Sure, checking that...
 Booka:  Sorry, that time is not available. Next available slots are: 7th Oct @ 10:00 AM, 7th Oct @ 11:00 AM, 7th Oct @ 01:00 PM
 AI Session:685eeb55-ed4c-4f88-aa58-d80dd1e48600
 Issue: If its the past date time, send a message straightaway that its not available instead of "Sure, checking that..". Do this for confirm intent only.
-----------------------------------------------------
-user:  can I make an appointment tomorrow morning
-Booka: what type of Service are your looking for ?
-user:  tint
-Booka: Sure, let me find next availabilities.
-Booka:  Sorry, that time is not available. Next available slots are: 7th Oct @ 10:00 AM, 7th Oct @ 11:00 AM, 7th Oct @ 05:00 PM
-user: I want 10AM 
-Booka: Sure, checking that...
-Booka:  Sorry, that time is not available. Next available slots are: 7th Oct @ 10:00 AM, 7th Oct @ 11:00 AM, 7th Oct @ 05:00 PM
-AI Session:70d998b4-51c2-4456-b98c-1f3047780083
-Issue: check this message again
 ----------------------------------------------------
 user:  Hey Paul. Looking to book a haircut for Teddy and myself for this Sunday 25th Feb. Luke Thompson
 Booka: which business do you want to book with?
@@ -256,8 +187,7 @@ user:   30th Sep @ 01 PM
 Booka: Sure, checking that...
 Booka:  All Done! Your appointment for hair cut booked at 30th Sep @ 01:00 PM with Paradise Cutters
 AI Session:652acdea-68e9-4374-818c-7a87c230c99a
-Issue: Only one booking is done here
-Family booking should show the double booking in the confirmation message
+Issue (Update): Only one booking is done here
 ----------------------------------------------------
 user:  Looking for a haircut on Monday 14th May
 Booka: Sure, let me find next availabilities.
@@ -273,21 +203,6 @@ Booka: Sure, let me find next availabilities.
 Booka:  The next available slots are: 14th Oct @ 10:00 AM, 14th Oct @ 02:00 PM, 14th Oct @ 03:00 PM. What date & time do you prefer?
 AI Session:5b787111-3e67-4714-bd3c-0997496faefb
 Issue: Sporadic behaviour by dialog flow here. all intents are coming as ScheduleAppointment
-----------------------------------------------------
-user:  Change appointment 
-Booka: what type of Service are your looking for ?
-user:  Cut with Paul tomorrow 
-Booka: which business do you want to book with?
-user:   that time is not available. Next available slots with Paul Something are: 30th Sep @ 02 PM
-Booka: Can't be sure of what service you are looking for. Try any of these: Cut & Wash, Cut, Wash & Dry, Cut, Cut & Wash, Cut, Wash And Blow Out
-user:  👌🏾 
-Booka: Do you want to try one or more of these options: Cut & Wash, Cut, Wash & Dry, Cut, Cut & Wash, Cut, Wash And Blow Out
-user:  Cancel appointment 
-Booka: Popular Services: Cut & Wash, Cut, Wash & Dry, Cut, Cut & Wash, Cut, Wash And Blow Out. If you want help in finding the right service, please contact provider
-user:  Which one? 
-Booka: Popular Services: Cut & Wash, Cut, Wash & Dry, Cut, Cut & Wash, Cut, Wash And Blow Out. If you want help in finding the right service, please contact provider
-AI Session:96cdf342-c292-44d6-9b45-755e4f6e948d
-Issue: its change appointment
 ----------------------------------------------------
 user:  Book a haircut with Tanja Thu afternoon
 Booka: which business do you want to book with?

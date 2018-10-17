@@ -1,0 +1,5 @@
+﻿1. Add/Edit Business Locations.
+On my business page, if i add/edit business locations and then come to My services page, the service locations should be updated with the new locations. 
+This update does not happen until refresh of the page is done.
+2. Admin/Business Owner should be able to be a non-service provider
+3. Service Locations add/edit should be possible with or without Business Locations 

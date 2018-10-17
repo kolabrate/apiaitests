@@ -1,8 +1,10 @@
-Expression: 6. Family booking
+﻿Expression: 6. Family booking
 
-Customer: book me tomorrow for [service] with [businessName] at [locationName]
-Booka: <CustomAnswerRequired>
-Customer: sdkhgf
-Booka: <Checking><SlotsAvailable> 
-Customer: [ConfirmDatetime] 
-Booka: <CheckingConfirmation><Booked>
+Case 412: <-81408787592>	
+Case: 49. cancel my toyota appointment (only business name mentioned in the cancel request)
+Customer: cancel my [businessName] appointment
+Booka: <CancelAppointmentDateTime>
+Customer: 9th Oct at 10AM
+Booka: Bummer<CancelAppointmentDateTime>
+Customer: Cancel my appointment on 9th Oct at 10AM
+Booka: Done

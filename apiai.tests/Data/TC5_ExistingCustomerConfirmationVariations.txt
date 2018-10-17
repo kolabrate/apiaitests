@@ -118,3 +118,11 @@ Customer: [service]
 Booka: <Checking><SlotsAvailable> 
 Customer: 11:30 PM[ReadLine]
 Booka: <CheckingConfirmation><Booked>
+
+Case: 57. Book me in anytime today(a time that is not listed.)
+Customer: Book me in anytime today
+Booka: what type of service are you looking for?<ValidationException>
+Customer: [service]
+Booka: <Checking><SlotsAvailable> 
+Customer: I want 10AM[ReadLine]
+Booka: <CheckingConfirmation><Booked>

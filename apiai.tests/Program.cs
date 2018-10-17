@@ -487,9 +487,9 @@ namespace apiai.tests
         private static string bookedDt = "22nd Sep at 12PM";
         private static string freeDt = "22nd Sep at 12PM";
         private static string freeDtConfirm = null;
-        private static string serviceName = "haircut";
+        private static string serviceName = "tint";
         private static string providerName = "Tanja";
-        private static string businessName = "paradise cutters";
+        private static string businessName = "In2Style";
         private static string locationName = "Airport West";
         private static string manyServices = "Colour and cut";
         private static void ProcessCase(List<Conversation> conversations, string caseName, bool isNewCustomer = true)

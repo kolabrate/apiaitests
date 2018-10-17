@@ -45,5 +45,5 @@ Customer: cancel my monday's appointment
 Booka: Done. Your appointment is cancelled
 
 Case: 49. cancel my toyota appointment (only business name mentioned in the cancel request)
-Customer: cancel my toyota appointment
+Customer: cancel my [businessName] appointment
 Booka: Done. Your appointment is cancelled

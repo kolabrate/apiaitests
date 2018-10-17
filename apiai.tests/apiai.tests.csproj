@@ -125,6 +125,7 @@
       <DependentUpon>BookaDb.edmx</DependentUpon>
       <LastGenOutput>BookaDb.cs</LastGenOutput>
     </Content>
+    <Content Include="Data\OnboardingIssuesList.txt" />
     <Content Include="Data\IssuesList.txt" />
     <Content Include="Data\allNewConvo.txt" />
     <Content Include="Data\results.txt" />

@@ -1,0 +1,3 @@
+----------------------------------------------------
+user:  cancel my In2Style appointment
+Booka: Oops! You may need to call the provider to cancel your appointment.
