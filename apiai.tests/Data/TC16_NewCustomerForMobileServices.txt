@@ -1,0 +1,54 @@
+﻿Expression: 1. Appointment Request Expression  with Service Name(New Customer)
+Case: 1. Book me in for lawn mowing
+Customer: Book me in for a lawn mowing
+Booka: Name of the person attending the appointment?<ValidationException>
+Customer: Anthony Gill 
+Booka: <UnknownBusiness>
+Customer: Jims
+Booka: <UnknownAddress>
+Customer: 7 southbank walk taylors hill 
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 2. can I make an appointment for weed removing
+Customer: can I make an appointment for weed removing
+Booka: Name of the person attending the appointment?<ValidationException>
+Customer: Anthony Gill 
+Booka: <UnknownBusiness>
+Customer: Jims
+Booka: <UnknownAddress>
+Customer: 7 southbank walk taylors hill 
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 3. I need an appointment for a [lawn mowing & hedging]  - all known services
+Customer: I need an appointment for a lawn mowing & hedging
+Booka: Name of the person attending the appointment?<ValidationException>
+Customer: Anthony Gill 
+Booka: <UnknownBusiness>
+Customer: Jims
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 4. can you book me in for a [lawn mowing & weed killing]
+Customer: can you book me in for a lawn mowing & weed killing
+Booka: Name of the person attending the appointment?<ValidationException>
+Customer: Anthony Gill 
+Booka: <UnknownBusiness>
+Customer: Jims
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>
+
+Case: 5. Book me in for lawn mowing with Jims
+Customer: Book me in for a lawn mowing with Jims
+Booka: Name of the person attending the appointment?<ValidationException>
+Customer: Anthony Gill 
+Booka: <UnknownAddress>
+Customer: 7 southbank walk taylors hill 
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation><Booked>

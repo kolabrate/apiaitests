@@ -225,3 +225,13 @@ Booka:  The next available slots are: 4th Oct @ 12:00 PM, 4th Oct @ 01:00 PM, 4t
 AI Session:4eeca6da-6bf9-4ba4-baaa-f5a5cf04434d
 Issue: Sporadic behaviour by dialog flow here. all intents are coming as ScheduleAppointment
 ----------------------------------------------------
+user:  Can I make an appointment next week
+Booka: what type of service are you looking for ?
+user:  tint
+Booka: Sure, let me find next availabilities.
+Booka:  The next available slots are: 12th Nov @ 02:00 PM, 12th Nov @ 03:00 PM, 12th Nov @ 04:00 PM. What date & time do you prefer?
+user: 12 Nov at 2PM
+Booka: Sure, checking that...
+Booka:  Sorry, that time is not available. Next available slots are: 12th Nov @ 02:00 PM, 12th Nov @ 03:00 PM, 12th Nov @ 04:00 PM
+AI Session:11bbc74a-7a69-49ee-8753-fa1e42831698
+Issue: Confirm Time is wrongly resolved. Need to train dialog flow

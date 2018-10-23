@@ -1,10 +1,11 @@
-﻿Expression: 6. Family booking
-
-Case 412: <-81408787592>	
-Case: 49. cancel my toyota appointment (only business name mentioned in the cancel request)
-Customer: cancel my [businessName] appointment
-Booka: <CancelAppointmentDateTime>
-Customer: 9th Oct at 10AM
-Booka: Bummer<CancelAppointmentDateTime>
-Customer: Cancel my appointment on 9th Oct at 10AM
-Booka: Done
+﻿Expression: 1. Appointment Request Expression  with Service Name(New Customer)
+Case: 1. Book me in for lawn mowing
+Customer: Book me in for a lawn mowing
+Booka: Name of the person attending the appointment?<ValidationException>
+Customer: Anthony Gill 
+Booka: <UnknownBusiness>
+Customer: Jims
+Booka: <UnknownAddress>
+Customer: 7 southbank walk taylors hill 
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 

@@ -18,6 +18,7 @@ Customer: [service]
 Booka: <Checking><SlotsAvailable> 
 Customer: check after the thursaday
 Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime]
 Booka: <CheckingConfirmation><Booked>
 
 Case: 45. I need an appointment next monday afternoon
@@ -27,6 +28,7 @@ Customer: [service]
 Booka: <Checking><SlotsAvailable> 
 Customer: more
 Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime]
 Booka: <CheckingConfirmation><Booked>
 
 Case: 46. Can I make an appointment next tuesday morning
@@ -36,6 +38,7 @@ Customer: [service]
 Booka: <Checking><SlotsAvailable> 
 Customer: what you have after that?
 Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime]
 Booka: <CheckingConfirmation><Booked>
 
 Case: 47. can I make an appointment tomorrow morning for haircut

@@ -21,8 +21,44 @@ Booka: <Checking><SlotsAvailable>
 Customer: [ConfirmDatetime] 
 Booka: <CheckingConfirmation>
 
-Case: 3. Missing service
+Case: 3. All services are Missing 
 Customer: book me in this afternoon for [service] and [missingService]
+Booka: what type of service are you looking for?<ValidationException>
+Customer: [shortService]
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <ManyServices> 
+Customer: [fullService]
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation>
+
+Case: 3. Of the two services, one is available with the provider and the other is missing
+Customer: book me in this afternoon for [service] and [missingService]
+Booka: what type of service are you looking for?<ValidationException>
+Customer: [shortService]
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <ManyServices> 
+Customer: [fullService]
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation>
+
+Case: 3. Of the three services, one is available with the provider and the other two are missing
+Customer: book me in this afternoon for [service] and [manyMissingServices]
+Booka: what type of service are you looking for?<ValidationException>
+Customer: [shortService]
+Booka: <UnknownBusiness>
+Customer: [businessName]
+Booka: <ManyServices> 
+Customer: [fullService]
+Booka: <Checking><SlotsAvailable> 
+Customer: [ConfirmDatetime] 
+Booka: <CheckingConfirmation>
+
+Case: 3. Of the three services, two are available with the provider and the other one is missing
+Customer: book me in this afternoon for [manyServices] and [missingService]
 Booka: what type of service are you looking for?<ValidationException>
 Customer: [shortService]
 Booka: <UnknownBusiness>
